@@ -1,0 +1,201 @@
+{
+  "uri": "https://philgeps-ocds.example/ocds-philgeps-department-of-education---region-v-5257621-001.json",
+  "version": "1.1",
+  "extensions": [
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/v1.1.5/extension.json",
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
+  ],
+  "publishedDate": "2025-04-28T09:00:00+08:00",
+  "publisher": {
+    "name": "Philippine Government Electronic Procurement System (PhilGEPS)",
+    "scheme": "PH-PhilGEPS",
+    "uid": "ph-philgeps",
+    "uri": "https://www.philgeps.gov.ph"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publicationPolicy": "https://philgeps-ocds.example/policy",
+  "releases": [
+    {
+      "ocid": "ocds-philgeps-department-of-education---region-v-5257621-001",
+      "id": "5257621-001",
+      "date": "2025-04-28T09:00:00+08:00",
+      "initiationType": "tender",
+      "tag": [
+        "compiled"
+      ],
+      "language": "en",
+      "buyer": {
+        "name": "Department of Education - Region V",
+        "id": "20000-DOE-V-2018"
+      },
+      "tender": {
+        "id": "5257621",
+        "title": "Supply and Delivery of Printing Materials",
+        "description": "A4 80gsm white bond paper, 500 sheets per ream",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procurementMethodDetails": "open",
+        "mainProcurementCategory": "goods",
+        "value": {
+          "amount": 1850000.0,
+          "currency": "PHP"
+        },
+        "tenderPeriod": {
+          "startDate": "2025-04-01T08:00:00+08:00",
+          "endDate": "2025-04-22T10:00:00+08:00"
+        },
+        "procuringEntity": {
+          "name": "Department of Education - Region V"
+        },
+        "items": [
+          {
+            "id": 1,
+            "description": "A4 80gsm white bond paper, 500 sheets per ream",
+            "quantity": 1000,
+            "classification": {
+              "scheme": "UNSPSC",
+              "id": "14111507",
+              "description": "Paper"
+            },
+            "unit": {
+              "name": "ream",
+              "value": {
+                "amount": 1850.0,
+                "currency": "PHP"
+              }
+            },
+            "additionalClassifications": [
+              {
+                "scheme": "UNSPSC",
+                "id": "14111507",
+                "description": "Paper"
+              }
+            ]
+          }
+        ]
+      },
+      "awards": [
+        {
+          "id": "5257621-001",
+          "title": "Supply and Delivery of Printing Materials (Lot 1)",
+          "date": "2025-05-12T14:00:00+08:00",
+          "status": "active",
+          "value": {
+            "amount": 1840000.0,
+            "currency": "PHP"
+          },
+          "suppliers": [
+            {
+              "id": "primeprint-trading-inc",
+              "name": "Primeprint Trading Inc."
+            }
+          ],
+          "items": [
+            {
+              "id": 1,
+              "description": "A4 80gsm white bond paper, 500 sheets per ream",
+              "quantity": 1000,
+              "classification": {
+                "scheme": "UNSPSC",
+                "id": "14111507",
+                "description": "Paper"
+              },
+              "unit": {
+                "name": "ream",
+                "value": {
+                  "amount": 1850.0,
+                  "currency": "PHP"
+                }
+              },
+              "additionalClassifications": [
+                {
+                  "scheme": "UNSPSC",
+                  "id": "14111507",
+                  "description": "Paper"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "contracts": [
+        {
+          "id": "5257621-001",
+          "awardID": "5257621-001",
+          "status": "active",
+          "period": {
+            "startDate": "2025-05-20T09:00:00+08:00",
+            "endDate": "2025-07-19T17:00:00+08:00"
+          },
+          "value": {
+            "amount": 1840000.0,
+            "currency": "PHP"
+          }
+        }
+      ],
+      "bids": {
+        "details": [
+          {
+            "id": "ocds-philgeps-department-of-education---region-v-5257621-001-bid-1",
+            "tenderers": [
+              {
+                "id": "primeprint-trading-inc.",
+                "name": "Primeprint Trading Inc."
+              }
+            ],
+            "status": "valid",
+            "date": "2025-04-22T10:00:00+08:00"
+          },
+          {
+            "id": "ocds-philgeps-department-of-education---region-v-5257621-001-bid-2",
+            "tenderers": [
+              {
+                "id": "national-bookstore-inc.",
+                "name": "National Bookstore Inc."
+              }
+            ],
+            "status": "valid",
+            "date": "2025-04-22T10:00:00+08:00"
+          },
+          {
+            "id": "ocds-philgeps-department-of-education---region-v-5257621-001-bid-3",
+            "tenderers": [
+              {
+                "id": "papercraft-philippines",
+                "name": "Papercraft Philippines"
+              }
+            ],
+            "status": "valid",
+            "date": "2025-04-22T10:00:00+08:00"
+          }
+        ]
+      },
+      "parties": [
+        {
+          "id": "20000-DOE-V-2018",
+          "name": "Department of Education - Region V",
+          "roles": [
+            "buyer",
+            "procuringEntity"
+          ]
+        },
+        {
+          "id": "primeprint-trading-inc",
+          "name": "Primeprint Trading Inc.",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        }
+      ],
+      "philgeps": {
+        "tradeAgreement": "RP-USA",
+        "fundingInstrument": "GOCC Corporate Funds",
+        "solicitationNo": "S-2025-05-DEDR5-1234",
+        "reasonForAward": "Lowest Calculated Responsive Bid",
+        "noticeToProceedDate": "2025-05-20T09:00:00+08:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Development / CI toolchain for validating the sample OCDS release package.
+# Install with: pip install -r requirements-dev.txt
+-r requirements.txt
+libcoveocds>=0.17.0

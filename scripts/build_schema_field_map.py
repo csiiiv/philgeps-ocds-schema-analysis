@@ -24,6 +24,7 @@ CODELIST_MAPPINGS = ROOT / "config" / "ocds_codelist_mappings.yaml"
 CROSSWALK_MD = REFS / "PHILGEPS_OCDS_CSV_CROSSWALK.md"
 FIELD_MAP_JSON = REFS / "PHILGEPS_CANONICAL_FIELD_MAP.json"
 APP_BUNDLE_JSON = ROOT / "app" / "src" / "data" / "schema_bundle.json"
+SAMPLE_RELEASE_JSON = REFS / "SAMPLE_OCDS_RELEASE_PACKAGE.json"
 
 OPEN_SCHEMA_KEYS = [
     ("schema_1", "S1", "2000-2015 XLSX"),
@@ -586,11 +587,11 @@ SAMPLE_CANONICAL_ROW: dict[str, object] = {
     "award_reference_no": "5257621-001",
     "award_title": "Supply and Delivery of Printing Materials (Lot 1)",
     "award_type": "Lot Award",
-    "award_published_date": "2025-04-28T09:00:00",
-    "award_date": "2025-05-12",
-    "notice_to_proceed_date": "2025-05-20",
-    "contract_effectivity_date": "2025-05-20",
-    "contract_end_date": "2025-07-19",
+    "award_published_date": "2025-04-28T09:00:00+08:00",
+    "award_date": "2025-05-12T14:00:00+08:00",
+    "notice_to_proceed_date": "2025-05-20T09:00:00+08:00",
+    "contract_effectivity_date": "2025-05-20T09:00:00+08:00",
+    "contract_end_date": "2025-07-19T17:00:00+08:00",
     "contract_amount": 1840000.00,
     "contract_no": "DEDR5-2025-001",
     "award_notice_status": "Posted",
@@ -606,8 +607,8 @@ SAMPLE_CANONICAL_ROW: dict[str, object] = {
         "National Bookstore Inc.",
         "Papercraft Philippines",
     ],
-    "published_date": "2025-04-01T08:00:00",
-    "closing_date": "2025-04-22T10:00:00",
+    "published_date": "2025-04-01T08:00:00+08:00",
+    "closing_date": "2025-04-22T10:00:00+08:00",
     "prebid_date": "2025-04-10T10:00:00",
     "record_id": "5257621-001",
 }
@@ -829,7 +830,7 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
         },
         "license": "https://creativecommons.org/licenses/by/4.0/",
         "publicationPolicy": "https://philgeps-ocds.example/policy",
-        "releases": [{"release": release, "url": f"https://philgeps-ocds.example/releases/{ocid}.json"}],
+        "releases": [release],
     }
     return package
 
@@ -837,7 +838,7 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
 def build_release_payload(ocds_cfg: dict, codelists: dict) -> dict:
     """Wrap the sample release package with a compact summary for the webapp."""
     package = build_sample_release_package(ocds_cfg, codelists)
-    release = package["releases"][0]["release"]
+    release = package["releases"][0]
 
     def block_keys(*names: str) -> list[str]:
         keys = []
@@ -1109,6 +1110,15 @@ def main() -> None:
         encoding="utf-8",
     )
     print(f"Wrote {APP_BUNDLE_JSON} (webapp bundle)")
+
+    # Emit the sample release package as a standalone JSON file so it can be
+    # validated with ocdskit (see scripts/validate_sample_release.py).
+    sample_package = build_sample_release_package(ocds_cfg, codelists)
+    SAMPLE_RELEASE_JSON.write_text(
+        json.dumps(sample_package, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Wrote {SAMPLE_RELEASE_JSON} (sample OCDS release package)")
 
 
 if __name__ == "__main__":

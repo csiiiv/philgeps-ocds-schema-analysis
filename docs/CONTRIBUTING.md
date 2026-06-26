@@ -12,10 +12,14 @@ philgeps-schema-analysis/
 │   ├── canonical_to_ocds.yaml # Canonical field → OCDS 1.1 path
 │   └── ocds_codelist_mappings.yaml # PhilGEPS value → OCDS codelist codes
 ├── references/               # Committed reference artifacts (human + machine)
+│   └── SAMPLE_OCDS_RELEASE_PACKAGE.json  # Generated sample — validated in CI
 ├── scripts/
-│   └── build_schema_field_map.py  # Emits FIELD_MAP.json, crosswalk, and app bundle
+│   ├── build_schema_field_map.py    # Emits FIELD_MAP.json, crosswalk, app bundle, sample
+│   └── validate_sample_release.py   # libcoveocds validation of the sample package
 ├── app/                      # Interactive webapp (Vite + React + TS)
 │   └── src/data/schema_bundle.json  # Generated — do not hand-edit
+├── .github/workflows/
+│   └── build-and-validate.yml # Regenerates artifacts, validates sample, builds webapp
 └── docs/
 ```
 
@@ -60,8 +64,25 @@ Then regenerate.
 | Crosswalk **Canonical** column | Yes | Compact S1–S5 strings |
 | Crosswalk other columns | Hand-curated | From PS-DBM templates + review |
 | `app/src/data/schema_bundle.json` | Yes | Bundled JSON consumed by the webapp (single source for all sections) |
+| `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` | Yes | Sample OCDS release package compiled from `SAMPLE_CANONICAL_ROW`; validated against OCDS 1.1 via `libcoveocds` in CI |
 | `philgeps-1.5.json`, `mphilgeps.json` | Imported | Re-import when PS-DBM publishes new template versions |
 | `PHILGEPS_SCHEMA_ANALYSIS.json` | Hand-curated / synced from Schema.tsx | |
+
+## OCDS sample release validation
+
+`scripts/build_schema_field_map.py` emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` — a real OCDS 1.1 release package compiled from `SAMPLE_CANONICAL_ROW` using the staging rules in `config/canonical_to_ocds.yaml`.
+
+`scripts/validate_sample_release.py` runs [libcoveocds](https://github.com/open-contracting/lib-cove-ocds) (the same engine as the [OCDS Data Review Tool](https://ocds-data-review-tool.readthedocs.io/)) against it. This guards the **shape** of our mapping output (schema conformance, extension resolution, date/currency formats), not the **correctness** of the mapping itself against real PhilGEPS exports.
+
+To run locally:
+
+```bash
+pip install -r requirements-dev.txt          # adds libcoveocds (needs Python ≥3.9, <3.13)
+python scripts/build_schema_field_map.py
+python scripts/validate_sample_release.py
+```
+
+For validating real, compiled OCDS output from the downstream pipeline, run libcoveocds or the Data Review Tool against that project's actual release packages — that is out of scope for this repo.
 
 ## Webapp development
 
@@ -74,6 +95,7 @@ The bundle shape is typed in `app/src/data/types.ts`. If you add a new top-level
 Before opening a PR:
 
 - [ ] `python scripts/build_schema_field_map.py` runs cleanly
+- [ ] `python scripts/validate_sample_release.py` reports `# OK` (sample release passes OCDS 1.1 schema validation)
 - [ ] JSON diff shows expected `canonical_fields` / `source_column_index` changes
 - [ ] Crosswalk row count remains 151 (unless intentionally adding rows)
 - [ ] New canonical fields have `field_types` entry

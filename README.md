@@ -67,6 +67,7 @@ Map by **column name**, not column position. Details: [references/philgeps-schem
 | [**PHILGEPS_CANONICAL_FIELD_MAP.json**](references/PHILGEPS_CANONICAL_FIELD_MAP.json) | Developers | 53 canonical fields, S1–S5 source columns, OCDS paths, embedded crosswalk |
 | [**PHILGEPS_OCDS_CSV_CROSSWALK.md**](references/PHILGEPS_OCDS_CSV_CROSSWALK.md) | Analysts / OCDS implementers | 151-row OCDS ↔ PhilGEPS 1.5/2.0 ↔ CSV ↔ canonical join |
 | [**app/**](app/) | Everyone | Interactive webapp rendering all of the above — [run locally](#run-the-webapp) |
+| [**SAMPLE_OCDS_RELEASE_PACKAGE.json**](references/SAMPLE_OCDS_RELEASE_PACKAGE.json) | OCDS implementers | Sample OCDS 1.1 release package built from the staging rules; validated in CI with `libcoveocds` |
 | [**config/schema_mappings.yaml**](config/schema_mappings.yaml) | Pipeline authors | **Source of truth** for export column → canonical field |
 | [**config/canonical_to_ocds.yaml**](config/canonical_to_ocds.yaml) | OCDS publishers | Canonical field → OCDS 1.1 path |
 | [config/ocds_codelist_mappings.yaml](config/ocds_codelist_mappings.yaml) | OCDS publishers | PhilGEPS status/mode values → OCDS codelists |
@@ -90,10 +91,11 @@ idx["Organization Name"]  # → procuring_entity
 ## Repository structure
 
 ```
+├── .github/workflows/  # CI: regenerate artifacts, validate sample, build webapp
 ├── app/                 # Interactive webapp (Vite + React + TS) — see app/README.md
 ├── config/              # Mapping source of truth (YAML)
-├── references/          # Schema docs, OCDS templates, generated JSON
-├── scripts/             # build_schema_field_map.py
+├── references/          # Schema docs, OCDS templates, generated JSON, sample release
+├── scripts/             # build_schema_field_map.py + validate_sample_release.py
 └── docs/                # Overview, getting started, contributing
 ```
 

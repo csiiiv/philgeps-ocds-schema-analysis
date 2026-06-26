@@ -2,8 +2,9 @@
 
 ## Prerequisites
 
-- Python 3.10+
+- Python 3.10+ (3.11 recommended — `libcoveocds`, used for sample-release validation, does not build on 3.13+)
 - Optional: `pip install -r requirements.txt` (only needed to **regenerate** JSON/markdown artifacts)
+- Optional: `pip install -r requirements-dev.txt` (adds `libcoveocds` to validate the sample OCDS release)
 
 ## Clone and explore (no build required)
 
@@ -86,6 +87,14 @@ This updates:
 - `references/PHILGEPS_CANONICAL_FIELD_MAP.json`
 - **Canonical** column in `references/PHILGEPS_OCDS_CSV_CROSSWALK.md`
 - `app/src/data/schema_bundle.json` (data bundle consumed by the webapp)
+- `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` (sample OCDS release package)
+
+Optionally validate the sample release against OCDS 1.1 (uses [libcoveocds](https://github.com/open-contracting/lib-cove-ocds), the engine behind the OCDS Data Review Tool):
+
+```bash
+pip install -r requirements-dev.txt
+python scripts/validate_sample_release.py
+```
 
 After regenerating, restart `npm run dev` (or rebuild) inside `app/` so the webapp picks up the new bundle.
 

@@ -48,16 +48,20 @@ Without a crosswalk, ingest code breaks silently when column **position** is ass
                              │ config/canonical_to_ocds.yaml
                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│  OCDS 1.1.5 paths                                                │
+│  OCDS 1.1 paths                                                  │
 │  PHILGEPS_OCDS_CSV_CROSSWALK.md · philgeps-*.json templates      │
+│  SAMPLE_OCDS_RELEASE_PACKAGE.json (sample built from rules)      │
 └────────────────────────────┬────────────────────────────────────┘
                              │ scripts/build_schema_field_map.py
-                             │   (build_app_bundle)
+                             │   (build_app_bundle, build_sample_release_package)
                              ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │  Interactive webapp (app/)                                       │
 │  app/src/data/schema_bundle.json → React SPA                     │
-└─────────────────────────────────────────────────────────────────┘
+└────────────────────────────┬────────────────────────────────────┘
+                             │ scripts/validate_sample_release.py (libcoveocds)
+                             ▼
+                        OCDS 1.1 schema validation (CI)
 ```
 
 ## Schema periods (S1–S5)
