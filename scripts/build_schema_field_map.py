@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -16,6 +17,10 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 REFS = ROOT / "references"
+
+# Allow importing sibling helper modules when running this script directly.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _ocds_checks import assert_release_package  # noqa: E402
 
 SCHEMA_ANALYSIS = REFS / "PHILGEPS_SCHEMA_ANALYSIS.json"
 SCHEMA_MAPPINGS = ROOT / "config" / "schema_mappings.yaml"
@@ -1114,6 +1119,10 @@ def main() -> None:
     # Emit the sample release package as a standalone JSON file so it can be
     # validated with ocdskit (see scripts/validate_sample_release.py).
     sample_package = build_sample_release_package(ocds_cfg, codelists)
+    # Hard-fail before writing if the package violates OCDS shape rules so a
+    # malformed release can never land on disk. Mirrors the pre-flight checks
+    # in scripts/validate_sample_release.py via scripts/_ocds_checks.py.
+    assert_release_package(sample_package, source="build_schema_field_map.main")
     SAMPLE_RELEASE_JSON.write_text(
         json.dumps(sample_package, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",

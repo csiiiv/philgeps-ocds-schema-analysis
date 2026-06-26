@@ -15,7 +15,9 @@ philgeps-schema-analysis/
 │   └── SAMPLE_OCDS_RELEASE_PACKAGE.json  # Generated sample — validated in CI
 ├── scripts/
 │   ├── build_schema_field_map.py    # Emits FIELD_MAP.json, crosswalk, app bundle, sample
-│   └── validate_sample_release.py   # libcoveocds validation of the sample package
+│   ├── _ocds_checks.py              # Shared OCDS pre-flight rules (used by build + validate)
+│   ├── validate_sample_release.py   # libcoveocds validation of the sample package
+│   └── test_ocds_checks.py          # Guard integrity tests for _ocds_checks
 ├── app/                      # Interactive webapp (Vite + React + TS)
 │   └── src/data/schema_bundle.json  # Generated — do not hand-edit
 ├── .github/workflows/
@@ -72,17 +74,26 @@ Then regenerate.
 
 `scripts/build_schema_field_map.py` emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` — a real OCDS 1.1 release package compiled from `SAMPLE_CANONICAL_ROW` using the staging rules in `config/canonical_to_ocds.yaml`.
 
-`scripts/validate_sample_release.py` runs [libcoveocds](https://github.com/open-contracting/lib-cove-ocds) (the same engine as the [OCDS Data Review Tool](https://ocds-data-review-tool.readthedocs.io/)) against it. This guards the **shape** of our mapping output (schema conformance, extension resolution, date/currency formats), not the **correctness** of the mapping itself against real PhilGEPS exports.
+Validation runs in **three layers**, each catching regressions earlier than the last:
+
+| Layer | Script | What it catches | Requires |
+|-------|--------|-----------------|----------|
+| 1. Build-time hard-fail | `scripts/build_schema_field_map.py` (via `_ocds_checks.assert_release_package`) | Malformed structure, version/extension rules, date formats — **before the file is written** | Nothing extra |
+| 2. Pre-flight + deep schema | `scripts/validate_sample_release.py` | Same rules as layer 1, then full JSON Schema via `libcoveocds` | `pip install -r requirements-dev.txt` |
+| 3. Guard integrity | `scripts/test_ocds_checks.py` | Verifies the layer-1 rules still fire on each known regression class | Nothing extra |
+
+The shared rules live in `scripts/_ocds_checks.py` — edit there and both the build and the validator pick them up. Add a new regression class by extending `check_release_package()` and adding a case to `test_ocds_checks.py`.
+
+This guards the **shape** of our mapping output (schema conformance, extension resolution, date/currency formats), not the **correctness** of the mapping itself against real PhilGEPS exports. For validating real, compiled OCDS output from the downstream pipeline, run libcoveocds or the Data Review Tool against that project's actual release packages — that is out of scope for this repo.
 
 To run locally:
 
 ```bash
 pip install -r requirements-dev.txt          # adds libcoveocds (needs Python ≥3.9, <3.13)
-python scripts/build_schema_field_map.py
-python scripts/validate_sample_release.py
+python scripts/build_schema_field_map.py     # layer 1: hard-fails on bad shape
+python scripts/test_ocds_checks.py           # layer 3: guard integrity
+python scripts/validate_sample_release.py    # layer 2: full schema validation
 ```
-
-For validating real, compiled OCDS output from the downstream pipeline, run libcoveocds or the Data Review Tool against that project's actual release packages — that is out of scope for this repo.
 
 ## Webapp development
 
@@ -95,7 +106,12 @@ The bundle shape is typed in `app/src/data/types.ts`. If you add a new top-level
 Before opening a PR:
 
 - [ ] `python scripts/build_schema_field_map.py` runs cleanly
-- [ ] `python scripts/validate_sample_release.py` reports `# OK` (sample release passes OCDS 1.1 schema validation)
+      (the build hard-fails on malformed OCDS shape via `scripts/_ocds_checks.py`
+      before writing the sample — no bad release can land on disk)
+- [ ] `python scripts/test_ocds_checks.py` passes
+      (guards the guards: confirms each known regression class is still caught)
+- [ ] `python scripts/validate_sample_release.py` reports `# OK`
+      (full OCDS 1.1 schema validation via libcoveocds)
 - [ ] JSON diff shows expected `canonical_fields` / `source_column_index` changes
 - [ ] Crosswalk row count remains 151 (unless intentionally adding rows)
 - [ ] New canonical fields have `field_types` entry

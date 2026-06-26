@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """Validate references/SAMPLE_OCDS_RELEASE_PACKAGE.json against OCDS 1.1.
 
-Uses libcoveocds (the same engine as open-contracting/cove-ocds, the OCDS Data
-Review Tool) to validate the sample release package emitted by
-build_schema_field_map.py. This performs JSON Schema validation and resolves
-any extensions listed in the package's `extensions` array.
+Two layers:
+
+  1. Pre-flight structural checks (scripts/_ocds_checks.check_release_package)
+     — the same rules the build script enforces before writing the file.
+     Runs without libcoveocds installed, so it works in any environment.
+  2. Full JSON Schema validation via libcoveocds (the engine behind the OCDS
+     Data Review Tool). Resolves extensions and runs the authoritative
+     schema checks. Requires `pip install -r requirements-dev.txt`.
 
 Scope note: this validates the SHAPE of the sample release (that our staging
 rules produce OCDS-conformant JSON). It is NOT a data-quality check and does
 NOT validate the mapping config against real PhilGEPS exports. For real-data
-validation, run libcoveocds or the OCDS Data Review Tool against the downstream
-compiler's actual output.
+validation, run libcoveocds or the OCDS Data Review Tool against the
+downstream compiler's actual output.
 
 Usage:
     python scripts/validate_sample_release.py
@@ -27,48 +31,16 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _ocds_checks import check_release_package  # noqa: E402
+
 SAMPLE = ROOT / "references" / "SAMPLE_OCDS_RELEASE_PACKAGE.json"
 
 
-def _structural_checks(data: dict) -> list[str]:
-    """Cheap pre-flight checks that surface common issues before schema validation."""
-    issues: list[str] = []
-
-    if "releases" not in data:
-        issues.append("package missing top-level `releases` array")
-        return issues
-    if not isinstance(data["releases"], list) or not data["releases"]:
-        issues.append("`releases` must be a non-empty array")
-        return issues
-
-    release = data["releases"][0]
-    if not isinstance(release, dict):
-        issues.append("`releases[0]` must be an object")
-        return issues
-
-    for required in ("ocid", "id", "date", "initiationType", "tag"):
-        if required not in release:
-            issues.append(f"release missing required field: {required}")
-
-    if "version" in data and isinstance(data["version"], str) and data["version"].count(".") > 1:
-        issues.append(
-            f"version '{data['version']}' includes a patch digit; "
-            "OCDS uses major.minor only (e.g. '1.1')"
-        )
-
-    for ext_url in data.get("extensions", []) or []:
-        if not isinstance(ext_url, str):
-            continue
-        if ext_url.endswith("/master/extension.json") or "/master/" in ext_url:
-            issues.append(
-                f"extension pinned to /master branch (use a tag for reproducibility): {ext_url}"
-            )
-    return issues
-
-
 def _libcove_validate(path: Path) -> tuple[list, list, str | None] | None:
-    """Run libcoveocds validation. Returns (validation_errors, additional_checks, version_used)
-    or None if libcoveocds is unavailable."""
+    """Run libcoveocds validation. Returns (validation_errors, additional_checks,
+    version_used) or None if libcoveocds is unavailable."""
     try:
         from libcoveocds.api import ocds_json_output
     except ImportError as exc:
@@ -107,15 +79,20 @@ def main() -> int:
         print(f"invalid JSON: {exc}", file=sys.stderr)
         return 1
 
-    issues = _structural_checks(data)
+    # Layer 1: shared pre-flight checks. These run regardless of whether
+    # libcoveocds is installed and stay in sync with the build-time guard.
+    issues = check_release_package(data)
     if issues:
         print("Pre-flight checks failed:", file=sys.stderr)
         print("\n".join(f"  - {i}" for i in issues), file=sys.stderr)
         return 1
 
+    # Layer 2: authoritative schema validation via libcoveocds.
     errors, additional, version_used = _libcove_validate(SAMPLE)
     if errors is None:
-        return 1  # libcoveocds unavailable — already reported above
+        # libcoveocds unavailable — pre-flight passed, but we couldn't run
+        # the deep check. Treat as a failure so CI catches missing deps.
+        return 1
 
     if version_used:
         print(f"# OCDS schema version used: {version_used}")

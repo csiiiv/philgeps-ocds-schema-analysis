@@ -46,6 +46,9 @@ jobs:
       - name: Validate sample OCDS release package against OCDS 1.1
         run: python scripts/validate_sample_release.py
 
+      - name: Verify pre-flight guard integrity
+        run: python scripts/test_ocds_checks.py
+
   build-webapp:
     runs-on: ubuntu-latest
     needs: build-and-validate
