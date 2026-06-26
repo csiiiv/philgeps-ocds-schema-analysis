@@ -83,6 +83,12 @@ export const NAV_ITEMS: NavItem[] = [
     icon: <Icon d="M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01" />,
   },
   {
+    id: "release",
+    label: "OCDS release package",
+    group: "OCDS mapping",
+    icon: <Icon d="M21 8l-5-5H7a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V8zM14 3v5h5M9 13h6M9 17h4" />,
+  },
+  {
     id: "codelists",
     label: "Codelist mappings",
     group: "OCDS mapping",

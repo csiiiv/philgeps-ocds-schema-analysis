@@ -4,6 +4,7 @@ import { OverviewPage } from "./pages/OverviewPage";
 import { CanonicalPage } from "./pages/CanonicalPage";
 import { CrosswalkPage } from "./pages/CrosswalkPage";
 import { StagedPage } from "./pages/StagedPage";
+import { ReleasePage } from "./pages/ReleasePage";
 import { PeriodsPage } from "./pages/PeriodsPage";
 import { CodelistsPage } from "./pages/CodelistsPage";
 import { LookupPage } from "./pages/LookupPage";
@@ -17,6 +18,7 @@ const ROUTES: Record<string, () => React.ReactNode> = {
   canonical: CanonicalPage,
   crosswalk: CrosswalkPage,
   staged: StagedPage,
+  release: ReleasePage,
   periods: PeriodsPage,
   codelists: CodelistsPage,
   lookup: LookupPage,

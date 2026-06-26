@@ -13,6 +13,7 @@ Interactive webapp that renders the PhilGEPS open-data schema mappings (2000–2
 | **Source column lookup** | Ingest tool: paste a CSV header, find its canonical field and OCDS path. |
 | **OCDS crosswalk** | All 151 crosswalk rows, filterable by OCDS block and status (mapped / omit / derived / extension). |
 | **OCDS staged output** | Live rendering of `config/canonical_to_ocds.yaml` — one card per OCDS block (planning, buyer, tender, awards, contracts, bids, philgeps_extension) showing path → canonical field, plus generated fields, planning triggers, and defaults. |
+| **OCDS release package** | A representative compiled OCDS release built by walking the staging rules. Overview cards, per-block jump links, syntax-highlighted raw JSON with copy and download. |
 | **Codelist mappings** | PhilGEPS status / method / category labels → OCDS closed codelists. |
 | **Global search** | Cross-section search for any column name, OCDS path, or canonical field. |
 | **About & sources** | Bundle metadata, source file inventory, regen instructions, external links. |

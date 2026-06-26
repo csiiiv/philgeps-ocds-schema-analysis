@@ -556,6 +556,328 @@ def ocds_block_of(ocds_field: str) -> str:
     return ocds_field.split("/", 1)[0]
 
 
+# Representative canonical sample row used to illustrate the OCDS staging rules.
+# One line-item award against a single bid notice; values are illustrative.
+SAMPLE_CANONICAL_ROW: dict[str, object] = {
+    "procuring_entity": "Department of Education - Region V",
+    "pe_uacs_code": "20000-DOE-V-2018",
+    "bid_reference_no": "5257621",
+    "solicitation_no": "S-2025-05-DEDR5-1234",
+    "notice_title": "Supply and Delivery of Printing Materials",
+    "classification": "Goods",
+    "business_category": "Printing Equipment and Supplies",
+    "funding_source": "General Fund",
+    "funding_instrument": "GOCC Corporate Funds",
+    "approved_budget": 1850000.00,
+    "trade_agreement": "RP-USA",
+    "procurement_mode": "Public Bidding",
+    "area_of_delivery": "Region V",
+    "contract_duration": 60,
+    "calendar_type": "Calendar Days",
+    "line_item_no": 1,
+    "item_name": "A4 Bond Paper (80gsm, 500 sheets/ream)",
+    "item_description": "A4 80gsm white bond paper, 500 sheets per ream",
+    "quantity": 1000,
+    "uom": "ream",
+    "item_budget": 1850.00,
+    "unspsc_code": "14111507",
+    "unspsc_description": "Paper",
+    "bid_notice_status": "Closed",
+    "award_reference_no": "5257621-001",
+    "award_title": "Supply and Delivery of Printing Materials (Lot 1)",
+    "award_type": "Lot Award",
+    "award_published_date": "2025-04-28T09:00:00",
+    "award_date": "2025-05-12",
+    "notice_to_proceed_date": "2025-05-20",
+    "contract_effectivity_date": "2025-05-20",
+    "contract_end_date": "2025-07-19",
+    "contract_amount": 1840000.00,
+    "contract_no": "DEDR5-2025-001",
+    "award_notice_status": "Posted",
+    "reason_for_award": "Lowest Calculated Responsive Bid",
+    "awardee_organization_name": "Primeprint Trading Inc.",
+    "awardee_org_id": "primeprint-trading-inc",
+    "awardee_jointventure": ["Primeprint Trading Inc."],
+    "awardee_country": "Philippines",
+    "awardee_region": "Region V",
+    "awardee_size": "Small",
+    "bidders": [
+        "Primeprint Trading Inc.",
+        "National Bookstore Inc.",
+        "Papercraft Philippines",
+    ],
+    "published_date": "2025-04-01T08:00:00",
+    "closing_date": "2025-04-22T10:00:00",
+    "prebid_date": "2025-04-10T10:00:00",
+    "record_id": "5257621-001",
+}
+
+
+def _set_nested(target: dict, dotted_path: str, value: object) -> None:
+    """Assign value into target at dotted_path, creating dicts as needed."""
+    cursor = target
+    parts = dotted_path.split("/")
+    for part in parts[:-1]:
+        nxt = cursor.setdefault(part, {})
+        if not isinstance(nxt, dict):
+            break
+        cursor = nxt
+    cursor[parts[-1]] = value
+
+
+def _resolve_canonical_value(canonical: str, sample: dict) -> object:
+    """Return the sample value for a canonical field (currency wrapping happens at assignment)."""
+    return sample.get(canonical)
+
+
+def _apply_currency(value: object, currency: str) -> object:
+    if value is None:
+        return None
+    return {"amount": value, "currency": currency}
+
+
+def _is_amount_leaf(dotted_path: str) -> bool:
+    """True for OCDS paths whose leaf represents a monetary amount (needs currency wrapping)."""
+    return dotted_path.endswith("/value/amount") or dotted_path == "value/amount"
+
+
+def _inject_currency(node: object, currency: str) -> None:
+    """Walk a release subtree and add `currency` next to every numeric `amount` field."""
+    if isinstance(node, dict):
+        if (
+            isinstance(node.get("amount"), (int, float))
+            and not isinstance(node.get("amount"), bool)
+            and "currency" not in node
+        ):
+            node["currency"] = currency
+        for v in node.values():
+            _inject_currency(v, currency)
+    elif isinstance(node, list):
+        for item in node:
+            _inject_currency(item, currency)
+
+
+def _apply_codelist_transform(value: object, canonical: str, codelists: dict) -> object:
+    """Translate PhilGEPS labels to OCDS codes via config/ocds_codelist_mappings.yaml."""
+    if value is None:
+        return None
+    if canonical == "procurement_mode":
+        return codelists.get("procurement_method", {}).get(value, value)
+    if canonical == "classification":
+        return codelists.get("main_procurement_category", {}).get(value, value)
+    if canonical == "bid_notice_status":
+        return codelists.get("tender_status", {}).get(value, value)
+    if canonical == "award_notice_status":
+        return codelists.get("award_status", {}).get(value, value)
+    return value
+
+
+def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
+    """Compile a sample compiled release by walking canonical_to_ocds.yaml staging rules."""
+    defaults = codelists.get("defaults", {})
+    currency = defaults.get("currency", "PHP")
+    initiation = defaults.get("initiation_type", "tender")
+    tag = defaults.get("tag", ["compiled"])
+    classification_scheme = defaults.get("classification_scheme", "UNSPSC")
+    bid_status_default = codelists.get("bid_status_default", "valid")
+    ocid_prefix = ocds_cfg.get("ocid_prefix", "ocds-philgeps")
+
+    row = SAMPLE_CANONICAL_ROW.copy()
+    ocid = f"{ocid_prefix}-{row['procuring_entity']}-{row['award_reference_no']}".lower().replace(" ", "-")
+
+    release: dict = {
+        "ocid": ocid,
+        "id": row["record_id"],
+        "date": row["award_published_date"],
+        "initiationType": initiation,
+        "tag": tag,
+        "language": "en",
+    }
+
+    def canon(canonical: str) -> object:
+        value = _resolve_canonical_value(canonical, row)
+        return _apply_codelist_transform(value, canonical, codelists)
+
+    def stage_block(block_name: str) -> dict:
+        out: dict = {}
+        for path, canonical in ocds_cfg.get(block_name, {}).items():
+            if isinstance(canonical, str) and not canonical.startswith("_"):
+                value = canon(canonical)
+                if value is not None:
+                    _set_nested(out, path, value)
+        return out
+
+    # Planning block (triggered when planning_triggers present).
+    planning_triggers = ocds_cfg.get("planning_triggers", [])
+    planning_values = {t: row.get(t) for t in planning_triggers}
+    if any(v is not None for v in planning_values.values()):
+        planning = stage_block("planning")
+        if planning:
+            release["planning"] = planning
+
+    # Buyer.
+    buyer = stage_block("buyer")
+    if buyer:
+        release["buyer"] = buyer
+
+    # Tender + tender/items + parties (buyer + suppliers).
+    tender = stage_block("tender")
+    release["tender"] = tender
+
+    # Canonical_to_ocds.yaml writes items/* as nested dicts; OCDS items is a list.
+    # Collapse to a single-item list using the sample line-item values.
+    if "items" in tender:
+        items_dict = tender.pop("items")
+        if isinstance(items_dict, dict):
+            item = dict(items_dict)
+        else:
+            item = {}
+        item["id"] = row["line_item_no"]
+        item["description"] = row["item_description"]
+        item["quantity"] = row["quantity"]
+        item["classification"] = {
+            "scheme": classification_scheme,
+            "id": row["unspsc_code"],
+            "description": row["unspsc_description"],
+        }
+        item["additionalClassifications"] = [
+            {
+                "scheme": classification_scheme,
+                "id": row["unspsc_code"],
+                "description": row["unspsc_description"],
+            }
+        ]
+        item["unit"] = {
+            "name": row["uom"],
+            "value": _apply_currency(row["item_budget"], currency),
+        }
+        tender["items"] = [item]
+
+    # Awards + award items + suppliers. Pop the staging-written items dict and
+    # replace it with the tender line-item list (OCDS items is always a list).
+    awards: list[dict] = []
+    award = stage_block("awards")
+    award.pop("items", None)
+    if tender.get("items"):
+        award["items"] = tender["items"]
+    award["suppliers"] = [
+        {"id": row["awardee_org_id"], "name": row["awardee_organization_name"]}
+    ]
+    awards.append(award)
+    release["awards"] = awards
+
+    # Contracts.
+    contract = stage_block("contracts")
+    contracts: list[dict] = [contract]
+    release["contracts"] = contracts
+
+    # Bids (extension).
+    bids_cfg = ocds_cfg.get("bids", {})
+    if bids_cfg:
+        bids = {"details": []}
+        for bidder_name in row.get("bidders", []):
+            bids["details"].append(
+                {
+                    "id": f"{ocid}-bid-{len(bids['details']) + 1}",
+                    "tenderers": [{"id": bidder_name.lower().replace(" ", "-"), "name": bidder_name}],
+                    "status": bid_status_default,
+                    "date": row["closing_date"],
+                }
+            )
+        release["bids"] = bids
+
+    # Parties (buyer + suppliers).
+    parties = []
+    parties.append(
+        {
+            "id": buyer.get("id", row.get("pe_uacs_code")),
+            "name": row["procuring_entity"],
+            "roles": ["buyer", "procuringEntity"],
+        }
+    )
+    parties.append(
+        {
+            "id": row["awardee_org_id"],
+            "name": row["awardee_organization_name"],
+            "roles": ["supplier", "payee", "tenderer"],
+        }
+    )
+    release["parties"] = parties
+
+    # PhilGEPS extension block.
+    ext_payload: dict = {}
+    for ext_key, canonical in ocds_cfg.get("philgeps_extension", {}).items():
+        value = canon(canonical)
+        if value is not None:
+            ext_payload[ext_key] = value
+    if ext_payload:
+        release["philgeps"] = ext_payload
+
+    # Add `currency` next to every numeric `amount` (value blocks, unit/value, etc.).
+    _inject_currency(release, currency)
+
+    package = {
+        "uri": f"https://philgeps-ocds.example/{ocid}.json",
+        "version": "1.1.5",
+        "extensions": ocds_cfg.get("extensions", []),
+        "publishedDate": row["award_published_date"],
+        "publisher": {
+            "name": "Philippine Government Electronic Procurement System (PhilGEPS)",
+            "scheme": "PH-PhilGEPS",
+            "uid": "ph-philgeps",
+            "uri": "https://www.philgeps.gov.ph",
+        },
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "publicationPolicy": "https://philgeps-ocds.example/policy",
+        "releases": [{"release": release, "url": f"https://philgeps-ocds.example/releases/{ocid}.json"}],
+    }
+    return package
+
+
+def build_release_payload(ocds_cfg: dict, codelists: dict) -> dict:
+    """Wrap the sample release package with a compact summary for the webapp."""
+    package = build_sample_release_package(ocds_cfg, codelists)
+    release = package["releases"][0]["release"]
+
+    def block_keys(*names: str) -> list[str]:
+        keys = []
+        for name in names:
+            if isinstance(release.get(name), dict):
+                keys.extend(sorted(release[name].keys()))
+            elif isinstance(release.get(name), list) and release[name] and isinstance(release[name][0], dict):
+                keys.extend(sorted(release[name][0].keys()))
+        return keys
+
+    return {
+        "package": package,
+        "release": release,
+        "summary": {
+            "ocid": release.get("ocid"),
+            "release_id": release.get("id"),
+            "release_date": release.get("date"),
+            "version": package.get("version"),
+            "initiation_type": release.get("initiationType"),
+            "tag": release.get("tag"),
+            "language": release.get("language"),
+            "publisher": package.get("publisher", {}).get("name"),
+            "extensions": package.get("extensions", []),
+            "top_level_blocks": sorted(
+                k for k, v in release.items() if not isinstance(v, (list, dict)) or k in {"planning", "buyer"}
+            ),
+            "tender_item_count": len(release.get("tender", {}).get("items", [])),
+            "award_count": len(release.get("awards", [])),
+            "contract_count": len(release.get("contracts", [])),
+            "party_count": len(release.get("parties", [])),
+            "bid_count": len(release.get("bids", {}).get("details", [])),
+            "has_planning": "planning" in release,
+            "has_extension": "philgeps" in release,
+            "tender_keys": block_keys("tender"),
+            "award_keys": block_keys("awards"),
+            "contract_keys": block_keys("contracts"),
+        },
+    }
+
+
 def build_app_bundle(
     *,
     analysis: dict,
@@ -688,6 +1010,7 @@ def build_app_bundle(
             "blocks": staged_blocks,
             "defaults": defaults,
         },
+        "ocds_release": build_release_payload(ocds_cfg, codelists),
         "codelists": codelist_sections,
         "ocds_reverse": {k: v for k, v in ocds_reverse.items()},
         "summary": {

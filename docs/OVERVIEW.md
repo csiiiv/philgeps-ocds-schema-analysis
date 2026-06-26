@@ -82,6 +82,7 @@ A Vite + React + TypeScript single-page app renders every layer above as searcha
 | Canonical fields | All 53 fields with type, S1–S5 columns, OCDS paths, expandable detail |
 | OCDS crosswalk | 151 rows, filter by OCDS block and status (mapped / omit / derived / extension) |
 | OCDS staged output | `canonical_to_ocds.yaml` as one card per OCDS block — path → canonical field |
+| OCDS release package | Representative compiled OCDS release: overview, per-block jump links, syntax-highlighted raw JSON with copy and download |
 | Schema periods | Per-schema column inventory |
 | Schema evolution | Field-level change classification across 25 years |
 | Source column lookup | Paste a CSV header → canonical field → OCDS path |

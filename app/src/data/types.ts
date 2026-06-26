@@ -145,7 +145,37 @@ export interface SchemaBundle {
   excluded_source_columns: string[];
   ocds_crosswalk: CrosswalkRow[];
   ocds_staged: OcdsStaged;
+  ocds_release: OcdsReleasePayload;
   codelists: CodelistSection[];
   ocds_reverse: Record<string, string[]>;
   summary: BundleSummary;
+}
+
+export interface OcdsReleaseSummary {
+  ocid: string;
+  release_id: string;
+  release_date: string;
+  version: string;
+  initiation_type: string;
+  tag: string[];
+  language: string;
+  publisher: string;
+  extensions: string[];
+  top_level_blocks: string[];
+  tender_item_count: number;
+  award_count: number;
+  contract_count: number;
+  party_count: number;
+  bid_count: number;
+  has_planning: boolean;
+  has_extension: boolean;
+  tender_keys: string[];
+  award_keys: string[];
+  contract_keys: string[];
+}
+
+export interface OcdsReleasePayload {
+  package: Record<string, unknown>;
+  release: Record<string, unknown>;
+  summary: OcdsReleaseSummary;
 }
