@@ -128,4 +128,4 @@ No runtime dependency on those projects is required to use the reference files.
 - Live PhilGEPS API or WSF ingest
 - Automated validation against production exports (planned extension point)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to extend mappings and regenerate artifacts.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to extend mappings and regenerate artifacts. See [VALIDATION.md](VALIDATION.md) for how the sample OCDS release is validated.

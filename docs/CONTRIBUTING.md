@@ -72,28 +72,9 @@ Then regenerate.
 
 ## OCDS sample release validation
 
-`scripts/build_schema_field_map.py` emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` — a real OCDS 1.1 release package compiled from `SAMPLE_CANONICAL_ROW` using the staging rules in `config/canonical_to_ocds.yaml`.
+The build emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` and validates it through a three-layer pipeline: a build-time hard-fail, libcoveocds schema validation, and guard-integrity tests. The shared rules live in `scripts/_ocds_checks.py`.
 
-Validation runs in **three layers**, each catching regressions earlier than the last:
-
-| Layer | Script | What it catches | Requires |
-|-------|--------|-----------------|----------|
-| 1. Build-time hard-fail | `scripts/build_schema_field_map.py` (via `_ocds_checks.assert_release_package`) | Malformed structure, version/extension rules, date formats — **before the file is written** | Nothing extra |
-| 2. Pre-flight + deep schema | `scripts/validate_sample_release.py` | Same rules as layer 1, then full JSON Schema via `libcoveocds` | `pip install -r requirements-dev.txt` |
-| 3. Guard integrity | `scripts/test_ocds_checks.py` | Verifies the layer-1 rules still fire on each known regression class | Nothing extra |
-
-The shared rules live in `scripts/_ocds_checks.py` — edit there and both the build and the validator pick them up. Add a new regression class by extending `check_release_package()` and adding a case to `test_ocds_checks.py`.
-
-This guards the **shape** of our mapping output (schema conformance, extension resolution, date/currency formats), not the **correctness** of the mapping itself against real PhilGEPS exports. For validating real, compiled OCDS output from the downstream pipeline, run libcoveocds or the Data Review Tool against that project's actual release packages — that is out of scope for this repo.
-
-To run locally:
-
-```bash
-pip install -r requirements-dev.txt          # adds libcoveocds (needs Python ≥3.9, <3.13)
-python scripts/build_schema_field_map.py     # layer 1: hard-fails on bad shape
-python scripts/test_ocds_checks.py           # layer 3: guard integrity
-python scripts/validate_sample_release.py    # layer 2: full schema validation
-```
+See [VALIDATION.md](VALIDATION.md) for the full layered model, the rules each layer enforces, and how to extend them.
 
 ## Webapp development
 

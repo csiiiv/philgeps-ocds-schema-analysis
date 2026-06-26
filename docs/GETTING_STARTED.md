@@ -119,6 +119,7 @@ data/raw/
 ## Next steps
 
 - [OVERVIEW.md](OVERVIEW.md) — architecture and scope
+- [VALIDATION.md](VALIDATION.md) — how the sample OCDS release is validated (three layers)
 - [CONTRIBUTING.md](CONTRIBUTING.md) — extend mappings, add schemas, publish changes
 - [../app/README.md](../app/README.md) — webapp sections, scripts, architecture
 - [../README.md](../README.md) — full file index

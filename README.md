@@ -46,6 +46,21 @@ Production build: `npm run build` → static files in `app/dist/`.
 
 ---
 
+## OCDS validation
+
+The build script emits a sample OCDS 1.1 release package and validates it through a three-layer pipeline: a build-time hard-fail (so a malformed release can never land on disk), full schema validation via [libcoveocds](https://github.com/open-contracting/lib-cove-ocds), and guard-integrity tests. All three run in CI.
+
+```bash
+pip install -r requirements-dev.txt          # libcoveocds (Python ≥3.9, <3.13)
+python scripts/build_schema_field_map.py     # hard-fails on bad shape
+python scripts/test_ocds_checks.py           # guard integrity
+python scripts/validate_sample_release.py    # full OCDS 1.1 schema validation
+```
+
+→ [docs/VALIDATION.md](docs/VALIDATION.md) for the layered model and how to extend the rules
+
+---
+
 ## Schema periods (S1–S5)
 
 | Key | Period | Format | Columns |
