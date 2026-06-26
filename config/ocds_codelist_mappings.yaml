@@ -1,0 +1,60 @@
+# OCDS closed-codelist transforms applied at compile time (Template v0.92 feedback).
+# Local PhilGEPS labels → OCDS 1.1 codes.
+
+defaults:
+  currency: PHP
+  initiation_type: tender
+  tag:
+    - compiled
+  classification_scheme: UNSPSC
+  unit_scheme: UNCEFACT
+
+procurement_method:
+  Public Bidding: open
+  "Competitive Bidding (Public Bidding)": open
+  "National Competitive Bidding": open
+  "International Competitive Bidding": open
+  "Invitation to Bid (ITB)": open
+  "Invitation to Apply for Eligibility and to Bid": open
+  "Request for Quotation (RFQ)": limited
+  "Notice for Negotiated Procurement": direct
+  "Small Value Procurement": limited
+  "Local Purchase": limited
+  "Limited Source Bidding (Sec. 49)": limited
+  Shopping: limited
+  "Direct Contracting": direct
+  "Negotiated Procurement": direct
+
+main_procurement_category:
+  Goods: goods
+  "Goods - General Support Services": goods
+  Services: services
+  "Consulting Services": services
+  "Civil Works": works
+  Infrastructure: works
+
+tender_status:
+  Active: active
+  Closed: complete
+  Cancelled: cancelled
+  Failed: unsuccessful
+  Awarded: complete
+  Shortlisted: active
+
+award_status:
+  Posted: active
+  Updated: active
+  Awarded: active
+  Active: active
+  Cancelled: cancelled
+  Failed: unsuccessful
+
+contract_status:
+  Posted: active
+  Updated: active
+  Active: active
+  Draft_APR: pending
+  Cancelled: cancelled
+  Terminated: terminated
+
+bid_status_default: valid

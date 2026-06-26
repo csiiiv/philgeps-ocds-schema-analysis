@@ -1,0 +1,412 @@
+# Source column name → canonical field per schema version.
+# Canonical field inventory: references/PHILGEPS_CANONICAL_FIELD_MAP.json
+
+field_types:
+  string:
+    - procuring_entity
+    - pe_region
+    - pe_province
+    - pe_city_municipality
+    - pe_government_branch
+    - pe_organization_type
+    - pe_organization_type_grouped
+    - bid_reference_no
+    - solicitation_no
+    - notice_title
+    - classification
+    - notice_type
+    - business_category
+    - funding_source
+    - funding_instrument
+    - trade_agreement
+    - procurement_mode
+    - area_of_delivery
+    - calendar_type
+    - item_name
+    - item_description
+    - uom
+    - unspsc_code
+    - unspsc_description
+    - bid_notice_status
+    - award_reference_no
+    - award_title
+    - award_type
+    - award_notice_status
+    - reason_for_award
+    - awardee_organization_name
+    - awardee_country
+    - awardee_region
+    - awardee_province
+    - awardee_city_municipality
+    - awardee_size
+    - contract_no
+    - source_file
+    - source_schema
+    - record_id
+    - pe_uacs_code
+    - pe_address
+    - indicative_app
+    - app_annual_year
+    - app_status
+    - app_item_id
+    - app_pap_object_code
+    - app_program_title
+    - app_object_code
+    - app_pmo_end_user
+    - app_procurement_mode
+    - app_remarks
+    - pr_app_item_id
+    - pr_number
+    - pr_status
+    - procurement_category
+    - delivery_period
+    - lot_type
+    - project_name
+    - pr_bid_reference_no
+    - pe_control_no
+    - item_code
+    - awardee_org_id
+    - awardee_address
+    - source_path
+    - source_format
+  decimal:
+    - approved_budget
+    - quantity
+    - item_budget
+    - contract_amount
+    - app_total_estimated_budget
+    - app_mooe_estimated_budget
+    - app_co_estimated_budget
+    - app_total_budget
+    - app_total_budget_available
+    - app_total_approved_budget
+  integer:
+    - line_item_no
+    - contract_duration
+  date:
+    - app_advertisement_date
+    - app_submission_opening_date
+    - app_notice_of_award_date
+    - app_contract_signing_date
+    - pr_date
+    - pr_created_date
+  datetime:
+    - published_date
+    - prebid_date
+    - closing_date
+    - award_published_date
+    - award_date
+    - notice_to_proceed_date
+    - contract_effectivity_date
+    - contract_end_date
+    - source_period_start
+    - source_period_end
+  string_array:
+    - list_of_bidders
+    - bidders
+    - awardee_joint_venture
+
+# Unified competition field: `bidders` is populated from `list_of_bidders` (Schema 3)
+# or future 1.5/2.0 vendor tables at compile time.
+
+# Privacy: omit from canonical output (retain only in raw JSONL).
+excluded_source_columns:
+  - Created By
+  - Awardee Contact Person
+
+schema_1:
+  Organization Name: procuring_entity
+  Reference ID: bid_reference_no
+  Solicitation No.: solicitation_no
+  Notice Title: notice_title
+  Classification: classification
+  Notice Type: notice_type
+  Business Category: business_category
+  Funding Source: funding_source
+  Funding Instrument: funding_instrument
+  Approved Budget of the Contract: approved_budget
+  Trade Agreement: trade_agreement
+  Publish Date: published_date
+  PreBid Date: prebid_date
+  Closing Date: closing_date
+  Procurement Mode: procurement_mode
+  Area of Delivery: area_of_delivery
+  Contract Duration: contract_duration
+  Calendar Type: calendar_type
+  Line Item No: line_item_no
+  Item Name: item_name
+  Item Desc: item_description
+  Quantity: quantity
+  UOM: uom
+  Item Budget: item_budget
+  UNSPSC Code: unspsc_code
+  UNSPSC Description: unspsc_description
+  Notice Status: bid_notice_status
+  Award No.: award_reference_no
+  Award Title: award_title
+  Award Type: award_type
+  Publish Date(Award): award_published_date
+  Award Date: award_date
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Efectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Contract Amount: contract_amount
+  Contract No: contract_no
+  Award Status: award_notice_status
+  Reason for Award: reason_for_award
+  Awardee Corporate Title: awardee_organization_name
+
+schema_2:
+  Organization Name: procuring_entity
+  Reference ID: bid_reference_no
+  Solicitation No.: solicitation_no
+  Notice Title: notice_title
+  Classification: classification
+  Notice Type: notice_type
+  Business Category: business_category
+  Funding Source: funding_source
+  Funding Instrument: funding_instrument
+  Approved Budget of the Contract: approved_budget
+  Trade Agreement: trade_agreement
+  Publish Date: published_date
+  PreBid Date: prebid_date
+  Closing Date: closing_date
+  Procurement Mode: procurement_mode
+  Area of Delivery: area_of_delivery
+  Contract Duration: contract_duration
+  Calendar Type: calendar_type
+  Line Item No: line_item_no
+  Item Name: item_name
+  Item Desc: item_description
+  Quantity: quantity
+  Unit of Measurement: uom
+  Item Budget: item_budget
+  UNSPSC Code: unspsc_code
+  UNSPSC Description: unspsc_description
+  Notice Status: bid_notice_status
+  Award No.: award_reference_no
+  Award Title: award_title
+  Award Type: award_type
+  Publish Date(Award): award_published_date
+  Award Date: award_date
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Efectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Contract Amount: contract_amount
+  Contract No: contract_no
+  Award Status: award_notice_status
+  Reason for Award: reason_for_award
+  Awardee Corporate Title: awardee_organization_name
+
+schema_3:
+  Procuring Entity: procuring_entity
+  Bid Reference No.: bid_reference_no
+  Solicitation No.: solicitation_no
+  Notice Title: notice_title
+  Classification: classification
+  Notice Type: notice_type
+  Business Category: business_category
+  Funding Source: funding_source
+  Funding Instrument: funding_instrument
+  Approved Budget of the Contract: approved_budget
+  Trade Agreement: trade_agreement
+  Published Date: published_date
+  PreBid Date: prebid_date
+  Closing Date: closing_date
+  Procurement Mode: procurement_mode
+  Area of Delivery: area_of_delivery
+  Contract Duration: contract_duration
+  Calendar Type: calendar_type
+  Line Item No: line_item_no
+  Item Name: item_name
+  Item Description: item_description
+  Quantity: quantity
+  UOM: uom
+  Item Budget: item_budget
+  UNSPSC Code: unspsc_code
+  UNSPSC Description: unspsc_description
+  Notice Status: bid_notice_status
+  Award No.: award_reference_no
+  Award Title: award_title
+  Award Type: award_type
+  Published Date(Award): award_published_date
+  Award Date: award_date
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Efectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Contract Amount: contract_amount
+  Contract No: contract_no
+  Award Status: award_notice_status
+  Reason for Award: reason_for_award
+  Awardee Organization Name: awardee_organization_name
+  List of Bidder's: list_of_bidders
+
+schema_4:
+  Procuring Entity (PE): procuring_entity
+  Region: pe_region
+  Province: pe_province
+  City/Municipality: pe_city_municipality
+  Government Branch: pe_government_branch
+  PE Organization Type: pe_organization_type
+  PE Organization Type (Grouped): pe_organization_type_grouped
+  Bid Reference No.: bid_reference_no
+  Notice Title: notice_title
+  Classification: classification
+  Business Category: business_category
+  Funding Source: funding_source
+  Funding Instrument: funding_instrument
+  Approved Budget of the Contract: approved_budget
+  Trade Agreement: trade_agreement
+  Published Date: published_date
+  Closing Date: closing_date
+  Procurement Mode: procurement_mode
+  Area of Delivery: area_of_delivery
+  Contract Duration: contract_duration
+  Calendar Type: calendar_type
+  Line Item No: line_item_no
+  Item Name: item_name
+  Item Description: item_description
+  Quantity: quantity
+  UOM: uom
+  Item Budget: item_budget
+  UNSPSC Code: unspsc_code
+  UNSPSC Description: unspsc_description
+  Bid Notice Status: bid_notice_status
+  Award Reference No.: award_reference_no
+  Award Title: award_title
+  Published Date(Award): award_published_date
+  Award Date: award_date
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Effectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Contract Amount: contract_amount
+  Award Notice Status: award_notice_status
+  Awardee Organization Name: awardee_organization_name
+  Country of Awardee: awardee_country
+  Region of Awardee: awardee_region
+  Province of Awardee: awardee_province
+  City/Municipality of Awardee: awardee_city_municipality
+  Awardee Size: awardee_size
+  Awardee Joint Venture: awardee_joint_venture
+
+schema_5:
+  Procuring Entity (PE): procuring_entity
+  Region: pe_region
+  Province: pe_province
+  City/Municipality: pe_city_municipality
+  Government Branch: pe_government_branch
+  PE Organization Type: pe_organization_type
+  PE Organization Type (Grouped): pe_organization_type_grouped
+  Bid Reference No.: bid_reference_no
+  Notice Title: notice_title
+  Classification: classification
+  Business Category: business_category
+  Funding Source: funding_source
+  Funding Instrument: funding_instrument
+  Approved Budget of the Contract: approved_budget
+  Trade Agreement: trade_agreement
+  Published Date: published_date
+  Closing Date: closing_date
+  Procurement Mode: procurement_mode
+  Area of Delivery: area_of_delivery
+  Contract Duration: contract_duration
+  Calendar Type: calendar_type
+  Line Item No: line_item_no
+  Item Name: item_name
+  Item Description: item_description
+  Quantity: quantity
+  UOM: uom
+  Item Budget: item_budget
+  UNSPSC Code: unspsc_code
+  UNSPSC Description: unspsc_description
+  Bid Notice Status: bid_notice_status
+  Award Reference No.: award_reference_no
+  Award Title: award_title
+  Published Date(Award): award_published_date
+  Award Date: award_date
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Effectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Contract Amount: contract_amount
+  Award Notice Status: award_notice_status
+  Awardee Organization Name: awardee_organization_name
+  Country of Awardee: awardee_country
+  Region of Awardee: awardee_region
+  Province of Awardee: awardee_province
+  City/Municipality of Awardee: awardee_city_municipality
+  Awardee Size: awardee_size
+  Awardee Joint Venture: awardee_joint_venture
+
+# mPhilGEPS 2.0 WSF integrated export (72 columns, APP + PR + bid/award).
+schema_mphilgeps_wsf:
+  Procuring Entity (PE): procuring_entity
+  UACS Code: pe_uacs_code
+  PE Address: pe_address
+  Government Branch: pe_government_branch
+  PE Organization Type: pe_organization_type
+  PE Organization Type (Grouped): pe_organization_type_grouped
+  Indicative APP? (Y/N): indicative_app
+  APP_Annual Year: app_annual_year
+  APP_Status: app_status
+  APP_ItemID: app_item_id
+  Code (PAP) / Object Code (UACS): app_pap_object_code
+  Procurement Program/Project Title: app_program_title
+  APP_Object Code: app_object_code
+  PMO/End-User: app_pmo_end_user
+  APP_Procurement Mode: app_procurement_mode
+  Advertisement/Posting of IB/REI: app_advertisement_date
+  Submission/Opening of Bids: app_submission_opening_date
+  Notice of Award: app_notice_of_award_date
+  Contract Signing: app_contract_signing_date
+  Source of Funds: funding_source
+  Total Estimated Budget: app_total_estimated_budget
+  MOOE_Estimated Budget: app_mooe_estimated_budget
+  CO_Estimated Budget: app_co_estimated_budget
+  Remarks (Brief Description of Project): app_remarks
+  PR_APP_ItemID: pr_app_item_id
+  PE Purchase Request (PR) No.: pr_number
+  PR Date: pr_date
+  PR Created Date: pr_created_date
+  PR_Status: pr_status
+  Procurement Category: procurement_category
+  Classification: classification
+  Applicable Procurement Rule: trade_agreement
+  Area of Delivery/Project Location: area_of_delivery
+  Delivery Period/Contract Duration: delivery_period
+  Lot Type: lot_type
+  Project Name: project_name
+  Total APP Budget: app_total_budget
+  Total APP Budget Available: app_total_budget_available
+  Total Approved Budget: app_total_approved_budget
+  PR_Bid Ref. No.: pr_bid_reference_no
+  Bid Reference No.: bid_reference_no
+  PE Control No.: pe_control_no
+  Notice Title: notice_title
+  Procurement Mode: procurement_mode
+  Approved Budget for the Contract (ABC): approved_budget
+  Published Date: published_date
+  Closing Date: closing_date
+  Item Code: item_code
+  Item/Lot Name: item_name
+  Item/Lot Description: item_description
+  Quantity: quantity
+  Unit of Measure: uom
+  Item Budget: item_budget
+  Bid Notice Status: bid_notice_status
+  Award Reference No.: award_reference_no
+  Award Title: award_title
+  UNSPSC Code: unspsc_code
+  Item/Lot Name [2]: item_name
+  Published Date (Award): award_published_date
+  Award Date: award_date
+  Contract Amount: contract_amount
+  Award Notice Status (Item): award_notice_status
+  Notice to Proceed Date: notice_to_proceed_date
+  Contract Effectivity Date: contract_effectivity_date
+  Contract End Date: contract_end_date
+  Reason for Award: reason_for_award
+  Awardee OrgID: awardee_org_id
+  Awardee Organization Name: awardee_organization_name
+  Awardee Address: awardee_address
+  Awardee Size (MSME Category): awardee_size
+  Awardee Joint Venture: awardee_joint_venture

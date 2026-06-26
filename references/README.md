@@ -1,0 +1,35 @@
+# References index
+
+All committed reference artifacts for PhilGEPS schema and OCDS mapping. See [SCHEMA_FILES_COMPARISON.md](SCHEMA_FILES_COMPARISON.md) for a detailed guide.
+
+> Prefer to browse interactively? The [`app/`](../app/) webapp renders every file below as searchable UI — canonical fields, the 151-row OCDS crosswalk, the staged OCDS output, codelists, and schema evolution. See [../docs/GETTING_STARTED.md#run-the-webapp](../docs/GETTING_STARTED.md) to run it.
+
+## Start here
+
+| File | Use when |
+|------|----------|
+| [PHILGEPS_CANONICAL_FIELD_MAP.json](PHILGEPS_CANONICAL_FIELD_MAP.json) | Writing ingest code — S1–S5 column → canonical field |
+| [PHILGEPS_OCDS_CSV_CROSSWALK.md](PHILGEPS_OCDS_CSV_CROSSWALK.md) | Tracing OCDS paths to CSV / live-system fields |
+| [PHILGEPS_SCHEMA_ANALYSIS.json](PHILGEPS_SCHEMA_ANALYSIS.json) | Column layout facts across schema periods |
+
+## Schema evolution
+
+| File | Format |
+|------|--------|
+| [philgeps-schema.md](philgeps-schema.md) | Narrative deep dive (613 lines) |
+| [PHILGEPS_SCHEMA_ANALYSIS.md](PHILGEPS_SCHEMA_ANALYSIS.md) | Tables-only summary |
+| [PHILGEPS_SCHEMA_ANALYSIS.json](PHILGEPS_SCHEMA_ANALYSIS.json) | Machine-readable schema analysis |
+
+## OCDS / PS-DBM templates
+
+| File | Contents |
+|------|----------|
+| [philgeps-1.5.json](philgeps-1.5.json) | PhilGEPS 1.5 → OCDS 1.1.5 |
+| [mphilgeps.json](mphilgeps.json) | mPhilGEPS 2.0 → OCDS 1.1.5 |
+| [ocds_reference.json](ocds_reference.json) | OCDS 1.1.5 field tree |
+
+Regenerate canonical map + crosswalk Canonical column + webapp data bundle:
+
+```bash
+python scripts/build_schema_field_map.py
+```

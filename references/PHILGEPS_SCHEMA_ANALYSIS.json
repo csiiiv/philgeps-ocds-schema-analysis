@@ -1,0 +1,563 @@
+{
+  "source": "https://raw.githubusercontent.com/csiiiv/philgeps-awards-dashboard/refs/heads/main/frontend/src/pages/About/Schema.tsx",
+  "title": "PhilGEPS Schema Evolution Analysis",
+  "analysis_date": "2025-11-14",
+  "purpose": "Comprehensive understanding of PhilGEPS data structure changes from 2000-2025",
+  "summary": "PhilGEPS data has evolved through 5 distinct schemas over 25 years, reflecting the modernization of the Philippine government procurement system.",
+  "quick_reference": [
+    {
+      "schema": "Schema 1",
+      "period": "2000-2015",
+      "format": "XLSX (row 3)",
+      "columns": 40,
+      "key_change": "Original system, uses UOM"
+    },
+    {
+      "schema": "Schema 2",
+      "period": "2016-2020",
+      "format": "XLSX (row 3)",
+      "columns": 40,
+      "key_change": "Renamed UOM → Unit of Measurement"
+    },
+    {
+      "schema": "Schema 3",
+      "period": "2021-2024",
+      "format": "CSV (row 0)",
+      "columns": 43,
+      "key_change": "Added 3 fields: Created By, Contact Person, Bidder List"
+    },
+    {
+      "schema": "Schema 4",
+      "period": "2025",
+      "format": "CSV (row 0)",
+      "columns": 46,
+      "key_change": "Added 12 location fields, removed 9 legacy fields"
+    },
+    {
+      "schema": "Schema 5",
+      "period": "2021-2024-V2",
+      "format": "CSV (row 0)",
+      "columns": 46,
+      "key_change": "Same as Schema 4 - Early PhilGEPS 2.0 implementation"
+    }
+  ],
+  "semantic_grouping": [
+    {
+      "category": "PROCURING ENTITY",
+      "fields": [
+        {
+          "field_name": "Entity name",
+          "schema_1_2_2000_2020": "Organization Name",
+          "schema_3_2021_2024": "Procuring Entity",
+          "schema_4_5_2025_v2": "Procuring Entity (PE)",
+          "evolution_notes": "Renamed 2021, clarified 2025"
+        },
+        {
+          "field_name": "Region",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Region",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Province",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Province",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "City/Municipality",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "City/Municipality",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Government branch",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Government Branch",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Organization type",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "PE Organization Type",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Organization type (grouped)",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "PE Organization Type (Grouped)",
+          "evolution_notes": "NEW 2025/V2"
+        }
+      ]
+    },
+    {
+      "category": "BID IDENTIFICATION",
+      "fields": [
+        {
+          "field_name": "Reference number",
+          "schema_1_2_2000_2020": "Reference ID",
+          "schema_3_2021_2024": "Bid Reference No.",
+          "schema_4_5_2025_v2": "Bid Reference No.",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Solicitation number",
+          "schema_1_2_2000_2020": "Solicitation No.",
+          "schema_3_2021_2024": "Solicitation No.",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Legacy field dropped 2025"
+        },
+        {
+          "field_name": "Notice title",
+          "schema_1_2_2000_2020": "Notice Title",
+          "schema_3_2021_2024": "Notice Title",
+          "schema_4_5_2025_v2": "Notice Title",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Classification",
+          "schema_1_2_2000_2020": "Classification",
+          "schema_3_2021_2024": "Classification",
+          "schema_4_5_2025_v2": "Classification",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Notice type",
+          "schema_1_2_2000_2020": "Notice Type",
+          "schema_3_2021_2024": "Notice Type",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Redundant, dropped 2025"
+        },
+        {
+          "field_name": "Business category",
+          "schema_1_2_2000_2020": "Business Category",
+          "schema_3_2021_2024": "Business Category",
+          "schema_4_5_2025_v2": "Business Category",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BUDGET & FUNDING",
+      "fields": [
+        {
+          "field_name": "Funding source",
+          "schema_1_2_2000_2020": "Funding Source",
+          "schema_3_2021_2024": "Funding Source",
+          "schema_4_5_2025_v2": "Funding Source",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Funding instrument",
+          "schema_1_2_2000_2020": "Funding Instrument",
+          "schema_3_2021_2024": "Funding Instrument",
+          "schema_4_5_2025_v2": "Funding Instrument",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Approved budget",
+          "schema_1_2_2000_2020": "Approved Budget of the Contract",
+          "schema_3_2021_2024": "Approved Budget of the Contract",
+          "schema_4_5_2025_v2": "Approved Budget of the Contract",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Trade agreement",
+          "schema_1_2_2000_2020": "Trade Agreement",
+          "schema_3_2021_2024": "Trade Agreement",
+          "schema_4_5_2025_v2": "Trade Agreement",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BID TIMELINE",
+      "fields": [
+        {
+          "field_name": "Published date",
+          "schema_1_2_2000_2020": "Publish Date",
+          "schema_3_2021_2024": "Published Date",
+          "schema_4_5_2025_v2": "Published Date",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Pre-bid date",
+          "schema_1_2_2000_2020": "PreBid Date",
+          "schema_3_2021_2024": "PreBid Date",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Less common, dropped 2025"
+        },
+        {
+          "field_name": "Closing date",
+          "schema_1_2_2000_2020": "Closing Date",
+          "schema_3_2021_2024": "Closing Date",
+          "schema_4_5_2025_v2": "Closing Date",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "PROCUREMENT",
+      "fields": [
+        {
+          "field_name": "Procurement mode",
+          "schema_1_2_2000_2020": "Procurement Mode",
+          "schema_3_2021_2024": "Procurement Mode",
+          "schema_4_5_2025_v2": "Procurement Mode",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Area of delivery",
+          "schema_1_2_2000_2020": "Area of Delivery",
+          "schema_3_2021_2024": "Area of Delivery",
+          "schema_4_5_2025_v2": "Area of Delivery",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract duration",
+          "schema_1_2_2000_2020": "Contract Duration",
+          "schema_3_2021_2024": "Contract Duration",
+          "schema_4_5_2025_v2": "Contract Duration",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Calendar type",
+          "schema_1_2_2000_2020": "Calendar Type",
+          "schema_3_2021_2024": "Calendar Type",
+          "schema_4_5_2025_v2": "Calendar Type",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "LINE ITEMS",
+      "fields": [
+        {
+          "field_name": "Line item number",
+          "schema_1_2_2000_2020": "Line Item No",
+          "schema_3_2021_2024": "Line Item No",
+          "schema_4_5_2025_v2": "Line Item No",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Item name",
+          "schema_1_2_2000_2020": "Item Name",
+          "schema_3_2021_2024": "Item Name",
+          "schema_4_5_2025_v2": "Item Name",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Item description",
+          "schema_1_2_2000_2020": "Item Desc",
+          "schema_3_2021_2024": "Item Description",
+          "schema_4_5_2025_v2": "Item Description",
+          "evolution_notes": "Full word 2021"
+        },
+        {
+          "field_name": "Quantity",
+          "schema_1_2_2000_2020": "Quantity",
+          "schema_3_2021_2024": "Quantity",
+          "schema_4_5_2025_v2": "Quantity",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Unit of measure",
+          "schema_1_2_2000_2020": "UOM (2000-2015) / Unit of Measurement (2016-2020)",
+          "schema_3_2021_2024": "UOM",
+          "schema_4_5_2025_v2": "UOM",
+          "evolution_notes": "Changed 2016, reverted 2021"
+        },
+        {
+          "field_name": "Item budget",
+          "schema_1_2_2000_2020": "Item Budget",
+          "schema_3_2021_2024": "Item Budget",
+          "schema_4_5_2025_v2": "Item Budget",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "UNSPSC",
+      "fields": [
+        {
+          "field_name": "UNSPSC code",
+          "schema_1_2_2000_2020": "UNSPSC Code",
+          "schema_3_2021_2024": "UNSPSC Code",
+          "schema_4_5_2025_v2": "UNSPSC Code",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "UNSPSC description",
+          "schema_1_2_2000_2020": "UNSPSC Description",
+          "schema_3_2021_2024": "UNSPSC Description",
+          "schema_4_5_2025_v2": "UNSPSC Description",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BID STATUS",
+      "fields": [
+        {
+          "field_name": "Bid/notice status",
+          "schema_1_2_2000_2020": "Notice Status",
+          "schema_3_2021_2024": "Notice Status",
+          "schema_4_5_2025_v2": "Bid Notice Status",
+          "evolution_notes": "More descriptive 2025"
+        },
+        {
+          "field_name": "Created by user",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "Created By",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, privacy concern 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD ID",
+      "fields": [
+        {
+          "field_name": "Award reference",
+          "schema_1_2_2000_2020": "Award No.",
+          "schema_3_2021_2024": "Award No.",
+          "schema_4_5_2025_v2": "Award Reference No.",
+          "evolution_notes": "More descriptive 2025"
+        },
+        {
+          "field_name": "Award title",
+          "schema_1_2_2000_2020": "Award Title",
+          "schema_3_2021_2024": "Award Title",
+          "schema_4_5_2025_v2": "Award Title",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Award type",
+          "schema_1_2_2000_2020": "Award Type",
+          "schema_3_2021_2024": "Award Type",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Simplified 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD TIMELINE",
+      "fields": [
+        {
+          "field_name": "Published date (award)",
+          "schema_1_2_2000_2020": "Publish Date(Award)",
+          "schema_3_2021_2024": "Published Date(Award)",
+          "schema_4_5_2025_v2": "Published Date(Award)",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Award date",
+          "schema_1_2_2000_2020": "Award Date",
+          "schema_3_2021_2024": "Award Date",
+          "schema_4_5_2025_v2": "Award Date",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Notice to proceed",
+          "schema_1_2_2000_2020": "Notice to Proceed Date",
+          "schema_3_2021_2024": "Notice to Proceed Date",
+          "schema_4_5_2025_v2": "Notice to Proceed Date",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract effectivity",
+          "schema_1_2_2000_2020": "Contract Efectivity Date",
+          "schema_3_2021_2024": "Contract Efectivity Date",
+          "schema_4_5_2025_v2": "Contract Effectivity Date",
+          "evolution_notes": "Typo fixed 2025"
+        },
+        {
+          "field_name": "Contract end date",
+          "schema_1_2_2000_2020": "Contract End Date",
+          "schema_3_2021_2024": "Contract End Date",
+          "schema_4_5_2025_v2": "Contract End Date",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "CONTRACT",
+      "fields": [
+        {
+          "field_name": "Contract amount",
+          "schema_1_2_2000_2020": "Contract Amount",
+          "schema_3_2021_2024": "Contract Amount",
+          "schema_4_5_2025_v2": "Contract Amount",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract number",
+          "schema_1_2_2000_2020": "Contract No",
+          "schema_3_2021_2024": "Contract No",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Auto-generated 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD STATUS",
+      "fields": [
+        {
+          "field_name": "Award status",
+          "schema_1_2_2000_2020": "Award Status",
+          "schema_3_2021_2024": "Award Status",
+          "schema_4_5_2025_v2": "Award Notice Status",
+          "evolution_notes": "Consistent naming 2025"
+        },
+        {
+          "field_name": "Reason for award",
+          "schema_1_2_2000_2020": "Reason for Award",
+          "schema_3_2021_2024": "Reason for Award",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Simplified 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARDEE INFORMATION",
+      "fields": [
+        {
+          "field_name": "Organization name",
+          "schema_1_2_2000_2020": "Awardee Corporate Title",
+          "schema_3_2021_2024": "Awardee Organization Name",
+          "schema_4_5_2025_v2": "Awardee Organization Name",
+          "evolution_notes": "Renamed in 2021"
+        },
+        {
+          "field_name": "Contact person",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "Awardee Contact Person",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, removed 2025 (privacy)"
+        },
+        {
+          "field_name": "Country",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Country of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Region",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Region of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Province",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Province of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "City/Municipality",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "City/Municipality of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Awardee size",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Awardee Size",
+          "evolution_notes": "NEW in 2025/V2 (Small/Med/Large)"
+        },
+        {
+          "field_name": "Joint venture",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Awardee Joint Venture",
+          "evolution_notes": "NEW in 2025/V2 (JV partners)"
+        }
+      ]
+    },
+    {
+      "category": "COMPETITION",
+      "fields": [
+        {
+          "field_name": "List of bidders",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "List of Bidder's",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, sensitive data 2025"
+        }
+      ]
+    }
+  ],
+  "side_by_side_comparison": {
+    "legend": {
+      "star": "New tracking/metadata field",
+      "globe": "Location/classification field",
+      "bold": "Major rename or new field"
+    },
+    "rows": [
+      {"position": 1, "schema_1": "Organization Name", "schema_2": "Organization Name", "schema_3": "Procuring Entity", "schema_4": "Procuring Entity (PE)", "schema_5": "Procuring Entity (PE)"},
+      {"position": 2, "schema_1": "Reference ID", "schema_2": "Reference ID", "schema_3": "Bid Reference No.", "schema_4": "Region", "schema_4_flags": ["location"], "schema_5": "Region", "schema_5_flags": ["location"]},
+      {"position": 3, "schema_1": "Solicitation No.", "schema_2": "Solicitation No.", "schema_3": "Solicitation No.", "schema_4": "Province", "schema_4_flags": ["location"], "schema_5": "Province", "schema_5_flags": ["location"]},
+      {"position": 4, "schema_1": "Notice Title", "schema_2": "Notice Title", "schema_3": "Notice Title", "schema_4": "City/Municipality", "schema_4_flags": ["location"], "schema_5": "City/Municipality", "schema_5_flags": ["location"]},
+      {"position": 5, "schema_1": "Publish Date", "schema_2": "Publish Date", "schema_3": "Notice Type", "schema_4": "Government Branch", "schema_4_flags": ["location"], "schema_5": "Government Branch", "schema_5_flags": ["location"]},
+      {"position": 6, "schema_1": "Classification", "schema_2": "Classification", "schema_3": "Classification", "schema_4": "PE Organization Type", "schema_4_flags": ["location"], "schema_5": "PE Organization Type", "schema_5_flags": ["location"]},
+      {"position": 7, "schema_1": "Notice Type", "schema_2": "Notice Type", "schema_3": "Procurement Mode", "schema_4": "PE Organization Type (Grouped)", "schema_4_flags": ["location"], "schema_5": "PE Organization Type (Grouped)", "schema_5_flags": ["location"]},
+      {"position": 8, "schema_1": "Business Category", "schema_2": "Business Category", "schema_3": "Business Category", "schema_4": "Bid Reference No.", "schema_5": "Bid Reference No."},
+      {"position": 9, "schema_1": "Funding Source", "schema_2": "Funding Source", "schema_3": "Funding Source", "schema_4": "Notice Title", "schema_5": "Notice Title"},
+      {"position": 10, "schema_1": "Funding Instrument", "schema_2": "Funding Instrument", "schema_3": "Funding Instrument", "schema_4": "Classification", "schema_5": "Classification"},
+      {"position": 11, "schema_1": "Procurement Mode", "schema_2": "Procurement Mode", "schema_3": "Trade Agreement", "schema_4": "Procurement Mode", "schema_5": "Procurement Mode"},
+      {"position": 12, "schema_1": "Trade Agreement", "schema_2": "Trade Agreement", "schema_3": "Approved Budget of the Contract", "schema_4": "Business Category", "schema_5": "Business Category"},
+      {"position": 13, "schema_1": "Approved Budget of the Contract", "schema_2": "Approved Budget of the Contract", "schema_3": "Published Date", "schema_4": "Funding Source", "schema_5": "Funding Source"},
+      {"position": 14, "schema_1": "Area of Delivery", "schema_2": "Area of Delivery", "schema_3": "Closing Date", "schema_4": "Funding Instrument", "schema_5": "Funding Instrument"},
+      {"position": 15, "schema_1": "Contract Duration", "schema_2": "Contract Duration", "schema_3": "PreBid Date", "schema_4": "Trade Agreement", "schema_5": "Trade Agreement"},
+      {"position": 16, "schema_1": "Calendar Type", "schema_2": "Calendar Type", "schema_3": "Area of Delivery", "schema_4": "Approved Budget of the Contract", "schema_5": "Approved Budget of the Contract"},
+      {"position": 17, "schema_1": "Line Item No", "schema_2": "Line Item No", "schema_3": "Contract Duration", "schema_4": "Published Date", "schema_5": "Published Date"},
+      {"position": 18, "schema_1": "Item Name", "schema_2": "Item Name", "schema_3": "Calendar Type", "schema_4": "Closing Date", "schema_5": "Closing Date"},
+      {"position": 19, "schema_1": "Item Desc", "schema_2": "Item Desc", "schema_3": "Line Item No", "schema_4": "Area of Delivery", "schema_5": "Area of Delivery"},
+      {"position": 20, "schema_1": "Quantity", "schema_2": "Quantity", "schema_3": "Item Name", "schema_4": "Contract Duration", "schema_5": "Contract Duration"},
+      {"position": 21, "schema_1": "UOM", "schema_1_flags": ["major"], "schema_2": "Unit of Measurement", "schema_2_flags": ["major"], "schema_3": "Item Description", "schema_4": "Calendar Type", "schema_5": "Calendar Type"},
+      {"position": 22, "schema_1": "Item Budget", "schema_2": "Item Budget", "schema_3": "Quantity", "schema_4": "Line Item No", "schema_5": "Line Item No"},
+      {"position": 23, "schema_1": "PreBid Date", "schema_2": "PreBid Date", "schema_3": "UOM", "schema_4": "Item Name", "schema_5": "Item Name"},
+      {"position": 24, "schema_1": "Closing Date", "schema_2": "Closing Date", "schema_3": "Item Budget", "schema_4": "Item Description", "schema_5": "Item Description"},
+      {"position": 25, "schema_1": "Notice Status", "schema_2": "Notice Status", "schema_3": "Notice Status", "schema_4": "Quantity", "schema_5": "Quantity"},
+      {"position": 26, "schema_1": "Award No.", "schema_2": "Award No.", "schema_3": "Created By", "schema_3_flags": ["major", "metadata"], "schema_4": "UOM", "schema_5": "UOM"},
+      {"position": 27, "schema_1": "Award Title", "schema_2": "Award Title", "schema_3": "Award No.", "schema_4": "Item Budget", "schema_5": "Item Budget"},
+      {"position": 28, "schema_1": "Award Type", "schema_2": "Award Type", "schema_3": "Award Title", "schema_4": "Bid Notice Status", "schema_4_flags": ["major"], "schema_5": "Bid Notice Status", "schema_5_flags": ["major"]},
+      {"position": 29, "schema_1": "UNSPSC Code", "schema_2": "UNSPSC Code", "schema_3": "Award Type", "schema_4": "Award Reference No.", "schema_5": "Award Reference No."},
+      {"position": 30, "schema_1": "UNSPSC Description", "schema_2": "UNSPSC Description", "schema_3": "UNSPSC Code", "schema_4": "Award Title", "schema_5": "Award Title"},
+      {"position": 31, "schema_1": "Awardee Corporate Title", "schema_2": "Awardee Corporate Title", "schema_3": "UNSPSC Description", "schema_4": "UNSPSC Code", "schema_5": "UNSPSC Code"},
+      {"position": 32, "schema_1": "Contract Amount", "schema_2": "Contract Amount", "schema_3": "Published Date(Award)", "schema_4": "UNSPSC Description", "schema_5": "UNSPSC Description"},
+      {"position": 33, "schema_1": "Contract No", "schema_2": "Contract No", "schema_3": "Award Date", "schema_4": "Published Date(Award)", "schema_5": "Published Date(Award)"},
+      {"position": 34, "schema_1": "Publish Date(Award)", "schema_2": "Publish Date(Award)", "schema_3": "Notice to Proceed Date", "schema_4": "Award Date", "schema_5": "Award Date"},
+      {"position": 35, "schema_1": "Award Date", "schema_2": "Award Date", "schema_3": "Contract No", "schema_4": "Contract Amount", "schema_5": "Contract Amount"},
+      {"position": 36, "schema_1": "Notice to Proceed Date", "schema_2": "Notice to Proceed Date", "schema_3": "Contract Amount", "schema_4": "Award Notice Status", "schema_4_flags": ["major"], "schema_5": "Award Notice Status", "schema_5_flags": ["major"]},
+      {"position": 37, "schema_1": "Contract Efectivity Date", "schema_1_flags": ["typo"], "schema_2": "Contract Efectivity Date", "schema_2_flags": ["typo"], "schema_3": "Contract Efectivity Date", "schema_3_flags": ["typo"], "schema_4": "Notice to Proceed Date", "schema_5": "Notice to Proceed Date"},
+      {"position": 38, "schema_1": "Contract End Date", "schema_2": "Contract End Date", "schema_3": "Contract End Date", "schema_4": "Contract Effectivity Date", "schema_4_flags": ["fixed_typo"], "schema_5": "Contract Effectivity Date", "schema_5_flags": ["fixed_typo"]},
+      {"position": 39, "schema_1": "Reason for Award", "schema_2": "Reason for Award", "schema_3": "Award Status", "schema_4": "Contract End Date", "schema_5": "Contract End Date"},
+      {"position": 40, "schema_1": "Award Status", "schema_2": "Award Status", "schema_3": "Reason for Award", "schema_4": "Awardee Organization Name", "schema_5": "Awardee Organization Name"},
+      {"position": 41, "schema_1": null, "schema_2": null, "schema_3": "Awardee Organization Name", "schema_4": "Country of Awardee", "schema_4_flags": ["major", "location"], "schema_5": "Country of Awardee", "schema_5_flags": ["major", "location"]},
+      {"position": 42, "schema_1": null, "schema_2": null, "schema_3": "Awardee Contact Person", "schema_3_flags": ["major", "metadata"], "schema_4": "Region of Awardee", "schema_4_flags": ["major", "location"], "schema_5": "Region of Awardee", "schema_5_flags": ["major", "location"]},
+      {"position": 43, "schema_1": null, "schema_2": null, "schema_3": "List of Bidder's", "schema_3_flags": ["major", "metadata"], "schema_4": "Province of Awardee", "schema_4_flags": ["major", "location"], "schema_5": "Province of Awardee", "schema_5_flags": ["major", "location"]},
+      {"position": 44, "schema_1": null, "schema_2": null, "schema_3": null, "schema_4": "City/Municipality of Awardee", "schema_4_flags": ["major", "location"], "schema_5": "City/Municipality of Awardee", "schema_5_flags": ["major", "location"]},
+      {"position": 45, "schema_1": null, "schema_2": null, "schema_3": null, "schema_4": "Awardee Size", "schema_4_flags": ["major", "location"], "schema_5": "Awardee Size", "schema_5_flags": ["major", "location"]},
+      {"position": 46, "schema_1": null, "schema_2": null, "schema_3": null, "schema_4": "Awardee Joint Venture", "schema_4_flags": ["major", "location"], "schema_5": "Awardee Joint Venture", "schema_5_flags": ["major", "location"]}
+    ]
+  },
+  "key_observations": [
+    "Location Fields - Both PE and Awardee expanded from 1 field to 7 fields",
+    "Core Procurement Fields - Budget, funding, and procurement mode remain stable",
+    "Privacy Removals - User tracking and bidder list fields removed in 2025",
+    "Legacy Field Removal - Deprecated fields systematically eliminated",
+    "Naming Standardization - Status field names made consistent"
+  ]
+}

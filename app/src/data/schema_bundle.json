@@ -1,0 +1,4373 @@
+{
+  "metadata": {
+    "title": "PhilGEPS Schema Explorer",
+    "generated_at": "2026-06-26T16:39:38.420471+00:00",
+    "schema_analysis_date": "2025-11-14",
+    "ocds_template": "PS-DBM v0.91 (OCDS 1.1.5)",
+    "ocds_mapping_version": "0.92-draft",
+    "ocid_prefix": "ocds-philgeps",
+    "sources": {
+      "schema_analysis": "references/PHILGEPS_SCHEMA_ANALYSIS.json",
+      "schema_mappings": "config/schema_mappings.yaml",
+      "canonical_to_ocds": "config/canonical_to_ocds.yaml",
+      "codelists": "config/ocds_codelist_mappings.yaml",
+      "crosswalk": "references/PHILGEPS_OCDS_CSV_CROSSWALK.md"
+    }
+  },
+  "schemas": {
+    "schema_1": {
+      "key": "schema_1",
+      "short_key": "S1",
+      "label": "Schema 1",
+      "period": "2000-2015",
+      "format": "XLSX (row 3)",
+      "columns": 40,
+      "key_change": "Original system, uses UOM",
+      "source_columns": {
+        "Organization Name": "procuring_entity",
+        "Reference ID": "bid_reference_no",
+        "Solicitation No.": "solicitation_no",
+        "Notice Title": "notice_title",
+        "Classification": "classification",
+        "Notice Type": "notice_type",
+        "Business Category": "business_category",
+        "Funding Source": "funding_source",
+        "Funding Instrument": "funding_instrument",
+        "Approved Budget of the Contract": "approved_budget",
+        "Trade Agreement": "trade_agreement",
+        "Publish Date": "published_date",
+        "PreBid Date": "prebid_date",
+        "Closing Date": "closing_date",
+        "Procurement Mode": "procurement_mode",
+        "Area of Delivery": "area_of_delivery",
+        "Contract Duration": "contract_duration",
+        "Calendar Type": "calendar_type",
+        "Line Item No": "line_item_no",
+        "Item Name": "item_name",
+        "Item Desc": "item_description",
+        "Quantity": "quantity",
+        "UOM": "uom",
+        "Item Budget": "item_budget",
+        "UNSPSC Code": "unspsc_code",
+        "UNSPSC Description": "unspsc_description",
+        "Notice Status": "bid_notice_status",
+        "Award No.": "award_reference_no",
+        "Award Title": "award_title",
+        "Award Type": "award_type",
+        "Publish Date(Award)": "award_published_date",
+        "Award Date": "award_date",
+        "Notice to Proceed Date": "notice_to_proceed_date",
+        "Contract Efectivity Date": "contract_effectivity_date",
+        "Contract End Date": "contract_end_date",
+        "Contract Amount": "contract_amount",
+        "Contract No": "contract_no",
+        "Award Status": "award_notice_status",
+        "Reason for Award": "reason_for_award",
+        "Awardee Corporate Title": "awardee_organization_name"
+      }
+    },
+    "schema_2": {
+      "key": "schema_2",
+      "short_key": "S2",
+      "label": "Schema 2",
+      "period": "2016-2020",
+      "format": "XLSX (row 3)",
+      "columns": 40,
+      "key_change": "Renamed UOM → Unit of Measurement",
+      "source_columns": {
+        "Organization Name": "procuring_entity",
+        "Reference ID": "bid_reference_no",
+        "Solicitation No.": "solicitation_no",
+        "Notice Title": "notice_title",
+        "Classification": "classification",
+        "Notice Type": "notice_type",
+        "Business Category": "business_category",
+        "Funding Source": "funding_source",
+        "Funding Instrument": "funding_instrument",
+        "Approved Budget of the Contract": "approved_budget",
+        "Trade Agreement": "trade_agreement",
+        "Publish Date": "published_date",
+        "PreBid Date": "prebid_date",
+        "Closing Date": "closing_date",
+        "Procurement Mode": "procurement_mode",
+        "Area of Delivery": "area_of_delivery",
+        "Contract Duration": "contract_duration",
+        "Calendar Type": "calendar_type",
+        "Line Item No": "line_item_no",
+        "Item Name": "item_name",
+        "Item Desc": "item_description",
+        "Quantity": "quantity",
+        "Unit of Measurement": "uom",
+        "Item Budget": "item_budget",
+        "UNSPSC Code": "unspsc_code",
+        "UNSPSC Description": "unspsc_description",
+        "Notice Status": "bid_notice_status",
+        "Award No.": "award_reference_no",
+        "Award Title": "award_title",
+        "Award Type": "award_type",
+        "Publish Date(Award)": "award_published_date",
+        "Award Date": "award_date",
+        "Notice to Proceed Date": "notice_to_proceed_date",
+        "Contract Efectivity Date": "contract_effectivity_date",
+        "Contract End Date": "contract_end_date",
+        "Contract Amount": "contract_amount",
+        "Contract No": "contract_no",
+        "Award Status": "award_notice_status",
+        "Reason for Award": "reason_for_award",
+        "Awardee Corporate Title": "awardee_organization_name"
+      }
+    },
+    "schema_3": {
+      "key": "schema_3",
+      "short_key": "S3",
+      "label": "Schema 3",
+      "period": "2021-2024",
+      "format": "CSV (row 0)",
+      "columns": 43,
+      "key_change": "Added 3 fields: Created By, Contact Person, Bidder List",
+      "source_columns": {
+        "Procuring Entity": "procuring_entity",
+        "Bid Reference No.": "bid_reference_no",
+        "Solicitation No.": "solicitation_no",
+        "Notice Title": "notice_title",
+        "Classification": "classification",
+        "Notice Type": "notice_type",
+        "Business Category": "business_category",
+        "Funding Source": "funding_source",
+        "Funding Instrument": "funding_instrument",
+        "Approved Budget of the Contract": "approved_budget",
+        "Trade Agreement": "trade_agreement",
+        "Published Date": "published_date",
+        "PreBid Date": "prebid_date",
+        "Closing Date": "closing_date",
+        "Procurement Mode": "procurement_mode",
+        "Area of Delivery": "area_of_delivery",
+        "Contract Duration": "contract_duration",
+        "Calendar Type": "calendar_type",
+        "Line Item No": "line_item_no",
+        "Item Name": "item_name",
+        "Item Description": "item_description",
+        "Quantity": "quantity",
+        "UOM": "uom",
+        "Item Budget": "item_budget",
+        "UNSPSC Code": "unspsc_code",
+        "UNSPSC Description": "unspsc_description",
+        "Notice Status": "bid_notice_status",
+        "Award No.": "award_reference_no",
+        "Award Title": "award_title",
+        "Award Type": "award_type",
+        "Published Date(Award)": "award_published_date",
+        "Award Date": "award_date",
+        "Notice to Proceed Date": "notice_to_proceed_date",
+        "Contract Efectivity Date": "contract_effectivity_date",
+        "Contract End Date": "contract_end_date",
+        "Contract Amount": "contract_amount",
+        "Contract No": "contract_no",
+        "Award Status": "award_notice_status",
+        "Reason for Award": "reason_for_award",
+        "Awardee Organization Name": "awardee_organization_name",
+        "List of Bidder's": "list_of_bidders"
+      }
+    },
+    "schema_4": {
+      "key": "schema_4",
+      "short_key": "S4",
+      "label": "Schema 4",
+      "period": "2025",
+      "format": "CSV (row 0)",
+      "columns": 46,
+      "key_change": "Added 12 location fields, removed 9 legacy fields",
+      "source_columns": {
+        "Procuring Entity (PE)": "procuring_entity",
+        "Region": "pe_region",
+        "Province": "pe_province",
+        "City/Municipality": "pe_city_municipality",
+        "Government Branch": "pe_government_branch",
+        "PE Organization Type": "pe_organization_type",
+        "PE Organization Type (Grouped)": "pe_organization_type_grouped",
+        "Bid Reference No.": "bid_reference_no",
+        "Notice Title": "notice_title",
+        "Classification": "classification",
+        "Business Category": "business_category",
+        "Funding Source": "funding_source",
+        "Funding Instrument": "funding_instrument",
+        "Approved Budget of the Contract": "approved_budget",
+        "Trade Agreement": "trade_agreement",
+        "Published Date": "published_date",
+        "Closing Date": "closing_date",
+        "Procurement Mode": "procurement_mode",
+        "Area of Delivery": "area_of_delivery",
+        "Contract Duration": "contract_duration",
+        "Calendar Type": "calendar_type",
+        "Line Item No": "line_item_no",
+        "Item Name": "item_name",
+        "Item Description": "item_description",
+        "Quantity": "quantity",
+        "UOM": "uom",
+        "Item Budget": "item_budget",
+        "UNSPSC Code": "unspsc_code",
+        "UNSPSC Description": "unspsc_description",
+        "Bid Notice Status": "bid_notice_status",
+        "Award Reference No.": "award_reference_no",
+        "Award Title": "award_title",
+        "Published Date(Award)": "award_published_date",
+        "Award Date": "award_date",
+        "Notice to Proceed Date": "notice_to_proceed_date",
+        "Contract Effectivity Date": "contract_effectivity_date",
+        "Contract End Date": "contract_end_date",
+        "Contract Amount": "contract_amount",
+        "Award Notice Status": "award_notice_status",
+        "Awardee Organization Name": "awardee_organization_name",
+        "Country of Awardee": "awardee_country",
+        "Region of Awardee": "awardee_region",
+        "Province of Awardee": "awardee_province",
+        "City/Municipality of Awardee": "awardee_city_municipality",
+        "Awardee Size": "awardee_size",
+        "Awardee Joint Venture": "awardee_joint_venture"
+      }
+    },
+    "schema_5": {
+      "key": "schema_5",
+      "short_key": "S5",
+      "label": "Schema 5",
+      "period": "2021-2024-V2",
+      "format": "CSV (row 0)",
+      "columns": 46,
+      "key_change": "Same as Schema 4 - Early PhilGEPS 2.0 implementation",
+      "source_columns": {
+        "Procuring Entity (PE)": "procuring_entity",
+        "Region": "pe_region",
+        "Province": "pe_province",
+        "City/Municipality": "pe_city_municipality",
+        "Government Branch": "pe_government_branch",
+        "PE Organization Type": "pe_organization_type",
+        "PE Organization Type (Grouped)": "pe_organization_type_grouped",
+        "Bid Reference No.": "bid_reference_no",
+        "Notice Title": "notice_title",
+        "Classification": "classification",
+        "Business Category": "business_category",
+        "Funding Source": "funding_source",
+        "Funding Instrument": "funding_instrument",
+        "Approved Budget of the Contract": "approved_budget",
+        "Trade Agreement": "trade_agreement",
+        "Published Date": "published_date",
+        "Closing Date": "closing_date",
+        "Procurement Mode": "procurement_mode",
+        "Area of Delivery": "area_of_delivery",
+        "Contract Duration": "contract_duration",
+        "Calendar Type": "calendar_type",
+        "Line Item No": "line_item_no",
+        "Item Name": "item_name",
+        "Item Description": "item_description",
+        "Quantity": "quantity",
+        "UOM": "uom",
+        "Item Budget": "item_budget",
+        "UNSPSC Code": "unspsc_code",
+        "UNSPSC Description": "unspsc_description",
+        "Bid Notice Status": "bid_notice_status",
+        "Award Reference No.": "award_reference_no",
+        "Award Title": "award_title",
+        "Published Date(Award)": "award_published_date",
+        "Award Date": "award_date",
+        "Notice to Proceed Date": "notice_to_proceed_date",
+        "Contract Effectivity Date": "contract_effectivity_date",
+        "Contract End Date": "contract_end_date",
+        "Contract Amount": "contract_amount",
+        "Award Notice Status": "award_notice_status",
+        "Awardee Organization Name": "awardee_organization_name",
+        "Country of Awardee": "awardee_country",
+        "Region of Awardee": "awardee_region",
+        "Province of Awardee": "awardee_province",
+        "City/Municipality of Awardee": "awardee_city_municipality",
+        "Awardee Size": "awardee_size",
+        "Awardee Joint Venture": "awardee_joint_venture"
+      }
+    }
+  },
+  "semantic_grouping": [
+    {
+      "category": "PROCURING ENTITY",
+      "fields": [
+        {
+          "field_name": "Entity name",
+          "schema_1_2_2000_2020": "Organization Name",
+          "schema_3_2021_2024": "Procuring Entity",
+          "schema_4_5_2025_v2": "Procuring Entity (PE)",
+          "evolution_notes": "Renamed 2021, clarified 2025"
+        },
+        {
+          "field_name": "Region",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Region",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Province",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Province",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "City/Municipality",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "City/Municipality",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Government branch",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Government Branch",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Organization type",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "PE Organization Type",
+          "evolution_notes": "NEW 2025/V2"
+        },
+        {
+          "field_name": "Organization type (grouped)",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "PE Organization Type (Grouped)",
+          "evolution_notes": "NEW 2025/V2"
+        }
+      ]
+    },
+    {
+      "category": "BID IDENTIFICATION",
+      "fields": [
+        {
+          "field_name": "Reference number",
+          "schema_1_2_2000_2020": "Reference ID",
+          "schema_3_2021_2024": "Bid Reference No.",
+          "schema_4_5_2025_v2": "Bid Reference No.",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Solicitation number",
+          "schema_1_2_2000_2020": "Solicitation No.",
+          "schema_3_2021_2024": "Solicitation No.",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Legacy field dropped 2025"
+        },
+        {
+          "field_name": "Notice title",
+          "schema_1_2_2000_2020": "Notice Title",
+          "schema_3_2021_2024": "Notice Title",
+          "schema_4_5_2025_v2": "Notice Title",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Classification",
+          "schema_1_2_2000_2020": "Classification",
+          "schema_3_2021_2024": "Classification",
+          "schema_4_5_2025_v2": "Classification",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Notice type",
+          "schema_1_2_2000_2020": "Notice Type",
+          "schema_3_2021_2024": "Notice Type",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Redundant, dropped 2025"
+        },
+        {
+          "field_name": "Business category",
+          "schema_1_2_2000_2020": "Business Category",
+          "schema_3_2021_2024": "Business Category",
+          "schema_4_5_2025_v2": "Business Category",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BUDGET & FUNDING",
+      "fields": [
+        {
+          "field_name": "Funding source",
+          "schema_1_2_2000_2020": "Funding Source",
+          "schema_3_2021_2024": "Funding Source",
+          "schema_4_5_2025_v2": "Funding Source",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Funding instrument",
+          "schema_1_2_2000_2020": "Funding Instrument",
+          "schema_3_2021_2024": "Funding Instrument",
+          "schema_4_5_2025_v2": "Funding Instrument",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Approved budget",
+          "schema_1_2_2000_2020": "Approved Budget of the Contract",
+          "schema_3_2021_2024": "Approved Budget of the Contract",
+          "schema_4_5_2025_v2": "Approved Budget of the Contract",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Trade agreement",
+          "schema_1_2_2000_2020": "Trade Agreement",
+          "schema_3_2021_2024": "Trade Agreement",
+          "schema_4_5_2025_v2": "Trade Agreement",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BID TIMELINE",
+      "fields": [
+        {
+          "field_name": "Published date",
+          "schema_1_2_2000_2020": "Publish Date",
+          "schema_3_2021_2024": "Published Date",
+          "schema_4_5_2025_v2": "Published Date",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Pre-bid date",
+          "schema_1_2_2000_2020": "PreBid Date",
+          "schema_3_2021_2024": "PreBid Date",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Less common, dropped 2025"
+        },
+        {
+          "field_name": "Closing date",
+          "schema_1_2_2000_2020": "Closing Date",
+          "schema_3_2021_2024": "Closing Date",
+          "schema_4_5_2025_v2": "Closing Date",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "PROCUREMENT",
+      "fields": [
+        {
+          "field_name": "Procurement mode",
+          "schema_1_2_2000_2020": "Procurement Mode",
+          "schema_3_2021_2024": "Procurement Mode",
+          "schema_4_5_2025_v2": "Procurement Mode",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Area of delivery",
+          "schema_1_2_2000_2020": "Area of Delivery",
+          "schema_3_2021_2024": "Area of Delivery",
+          "schema_4_5_2025_v2": "Area of Delivery",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract duration",
+          "schema_1_2_2000_2020": "Contract Duration",
+          "schema_3_2021_2024": "Contract Duration",
+          "schema_4_5_2025_v2": "Contract Duration",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Calendar type",
+          "schema_1_2_2000_2020": "Calendar Type",
+          "schema_3_2021_2024": "Calendar Type",
+          "schema_4_5_2025_v2": "Calendar Type",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "LINE ITEMS",
+      "fields": [
+        {
+          "field_name": "Line item number",
+          "schema_1_2_2000_2020": "Line Item No",
+          "schema_3_2021_2024": "Line Item No",
+          "schema_4_5_2025_v2": "Line Item No",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Item name",
+          "schema_1_2_2000_2020": "Item Name",
+          "schema_3_2021_2024": "Item Name",
+          "schema_4_5_2025_v2": "Item Name",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Item description",
+          "schema_1_2_2000_2020": "Item Desc",
+          "schema_3_2021_2024": "Item Description",
+          "schema_4_5_2025_v2": "Item Description",
+          "evolution_notes": "Full word 2021"
+        },
+        {
+          "field_name": "Quantity",
+          "schema_1_2_2000_2020": "Quantity",
+          "schema_3_2021_2024": "Quantity",
+          "schema_4_5_2025_v2": "Quantity",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Unit of measure",
+          "schema_1_2_2000_2020": "UOM (2000-2015) / Unit of Measurement (2016-2020)",
+          "schema_3_2021_2024": "UOM",
+          "schema_4_5_2025_v2": "UOM",
+          "evolution_notes": "Changed 2016, reverted 2021"
+        },
+        {
+          "field_name": "Item budget",
+          "schema_1_2_2000_2020": "Item Budget",
+          "schema_3_2021_2024": "Item Budget",
+          "schema_4_5_2025_v2": "Item Budget",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "UNSPSC",
+      "fields": [
+        {
+          "field_name": "UNSPSC code",
+          "schema_1_2_2000_2020": "UNSPSC Code",
+          "schema_3_2021_2024": "UNSPSC Code",
+          "schema_4_5_2025_v2": "UNSPSC Code",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "UNSPSC description",
+          "schema_1_2_2000_2020": "UNSPSC Description",
+          "schema_3_2021_2024": "UNSPSC Description",
+          "schema_4_5_2025_v2": "UNSPSC Description",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "BID STATUS",
+      "fields": [
+        {
+          "field_name": "Bid/notice status",
+          "schema_1_2_2000_2020": "Notice Status",
+          "schema_3_2021_2024": "Notice Status",
+          "schema_4_5_2025_v2": "Bid Notice Status",
+          "evolution_notes": "More descriptive 2025"
+        },
+        {
+          "field_name": "Created by user",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "Created By",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, privacy concern 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD ID",
+      "fields": [
+        {
+          "field_name": "Award reference",
+          "schema_1_2_2000_2020": "Award No.",
+          "schema_3_2021_2024": "Award No.",
+          "schema_4_5_2025_v2": "Award Reference No.",
+          "evolution_notes": "More descriptive 2025"
+        },
+        {
+          "field_name": "Award title",
+          "schema_1_2_2000_2020": "Award Title",
+          "schema_3_2021_2024": "Award Title",
+          "schema_4_5_2025_v2": "Award Title",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Award type",
+          "schema_1_2_2000_2020": "Award Type",
+          "schema_3_2021_2024": "Award Type",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Simplified 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD TIMELINE",
+      "fields": [
+        {
+          "field_name": "Published date (award)",
+          "schema_1_2_2000_2020": "Publish Date(Award)",
+          "schema_3_2021_2024": "Published Date(Award)",
+          "schema_4_5_2025_v2": "Published Date(Award)",
+          "evolution_notes": "Renamed 2021"
+        },
+        {
+          "field_name": "Award date",
+          "schema_1_2_2000_2020": "Award Date",
+          "schema_3_2021_2024": "Award Date",
+          "schema_4_5_2025_v2": "Award Date",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Notice to proceed",
+          "schema_1_2_2000_2020": "Notice to Proceed Date",
+          "schema_3_2021_2024": "Notice to Proceed Date",
+          "schema_4_5_2025_v2": "Notice to Proceed Date",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract effectivity",
+          "schema_1_2_2000_2020": "Contract Efectivity Date",
+          "schema_3_2021_2024": "Contract Efectivity Date",
+          "schema_4_5_2025_v2": "Contract Effectivity Date",
+          "evolution_notes": "Typo fixed 2025"
+        },
+        {
+          "field_name": "Contract end date",
+          "schema_1_2_2000_2020": "Contract End Date",
+          "schema_3_2021_2024": "Contract End Date",
+          "schema_4_5_2025_v2": "Contract End Date",
+          "evolution_notes": "Stable"
+        }
+      ]
+    },
+    {
+      "category": "CONTRACT",
+      "fields": [
+        {
+          "field_name": "Contract amount",
+          "schema_1_2_2000_2020": "Contract Amount",
+          "schema_3_2021_2024": "Contract Amount",
+          "schema_4_5_2025_v2": "Contract Amount",
+          "evolution_notes": "Stable"
+        },
+        {
+          "field_name": "Contract number",
+          "schema_1_2_2000_2020": "Contract No",
+          "schema_3_2021_2024": "Contract No",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Auto-generated 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARD STATUS",
+      "fields": [
+        {
+          "field_name": "Award status",
+          "schema_1_2_2000_2020": "Award Status",
+          "schema_3_2021_2024": "Award Status",
+          "schema_4_5_2025_v2": "Award Notice Status",
+          "evolution_notes": "Consistent naming 2025"
+        },
+        {
+          "field_name": "Reason for award",
+          "schema_1_2_2000_2020": "Reason for Award",
+          "schema_3_2021_2024": "Reason for Award",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Simplified 2025"
+        }
+      ]
+    },
+    {
+      "category": "AWARDEE INFORMATION",
+      "fields": [
+        {
+          "field_name": "Organization name",
+          "schema_1_2_2000_2020": "Awardee Corporate Title",
+          "schema_3_2021_2024": "Awardee Organization Name",
+          "schema_4_5_2025_v2": "Awardee Organization Name",
+          "evolution_notes": "Renamed in 2021"
+        },
+        {
+          "field_name": "Contact person",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "Awardee Contact Person",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, removed 2025 (privacy)"
+        },
+        {
+          "field_name": "Country",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Country of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Region",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Region of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Province",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Province of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "City/Municipality",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "City/Municipality of Awardee",
+          "evolution_notes": "NEW in 2025/V2"
+        },
+        {
+          "field_name": "Awardee size",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Awardee Size",
+          "evolution_notes": "NEW in 2025/V2 (Small/Med/Large)"
+        },
+        {
+          "field_name": "Joint venture",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": null,
+          "schema_4_5_2025_v2": "Awardee Joint Venture",
+          "evolution_notes": "NEW in 2025/V2 (JV partners)"
+        }
+      ]
+    },
+    {
+      "category": "COMPETITION",
+      "fields": [
+        {
+          "field_name": "List of bidders",
+          "schema_1_2_2000_2020": null,
+          "schema_3_2021_2024": "List of Bidder's",
+          "schema_4_5_2025_v2": "REMOVED",
+          "evolution_notes": "Added 2021, sensitive data 2025"
+        }
+      ]
+    }
+  ],
+  "canonical_fields": [
+    {
+      "canonical_field": "approved_budget",
+      "field_type": "decimal",
+      "category": "BUDGET & FUNDING",
+      "semantic_name": "Approved budget",
+      "source_columns": {
+        "schema_1": "Approved Budget of the Contract",
+        "schema_2": "Approved Budget of the Contract",
+        "schema_3": "Approved Budget of the Contract",
+        "schema_4": "Approved Budget of the Contract",
+        "schema_5": "Approved Budget of the Contract"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "value/amount"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Approved Budget of the Contract → approved_budget",
+      "excluded": false
+    },
+    {
+      "canonical_field": "area_of_delivery",
+      "field_type": "string",
+      "category": "PROCUREMENT",
+      "semantic_name": "Area of delivery",
+      "source_columns": {
+        "schema_1": "Area of Delivery",
+        "schema_2": "Area of Delivery",
+        "schema_3": "Area of Delivery",
+        "schema_4": "Area of Delivery",
+        "schema_5": "Area of Delivery"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Area of Delivery → area_of_delivery [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_date",
+      "field_type": "datetime",
+      "category": "AWARD TIMELINE",
+      "semantic_name": "Award date",
+      "source_columns": {
+        "schema_1": "Award Date",
+        "schema_2": "Award Date",
+        "schema_3": "Award Date",
+        "schema_4": "Award Date",
+        "schema_5": "Award Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "awards/date"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Award Date → award_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_notice_status",
+      "field_type": "string",
+      "category": "AWARD STATUS",
+      "semantic_name": "Award status",
+      "source_columns": {
+        "schema_1": "Award Status",
+        "schema_2": "Award Status",
+        "schema_3": "Award Status",
+        "schema_4": "Award Notice Status",
+        "schema_5": "Award Notice Status"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "awards/status",
+        "contracts/status"
+      ],
+      "evolution_notes": "Consistent naming 2025",
+      "canonical_ai": "S1–S3: Award Status · S4–S5: Award Notice Status → award_notice_status [codelist map]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_published_date",
+      "field_type": "datetime",
+      "category": "AWARD TIMELINE",
+      "semantic_name": "Published date (award)",
+      "source_columns": {
+        "schema_1": "Publish Date(Award)",
+        "schema_2": "Publish Date(Award)",
+        "schema_3": "Published Date(Award)",
+        "schema_4": "Published Date(Award)",
+        "schema_5": "Published Date(Award)"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Renamed 2021",
+      "canonical_ai": "S1–S2: Publish Date(Award) · S3–S5: Published Date(Award) → award_published_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_reference_no",
+      "field_type": "string",
+      "category": "AWARD ID",
+      "semantic_name": "Award reference",
+      "source_columns": {
+        "schema_1": "Award No.",
+        "schema_2": "Award No.",
+        "schema_3": "Award No.",
+        "schema_4": "Award Reference No.",
+        "schema_5": "Award Reference No."
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "awards/id",
+        "contracts/awardID",
+        "contracts/id"
+      ],
+      "evolution_notes": "More descriptive 2025",
+      "canonical_ai": "S1–S3: Award No. · S4–S5: Award Reference No. → award_reference_no",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_title",
+      "field_type": "string",
+      "category": "AWARD ID",
+      "semantic_name": "Award title",
+      "source_columns": {
+        "schema_1": "Award Title",
+        "schema_2": "Award Title",
+        "schema_3": "Award Title",
+        "schema_4": "Award Title",
+        "schema_5": "Award Title"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "awards/title"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Award Title → award_title",
+      "excluded": false
+    },
+    {
+      "canonical_field": "award_type",
+      "field_type": "string",
+      "category": "AWARD ID",
+      "semantic_name": "Award type",
+      "source_columns": {
+        "schema_1": "Award Type",
+        "schema_2": "Award Type",
+        "schema_3": "Award Type",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Simplified 2025",
+      "canonical_ai": "S1–S3: Award Type → award_type [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_city_municipality",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "City/Municipality",
+      "source_columns": {
+        "schema_4": "City/Municipality of Awardee",
+        "schema_5": "City/Municipality of Awardee",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW in 2025/V2",
+      "canonical_ai": "S4–S5: City/Municipality of Awardee → awardee_city_municipality",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_country",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Country",
+      "source_columns": {
+        "schema_4": "Country of Awardee",
+        "schema_5": "Country of Awardee",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW in 2025/V2",
+      "canonical_ai": "S4–S5: Country of Awardee → awardee_country",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_joint_venture",
+      "field_type": "string_array",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Joint venture",
+      "source_columns": {
+        "schema_4": "Awardee Joint Venture",
+        "schema_5": "Awardee Joint Venture",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "extension/awardeeJointVenture"
+      ],
+      "evolution_notes": "NEW in 2025/V2 (JV partners)",
+      "canonical_ai": "S4–S5: Awardee Joint Venture → awardee_joint_venture",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_organization_name",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Organization name",
+      "source_columns": {
+        "schema_1": "Awardee Corporate Title",
+        "schema_2": "Awardee Corporate Title",
+        "schema_3": "Awardee Organization Name",
+        "schema_4": "Awardee Organization Name",
+        "schema_5": "Awardee Organization Name"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "suppliers/name"
+      ],
+      "evolution_notes": "Renamed in 2021",
+      "canonical_ai": "S1–S2: Awardee Corporate Title · S3–S5: Awardee Organization Name → awardee_organization_name",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_province",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Province",
+      "source_columns": {
+        "schema_4": "Province of Awardee",
+        "schema_5": "Province of Awardee",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW in 2025/V2",
+      "canonical_ai": "S4–S5: Province of Awardee → awardee_province",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_region",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Region",
+      "source_columns": {
+        "schema_4": "Region of Awardee",
+        "schema_5": "Region of Awardee",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW in 2025/V2",
+      "canonical_ai": "S4–S5: Region of Awardee → awardee_region",
+      "excluded": false
+    },
+    {
+      "canonical_field": "awardee_size",
+      "field_type": "string",
+      "category": "AWARDEE INFORMATION",
+      "semantic_name": "Awardee size",
+      "source_columns": {
+        "schema_4": "Awardee Size",
+        "schema_5": "Awardee Size",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW in 2025/V2 (Small/Med/Large)",
+      "canonical_ai": "S4–S5: Awardee Size → awardee_size",
+      "excluded": false
+    },
+    {
+      "canonical_field": "bid_notice_status",
+      "field_type": "string",
+      "category": "BID STATUS",
+      "semantic_name": "Bid/notice status",
+      "source_columns": {
+        "schema_1": "Notice Status",
+        "schema_2": "Notice Status",
+        "schema_3": "Notice Status",
+        "schema_4": "Bid Notice Status",
+        "schema_5": "Bid Notice Status"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tender/status"
+      ],
+      "evolution_notes": "More descriptive 2025",
+      "canonical_ai": "S1–S3: Notice Status · S4–S5: Bid Notice Status → bid_notice_status [codelist map]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "bid_reference_no",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Reference number",
+      "source_columns": {
+        "schema_1": "Reference ID",
+        "schema_2": "Reference ID",
+        "schema_3": "Bid Reference No.",
+        "schema_4": "Bid Reference No.",
+        "schema_5": "Bid Reference No."
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tender/id"
+      ],
+      "evolution_notes": "Renamed 2021",
+      "canonical_ai": "S1–S2: Reference ID · S3–S5: Bid Reference No. → bid_reference_no",
+      "excluded": false
+    },
+    {
+      "canonical_field": "business_category",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Business category",
+      "source_columns": {
+        "schema_1": "Business Category",
+        "schema_2": "Business Category",
+        "schema_3": "Business Category",
+        "schema_4": "Business Category",
+        "schema_5": "Business Category"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Business Category → business_category",
+      "excluded": false
+    },
+    {
+      "canonical_field": "calendar_type",
+      "field_type": "string",
+      "category": "PROCUREMENT",
+      "semantic_name": "Calendar type",
+      "source_columns": {
+        "schema_1": "Calendar Type",
+        "schema_2": "Calendar Type",
+        "schema_3": "Calendar Type",
+        "schema_4": "Calendar Type",
+        "schema_5": "Calendar Type"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Calendar Type → calendar_type",
+      "excluded": false
+    },
+    {
+      "canonical_field": "classification",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Classification",
+      "source_columns": {
+        "schema_1": "Classification",
+        "schema_2": "Classification",
+        "schema_3": "Classification",
+        "schema_4": "Classification",
+        "schema_5": "Classification"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tender/mainProcurementCategory"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Classification → classification [codelist map]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "closing_date",
+      "field_type": "datetime",
+      "category": "BID TIMELINE",
+      "semantic_name": "Closing date",
+      "source_columns": {
+        "schema_1": "Closing Date",
+        "schema_2": "Closing Date",
+        "schema_3": "Closing Date",
+        "schema_4": "Closing Date",
+        "schema_5": "Closing Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tenderPeriod/endDate"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Closing Date → closing_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "contract_amount",
+      "field_type": "decimal",
+      "category": "CONTRACT",
+      "semantic_name": "Contract amount",
+      "source_columns": {
+        "schema_1": "Contract Amount",
+        "schema_2": "Contract Amount",
+        "schema_3": "Contract Amount",
+        "schema_4": "Contract Amount",
+        "schema_5": "Contract Amount"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "value/amount"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Contract Amount → contract_amount",
+      "excluded": false
+    },
+    {
+      "canonical_field": "contract_duration",
+      "field_type": "integer",
+      "category": "PROCUREMENT",
+      "semantic_name": "Contract duration",
+      "source_columns": {
+        "schema_1": "Contract Duration",
+        "schema_2": "Contract Duration",
+        "schema_3": "Contract Duration",
+        "schema_4": "Contract Duration",
+        "schema_5": "Contract Duration"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Contract Duration → contract_duration",
+      "excluded": false
+    },
+    {
+      "canonical_field": "contract_effectivity_date",
+      "field_type": "datetime",
+      "category": "AWARD TIMELINE",
+      "semantic_name": "Contract effectivity",
+      "source_columns": {
+        "schema_1": "Contract Efectivity Date",
+        "schema_2": "Contract Efectivity Date",
+        "schema_3": "Contract Efectivity Date",
+        "schema_4": "Contract Effectivity Date",
+        "schema_5": "Contract Effectivity Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "period/startDate"
+      ],
+      "evolution_notes": "Typo fixed 2025",
+      "canonical_ai": "S1–S3: Contract Efectivity Date · S4–S5: Contract Effectivity Date → contract_effectivity_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "contract_end_date",
+      "field_type": "datetime",
+      "category": "AWARD TIMELINE",
+      "semantic_name": "Contract end date",
+      "source_columns": {
+        "schema_1": "Contract End Date",
+        "schema_2": "Contract End Date",
+        "schema_3": "Contract End Date",
+        "schema_4": "Contract End Date",
+        "schema_5": "Contract End Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "period/endDate"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Contract End Date → contract_end_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "contract_no",
+      "field_type": "string",
+      "category": "CONTRACT",
+      "semantic_name": "Contract number",
+      "source_columns": {
+        "schema_1": "Contract No",
+        "schema_2": "Contract No",
+        "schema_3": "Contract No",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Auto-generated 2025",
+      "canonical_ai": "S1–S3: Contract No → contract_no [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "funding_instrument",
+      "field_type": "string",
+      "category": "BUDGET & FUNDING",
+      "semantic_name": "Funding instrument",
+      "source_columns": {
+        "schema_1": "Funding Instrument",
+        "schema_2": "Funding Instrument",
+        "schema_3": "Funding Instrument",
+        "schema_4": "Funding Instrument",
+        "schema_5": "Funding Instrument"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "extension/fundingInstrument"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Funding Instrument → funding_instrument [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "funding_source",
+      "field_type": "string",
+      "category": "BUDGET & FUNDING",
+      "semantic_name": "Funding source",
+      "source_columns": {
+        "schema_1": "Funding Source",
+        "schema_2": "Funding Source",
+        "schema_3": "Funding Source",
+        "schema_4": "Funding Source",
+        "schema_5": "Funding Source"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "budget/description"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Funding Source → funding_source",
+      "excluded": false
+    },
+    {
+      "canonical_field": "item_budget",
+      "field_type": "decimal",
+      "category": "LINE ITEMS",
+      "semantic_name": "Item budget",
+      "source_columns": {
+        "schema_1": "Item Budget",
+        "schema_2": "Item Budget",
+        "schema_3": "Item Budget",
+        "schema_4": "Item Budget",
+        "schema_5": "Item Budget"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/unit/value/amount"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Item Budget → item_budget",
+      "excluded": false
+    },
+    {
+      "canonical_field": "item_description",
+      "field_type": "string",
+      "category": "LINE ITEMS",
+      "semantic_name": "Item description",
+      "source_columns": {
+        "schema_1": "Item Desc",
+        "schema_2": "Item Desc",
+        "schema_3": "Item Description",
+        "schema_4": "Item Description",
+        "schema_5": "Item Description"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/description",
+        "tender/description"
+      ],
+      "evolution_notes": "Full word 2021",
+      "canonical_ai": "S1–S2: Item Desc · S3–S5: Item Description → item_description",
+      "excluded": false
+    },
+    {
+      "canonical_field": "item_name",
+      "field_type": "string",
+      "category": "LINE ITEMS",
+      "semantic_name": "Item name",
+      "source_columns": {
+        "schema_1": "Item Name",
+        "schema_2": "Item Name",
+        "schema_3": "Item Name",
+        "schema_4": "Item Name",
+        "schema_5": "Item Name"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Item Name → item_name",
+      "excluded": false
+    },
+    {
+      "canonical_field": "line_item_no",
+      "field_type": "integer",
+      "category": "LINE ITEMS",
+      "semantic_name": "Line item number",
+      "source_columns": {
+        "schema_1": "Line Item No",
+        "schema_2": "Line Item No",
+        "schema_3": "Line Item No",
+        "schema_4": "Line Item No",
+        "schema_5": "Line Item No"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/id"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Line Item No → line_item_no",
+      "excluded": false
+    },
+    {
+      "canonical_field": "list_of_bidders",
+      "field_type": "string_array",
+      "category": "COMPETITION",
+      "semantic_name": "List of bidders",
+      "source_columns": {
+        "schema_3": "List of Bidder's",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_3"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Added 2021, sensitive data 2025",
+      "canonical_ai": "S3: List of Bidder's → list_of_bidders",
+      "excluded": false
+    },
+    {
+      "canonical_field": "notice_title",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Notice title",
+      "source_columns": {
+        "schema_1": "Notice Title",
+        "schema_2": "Notice Title",
+        "schema_3": "Notice Title",
+        "schema_4": "Notice Title",
+        "schema_5": "Notice Title"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tender/title"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Notice Title → notice_title",
+      "excluded": false
+    },
+    {
+      "canonical_field": "notice_to_proceed_date",
+      "field_type": "datetime",
+      "category": "AWARD TIMELINE",
+      "semantic_name": "Notice to proceed",
+      "source_columns": {
+        "schema_1": "Notice to Proceed Date",
+        "schema_2": "Notice to Proceed Date",
+        "schema_3": "Notice to Proceed Date",
+        "schema_4": "Notice to Proceed Date",
+        "schema_5": "Notice to Proceed Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "extension/noticeToProceedDate"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Notice to Proceed Date → notice_to_proceed_date [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "notice_type",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Notice type",
+      "source_columns": {
+        "schema_1": "Notice Type",
+        "schema_2": "Notice Type",
+        "schema_3": "Notice Type",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Redundant, dropped 2025",
+      "canonical_ai": "S1–S3: Notice Type → notice_type [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_city_municipality",
+      "field_type": "string",
+      "category": null,
+      "semantic_name": null,
+      "source_columns": {
+        "schema_4": "City/Municipality",
+        "schema_5": "City/Municipality",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": null,
+      "canonical_ai": "S4–S5: City/Municipality → pe_city_municipality",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_government_branch",
+      "field_type": "string",
+      "category": "PROCURING ENTITY",
+      "semantic_name": "Government branch",
+      "source_columns": {
+        "schema_4": "Government Branch",
+        "schema_5": "Government Branch",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW 2025/V2",
+      "canonical_ai": "S4–S5: Government Branch → pe_government_branch",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_organization_type",
+      "field_type": "string",
+      "category": "PROCURING ENTITY",
+      "semantic_name": "Organization type",
+      "source_columns": {
+        "schema_4": "PE Organization Type",
+        "schema_5": "PE Organization Type",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW 2025/V2",
+      "canonical_ai": "S4–S5: PE Organization Type → pe_organization_type",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_organization_type_grouped",
+      "field_type": "string",
+      "category": "PROCURING ENTITY",
+      "semantic_name": "Organization type (grouped)",
+      "source_columns": {
+        "schema_4": "PE Organization Type (Grouped)",
+        "schema_5": "PE Organization Type (Grouped)",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "NEW 2025/V2",
+      "canonical_ai": "S4–S5: PE Organization Type (Grouped) → pe_organization_type_grouped",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_province",
+      "field_type": "string",
+      "category": null,
+      "semantic_name": null,
+      "source_columns": {
+        "schema_4": "Province",
+        "schema_5": "Province",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": null,
+      "canonical_ai": "S4–S5: Province → pe_province",
+      "excluded": false
+    },
+    {
+      "canonical_field": "pe_region",
+      "field_type": "string",
+      "category": null,
+      "semantic_name": null,
+      "source_columns": {
+        "schema_4": "Region",
+        "schema_5": "Region",
+        "schema_1": null,
+        "schema_2": null,
+        "schema_3": null
+      },
+      "present_in_schemas": [
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": null,
+      "canonical_ai": "S4–S5: Region → pe_region",
+      "excluded": false
+    },
+    {
+      "canonical_field": "prebid_date",
+      "field_type": "datetime",
+      "category": "BID TIMELINE",
+      "semantic_name": "Pre-bid date",
+      "source_columns": {
+        "schema_1": "PreBid Date",
+        "schema_2": "PreBid Date",
+        "schema_3": "PreBid Date",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [],
+      "evolution_notes": "Less common, dropped 2025",
+      "canonical_ai": "S1–S3: PreBid Date → prebid_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "procurement_mode",
+      "field_type": "string",
+      "category": "PROCUREMENT",
+      "semantic_name": "Procurement mode",
+      "source_columns": {
+        "schema_1": "Procurement Mode",
+        "schema_2": "Procurement Mode",
+        "schema_3": "Procurement Mode",
+        "schema_4": "Procurement Mode",
+        "schema_5": "Procurement Mode"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tender/procurementMethod",
+        "tender/procurementMethodDetails"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Procurement Mode → procurement_mode [codelist map]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "procuring_entity",
+      "field_type": "string",
+      "category": "PROCURING ENTITY",
+      "semantic_name": "Entity name",
+      "source_columns": {
+        "schema_1": "Organization Name",
+        "schema_2": "Organization Name",
+        "schema_3": "Procuring Entity",
+        "schema_4": "Procuring Entity (PE)",
+        "schema_5": "Procuring Entity (PE)"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "buyer/name",
+        "procuringEntity/name"
+      ],
+      "evolution_notes": "Renamed 2021, clarified 2025",
+      "canonical_ai": "S1–S2: Organization Name · S3: Procuring Entity · S4–S5: Procuring Entity (PE) → procuring_entity",
+      "excluded": false
+    },
+    {
+      "canonical_field": "published_date",
+      "field_type": "datetime",
+      "category": "BID TIMELINE",
+      "semantic_name": "Published date",
+      "source_columns": {
+        "schema_1": "Publish Date",
+        "schema_2": "Publish Date",
+        "schema_3": "Published Date",
+        "schema_4": "Published Date",
+        "schema_5": "Published Date"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "tenderPeriod/startDate"
+      ],
+      "evolution_notes": "Renamed 2021",
+      "canonical_ai": "S1–S2: Publish Date · S3–S5: Published Date → published_date",
+      "excluded": false
+    },
+    {
+      "canonical_field": "quantity",
+      "field_type": "decimal",
+      "category": "LINE ITEMS",
+      "semantic_name": "Quantity",
+      "source_columns": {
+        "schema_1": "Quantity",
+        "schema_2": "Quantity",
+        "schema_3": "Quantity",
+        "schema_4": "Quantity",
+        "schema_5": "Quantity"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/quantity"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Quantity → quantity",
+      "excluded": false
+    },
+    {
+      "canonical_field": "reason_for_award",
+      "field_type": "string",
+      "category": "AWARD STATUS",
+      "semantic_name": "Reason for award",
+      "source_columns": {
+        "schema_1": "Reason for Award",
+        "schema_2": "Reason for Award",
+        "schema_3": "Reason for Award",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [
+        "extension/reasonForAward"
+      ],
+      "evolution_notes": "Simplified 2025",
+      "canonical_ai": "S1–S3: Reason for Award → reason_for_award [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "solicitation_no",
+      "field_type": "string",
+      "category": "BID IDENTIFICATION",
+      "semantic_name": "Solicitation number",
+      "source_columns": {
+        "schema_1": "Solicitation No.",
+        "schema_2": "Solicitation No.",
+        "schema_3": "Solicitation No.",
+        "schema_4": null,
+        "schema_5": null
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3"
+      ],
+      "ocds_paths": [
+        "extension/solicitationNo"
+      ],
+      "evolution_notes": "Legacy field dropped 2025",
+      "canonical_ai": "S1–S3: Solicitation No. → solicitation_no [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "trade_agreement",
+      "field_type": "string",
+      "category": "BUDGET & FUNDING",
+      "semantic_name": "Trade agreement",
+      "source_columns": {
+        "schema_1": "Trade Agreement",
+        "schema_2": "Trade Agreement",
+        "schema_3": "Trade Agreement",
+        "schema_4": "Trade Agreement",
+        "schema_5": "Trade Agreement"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "extension/tradeAgreement"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: Trade Agreement → trade_agreement [extension]",
+      "excluded": false
+    },
+    {
+      "canonical_field": "unspsc_code",
+      "field_type": "string",
+      "category": "UNSPSC",
+      "semantic_name": "UNSPSC code",
+      "source_columns": {
+        "schema_1": "UNSPSC Code",
+        "schema_2": "UNSPSC Code",
+        "schema_3": "UNSPSC Code",
+        "schema_4": "UNSPSC Code",
+        "schema_5": "UNSPSC Code"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/classification/id"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: UNSPSC Code → unspsc_code",
+      "excluded": false
+    },
+    {
+      "canonical_field": "unspsc_description",
+      "field_type": "string",
+      "category": "UNSPSC",
+      "semantic_name": "UNSPSC description",
+      "source_columns": {
+        "schema_1": "UNSPSC Description",
+        "schema_2": "UNSPSC Description",
+        "schema_3": "UNSPSC Description",
+        "schema_4": "UNSPSC Description",
+        "schema_5": "UNSPSC Description"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/classification/description"
+      ],
+      "evolution_notes": "Stable",
+      "canonical_ai": "S1–S5: UNSPSC Description → unspsc_description",
+      "excluded": false
+    },
+    {
+      "canonical_field": "uom",
+      "field_type": "string",
+      "category": "LINE ITEMS",
+      "semantic_name": "Unit of measure",
+      "source_columns": {
+        "schema_1": "UOM",
+        "schema_2": "Unit of Measurement",
+        "schema_3": "UOM",
+        "schema_4": "UOM",
+        "schema_5": "UOM"
+      },
+      "present_in_schemas": [
+        "schema_1",
+        "schema_2",
+        "schema_3",
+        "schema_4",
+        "schema_5"
+      ],
+      "ocds_paths": [
+        "items/unit/name"
+      ],
+      "evolution_notes": "Changed 2016, reverted 2021",
+      "canonical_ai": "S1: UOM · S2: Unit of Measurement · S3–S5: UOM → uom",
+      "excluded": false
+    }
+  ],
+  "field_types": {
+    "string": [
+      "procuring_entity",
+      "pe_region",
+      "pe_province",
+      "pe_city_municipality",
+      "pe_government_branch",
+      "pe_organization_type",
+      "pe_organization_type_grouped",
+      "bid_reference_no",
+      "solicitation_no",
+      "notice_title",
+      "classification",
+      "notice_type",
+      "business_category",
+      "funding_source",
+      "funding_instrument",
+      "trade_agreement",
+      "procurement_mode",
+      "area_of_delivery",
+      "calendar_type",
+      "item_name",
+      "item_description",
+      "uom",
+      "unspsc_code",
+      "unspsc_description",
+      "bid_notice_status",
+      "award_reference_no",
+      "award_title",
+      "award_type",
+      "award_notice_status",
+      "reason_for_award",
+      "awardee_organization_name",
+      "awardee_country",
+      "awardee_region",
+      "awardee_province",
+      "awardee_city_municipality",
+      "awardee_size",
+      "contract_no",
+      "source_file",
+      "source_schema",
+      "record_id",
+      "pe_uacs_code",
+      "pe_address",
+      "indicative_app",
+      "app_annual_year",
+      "app_status",
+      "app_item_id",
+      "app_pap_object_code",
+      "app_program_title",
+      "app_object_code",
+      "app_pmo_end_user",
+      "app_procurement_mode",
+      "app_remarks",
+      "pr_app_item_id",
+      "pr_number",
+      "pr_status",
+      "procurement_category",
+      "delivery_period",
+      "lot_type",
+      "project_name",
+      "pr_bid_reference_no",
+      "pe_control_no",
+      "item_code",
+      "awardee_org_id",
+      "awardee_address",
+      "source_path",
+      "source_format"
+    ],
+    "decimal": [
+      "approved_budget",
+      "quantity",
+      "item_budget",
+      "contract_amount",
+      "app_total_estimated_budget",
+      "app_mooe_estimated_budget",
+      "app_co_estimated_budget",
+      "app_total_budget",
+      "app_total_budget_available",
+      "app_total_approved_budget"
+    ],
+    "integer": [
+      "line_item_no",
+      "contract_duration"
+    ],
+    "date": [
+      "app_advertisement_date",
+      "app_submission_opening_date",
+      "app_notice_of_award_date",
+      "app_contract_signing_date",
+      "pr_date",
+      "pr_created_date"
+    ],
+    "datetime": [
+      "published_date",
+      "prebid_date",
+      "closing_date",
+      "award_published_date",
+      "award_date",
+      "notice_to_proceed_date",
+      "contract_effectivity_date",
+      "contract_end_date",
+      "source_period_start",
+      "source_period_end"
+    ],
+    "string_array": [
+      "list_of_bidders",
+      "bidders",
+      "awardee_joint_venture"
+    ]
+  },
+  "excluded_source_columns": [
+    "Created By",
+    "Awardee Contact Person"
+  ],
+  "ocds_crosswalk": [
+    {
+      "ocds_field": "awards/contractPeriod/endDate",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (AwardID)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract End Date)`",
+      "v2_csv": "Award Reference No.",
+      "v1_csv": "Award No.",
+      "canonical": "S1–S5: Contract End Date → contract_end_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/contractPeriod/startDate",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardAwardee (ContractStartDate)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Effectivity Date)`",
+      "v2_csv": "Contract Effectivity Date",
+      "v1_csv": "Contract Efectivity Date",
+      "canonical": "S1–S3: Contract Efectivity Date · S4–S5: Contract Effectivity Date → contract_effectivity_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/date",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (PublishDate)`",
+      "philgeps_2_0": "`Awards (Award Date)`",
+      "v2_csv": "Published Date(Award)",
+      "v1_csv": "Published Date(Award)",
+      "canonical": "S1–S5: Award Date → award_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/description",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardDetail (Description)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Item Description",
+      "v1_csv": "Item Description",
+      "canonical": "S1–S5: Item Description → item_description (line-item scope)",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/documents/dateModified",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (ModifiedDate)`",
+      "philgeps_2_0": "`Awards Documents (Modified date)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (documents not in open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "awards/documents/datePublished",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (PublishDate)`",
+      "philgeps_2_0": "`Awards Documents (Created date)`",
+      "v2_csv": "Published Date(Award)",
+      "v1_csv": "Published Date(Award)",
+      "canonical": "omit (documents not in open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "awards/documents/description",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`R3_File (FileName)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "awards/documents/id",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`R3_File (FileID)`",
+      "philgeps_2_0": "`Awards Documents (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "awards/id",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (AwardID)`",
+      "philgeps_2_0": "`Awards (ID)`",
+      "v2_csv": "Award Reference No.",
+      "v1_csv": "Award No.",
+      "canonical": "S1–S3: Award No. · S4–S5: Award Reference No. → award_reference_no",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/items/description",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardDetail (Description)`",
+      "philgeps_2_0": "`Awards Item (Item Description)`",
+      "v2_csv": "Item Description",
+      "v1_csv": "Item Description",
+      "canonical": "S1–S2: Item Desc · S3–S5: Item Description → item_description",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/items/id",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (AwardID)`",
+      "philgeps_2_0": "`Awards Item (ID)`",
+      "v2_csv": "Award Reference No.",
+      "v1_csv": "Award No.",
+      "canonical": "S1–S3: Award No. · S4–S5: Award Reference No. → award_reference_no (award-level id; use line_item_no for item rows)",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/items/unit/name",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_UOM (Description)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "UOM",
+      "v1_csv": "UOM",
+      "canonical": "S1: UOM · S2: Unit of Measurement · S3–S5: UOM → uom",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/items/unit/value/amount",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_Tender_Item (Budget)`",
+      "philgeps_2_0": "`Awards Item (Unit Price)`",
+      "v2_csv": "Item Budget",
+      "v1_csv": "Item Budget",
+      "canonical": "S1–S5: Item Budget → item_budget",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/status",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (AwardStatus)`",
+      "philgeps_2_0": "`Awards (Status)`",
+      "v2_csv": "Award Notice Status",
+      "v1_csv": "Award Status",
+      "canonical": "S1–S3: Award Status · S4–S5: Award Notice Status → award_notice_status [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/suppliers/id",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardAwardee (AwardeeID)`",
+      "philgeps_2_0": "`Supplier (Supplier ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(awardee_organization_name)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "awards/suppliers/name",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardAwardee (Awardee)`",
+      "philgeps_2_0": "`Awards (Awardee), Supplier (Supplier Organization Name)`",
+      "v2_csv": "Awardee Organization Name",
+      "v1_csv": "Awardee Organization Name",
+      "canonical": "S1–S2: Awardee Corporate Title · S3–S5: Awardee Organization Name → awardee_organization_name",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/title",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`M_Award (AwardTitle)`",
+      "philgeps_2_0": "`Awards (Title)`",
+      "v2_csv": "Award Title",
+      "v1_csv": "Award Title",
+      "canonical": "S1–S5: Award Title → award_title",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "awards/value/amount",
+      "ocds_block": "awards",
+      "philgeps_1_5": "`D_AwardAwardee (ContractAmt)`",
+      "philgeps_2_0": "`Awards (Contract Amount)`",
+      "v2_csv": "Contract Amount",
+      "v1_csv": "Contract Amount",
+      "canonical": "S1–S5: Contract Amount → contract_amount",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "buyer/id",
+      "ocds_block": "buyer",
+      "philgeps_1_5": "`M_Organization (OrgID)`",
+      "philgeps_2_0": "`departments_government_agency (UACS_code)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "buyer/name",
+      "ocds_block": "buyer",
+      "philgeps_1_5": "`M_Organization (OrgName)`",
+      "philgeps_2_0": "`departments_government_agency (name), Tenders (Agency Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "S1–S2: Organization Name · S3: Procuring Entity · S4–S5: Procuring Entity (PE) → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/awardID",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Award (AwardID)`",
+      "philgeps_2_0": "`Notice to Proceed (Award ID)`",
+      "v2_csv": "Award Reference No.",
+      "v1_csv": "Award No.",
+      "canonical": "S1–S3: Award No. · S4–S5: Award Reference No. → award_reference_no",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/dateSigned",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (AwardDate)`",
+      "philgeps_2_0": "`Awards (Award Date)`",
+      "v2_csv": "Award Date",
+      "v1_csv": "Award Date",
+      "canonical": "S1–S5: Award Date → award_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/description",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardDetail (Description)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Item Description",
+      "v1_csv": "Item Description",
+      "canonical": "S1–S2: Item Desc · S3–S5: Item Description → item_description",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/documents/dateModified",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Award (ModifiedDate)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "contracts/documents/datePublished",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Award (PublishDate)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Published Date(Award)",
+      "v1_csv": "Published Date(Award)",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "contracts/documents/id",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`R4_AwardNotice_AwardDoc (ANAwardDocID)`",
+      "philgeps_2_0": "`Contract Management Documents (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "contracts/documents/title",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`R3_File (Name)`",
+      "philgeps_2_0": "`Contract Management Documents (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "contracts/implementation/transactions/payee/id",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (AwardeeID)`",
+      "philgeps_2_0": "`Supplier (Supplier ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(awardee_organization_name)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "contracts/implementation/transactions/payee/name",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (Awardee)`",
+      "philgeps_2_0": "`Supplier (Supplier Organization Name)`",
+      "v2_csv": "Awardee Organization Name",
+      "v1_csv": "Awardee Organization Name",
+      "canonical": "S1–S2: Awardee Corporate Title · S3–S5: Awardee Organization Name → awardee_organization_name",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/implementation/transactions/payer/id",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrgID)`",
+      "philgeps_2_0": "`Tenders (Agency ID (Foreign Key))`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "contracts/implementation/transactions/payer/name",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrg)`",
+      "philgeps_2_0": "`Tenders (Agency Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "S1–S2: Organization Name · S3: Procuring Entity · S4–S5: Procuring Entity (PE) → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/items/description",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardDetail (ItemName)`",
+      "philgeps_2_0": "`Awards Item (Item Description)`",
+      "v2_csv": "Item Name",
+      "v1_csv": "Item Name",
+      "canonical": "S1–S5: Item Name → item_name",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/items/id",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardDetail (LineItemID)`",
+      "philgeps_2_0": "`Awards Item (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "S1–S5: Line Item No → line_item_no",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/items/quantity",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardDetail (Qty)`",
+      "philgeps_2_0": "`Awards Item (Quantity)`",
+      "v2_csv": "Quantity",
+      "v1_csv": "Quantity",
+      "canonical": "S1–S5: Quantity → quantity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/items/unit/value/amount",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardDetail (Budget)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Item Budget",
+      "v1_csv": "Item Budget",
+      "canonical": "S1–S5: Item Budget → item_budget",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/period/endDate",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (ContractEndDate)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract End Date)`",
+      "v2_csv": "Contract End Date",
+      "v1_csv": "Contract End Date",
+      "canonical": "S1–S5: Contract End Date → contract_end_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/period/startDate",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (ContractStartDate)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Effectivity Date)`",
+      "v2_csv": "Contract Effectivity Date",
+      "v1_csv": "Contract Efectivity Date",
+      "canonical": "S1–S3: Contract Efectivity Date · S4–S5: Contract Effectivity Date → contract_effectivity_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/status",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Award (AwardStatus)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Status)`",
+      "v2_csv": "Award Notice Status",
+      "v1_csv": "Award Status",
+      "canonical": "S1–S3: Award Status · S4–S5: Award Notice Status → award_notice_status [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/title",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`M_Award (AwardTitle)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Title)`",
+      "v2_csv": "Award Title",
+      "v1_csv": "Award Title",
+      "canonical": "S1–S5: Award Title → award_title",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "contracts/value/amount",
+      "ocds_block": "contracts",
+      "philgeps_1_5": "`D_AwardAwardee (ContractAmt)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Amount)`",
+      "v2_csv": "Contract Amount",
+      "v1_csv": "Contract Amount",
+      "canonical": "S1–S5: Contract Amount → contract_amount",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/address/countryName",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Country (CountryName)`",
+      "philgeps_2_0": "`Supplier (Country)`",
+      "v2_csv": "Country of Awardee",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Country of Awardee → awardee_country",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/address/locality",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Province (ProvinceName)`",
+      "philgeps_2_0": "`departments_government_agency (province), Supplier (Province)`",
+      "v2_csv": "Province, Province of Awardee",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Province → pe_province · S4–S5: Province of Awardee → awardee_province",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/address/postalCode",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (ZipCode)`",
+      "philgeps_2_0": "`departments_government_agency (zip_code), Supplier (Zip Code)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/address/region",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Region (RegionName)`",
+      "philgeps_2_0": "`departments_government_agency (region), Supplier (Region)`",
+      "v2_csv": "Region, Region of Awardee",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Region → pe_region · S4–S5: Region of Awardee → awardee_region",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/address/streetAddress",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`D_AwardAwardee (Address)`",
+      "philgeps_2_0": "`departments_government_agency (street_address), Supplier (Address)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/address/streetAddress",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (Address1)`",
+      "philgeps_2_0": "`departments_government_agency (street_address), Supplier (Address)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/email",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_User (Email)`",
+      "philgeps_2_0": "`Buyer (Email), Supplier_User (Email)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (privacy / not in CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/faxNumber",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_User (FaxAreaCode + FaxNo)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`D_AwardAwardee (ContactPerson)`",
+      "philgeps_2_0": "`Buyer (Full Name), Supplier_User (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "Awardee Contact Person",
+      "canonical": "omit (privacy excluded; S3 had Created By / Awardee Contact Person)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Tender (ContactPersonName)`",
+      "philgeps_2_0": "`Buyer (Full Name), Supplier_User (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "Created By",
+      "canonical": "omit (privacy excluded; S3 had Created By / Awardee Contact Person)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_User (Firstname + Middlename + Lastname)`",
+      "philgeps_2_0": "`Buyer (Full Name), Supplier_User (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (privacy excluded; S3 had Created By / Awardee Contact Person)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/telephone",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_User (TelAreaCode + TelNo + TelExtNo)`",
+      "philgeps_2_0": "`Buyer (Phone)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/contactPoint/url",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (Website)`",
+      "philgeps_2_0": "`Supplier (Website)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "parties/details",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_BuyerOrgType (Description)`",
+      "philgeps_2_0": "`agency_organization_types (name)`",
+      "v2_csv": "PE Organization Type, PE Organization Type (Grouped)",
+      "v1_csv": "—",
+      "canonical": "S4–S5: PE Organization Type → pe_organization_type",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/id",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`D_AwardAwardee (AwardeeID)`",
+      "philgeps_2_0": "`departments_government_agency (department_id), Supplier (Supplier ID), Vendors (Vendors ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(awardee_organization_name)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "parties/id",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (OrgID)`",
+      "philgeps_2_0": "`departments_government_agency (department_id), Supplier (Supplier ID), Vendors (Vendors ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "parties/id",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrgID)`",
+      "philgeps_2_0": "`departments_government_agency (department_id), Supplier (Supplier ID), Vendors (Vendors ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "parties/id",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_TenderBiddersList (OrgID)`",
+      "philgeps_2_0": "`departments_government_agency (department_id), Supplier (Supplier ID), Vendors (Vendors ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(parsed bidder name)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "parties/identifier/id",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (OrgID)`",
+      "philgeps_2_0": "`departments_government_agency (UACS_code)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "parties/identifier/legalName",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (OrgName)`",
+      "philgeps_2_0": "`departments_government_agency (name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "S1–S2: Organization Name · S3: Procuring Entity · S4–S5: Procuring Entity (PE) → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`D_AwardAwardee (Awardee)`",
+      "philgeps_2_0": "`departments_government_agency (name), Supplier (Supplier Organization Name), Vendors (Name)`",
+      "v2_csv": "Awardee Organization Name",
+      "v1_csv": "Awardee Organization Name",
+      "canonical": "V2/V1: Awardee Organization Name → awardee_organization_name",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Organization (OrgName)`",
+      "philgeps_2_0": "`departments_government_agency (name), Supplier (Supplier Organization Name), Vendors (Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "V2: Procuring Entity (PE) \\| V1: Procuring Entity → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrg)`",
+      "philgeps_2_0": "`departments_government_agency (name), Supplier (Supplier Organization Name), Vendors (Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "V2: Procuring Entity (PE) \\| V1: Procuring Entity → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/name",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_TenderBiddersList (OrgName)`",
+      "philgeps_2_0": "`departments_government_agency (name), Supplier (Supplier Organization Name), Vendors (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "List of Bidder's",
+      "canonical": "V1: List of Bidder's → bidders [parse ; only]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "parties/roles",
+      "ocds_block": "parties",
+      "philgeps_1_5": "`M_Role (RoleName)`",
+      "philgeps_2_0": "`Buyer (User Role ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "planning/budget/amount/amount",
+      "ocds_block": "planning",
+      "philgeps_1_5": "`M_Tender (ApprovedBudget)`",
+      "philgeps_2_0": "`app_line_items (Total Estimated Budget), Tenders Items (Estimated Budget Cost)`",
+      "v2_csv": "Approved Budget of the Contract",
+      "v1_csv": "Approved Budget of the Contract",
+      "canonical": "S1–S5: Approved Budget of the Contract → approved_budget",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "planning/budget/description",
+      "ocds_block": "planning",
+      "philgeps_1_5": "`M_Tender (Funding Source)`",
+      "philgeps_2_0": "`APP Details (Source of Funds), PR (Funding Source)`",
+      "v2_csv": "Funding Source",
+      "v1_csv": "Funding Source",
+      "canonical": "S1–S5: Funding Source → funding_source",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "planning/budget/project",
+      "ocds_block": "planning",
+      "philgeps_1_5": "`M_Tender (TenderTitle)`",
+      "philgeps_2_0": "`APP Details (Procurement Program/Project Title), PR (Project Name)`",
+      "v2_csv": "Notice Title",
+      "v1_csv": "Notice Title",
+      "canonical": "S1–S5: Notice Title → notice_title",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "relatedProcesses/id",
+      "ocds_block": "relatedProcesses",
+      "philgeps_1_5": "`M_Tender (RefNo)`",
+      "philgeps_2_0": "`Tenders (Tender ID)`",
+      "v2_csv": "Bid Reference No.",
+      "v1_csv": "Bid Reference No.",
+      "canonical": "S1–S2: Reference ID · S3–S5: Bid Reference No. → bid_reference_no (S3 fallback: Solicitation No. if 0)",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "relatedProcesses/relationship",
+      "ocds_block": "relatedProcesses",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrg)`",
+      "philgeps_2_0": "`Tenders (Agency Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "constant: parent",
+      "status": "constant"
+    },
+    {
+      "ocds_field": "relatedProcesses/title",
+      "ocds_block": "relatedProcesses",
+      "philgeps_1_5": "`M_Tender (TenderTitle)`",
+      "philgeps_2_0": "`Tenders (Tender Title)`",
+      "v2_csv": "Notice Title",
+      "v1_csv": "Notice Title",
+      "canonical": "S1–S5: Notice Title → notice_title",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/additionalProcurementCategories",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (BusCat)`",
+      "philgeps_2_0": "`Tenders Items (Business Category)`",
+      "v2_csv": "Business Category",
+      "v1_csv": "Business Category",
+      "canonical": "S1–S5: Business Category → business_category",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/amendments/date",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_BidSupplement (CreationDate)`",
+      "philgeps_2_0": "`Tender_Supplement (Created Date)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/amendments/description",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_BidSupplement (Description)`",
+      "philgeps_2_0": "`Tender_Supplement (Description)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/amendments/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_BidSupplement (BidSuppID)`",
+      "philgeps_2_0": "`Tender_Supplement (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/amendments/rationale",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_BidSupplement (BidSuppTitle)`",
+      "philgeps_2_0": "`Tender_Supplement (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/awardCriteriaDetails",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_AwardAwardee (AwardReason)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "Reason for Award",
+      "canonical": "S1–S3: Reason for Award → reason_for_award [extension]",
+      "status": "extension"
+    },
+    {
+      "ocds_field": "tender/awardPeriod/durationInDays",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ContractDuration + CalendarType)`",
+      "philgeps_2_0": "`Tenders (Contract Period)`",
+      "v2_csv": "Contract Duration, Calendar Type",
+      "v1_csv": "Contract Duration, Calendar Type",
+      "canonical": "derive: S1–S5 Contract Duration + Calendar Type → contract_duration",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/awardPeriod/startDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Award (PublishDate)`",
+      "philgeps_2_0": "`Awards (Award Date)`",
+      "v2_csv": "Published Date(Award)",
+      "v1_csv": "Published Date(Award)",
+      "canonical": "S1–S2: Publish Date(Award) · S3–S5: Published Date(Award) → award_published_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/contractPeriod/endDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_AwardAwardee (ContractEndDate)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract End Date)`",
+      "v2_csv": "Contract End Date",
+      "v1_csv": "Contract End Date",
+      "canonical": "S1–S5: Contract End Date → contract_end_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/contractPeriod/startDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_AwardAwardee (ContractStartDate)`",
+      "philgeps_2_0": "`Notice to Proceed (Contract Effectivity Date)`",
+      "v2_csv": "Contract Effectivity Date",
+      "v1_csv": "Contract Efectivity Date",
+      "canonical": "S1–S3: Contract Efectivity Date · S4–S5: Contract Effectivity Date → contract_effectivity_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/description",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (Description)`",
+      "philgeps_2_0": "`Tenders (Description)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (use notice_title or item_description)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/dateModified",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (ModifiedDate)`",
+      "philgeps_2_0": "`Tender Documents (Modified date)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/datePublished",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (AcceptedDate)`",
+      "philgeps_2_0": "`Tender Documents (Publish date)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/documentType",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (Content)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/format",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (Format)`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (DocID)`",
+      "philgeps_2_0": "`Tender Documents (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/documents/title",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Document (DocName)`",
+      "philgeps_2_0": "`Tender Documents (Title)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/enquiryPeriod/endDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ClosingDate)`",
+      "philgeps_2_0": "`Tenders (Tender End Datetime)`",
+      "v2_csv": "Closing Date",
+      "v1_csv": "Closing Date",
+      "canonical": "S1–S5: Closing Date → closing_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/enquiryPeriod/startDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (PublishDate)`",
+      "philgeps_2_0": "`Tenders (Tender Start Datetime)`",
+      "v2_csv": "Published Date",
+      "v1_csv": "Published Date",
+      "canonical": "S1–S2: Publish Date · S3–S5: Published Date → published_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (RefNo)`",
+      "philgeps_2_0": "`Tenders (Tender ID)`",
+      "v2_csv": "Bid Reference No.",
+      "v1_csv": "Bid Reference No.",
+      "canonical": "S1–S2: Reference ID · S3–S5: Bid Reference No. → bid_reference_no",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/additionalClassifications/description",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_UNSPSC (Description)`",
+      "philgeps_2_0": "`Tenders Items (UNSPSC Description)`",
+      "v2_csv": "UNSPSC Description",
+      "v1_csv": "UNSPSC Description",
+      "canonical": "S1–S5: UNSPSC Description → unspsc_description",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/additionalClassifications/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_UNSPSC (UNSPSCCode)`",
+      "philgeps_2_0": "`Tenders Items (UNSPSC Code)`",
+      "v2_csv": "UNSPSC Code",
+      "v1_csv": "UNSPSC Code",
+      "canonical": "S1–S5: UNSPSC Code → unspsc_code",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/additionalClassifications/scheme",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_UNSPSC (UNSPSCCode)`",
+      "philgeps_2_0": "`Tenders Items (UNSPSC Code)`",
+      "v2_csv": "UNSPSC Code",
+      "v1_csv": "UNSPSC Code",
+      "canonical": "constant: UNSPSC",
+      "status": "constant"
+    },
+    {
+      "ocds_field": "tender/items/classification/description",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Classification (Description)`",
+      "philgeps_2_0": "`Tenders (Classification)`",
+      "v2_csv": "Classification",
+      "v1_csv": "Classification",
+      "canonical": "S1–S5: Classification → classification [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/classification/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ClassificationID)`",
+      "philgeps_2_0": "`Tenders (Classification ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/items/description",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_Tender_Item (ItemName)`",
+      "philgeps_2_0": "`Tenders Items (Item Description)`",
+      "v2_csv": "Item Name",
+      "v1_csv": "Item Name",
+      "canonical": "S1–S2: Item Desc · S3–S5: Item Description → item_description",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_Tender_Item (LineItemID)`",
+      "philgeps_2_0": "`Tenders Items (Item ID)`",
+      "v2_csv": "Line Item No",
+      "v1_csv": "Line Item No",
+      "canonical": "S1–S5: Line Item No → line_item_no",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/unit/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_UOM (UMOID)`",
+      "philgeps_2_0": "`Unit of Measure (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "tender/items/unit/name",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_UOM (Description)`",
+      "philgeps_2_0": "`Unit of Measure (Unit of Measure)`",
+      "v2_csv": "UOM",
+      "v1_csv": "UOM",
+      "canonical": "S1: UOM · S2: Unit of Measurement · S3–S5: UOM → uom",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/items/unit/value/amount",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`D_Tender_Item (Budget)`",
+      "philgeps_2_0": "`Tenders Items (Estimated Budget Cost), Item Details (Product Price)`",
+      "v2_csv": "Item Budget",
+      "v1_csv": "Item Budget",
+      "canonical": "S1–S5: Item Budget → item_budget",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/mainProcurementCategory",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (Classification)`",
+      "philgeps_2_0": "`Tenders (Classification)`",
+      "v2_csv": "Classification",
+      "v1_csv": "Classification",
+      "canonical": "S1–S5: Classification → classification [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/milestones/code",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (PreBidDate)`",
+      "philgeps_2_0": "`Tenders (prebid_meeting_start_datetime)`",
+      "v2_csv": "—",
+      "v1_csv": "PreBid Date",
+      "canonical": "S1–S3: PreBid Date → prebid_date [milestone:preBid]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/milestones/dateMet",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (PreBidDate)`",
+      "philgeps_2_0": "`Tenders (prebid_meeting_end_datetime)`",
+      "v2_csv": "—",
+      "v1_csv": "PreBid Date",
+      "canonical": "S1–S3: PreBid Date → prebid_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/procurementMethod",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ProcurementMode)`",
+      "philgeps_2_0": "`Tenders (Procurement Mode)`",
+      "v2_csv": "Procurement Mode",
+      "v1_csv": "Procurement Mode",
+      "canonical": "S1–S5: Procurement Mode → procurement_mode [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/procuringEntity/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrgID)`",
+      "philgeps_2_0": "`Tenders (Agency ID (Foreign Key))`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(procuring_entity)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "tender/procuringEntity/name",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ProcuringEntityOrg)`",
+      "philgeps_2_0": "`Tenders (Agency Name)`",
+      "v2_csv": "Procuring Entity (PE)",
+      "v1_csv": "Procuring Entity",
+      "canonical": "S1–S2: Organization Name · S3: Procuring Entity · S4–S5: Procuring Entity (PE) → procuring_entity",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/status",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (TenderStatus)`",
+      "philgeps_2_0": "`Tenders (Status)`",
+      "v2_csv": "Bid Notice Status",
+      "v1_csv": "Notice Status",
+      "canonical": "S1–S3: Notice Status · S4–S5: Bid Notice Status → bid_notice_status [codelist map]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/tenderPeriod/endDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ClosingDate)`",
+      "philgeps_2_0": "`Tenders (Tender End Datetime)`",
+      "v2_csv": "Closing Date",
+      "v1_csv": "Closing Date",
+      "canonical": "S1–S5: Closing Date → closing_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/tenderPeriod/startDate",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (PublishDate)`",
+      "philgeps_2_0": "`Tenders (Tender Start Datetime)`",
+      "v2_csv": "Published Date",
+      "v1_csv": "Published Date",
+      "canonical": "S1–S2: Publish Date · S3–S5: Published Date → published_date",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/tenderers/id",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_TenderBiddersList (OrgID)`",
+      "philgeps_2_0": "`Tender_Participants (Vendor ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "derived: slug(parsed bidder name)",
+      "status": "derived"
+    },
+    {
+      "ocds_field": "tender/tenderers/name",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_TenderBiddersList (OrgName)`",
+      "philgeps_2_0": "`Vendors (Name), Tender_Participants (Vendor Name)`",
+      "v2_csv": "—",
+      "v1_csv": "List of Bidder's",
+      "canonical": "S3: List of Bidder's → bidders [parse ; html-unescape]",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "tender/value/amount",
+      "ocds_block": "tender",
+      "philgeps_1_5": "`M_Tender (ApprovedBudget)`",
+      "philgeps_2_0": "`Tenders Items (Estimated Budget Cost)`",
+      "v2_csv": "Approved Budget of the Contract",
+      "v1_csv": "Approved Budget of the Contract",
+      "canonical": "S1–S5: Approved Budget of the Contract → approved_budget",
+      "status": "mapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_AwardAwardee (AwardType) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "Award Type",
+      "canonical": "S1–S3: Award Type → award_type [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_AwardAwardee (ContractNo) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "Contract No",
+      "canonical": "S1–S3: Contract No → contract_no [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_AwardAwardee (Proceed Date) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Notice to Proceed Date",
+      "v1_csv": "Notice to Proceed Date",
+      "canonical": "S1–S5: Notice to Proceed Date → notice_to_proceed_date [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_Tender_Item (ItemDesc) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Item Description",
+      "v1_csv": "Item Description",
+      "canonical": "S1–S2: Item Desc · S3–S5: Item Description → item_description",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_Tender_Item (Qty) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Quantity",
+      "v1_csv": "Quantity",
+      "canonical": "S1–S5: Quantity → quantity",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`D_Tender_Item (UOM) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "UOM",
+      "v1_csv": "UOM",
+      "canonical": "S1: UOM · S2: Unit of Measurement · S3–S5: UOM → uom",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`M_Tender (Funding Instrument) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Funding Instrument",
+      "v1_csv": "Funding Instrument",
+      "canonical": "S1–S5: Funding Instrument → funding_instrument [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`M_Tender (NoticeType) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "Notice Type",
+      "canonical": "S1–S3: Notice Type → notice_type [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`M_Tender (SolicitationNo) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "—",
+      "v1_csv": "Solicitation No.",
+      "canonical": "S1–S3: Solicitation No. → solicitation_no [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`M_Tender (TradeAgreement) *(unmapped)*`",
+      "philgeps_2_0": "`—`",
+      "v2_csv": "Trade Agreement",
+      "v1_csv": "Trade Agreement",
+      "canonical": "S1–S5: Trade Agreement → trade_agreement [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`APP (ID)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`APP Details (Annual Year)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Auditor (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Award_Participants (Vendor Name)`",
+      "v2_csv": "Awardee Joint Venture",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Awardee Joint Venture → awardee_joint_venture [parse ;]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Awards (Reason of Award)`",
+      "v2_csv": "—",
+      "v1_csv": "Reason for Award",
+      "canonical": "S1–S3: Reason for Award → reason_for_award [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Awards (Vendor Acceptance Date)`",
+      "v2_csv": "Notice to Proceed Date",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Notice to Proceed Date → notice_to_proceed_date [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`CSO (Organization Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Contract Payment Details (Contract Amount)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`PO GRN (Number of Days)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`PO Milestones (Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`PR (PR Date)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`PR (PR Number)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Purchase Orders (Vendor Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Supplier (City)`",
+      "v2_csv": "City/Municipality of Awardee",
+      "v1_csv": "—",
+      "canonical": "S4–S5: City/Municipality of Awardee → awardee_city_municipality",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Supplier (Company Type)`",
+      "v2_csv": "Awardee Size",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Awardee Size → awardee_size",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Supplier (SEC Registration Number)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Supplier (Tax Number)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Tender_BAC (Member Name)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Tenders (Delivery Location)`",
+      "v2_csv": "Area of Delivery",
+      "v1_csv": "Area of Delivery",
+      "canonical": "S1–S5: Area of Delivery → area_of_delivery [extension]",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Tenders Items (Item Name)`",
+      "v2_csv": "Item Name",
+      "v1_csv": "Item Name",
+      "canonical": "S1–S5: Item Name → item_name",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`Tenders Items (Quantity)`",
+      "v2_csv": "Quantity",
+      "v1_csv": "Quantity",
+      "canonical": "S1–S5: Quantity → quantity",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`agency_organization_types (grouped_name)`",
+      "v2_csv": "PE Organization Type (Grouped)",
+      "v1_csv": "—",
+      "canonical": "S4–S5: PE Organization Type (Grouped) → pe_organization_type_grouped",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`app_line_items (Total Estimated Budget)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`app_status_tracker (Status)`",
+      "v2_csv": "—",
+      "v1_csv": "—",
+      "canonical": "omit (PhilGEPS 2.0 internal — not in flat open CSV)",
+      "status": "omit"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`departments_government_agency (city_municipality)`",
+      "v2_csv": "City/Municipality",
+      "v1_csv": "—",
+      "canonical": "S4–S5: City/Municipality → pe_city_municipality",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`departments_government_agency (city_name)`",
+      "v2_csv": "City/Municipality",
+      "v1_csv": "—",
+      "canonical": "S4–S5: City/Municipality → pe_city_municipality",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`departments_government_agency (government_branch)`",
+      "v2_csv": "Government Branch",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Government Branch → pe_government_branch",
+      "status": "unmapped"
+    },
+    {
+      "ocds_field": "—",
+      "ocds_block": "other",
+      "philgeps_1_5": "`—`",
+      "philgeps_2_0": "`government_branchs (name)`",
+      "v2_csv": "Government Branch",
+      "v1_csv": "—",
+      "canonical": "S4–S5: Government Branch → pe_government_branch",
+      "status": "unmapped"
+    }
+  ],
+  "ocds_staged": {
+    "version": "0.92-draft",
+    "ocid_prefix": "ocds-philgeps",
+    "extensions": [
+      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/master/extension.json",
+      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/master/extension.json"
+    ],
+    "planning_triggers": [
+      "app_item_id",
+      "app_total_estimated_budget",
+      "app_program_title"
+    ],
+    "generated": [
+      {
+        "field": "ocid",
+        "spec": {
+          "from": [
+            "award_reference_no",
+            "procuring_entity"
+          ]
+        }
+      },
+      {
+        "field": "release_id",
+        "spec": "record_id"
+      },
+      {
+        "field": "release_date",
+        "spec": {
+          "prefer": [
+            "award_published_date",
+            "published_date",
+            "award_date"
+          ]
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "block": "planning",
+        "paths": [
+          {
+            "path": "budget/id",
+            "canonical": "app_item_id",
+            "is_constant": false
+          },
+          {
+            "path": "budget/description",
+            "canonical": "funding_source",
+            "is_constant": false
+          },
+          {
+            "path": "budget/amount/amount",
+            "canonical": "app_total_estimated_budget",
+            "is_constant": false
+          },
+          {
+            "path": "budget/project",
+            "canonical": "app_program_title",
+            "is_constant": false
+          },
+          {
+            "path": "budget/projectID",
+            "canonical": "app_pap_object_code",
+            "is_constant": false
+          },
+          {
+            "path": "planning/rationale",
+            "canonical": "app_remarks",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "buyer",
+        "paths": [
+          {
+            "path": "buyer/name",
+            "canonical": "procuring_entity",
+            "is_constant": false
+          },
+          {
+            "path": "buyer/id",
+            "canonical": "pe_uacs_code",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "tender",
+        "paths": [
+          {
+            "path": "tender/id",
+            "canonical": "bid_reference_no",
+            "is_constant": false
+          },
+          {
+            "path": "tender/title",
+            "canonical": "notice_title",
+            "is_constant": false
+          },
+          {
+            "path": "tender/description",
+            "canonical": "item_description",
+            "is_constant": false
+          },
+          {
+            "path": "tender/status",
+            "canonical": "bid_notice_status",
+            "is_constant": false
+          },
+          {
+            "path": "tender/procurementMethod",
+            "canonical": "procurement_mode",
+            "is_constant": false
+          },
+          {
+            "path": "tender/procurementMethodDetails",
+            "canonical": "procurement_mode",
+            "is_constant": false
+          },
+          {
+            "path": "tender/mainProcurementCategory",
+            "canonical": "classification",
+            "is_constant": false
+          },
+          {
+            "path": "value/amount",
+            "canonical": "approved_budget",
+            "is_constant": false
+          },
+          {
+            "path": "tenderPeriod/startDate",
+            "canonical": "published_date",
+            "is_constant": false
+          },
+          {
+            "path": "tenderPeriod/endDate",
+            "canonical": "closing_date",
+            "is_constant": false
+          },
+          {
+            "path": "procuringEntity/name",
+            "canonical": "procuring_entity",
+            "is_constant": false
+          },
+          {
+            "path": "items/id",
+            "canonical": "line_item_no",
+            "is_constant": false
+          },
+          {
+            "path": "items/description",
+            "canonical": "item_description",
+            "is_constant": false
+          },
+          {
+            "path": "items/quantity",
+            "canonical": "quantity",
+            "is_constant": false
+          },
+          {
+            "path": "items/classification/id",
+            "canonical": "unspsc_code",
+            "is_constant": false
+          },
+          {
+            "path": "items/classification/description",
+            "canonical": "unspsc_description",
+            "is_constant": false
+          },
+          {
+            "path": "items/unit/name",
+            "canonical": "uom",
+            "is_constant": false
+          },
+          {
+            "path": "items/unit/value/amount",
+            "canonical": "item_budget",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "awards",
+        "paths": [
+          {
+            "path": "awards/id",
+            "canonical": "award_reference_no",
+            "is_constant": false
+          },
+          {
+            "path": "awards/title",
+            "canonical": "award_title",
+            "is_constant": false
+          },
+          {
+            "path": "awards/date",
+            "canonical": "award_date",
+            "is_constant": false
+          },
+          {
+            "path": "awards/status",
+            "canonical": "award_notice_status",
+            "is_constant": false
+          },
+          {
+            "path": "value/amount",
+            "canonical": "contract_amount",
+            "is_constant": false
+          },
+          {
+            "path": "suppliers/name",
+            "canonical": "awardee_organization_name",
+            "is_constant": false
+          },
+          {
+            "path": "suppliers/id",
+            "canonical": "awardee_org_id",
+            "is_constant": false
+          },
+          {
+            "path": "items/id",
+            "canonical": "line_item_no",
+            "is_constant": false
+          },
+          {
+            "path": "items/description",
+            "canonical": "item_description",
+            "is_constant": false
+          },
+          {
+            "path": "items/quantity",
+            "canonical": "quantity",
+            "is_constant": false
+          },
+          {
+            "path": "items/classification/id",
+            "canonical": "unspsc_code",
+            "is_constant": false
+          },
+          {
+            "path": "items/unit/name",
+            "canonical": "uom",
+            "is_constant": false
+          },
+          {
+            "path": "items/unit/value/amount",
+            "canonical": "item_budget",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "contracts",
+        "paths": [
+          {
+            "path": "contracts/id",
+            "canonical": "award_reference_no",
+            "is_constant": false
+          },
+          {
+            "path": "contracts/awardID",
+            "canonical": "award_reference_no",
+            "is_constant": false
+          },
+          {
+            "path": "contracts/status",
+            "canonical": "award_notice_status",
+            "is_constant": false
+          },
+          {
+            "path": "period/startDate",
+            "canonical": "contract_effectivity_date",
+            "is_constant": false
+          },
+          {
+            "path": "period/endDate",
+            "canonical": "contract_end_date",
+            "is_constant": false
+          },
+          {
+            "path": "value/amount",
+            "canonical": "contract_amount",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "bids",
+        "paths": [
+          {
+            "path": "details/tenderers/name",
+            "canonical": "bidders",
+            "is_constant": false
+          }
+        ]
+      },
+      {
+        "block": "philgeps_extension",
+        "paths": [
+          {
+            "path": "philgeps_extension/tradeAgreement",
+            "canonical": "trade_agreement"
+          },
+          {
+            "path": "philgeps_extension/fundingInstrument",
+            "canonical": "funding_instrument"
+          },
+          {
+            "path": "philgeps_extension/solicitationNo",
+            "canonical": "solicitation_no"
+          },
+          {
+            "path": "philgeps_extension/reasonForAward",
+            "canonical": "reason_for_award"
+          },
+          {
+            "path": "philgeps_extension/noticeToProceedDate",
+            "canonical": "notice_to_proceed_date"
+          },
+          {
+            "path": "philgeps_extension/sourceSchema",
+            "canonical": "source_schema"
+          },
+          {
+            "path": "philgeps_extension/sourceFile",
+            "canonical": "source_file"
+          },
+          {
+            "path": "philgeps_extension/appStatus",
+            "canonical": "app_status"
+          },
+          {
+            "path": "philgeps_extension/prNumber",
+            "canonical": "pr_number"
+          },
+          {
+            "path": "philgeps_extension/prStatus",
+            "canonical": "pr_status"
+          },
+          {
+            "path": "philgeps_extension/awardeeJointVenture",
+            "canonical": "awardee_joint_venture"
+          }
+        ]
+      }
+    ],
+    "defaults": {
+      "currency": "PHP",
+      "initiation_type": "tender",
+      "tag": [
+        "compiled"
+      ],
+      "classification_scheme": "UNSPSC",
+      "unit_scheme": "UNCEFACT"
+    }
+  },
+  "codelists": [
+    {
+      "name": "procurement_method",
+      "label": "Procurement method",
+      "entries": [
+        {
+          "philgeps": "Public Bidding",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "Competitive Bidding (Public Bidding)",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "National Competitive Bidding",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "International Competitive Bidding",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "Invitation to Bid (ITB)",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "Invitation to Apply for Eligibility and to Bid",
+          "ocds": "open"
+        },
+        {
+          "philgeps": "Request for Quotation (RFQ)",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Notice for Negotiated Procurement",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Small Value Procurement",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Local Purchase",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Limited Source Bidding (Sec. 49)",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Shopping",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Direct Contracting",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement",
+          "ocds": "direct"
+        }
+      ]
+    },
+    {
+      "name": "main_procurement_category",
+      "label": "Main procurement category",
+      "entries": [
+        {
+          "philgeps": "Goods",
+          "ocds": "goods"
+        },
+        {
+          "philgeps": "Goods - General Support Services",
+          "ocds": "goods"
+        },
+        {
+          "philgeps": "Services",
+          "ocds": "services"
+        },
+        {
+          "philgeps": "Consulting Services",
+          "ocds": "services"
+        },
+        {
+          "philgeps": "Civil Works",
+          "ocds": "works"
+        },
+        {
+          "philgeps": "Infrastructure",
+          "ocds": "works"
+        }
+      ]
+    },
+    {
+      "name": "tender_status",
+      "label": "Tender status",
+      "entries": [
+        {
+          "philgeps": "Active",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Closed",
+          "ocds": "complete"
+        },
+        {
+          "philgeps": "Cancelled",
+          "ocds": "cancelled"
+        },
+        {
+          "philgeps": "Failed",
+          "ocds": "unsuccessful"
+        },
+        {
+          "philgeps": "Awarded",
+          "ocds": "complete"
+        },
+        {
+          "philgeps": "Shortlisted",
+          "ocds": "active"
+        }
+      ]
+    },
+    {
+      "name": "award_status",
+      "label": "Award status",
+      "entries": [
+        {
+          "philgeps": "Posted",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Updated",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Awarded",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Active",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Cancelled",
+          "ocds": "cancelled"
+        },
+        {
+          "philgeps": "Failed",
+          "ocds": "unsuccessful"
+        }
+      ]
+    },
+    {
+      "name": "contract_status",
+      "label": "Contract status",
+      "entries": [
+        {
+          "philgeps": "Posted",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Updated",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Active",
+          "ocds": "active"
+        },
+        {
+          "philgeps": "Draft_APR",
+          "ocds": "pending"
+        },
+        {
+          "philgeps": "Cancelled",
+          "ocds": "cancelled"
+        },
+        {
+          "philgeps": "Terminated",
+          "ocds": "terminated"
+        }
+      ]
+    }
+  ],
+  "ocds_reverse": {
+    "budget/id": [
+      "app_item_id"
+    ],
+    "budget/description": [
+      "funding_source"
+    ],
+    "budget/amount/amount": [
+      "app_total_estimated_budget"
+    ],
+    "budget/project": [
+      "app_program_title"
+    ],
+    "budget/projectID": [
+      "app_pap_object_code"
+    ],
+    "planning/rationale": [
+      "app_remarks"
+    ],
+    "tender/id": [
+      "bid_reference_no"
+    ],
+    "tender/title": [
+      "notice_title"
+    ],
+    "tender/description": [
+      "item_description"
+    ],
+    "tender/status": [
+      "bid_notice_status"
+    ],
+    "tender/procurementMethod": [
+      "procurement_mode"
+    ],
+    "tender/procurementMethodDetails": [
+      "procurement_mode"
+    ],
+    "tender/mainProcurementCategory": [
+      "classification"
+    ],
+    "value/amount": [
+      "approved_budget",
+      "contract_amount",
+      "contract_amount"
+    ],
+    "tenderPeriod/startDate": [
+      "published_date"
+    ],
+    "tenderPeriod/endDate": [
+      "closing_date"
+    ],
+    "procuringEntity/name": [
+      "procuring_entity"
+    ],
+    "items/id": [
+      "line_item_no",
+      "line_item_no"
+    ],
+    "items/description": [
+      "item_description",
+      "item_description"
+    ],
+    "items/quantity": [
+      "quantity",
+      "quantity"
+    ],
+    "items/classification/id": [
+      "unspsc_code",
+      "unspsc_code"
+    ],
+    "items/classification/description": [
+      "unspsc_description"
+    ],
+    "items/unit/name": [
+      "uom",
+      "uom"
+    ],
+    "items/unit/value/amount": [
+      "item_budget",
+      "item_budget"
+    ],
+    "awards/id": [
+      "award_reference_no"
+    ],
+    "awards/title": [
+      "award_title"
+    ],
+    "awards/date": [
+      "award_date"
+    ],
+    "awards/status": [
+      "award_notice_status"
+    ],
+    "suppliers/name": [
+      "awardee_organization_name"
+    ],
+    "suppliers/id": [
+      "awardee_org_id"
+    ],
+    "contracts/id": [
+      "award_reference_no"
+    ],
+    "contracts/awardID": [
+      "award_reference_no"
+    ],
+    "contracts/status": [
+      "award_notice_status"
+    ],
+    "period/startDate": [
+      "contract_effectivity_date"
+    ],
+    "period/endDate": [
+      "contract_end_date"
+    ],
+    "buyer/name": [
+      "procuring_entity"
+    ],
+    "buyer/id": [
+      "pe_uacs_code"
+    ],
+    "details/tenderers/name": [
+      "bidders"
+    ],
+    "extension/tradeAgreement": [
+      "trade_agreement"
+    ],
+    "extension/fundingInstrument": [
+      "funding_instrument"
+    ],
+    "extension/solicitationNo": [
+      "solicitation_no"
+    ],
+    "extension/reasonForAward": [
+      "reason_for_award"
+    ],
+    "extension/noticeToProceedDate": [
+      "notice_to_proceed_date"
+    ],
+    "extension/sourceSchema": [
+      "source_schema"
+    ],
+    "extension/sourceFile": [
+      "source_file"
+    ],
+    "extension/appStatus": [
+      "app_status"
+    ],
+    "extension/prNumber": [
+      "pr_number"
+    ],
+    "extension/prStatus": [
+      "pr_status"
+    ],
+    "extension/awardeeJointVenture": [
+      "awardee_joint_venture"
+    ]
+  },
+  "summary": {
+    "schema_count": 5,
+    "canonical_field_count": 53,
+    "crosswalk_row_count": 151,
+    "crosswalk_with_ocds": 113,
+    "crosswalk_mapped": 67,
+    "crosswalk_omit": 47,
+    "crosswalk_derived": 11,
+    "crosswalk_extension": 1,
+    "staged_block_count": 7,
+    "codelist_count": 5,
+    "semantic_group_count": 14
+  }
+}
