@@ -818,7 +818,7 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
 
     package = {
         "uri": f"https://philgeps-ocds.example/{ocid}.json",
-        "version": "1.1.5",
+        "version": ocds_cfg.get("ocds_version", "1.1"),
         "extensions": ocds_cfg.get("extensions", []),
         "publishedDate": row["award_published_date"],
         "publisher": {

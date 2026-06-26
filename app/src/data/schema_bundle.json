@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "PhilGEPS Schema Explorer",
-    "generated_at": "2026-06-26T17:56:35.309989+00:00",
+    "generated_at": "2026-06-26T18:07:34.122546+00:00",
     "schema_analysis_date": "2025-11-14",
     "ocds_template": "PS-DBM v0.91 (OCDS 1.1.5)",
     "ocds_mapping_version": "0.92-draft",
@@ -3662,8 +3662,8 @@
     "version": "0.92-draft",
     "ocid_prefix": "ocds-philgeps",
     "extensions": [
-      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/master/extension.json",
-      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/master/extension.json"
+      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/v1.1.5/extension.json",
+      "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
     ],
     "planning_triggers": [
       "app_item_id",
@@ -4019,10 +4019,10 @@
   "ocds_release": {
     "package": {
       "uri": "https://philgeps-ocds.example/ocds-philgeps-department-of-education---region-v-5257621-001.json",
-      "version": "1.1.5",
+      "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/master/extension.json",
-        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/master/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/v1.1.5/extension.json",
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
       ],
       "publishedDate": "2025-04-28T09:00:00",
       "publisher": {
@@ -4407,7 +4407,7 @@
       "ocid": "ocds-philgeps-department-of-education---region-v-5257621-001",
       "release_id": "5257621-001",
       "release_date": "2025-04-28T09:00:00",
-      "version": "1.1.5",
+      "version": "1.1",
       "initiation_type": "tender",
       "tag": [
         "compiled"
@@ -4415,8 +4415,8 @@
       "language": "en",
       "publisher": "Philippine Government Electronic Procurement System (PhilGEPS)",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/master/extension.json",
-        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/master/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/v1.1.5/extension.json",
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
       ],
       "top_level_blocks": [
         "buyer",

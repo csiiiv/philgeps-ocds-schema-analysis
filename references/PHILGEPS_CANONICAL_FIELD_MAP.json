@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "PhilGEPS canonical field map (open-data schemas S1–S5)",
-    "generated_at": "2026-06-26T17:56:35.304912+00:00",
+    "generated_at": "2026-06-26T18:07:34.115541+00:00",
     "sources": {
       "schema_analysis": "references/PHILGEPS_SCHEMA_ANALYSIS.json",
       "schema_mappings": "config/schema_mappings.yaml",
