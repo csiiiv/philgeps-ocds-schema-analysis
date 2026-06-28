@@ -88,6 +88,10 @@
             {
               "id": "primeprint-trading-inc",
               "name": "Primeprint Trading Inc."
+            },
+            {
+              "id": "jv-supplies-corp",
+              "name": "JV Supplies Corp."
             }
           ],
           "items": [
@@ -187,6 +191,15 @@
             "payee",
             "tenderer"
           ]
+        },
+        {
+          "id": "jv-supplies-corp",
+          "name": "JV Supplies Corp.",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
         }
       ],
       "philgeps": {
@@ -194,7 +207,8 @@
         "fundingInstrument": "GOCC Corporate Funds",
         "solicitationNo": "S-2025-05-DEDR5-1234",
         "reasonForAward": "Lowest Calculated Responsive Bid",
-        "noticeToProceedDate": "2025-05-20T09:00:00+08:00"
+        "noticeToProceedDate": "2025-05-20T09:00:00+08:00",
+        "awardeeJointVenture": "JV Supplies Corp."
       }
     }
   ]

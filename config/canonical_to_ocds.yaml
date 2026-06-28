@@ -15,9 +15,13 @@ extensions:
 generated:
   ocid:
     from:
+      - bid_reference_no
       - award_reference_no
       - procuring_entity
-  release_id: record_id
+  release_id:
+    prefer:
+      - bid_reference_no
+      - award_reference_no
   release_date:
     prefer:
       - award_published_date

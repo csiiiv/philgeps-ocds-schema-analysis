@@ -12,12 +12,19 @@ philgeps-schema-analysis/
 │   ├── canonical_to_ocds.yaml # Canonical field → OCDS 1.1 path
 │   └── ocds_codelist_mappings.yaml # PhilGEPS value → OCDS codelist codes
 ├── references/               # Committed reference artifacts (human + machine)
-│   └── SAMPLE_OCDS_RELEASE_PACKAGE.json  # Generated sample — validated in CI
+│   ├── SAMPLE_OCDS_RELEASE_PACKAGE.json  # Synthetic sample — validated in CI
+│   └── transformed/          # ETL outputs: full/, by_year/, combined.report.json (gitignored)
 ├── scripts/
 │   ├── build_schema_field_map.py    # Emits FIELD_MAP.json, crosswalk, app bundle, sample
 │   ├── _ocds_checks.py              # Shared OCDS pre-flight rules (used by build + validate)
 │   ├── validate_sample_release.py   # libcoveocds validation of the sample package
-│   └── test_ocds_checks.py          # Guard integrity tests for _ocds_checks
+│   ├── validate_transform_sample.py # libcoveocds validation of transform output
+│   ├── test_ocds_checks.py          # Guard integrity tests for _ocds_checks
+│   ├── test_ocds_compiler.py        # Grouped compile + JV expansion tests
+│   ├── test_data_quality.py         # Group validation + sampling tests
+│   ├── _data_quality.py             # Row-level data-quality validator (severity-tagged)
+│   ├── _ocds_compiler.py            # General-purpose canonical→OCDS release compiler
+│   └── transform_to_ocds.py         # Streaming CSV → OCDS transformer CLI
 ├── app/                      # Interactive webapp (Vite + React + TS)
 │   └── src/data/schema_bundle.json  # Generated — do not hand-edit
 ├── .github/workflows/
@@ -58,6 +65,17 @@ For edge cases (derived IDs, omit rules, multi-field OCDS paths), edit dictionar
 
 Then regenerate.
 
+### Change transform or data-quality rules
+
+After editing `scripts/_data_quality.py`, `scripts/_ocds_compiler.py`, or `scripts/transform_to_ocds.py`:
+
+1. Run unit guards: `python scripts/test_data_quality.py`, `python scripts/test_ocds_compiler.py`
+2. Transform a sample export and validate (see [TRANSFORM.md](TRANSFORM.md))
+3. Run `python scripts/build_schema_field_map.py` — embeds `combined.report.json` (or latest single-file `.dq.json`) into `schema_bundle.json` for the **ETL Pipeline** webapp section
+4. `cd app && npm run build` if UI types changed
+
+Transform outputs under `references/transformed/` are gitignored; only the compact DQ snapshot in `schema_bundle.json` is committed when you regenerate after a local transform.
+
 ## Generated vs hand-curated
 
 | File | Generated? | Notes |
@@ -72,9 +90,9 @@ Then regenerate.
 
 ## OCDS sample release validation
 
-The build emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` and validates it through a three-layer pipeline: a build-time hard-fail, libcoveocds schema validation, and guard-integrity tests. The shared rules live in `scripts/_ocds_checks.py`.
+The build emits `references/SAMPLE_OCDS_RELEASE_PACKAGE.json` and validates it through a multi-layer pipeline (see [VALIDATION.md](VALIDATION.md)). The shared rules live in `scripts/_ocds_checks.py`.
 
-See [VALIDATION.md](VALIDATION.md) for the full layered model, the rules each layer enforces, and how to extend them.
+See [VALIDATION.md](VALIDATION.md) for the full layered model. See [TRANSFORM.md](TRANSFORM.md) for single-file transform. See [ETL_PIPELINE.md](ETL_PIPELINE.md) for the full batch pipeline.
 
 ## Webapp development
 
@@ -91,6 +109,10 @@ Before opening a PR:
       before writing the sample — no bad release can land on disk)
 - [ ] `python scripts/test_ocds_checks.py` passes
       (guards the guards: confirms each known regression class is still caught)
+- [ ] `python scripts/test_ocds_compiler.py` passes
+      (grouped item-id disambiguation and JV supplier expansion)
+- [ ] `python scripts/test_data_quality.py` passes
+      (group validation rules and diversified warning sampling)
 - [ ] `python scripts/validate_sample_release.py` reports `# OK`
       (full OCDS 1.1 schema validation via libcoveocds)
 - [ ] JSON diff shows expected `canonical_fields` / `source_column_index` changes

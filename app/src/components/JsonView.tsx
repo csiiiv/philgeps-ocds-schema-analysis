@@ -2,6 +2,35 @@ import { useState, type ReactNode } from "react";
 import { classNames } from "./helpers";
 import { copyText, downloadText, highlightJson, prettyJson } from "./json";
 
+/** Lazy-rendered JSON — only highlights when the parent panel is open. */
+export function LazyJsonView({
+  value,
+  maxHeight = "70vh",
+  filename = "release.json",
+}: {
+  value: unknown;
+  maxHeight?: string;
+  filename?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="json-wrap">
+      {!open ? (
+        <button type="button" className="btn" style={{ margin: "8px 12px" }} onClick={() => setOpen(true)}>
+          Load JSON
+        </button>
+      ) : (
+        <>
+          <div className="json-scroll" style={{ maxHeight }}>
+            <pre dangerouslySetInnerHTML={{ __html: highlightJson(value) }} />
+          </div>
+          <JsonActions text={prettyJson(value)} filename={filename} />
+        </>
+      )}
+    </div>
+  );
+}
+
 /** Pretty, syntax-highlighted, scrollable JSON viewer. */
 export function JsonView({
   value,

@@ -4,15 +4,15 @@ Reference repository for **PhilGEPS open-data schema evolution (2000–2025)** a
 
 Use this repo to answer: *What column names appear in which export era? How do they normalize to one schema? How does that relate to OCDS and PhilGEPS 1.5/2.0 internal fields?*
 
-**This repo does not include raw CSV/XLSX data or an ETL pipeline** — only documentation, mapping config, and JSON/markdown references. Raw exports live on [Google Drive](https://drive.google.com/drive/folders/1kkqBC60VPHmdlZfntu3A-8pSKAdIh2Nx?usp=sharing).
+**This repo does not include raw CSV/XLSX data** — only documentation, mapping config, JSON/markdown references, and a **reference ETL pipeline** that transforms local exports into OCDS. Raw exports live on [Google Drive](https://drive.google.com/drive/folders/1kkqBC60VPHmdlZfntu3A-8pSKAdIh2Nx?usp=sharing). After cloning [philgeps-ocds-schema-analysis](https://github.com/csiiiv/philgeps-ocds-schema-analysis), place them under `raw/` at the repository root.
 
 ---
 
 ## Quick start
 
 ```bash
-git clone <repo-url>
-cd philgeps-schema-analysis
+git clone https://github.com/csiiiv/philgeps-ocds-schema-analysis.git
+cd philgeps-ocds-schema-analysis
 ```
 
 **No install required** to read the references. To regenerate derived files:
@@ -48,16 +48,42 @@ Production build: `npm run build` → static files in `app/dist/`.
 
 ## OCDS validation
 
-The build script emits a sample OCDS 1.1 release package and validates it through a three-layer pipeline: a build-time hard-fail (so a malformed release can never land on disk), full schema validation via [libcoveocds](https://github.com/open-contracting/lib-cove-ocds), and guard-integrity tests. All three run in CI.
+The build script emits a sample OCDS 1.1 release package and validates it through a multi-layer pipeline (see [docs/VALIDATION.md](docs/VALIDATION.md)). All guard tests run in CI.
 
 ```bash
 pip install -r requirements-dev.txt          # libcoveocds (Python ≥3.9, <3.13)
-python scripts/build_schema_field_map.py     # hard-fails on bad shape
-python scripts/test_ocds_checks.py           # guard integrity
-python scripts/validate_sample_release.py    # full OCDS 1.1 schema validation
+python scripts/build_schema_field_map.py     # layer 1: hard-fail on bad shape
+python scripts/test_ocds_checks.py           # layer 3
+python scripts/test_ocds_compiler.py         # layer 4
+python scripts/test_data_quality.py          # layer 5
+python scripts/validate_sample_release.py    # layer 2: synthetic sample
 ```
 
 → [docs/VALIDATION.md](docs/VALIDATION.md) for the layered model and how to extend the rules
+
+---
+
+## Transform real data
+
+Turn PhilGEPS exports into OCDS 1.1 releases using the validated mapping. Single-file transform for development; batch pipeline for the full 2000–2025 corpus.
+
+```bash
+pip install -r requirements.txt
+
+# One CSV export
+python scripts/transform_to_ocds.py raw/<your-export>.csv
+
+# Full dataset (54 files → by_year/ + combined.report.json)
+python scripts/run_full_dataset.py --no-quiet
+python scripts/build_schema_field_map.py
+cd app && npm run dev
+```
+
+Outputs land in `references/transformed/` (gitignored). The webapp **ETL Pipeline** section embeds `combined.report.json` for corpus stats; **Year data quality**, **Release browser** (`#/etl-releases/{year}`), and per-year caches load from `by_year/dq/` and `by_year/browser/` at dev time.
+
+→ [docs/TRANSFORM.md](docs/TRANSFORM.md) — single-file pipeline, DQ rules  
+→ [docs/ETL_PIPELINE.md](docs/ETL_PIPELINE.md) — full batch ETL, outputs, reports  
+→ [docs/ARCHITECTURAL_DECISIONS.md](docs/ARCHITECTURAL_DECISIONS.md) — ADR log (why the pipeline is shaped this way)
 
 ---
 
@@ -84,6 +110,7 @@ Map by **column name**, not column position. Details: [references/philgeps-schem
 | [**app/**](app/) | Everyone | Interactive webapp rendering all of the above — [run locally](#run-the-webapp) |
 | [**SAMPLE_OCDS_RELEASE_PACKAGE.json**](references/SAMPLE_OCDS_RELEASE_PACKAGE.json) | OCDS implementers | Sample OCDS 1.1 release package built from the staging rules; validated in CI with `libcoveocds` |
 | [**config/schema_mappings.yaml**](config/schema_mappings.yaml) | Pipeline authors | **Source of truth** for export column → canonical field |
+| [**references/transformed/combined.report.json**](references/transformed/combined.report.json) | Integrators / webapp | Full-dataset DQ roll-up + per-year stats (local; see [ETL_PIPELINE.md](docs/ETL_PIPELINE.md)) |
 | [**config/canonical_to_ocds.yaml**](config/canonical_to_ocds.yaml) | OCDS publishers | Canonical field → OCDS 1.1 path |
 | [config/ocds_codelist_mappings.yaml](config/ocds_codelist_mappings.yaml) | OCDS publishers | PhilGEPS status/mode values → OCDS codelists |
 | [PHILGEPS_SCHEMA_ANALYSIS.json](references/PHILGEPS_SCHEMA_ANALYSIS.json) | Tools | Structured schema evolution tables |
@@ -109,9 +136,9 @@ idx["Organization Name"]  # → procuring_entity
 ├── .github/workflows/  # CI: regenerate artifacts, validate sample, build webapp
 ├── app/                 # Interactive webapp (Vite + React + TS) — see app/README.md
 ├── config/              # Mapping source of truth (YAML)
-├── references/          # Schema docs, OCDS templates, generated JSON, sample release
-├── scripts/             # build_schema_field_map.py + validate_sample_release.py
-└── docs/                # Overview, getting started, contributing
+├── references/          # Schema docs, OCDS templates, generated JSON, sample release, transformed/
+├── scripts/             # build_schema_field_map.py, transform_to_ocds.py, run_full_dataset.py, …
+└── docs/                # Overview, ETL pipeline, transform, validation, getting started
 ```
 
 → [docs/OVERVIEW.md](docs/OVERVIEW.md) for architecture and scope

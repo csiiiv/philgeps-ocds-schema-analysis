@@ -11,13 +11,13 @@
 Most consumers only need the committed reference files:
 
 ```bash
-git clone <your-repo-url> philgeps-schema-analysis
-cd philgeps-schema-analysis
+git clone https://github.com/csiiiv/philgeps-ocds-schema-analysis.git
+cd philgeps-ocds-schema-analysis
 ```
 
 | Goal | Start here |
 |------|------------|
-| **Browse everything interactively** | [Run the webapp](#run-the-webapp) — canonical browser, OCDS crosswalk, staged output, search |
+| **Browse everything interactively** | [Run the webapp](#run-the-webapp) — canonical browser, OCDS crosswalk, staged output, data transformation (if embedded), search |
 | Understand schema history | [references/philgeps-schema.md](../references/philgeps-schema.md) or [live schema page](https://philgeps.simple-systems.dev/about/schema) |
 | Programmatic S1–S5 column names | [references/PHILGEPS_CANONICAL_FIELD_MAP.json](../references/PHILGEPS_CANONICAL_FIELD_MAP.json) |
 | OCDS ↔ CSV gap analysis | [references/PHILGEPS_OCDS_CSV_CROSSWALK.md](../references/PHILGEPS_OCDS_CSV_CROSSWALK.md) |
@@ -106,20 +106,52 @@ This repo does not include exports. Download from:
 
 [RAW_CSV — Google Drive](https://drive.google.com/drive/folders/1kkqBC60VPHmdlZfntu3A-8pSKAdIh2Nx?usp=sharing)
 
-Suggested layout for local testing:
+Suggested layout for local testing (monorepo: place at repo root as `raw/`):
 
 ```
-data/raw/
-  2000-2012/          # XLSX
-  2013-2020/          # XLSX
-  2021-2025/          # CSV (S3)
-  2021-2025-V2/       # CSV (S5)
+raw/
+  2000-2012/                    # XLSX (S1)
+  PHILGEPS 2013-2021/           # quarterly XLSX
+  PHILGEPS -- 2021-2025 (CSV)/  # yearly CSV (S3)
+  Misc/PHILGEPS -- 2021 - 2025 (CSV) V2/   # quarterly CSV (S4/S5)
 ```
+
+## Transform exports
+
+### Single file (development)
+
+Reference pipeline for turning one PhilGEPS export into OCDS releases:
+
+```bash
+pip install -r requirements.txt
+python scripts/transform_to_ocds.py raw/<export>.csv --sample 1000
+pip install -r requirements-dev.txt
+python scripts/validate_transform_sample.py references/transformed/<basename>.json
+python scripts/build_schema_field_map.py
+```
+
+→ [TRANSFORM.md](TRANSFORM.md) for DQ rules and grouping semantics  
+→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for `ocid` / `release.id` policy
+
+### Full dataset (batch ETL)
+
+Transform all PhilGEPS exports, merge by calendar year, refresh the webapp bundle:
+
+```bash
+python scripts/run_full_dataset.py --no-quiet
+python scripts/build_schema_field_map.py
+cd app && npm run dev
+```
+
+Use `--resume` only when re-running the **same** compiler rules without policy changes. See [ETL_PIPELINE.md](ETL_PIPELINE.md) for output paths, post-ETL steps, and disk/RAM requirements.
 
 ## Next steps
 
+- [ETL_PIPELINE.md](ETL_PIPELINE.md) — full batch ETL pipeline
+- [TRANSFORM.md](TRANSFORM.md) — single-file transform, DQ rules, **Release browser**
 - [OVERVIEW.md](OVERVIEW.md) — architecture and scope
-- [VALIDATION.md](VALIDATION.md) — how the sample OCDS release is validated (three layers)
+- [VALIDATION.md](VALIDATION.md) — OCDS validation layers (sample + transform output)
+- [TRANSFORM.md](TRANSFORM.md) — transform a real PhilGEPS CSV export into OCDS releases
 - [CONTRIBUTING.md](CONTRIBUTING.md) — extend mappings, add schemas, publish changes
 - [../app/README.md](../app/README.md) — webapp sections, scripts, architecture
 - [../README.md](../README.md) — full file index

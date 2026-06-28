@@ -76,7 +76,7 @@ export function OverviewPage() {
 
       <SectionHeader
         title="Data flow"
-        subtitle="Four layers move from raw exports to OCDS-ready records."
+        subtitle="Four layers move from raw exports to OCDS-ready records. A reference ETL pipeline can materialize the full corpus locally."
       />
       <div className="flow-diagram">
         <FlowStep
@@ -101,7 +101,58 @@ export function OverviewPage() {
           body="Canonical → OCDS staged paths and codelist transforms."
           onClick={() => navigate("staged")}
         />
+        {s.transform_available && (
+          <>
+            <FlowArrow />
+            <FlowStep
+              title="5. ETL output"
+              body={
+                s.transform_scope === "full_dataset"
+                  ? `${(s.transform_release_count ?? 0).toLocaleString()} releases across ${s.transform_calendar_year_count ?? 0} years — browse in ETL Pipeline.`
+                  : "Local transform output embedded — browse in ETL Pipeline."
+              }
+              onClick={() => navigate("etl-overview")}
+            />
+          </>
+        )}
       </div>
+
+      {s.transform_available && (
+        <>
+          <SectionHeader
+            title="Transform output"
+            subtitle="Stats from the latest embedded run report. Open ETL Pipeline for DQ findings and the Release browser."
+          />
+          <div className="card-grid cols-4">
+            <SummaryCard
+              label="Releases compiled"
+              value={s.transform_release_count ?? 0}
+              sub={
+                s.transform_scope === "full_dataset"
+                  ? `${(s.transform_calendar_year_count ?? 0).toLocaleString()} calendar years`
+                  : "Single export run"
+              }
+              onClick={() => navigate("etl-overview")}
+            />
+            <SummaryCard
+              label="Release browser"
+              value={s.transform_calendar_year_count ?? 0}
+              sub="Calendar years · #/etl-releases/{year}"
+              variant="teal"
+              onClick={() => navigate("etl-releases")}
+            />
+            {s.transform_scope === "full_dataset" && (
+              <SummaryCard
+                label="Source files"
+                value={s.transform_source_file_count ?? 0}
+                sub="Raw exports transformed"
+                variant="purple"
+                onClick={() => navigate("etl-overview")}
+              />
+            )}
+          </div>
+        </>
+      )}
 
       <SectionHeader
         title="Schema periods"
@@ -167,6 +218,18 @@ export function OverviewPage() {
             <code>config/ocds_codelist_mappings.yaml</code>.
           </div>
         </Card>
+        {bundle.transform && (
+          <Card interactive onClick={() => navigate("etl-overview")}>
+            <div className="card-title">ETL pipeline output</div>
+            <div className="card-body">
+              When a local ETL run is embedded, the <strong>ETL Pipeline</strong> section shows
+              pipeline overview, year/overall data quality, and a{" "}
+              <strong>Release browser</strong> at <code>#/etl-releases/&#123;year&#125;</code>
+              {bundle.transform.scope === "full_dataset" ? " (25 calendar years, ~3.6M releases)" : ""}
+              — searchable releases with structured summaries and Raw JSON on demand.
+            </div>
+          </Card>
+        )}
       </div>
 
       <SectionHeader title="Mapping metadata" />

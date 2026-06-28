@@ -8,6 +8,12 @@ venv/
 .pytest_cache/
 .DS_Store
 
+# Raw exports (large; obtain from Google Drive — see docs/GETTING_STARTED.md)
+raw/
+
+# Transform outputs (regenerate with scripts/transform_to_ocds.py)
+references/transformed/
+
 # Webapp (app/)
 app/node_modules/
 app/dist/

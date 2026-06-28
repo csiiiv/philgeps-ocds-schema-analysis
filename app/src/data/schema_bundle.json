@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "PhilGEPS Schema Explorer",
-    "generated_at": "2026-06-26T18:52:26.530876+00:00",
+    "generated_at": "2026-06-28T16:27:58.910104+00:00",
     "schema_analysis_date": "2025-11-14",
     "ocds_template": "PS-DBM v0.91 (OCDS 1.1.5)",
     "ocds_mapping_version": "0.92-draft",
@@ -3675,6 +3675,7 @@
         "field": "ocid",
         "spec": {
           "from": [
+            "bid_reference_no",
             "award_reference_no",
             "procuring_entity"
           ]
@@ -3682,7 +3683,12 @@
       },
       {
         "field": "release_id",
-        "spec": "record_id"
+        "spec": {
+          "prefer": [
+            "bid_reference_no",
+            "award_reference_no"
+          ]
+        }
       },
       {
         "field": "release_date",
@@ -4107,6 +4113,54 @@
                 {
                   "id": "primeprint-trading-inc",
                   "name": "Primeprint Trading Inc."
+                },
+                {
+                  "id": "j",
+                  "name": "J"
+                },
+                {
+                  "id": "v",
+                  "name": "V"
+                },
+                {
+                  "id": "s",
+                  "name": "S"
+                },
+                {
+                  "id": "u",
+                  "name": "u"
+                },
+                {
+                  "id": "p",
+                  "name": "p"
+                },
+                {
+                  "id": "l",
+                  "name": "l"
+                },
+                {
+                  "id": "i",
+                  "name": "i"
+                },
+                {
+                  "id": "e",
+                  "name": "e"
+                },
+                {
+                  "id": "c",
+                  "name": "C"
+                },
+                {
+                  "id": "o",
+                  "name": "o"
+                },
+                {
+                  "id": "r",
+                  "name": "r"
+                },
+                {
+                  "id": "unknown",
+                  "name": "."
                 }
               ],
               "items": [
@@ -4206,6 +4260,114 @@
                 "payee",
                 "tenderer"
               ]
+            },
+            {
+              "id": "j",
+              "name": "J",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "v",
+              "name": "V",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "s",
+              "name": "S",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "u",
+              "name": "u",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "p",
+              "name": "p",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "l",
+              "name": "l",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "i",
+              "name": "i",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "e",
+              "name": "e",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "c",
+              "name": "C",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "o",
+              "name": "o",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "r",
+              "name": "r",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
+            },
+            {
+              "id": "unknown",
+              "name": ".",
+              "roles": [
+                "supplier",
+                "payee",
+                "tenderer"
+              ]
             }
           ],
           "philgeps": {
@@ -4213,7 +4375,8 @@
             "fundingInstrument": "GOCC Corporate Funds",
             "solicitationNo": "S-2025-05-DEDR5-1234",
             "reasonForAward": "Lowest Calculated Responsive Bid",
-            "noticeToProceedDate": "2025-05-20T09:00:00+08:00"
+            "noticeToProceedDate": "2025-05-20T09:00:00+08:00",
+            "awardeeJointVenture": "JV Supplies Corp."
           }
         }
       ]
@@ -4291,6 +4454,54 @@
             {
               "id": "primeprint-trading-inc",
               "name": "Primeprint Trading Inc."
+            },
+            {
+              "id": "j",
+              "name": "J"
+            },
+            {
+              "id": "v",
+              "name": "V"
+            },
+            {
+              "id": "s",
+              "name": "S"
+            },
+            {
+              "id": "u",
+              "name": "u"
+            },
+            {
+              "id": "p",
+              "name": "p"
+            },
+            {
+              "id": "l",
+              "name": "l"
+            },
+            {
+              "id": "i",
+              "name": "i"
+            },
+            {
+              "id": "e",
+              "name": "e"
+            },
+            {
+              "id": "c",
+              "name": "C"
+            },
+            {
+              "id": "o",
+              "name": "o"
+            },
+            {
+              "id": "r",
+              "name": "r"
+            },
+            {
+              "id": "unknown",
+              "name": "."
             }
           ],
           "items": [
@@ -4390,6 +4601,114 @@
             "payee",
             "tenderer"
           ]
+        },
+        {
+          "id": "j",
+          "name": "J",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "v",
+          "name": "V",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "s",
+          "name": "S",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "u",
+          "name": "u",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "p",
+          "name": "p",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "l",
+          "name": "l",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "i",
+          "name": "i",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "e",
+          "name": "e",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "c",
+          "name": "C",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "o",
+          "name": "o",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "r",
+          "name": "r",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
+        },
+        {
+          "id": "unknown",
+          "name": ".",
+          "roles": [
+            "supplier",
+            "payee",
+            "tenderer"
+          ]
         }
       ],
       "philgeps": {
@@ -4397,7 +4716,8 @@
         "fundingInstrument": "GOCC Corporate Funds",
         "solicitationNo": "S-2025-05-DEDR5-1234",
         "reasonForAward": "Lowest Calculated Responsive Bid",
-        "noticeToProceedDate": "2025-05-20T09:00:00+08:00"
+        "noticeToProceedDate": "2025-05-20T09:00:00+08:00",
+        "awardeeJointVenture": "JV Supplies Corp."
       }
     },
     "summary": {
@@ -4426,7 +4746,7 @@
       "tender_item_count": 1,
       "award_count": 1,
       "contract_count": 1,
-      "party_count": 2,
+      "party_count": 14,
       "bid_count": 3,
       "has_planning": false,
       "has_extension": true,
@@ -4459,6 +4779,2545 @@
         "status",
         "value"
       ]
+    }
+  },
+  "transform": {
+    "scope": "full_dataset",
+    "input_file": "PhilGEPS full dataset (54 source files)",
+    "input_bytes": 7784427695,
+    "schema_detected": "schema_3",
+    "mapped_column_count": 0,
+    "unmapped_columns": [],
+    "header": [],
+    "rows_seen": 17595375,
+    "rows_committed": 17595102,
+    "rows_quarantined": 273,
+    "severity_counts": {
+      "error": 273,
+      "warning": 1009456,
+      "info": 11949871
+    },
+    "rule_counts": [
+      {
+        "rule": "unawarded_tender",
+        "severity": "info",
+        "count": 11949871
+      },
+      {
+        "rule": "non_positive_amount",
+        "severity": "warning",
+        "count": 809449
+      },
+      {
+        "rule": "placeholder_bid_ref",
+        "severity": "warning",
+        "count": 113067
+      },
+      {
+        "rule": "award_missing_expected",
+        "severity": "warning",
+        "count": 54997
+      },
+      {
+        "rule": "group_field_conflict",
+        "severity": "warning",
+        "count": 31435
+      },
+      {
+        "rule": "missing_identity",
+        "severity": "warning",
+        "count": 346
+      },
+      {
+        "rule": "missing_identity",
+        "severity": "error",
+        "count": 272
+      },
+      {
+        "rule": "display_id_collision",
+        "severity": "warning",
+        "count": 162
+      },
+      {
+        "rule": "bad_numeric",
+        "severity": "error",
+        "count": 1
+      }
+    ],
+    "issue_group_counts": [],
+    "quarantined_samples": [
+      {
+        "row_index": 99,
+        "row_entry": {
+          "bid_reference_no": "5478310",
+          "solicitation_no": "BGH-2018-45-001",
+          "procuring_entity": "BATAAN GENERAL HOSPITAL",
+          "notice_title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "bid_notice_status": "Closed",
+          "approved_budget": "22259720.16",
+          "item_budget": "45000",
+          "contract_amount": "28125",
+          "published_date": "2018-10-01T00:00:00+08:00",
+          "closing_date": "2018-10-29T08:30:00+08:00",
+          "line_item_no": "233",
+          "item_name": "Epidural Set g.18, mini pack with clear catheter",
+          "item_description": "Anesthesia",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BATAAN GENERAL HOSPITAL",
+          "Reference ID": "5478310",
+          "Solicitation No.": "BGH-2018-45-001",
+          "Notice Title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "Publish Date": "2018-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "22259720.16",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "10",
+          "Calendar Type": "Day/s",
+          "Line Item No": "233",
+          "Item Name": "Epidural Set g.18, mini pack with clear catheter",
+          "Item Desc": "Anesthesia",
+          "Quantity": "50",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "45000",
+          "PreBid Date": "2018-10-15T10:00:00+08:00",
+          "Closing Date": "2018-10-29T08:30:00+08:00",
+          "Notice Status": "Closed",
+          "Contract Amount": "28125",
+          "Contract No": "19-02-232"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "error",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 99: identity field `award_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 100,
+        "row_entry": {
+          "bid_reference_no": "5478310",
+          "solicitation_no": "BGH-2018-45-001",
+          "procuring_entity": "BATAAN GENERAL HOSPITAL",
+          "notice_title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "bid_notice_status": "Closed",
+          "approved_budget": "22259720.16",
+          "item_budget": "8000",
+          "contract_amount": "232.3",
+          "published_date": "2018-10-01T00:00:00+08:00",
+          "closing_date": "2018-10-29T08:30:00+08:00",
+          "line_item_no": "234",
+          "item_name": "Jackson-Rees Circuits, 1L bag 7ft Fresh Gas Tube,",
+          "item_description": "Anesthesia",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BATAAN GENERAL HOSPITAL",
+          "Reference ID": "5478310",
+          "Solicitation No.": "BGH-2018-45-001",
+          "Notice Title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "Publish Date": "2018-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "22259720.16",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "10",
+          "Calendar Type": "Day/s",
+          "Line Item No": "234",
+          "Item Name": "Jackson-Rees Circuits, 1L bag 7ft Fresh Gas Tube,",
+          "Item Desc": "Anesthesia",
+          "Quantity": "5",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "8000",
+          "PreBid Date": "2018-10-15T10:00:00+08:00",
+          "Closing Date": "2018-10-29T08:30:00+08:00",
+          "Notice Status": "Closed",
+          "Contract Amount": "232.3",
+          "Contract No": "19-02-199"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "error",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 100: identity field `award_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 101,
+        "row_entry": {
+          "bid_reference_no": "5478310",
+          "solicitation_no": "BGH-2018-45-001",
+          "procuring_entity": "BATAAN GENERAL HOSPITAL",
+          "notice_title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "bid_notice_status": "Closed",
+          "approved_budget": "22259720.16",
+          "item_budget": "6000",
+          "contract_amount": "1161.5",
+          "published_date": "2018-10-01T00:00:00+08:00",
+          "closing_date": "2018-10-29T08:30:00+08:00",
+          "line_item_no": "241",
+          "item_name": "Nasopharyngeal Airways, fr.28",
+          "item_description": "Anesthesia",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BATAAN GENERAL HOSPITAL",
+          "Reference ID": "5478310",
+          "Solicitation No.": "BGH-2018-45-001",
+          "Notice Title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "Publish Date": "2018-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "22259720.16",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "10",
+          "Calendar Type": "Day/s",
+          "Line Item No": "241",
+          "Item Name": "Nasopharyngeal Airways, fr.28",
+          "Item Desc": "Anesthesia",
+          "Quantity": "15",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "6000",
+          "PreBid Date": "2018-10-15T10:00:00+08:00",
+          "Closing Date": "2018-10-29T08:30:00+08:00",
+          "Notice Status": "Closed",
+          "Contract Amount": "1161.5",
+          "Contract No": "19-02-199"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "error",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 101: identity field `award_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 102,
+        "row_entry": {
+          "bid_reference_no": "5478310",
+          "solicitation_no": "BGH-2018-45-001",
+          "procuring_entity": "BATAAN GENERAL HOSPITAL",
+          "notice_title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "bid_notice_status": "Closed",
+          "approved_budget": "22259720.16",
+          "item_budget": "8000",
+          "contract_amount": "1161.5",
+          "published_date": "2018-10-01T00:00:00+08:00",
+          "closing_date": "2018-10-29T08:30:00+08:00",
+          "line_item_no": "242",
+          "item_name": "Nasopharyngeal Airways, fr.32",
+          "item_description": "Anesthesia",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BATAAN GENERAL HOSPITAL",
+          "Reference ID": "5478310",
+          "Solicitation No.": "BGH-2018-45-001",
+          "Notice Title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "Publish Date": "2018-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "22259720.16",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "10",
+          "Calendar Type": "Day/s",
+          "Line Item No": "242",
+          "Item Name": "Nasopharyngeal Airways, fr.32",
+          "Item Desc": "Anesthesia",
+          "Quantity": "20",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "8000",
+          "PreBid Date": "2018-10-15T10:00:00+08:00",
+          "Closing Date": "2018-10-29T08:30:00+08:00",
+          "Notice Status": "Closed",
+          "Contract Amount": "1161.5",
+          "Contract No": "19-02-199"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "error",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 102: identity field `award_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 247,
+        "row_entry": {
+          "bid_reference_no": "5478310",
+          "solicitation_no": "BGH-2018-45-001",
+          "procuring_entity": "BATAAN GENERAL HOSPITAL",
+          "notice_title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "bid_notice_status": "Closed",
+          "approved_budget": "22259720.16",
+          "item_budget": "10800",
+          "contract_amount": "1020",
+          "published_date": "2018-10-01T00:00:00+08:00",
+          "closing_date": "2018-10-29T08:30:00+08:00",
+          "line_item_no": "229",
+          "item_name": "Combined Spinal Epidural Pack G18/G27",
+          "item_description": "Anesthesia",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BATAAN GENERAL HOSPITAL",
+          "Reference ID": "5478310",
+          "Solicitation No.": "BGH-2018-45-001",
+          "Notice Title": "2018 45th Public Bidding for Medical Supplies for 2019 Consumption",
+          "Publish Date": "2018-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "22259720.16",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "10",
+          "Calendar Type": "Day/s",
+          "Line Item No": "229",
+          "Item Name": "Combined Spinal Epidural Pack G18/G27",
+          "Item Desc": "Anesthesia",
+          "Quantity": "6",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "10800",
+          "PreBid Date": "2018-10-15T10:00:00+08:00",
+          "Closing Date": "2018-10-29T08:30:00+08:00",
+          "Notice Status": "Closed",
+          "Contract Amount": "1020",
+          "Contract No": "19-02-249"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "error",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 247: identity field `award_reference_no` is missing"
+          }
+        ]
+      }
+    ],
+    "quarantined_samples_omitted": 46,
+    "warning_samples": [
+      {
+        "row_index": 7,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Portland Cement",
+          "item_description": "40kgs/bag",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Portland Cement",
+          "Item Desc": "40kgs/bag",
+          "Quantity": "638",
+          "Unit of Measurement": "Bag",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "non_positive_amount",
+            "severity": "warning",
+            "field": "item_budget",
+            "value": "-1",
+            "message": "row 7: `item_budget` is non-positive (-1.0)"
+          }
+        ]
+      },
+      {
+        "row_index": 8,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "2",
+          "item_name": "Fine aggregates",
+          "item_description": "S-1",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "2",
+          "Item Name": "Fine aggregates",
+          "Item Desc": "S-1",
+          "Quantity": "35",
+          "Unit of Measurement": "Cubic Meter",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "non_positive_amount",
+            "severity": "warning",
+            "field": "item_budget",
+            "value": "-1",
+            "message": "row 8: `item_budget` is non-positive (-1.0)"
+          }
+        ]
+      },
+      {
+        "row_index": 9,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "3",
+          "item_name": "Coarse Aggregates",
+          "item_description": "G-2",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "3",
+          "Item Name": "Coarse Aggregates",
+          "Item Desc": "G-2",
+          "Quantity": "70",
+          "Unit of Measurement": "Cubic Meter",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "non_positive_amount",
+            "severity": "warning",
+            "field": "item_budget",
+            "value": "-1",
+            "message": "row 9: `item_budget` is non-positive (-1.0)"
+          }
+        ]
+      },
+      {
+        "row_index": 10,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "4",
+          "item_name": "RSB",
+          "item_description": "16mm dia x 6m",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "4",
+          "Item Name": "RSB",
+          "Item Desc": "16mm dia x 6m",
+          "Quantity": "5",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "non_positive_amount",
+            "severity": "warning",
+            "field": "item_budget",
+            "value": "-1",
+            "message": "row 10: `item_budget` is non-positive (-1.0)"
+          }
+        ]
+      },
+      {
+        "row_index": 11,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "5",
+          "item_name": "Steel Forms",
+          "item_description": "1.20 mm. thk x 2\" x 6\" x 20ft C-Purlins",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "5",
+          "Item Name": "Steel Forms",
+          "Item Desc": "1.20 mm. thk x 2\" x 6\" x 20ft C-Purlins",
+          "Quantity": "18",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "non_positive_amount",
+            "severity": "warning",
+            "field": "item_budget",
+            "value": "-1",
+            "message": "row 11: `item_budget` is non-positive (-1.0)"
+          }
+        ]
+      },
+      {
+        "row_index": 5446,
+        "row_entry": {
+          "bid_reference_no": "7176593",
+          "solicitation_no": "2020-06-478",
+          "award_reference_no": "2812112",
+          "procuring_entity": "CITY OF MANILA",
+          "notice_title": "Lease of Venue including Food and Drinks",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Posted",
+          "awardee_organization_name": "THE BAYLEAF INTRAMUROS",
+          "approved_budget": "500000",
+          "item_budget": "500000",
+          "award_date": "2020-06-26T00:00:00+08:00",
+          "published_date": "2020-10-01T15:40:01+08:00",
+          "line_item_no": "1",
+          "item_name": "Lease of Venue including Food and Drinks",
+          "item_description": "Lease of Venue including Food and Drinks",
+          "procurement_mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF MANILA",
+          "Reference ID": "7176593",
+          "Solicitation No.": "2020-06-478",
+          "Notice Title": "Lease of Venue including Food and Drinks",
+          "Publish Date": "2020-10-01T15:40:01+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Business Category": "Hotel and Lodging and Meeting Facilities",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "500000",
+          "Area of Delivery": "Metro Manila",
+          "Line Item No": "1",
+          "Item Name": "Lease of Venue including Food and Drinks",
+          "Item Desc": "Lease of Venue including Food and Drinks",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "500000",
+          "Notice Status": "Awarded",
+          "Award No.": "2812112",
+          "Award Title": "Lease of Venue including Food and Drinks",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "90110000",
+          "UNSPSC Description": "Hotels and lodging and meeting facilities",
+          "Awardee Corporate Title": "THE BAYLEAF INTRAMUROS",
+          "Contract No": "459",
+          "Publish Date(Award)": "2020-10-01T15:40:01+08:00",
+          "Award Date": "2020-06-26T00:00:00+08:00"
+        },
+        "issues": [
+          {
+            "rule": "award_missing_expected",
+            "severity": "warning",
+            "field": "contract_amount",
+            "value": "NULL",
+            "message": "row 5446: row is `posted` but `contract_amount` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 5453,
+        "row_entry": {
+          "bid_reference_no": "7220961",
+          "solicitation_no": "E-035-2020 GQ",
+          "award_reference_no": "2834267",
+          "procuring_entity": "MUNICIPALITY OF GUINAYANGAN, QUEZON",
+          "notice_title": "Supply and Delivery of Perishable Goods and Grocery Items",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "RLPAM SARI SARI STORE",
+          "approved_budget": "28358",
+          "item_budget": "28358",
+          "award_date": "2020-09-16T00:00:00+08:00",
+          "published_date": "2020-10-01T16:23:02+08:00",
+          "line_item_no": "1",
+          "item_name": "Supply and Delivery of Perishable Goods and Grocer",
+          "item_description": "Shanghai wrapper,miki,bangus,laman,pata,manok,bawang,sibuyas,patatas,carrots,toyo,langis,itlog,hotdog,magic sarap big,monggo,luya,kamatis,dip ketchup,atay,suka,asin,brown sugar,tomato sauce 250 g, tomato paste, bihon, coffee 3 in 1, repolyo",
+          "procurement_mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)"
+        },
+        "raw_row": {
+          "Organization Name": "MUNICIPALITY OF GUINAYANGAN, QUEZON",
+          "Reference ID": "7220961",
+          "Solicitation No.": "E-035-2020 GQ",
+          "Notice Title": "Supply and Delivery of Perishable Goods and Grocery Items",
+          "Publish Date": "2020-10-01T16:23:02+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Business Category": "General Merchandise",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "28358",
+          "Area of Delivery": "Quezon",
+          "Contract Duration": "15",
+          "Line Item No": "1",
+          "Item Name": "Supply and Delivery of Perishable Goods and Grocer",
+          "Item Desc": "Shanghai wrapper,miki,bangus,laman,pata,manok,bawang,sibuyas,patatas,carrots,toyo,langis,itlog,hotdog,magic sarap big,monggo,luya,kamatis,dip ketchup,atay,suka,asin,brown sugar,tomato sauce 250 g, tomato paste, bihon, coffee 3 in 1, repolyo",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "28358",
+          "Notice Status": "Awarded",
+          "Award No.": "2834267",
+          "Award Title": "Supply and Delivery of Perishable Goods and Grocery Items",
+          "Award Type": "Award Notice (Negotiated Procurement - Emergency C",
+          "UNSPSC Code": "50000000",
+          "UNSPSC Description": "Food Beverage and Tobacco Products",
+          "Awardee Corporate Title": "RLPAM SARI SARI STORE",
+          "Contract No": "E-035-2020 GQ",
+          "Publish Date(Award)": "2020-10-01T16:23:02+08:00"
+        },
+        "issues": [
+          {
+            "rule": "award_missing_expected",
+            "severity": "warning",
+            "field": "contract_amount",
+            "value": "NULL",
+            "message": "row 5453: row is `updated` but `contract_amount` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 11561,
+        "row_entry": {
+          "bid_reference_no": "7224405",
+          "solicitation_no": "7067696",
+          "award_reference_no": "2836103",
+          "procuring_entity": "PAG-IBIG FUND - DAVAO HUB (TECHNICAL AND ADMIN SUPPORT)",
+          "notice_title": "1 Unit DLP PROJECTOR",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "TRICOM DYNAMICS INC.",
+          "approved_budget": "66000",
+          "item_budget": "66000",
+          "award_date": "2020-08-26T00:00:00+08:00",
+          "published_date": "2020-10-02T16:21:40+08:00",
+          "line_item_no": "1",
+          "item_name": "DLP PROJECTOR",
+          "item_description": "DLP PROJECTOR, WIRELESS/PORTABLE",
+          "procurement_mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)"
+        },
+        "raw_row": {
+          "Organization Name": "PAG-IBIG FUND - DAVAO HUB (TECHNICAL AND ADMIN SUPPORT)",
+          "Reference ID": "7224405",
+          "Solicitation No.": "7067696",
+          "Notice Title": "1 Unit DLP PROJECTOR",
+          "Publish Date": "2020-10-02T16:21:40+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Business Category": "Office Equipment Parts and Accessories",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+          "Procurement Mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "66000",
+          "Area of Delivery": "Davao Del Sur",
+          "Contract Duration": "15",
+          "Line Item No": "1",
+          "Item Name": "DLP PROJECTOR",
+          "Item Desc": "DLP PROJECTOR, WIRELESS/PORTABLE",
+          "Quantity": "1",
+          "Unit of Measurement": "Unit",
+          "Item Budget": "66000",
+          "Notice Status": "Awarded",
+          "Award No.": "2836103",
+          "Award Title": "1 Unit DLP PROJECTOR",
+          "Award Type": "Award Notice  (Shopping - Unforeseen Contingency)",
+          "UNSPSC Code": "44000000",
+          "UNSPSC Description": "Office Equipment and Accessories and Supplies",
+          "Awardee Corporate Title": "TRICOM DYNAMICS INC.",
+          "Contract No": "HBC20-109",
+          "Publish Date(Award)": "2020-10-02T16:21:40+08:00"
+        },
+        "issues": [
+          {
+            "rule": "award_missing_expected",
+            "severity": "warning",
+            "field": "contract_amount",
+            "value": "NULL",
+            "message": "row 11561: row is `updated` but `contract_amount` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 11573,
+        "row_entry": {
+          "bid_reference_no": "7223144",
+          "solicitation_no": "0766-20",
+          "award_reference_no": "2835425",
+          "procuring_entity": "CITY OF BUTUAN, AGUSAN DEL NORTE",
+          "notice_title": "Procurement of medical. dental and laboratory supplies under P.R.No. 3873-2020-30% CDRRMF-Butuan City Task Force Covid-19 Operations",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Posted",
+          "awardee_organization_name": "HEAL J TRADING",
+          "approved_budget": "13536.5",
+          "item_budget": "13536.5",
+          "award_date": "2020-09-24T00:00:00+08:00",
+          "published_date": "2020-10-02T21:44:42+08:00",
+          "line_item_no": "1",
+          "item_name": "Procurement of medical. dental and laboratory supp",
+          "item_description": "Procurement of medical. dental and laboratory supplies under P.R.No. 3873-2020-30% CDRRMF-Butuan City Task Force Covid-19 Operations",
+          "procurement_mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF BUTUAN, AGUSAN DEL NORTE",
+          "Reference ID": "7223144",
+          "Solicitation No.": "0766-20",
+          "Notice Title": "Procurement of medical. dental and laboratory supplies under P.R.No. 3873-2020-30% CDRRMF-Butuan City Task Force Covid-19 Operations",
+          "Publish Date": "2020-10-02T21:44:42+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Business Category": "Medical and Dental Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "13536.5",
+          "Area of Delivery": "Agusan Del Norte",
+          "Contract Duration": "15",
+          "Line Item No": "1",
+          "Item Name": "Procurement of medical. dental and laboratory supp",
+          "Item Desc": "Procurement of medical. dental and laboratory supplies under P.R.No. 3873-2020-30% CDRRMF-Butuan City Task Force Covid-19 Operations",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "13536.5",
+          "Notice Status": "Awarded",
+          "Award No.": "2835425",
+          "Award Title": "Procurement of medical. dental and laboratory supplies under P.R.No. 3873-2020-30% CDRRMF-Butuan City Task Force Covid-19 Operations",
+          "Award Type": "Award Notice (Negotiated Procurement - Emergency C",
+          "UNSPSC Code": "42000000",
+          "UNSPSC Description": "Medical Equipment and Accessories and Supplies",
+          "Awardee Corporate Title": "HEAL J TRADING",
+          "Contract No": "0766-20",
+          "Publish Date(Award)": "2020-10-02T21:44:42+08:00"
+        },
+        "issues": [
+          {
+            "rule": "award_missing_expected",
+            "severity": "warning",
+            "field": "contract_amount",
+            "value": "NULL",
+            "message": "row 11573: row is `posted` but `contract_amount` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 17334,
+        "row_entry": {
+          "bid_reference_no": "7218978",
+          "solicitation_no": "20-6055",
+          "award_reference_no": "2833127",
+          "procuring_entity": "PROVINCE OF COMPOSTELA VALLEY",
+          "notice_title": "alcohol rubbing 70% Isopropyl for COVID19-20-6055",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Posted",
+          "awardee_organization_name": "GLORSO MEDICA",
+          "approved_budget": "1254998.34",
+          "item_budget": "1254998.34",
+          "award_date": "2020-09-08T00:00:00+08:00",
+          "published_date": "2020-10-05T09:07:01+08:00",
+          "line_item_no": "1",
+          "item_name": "Alcohol Rubbing 70% Isopropyl for COVID19",
+          "item_description": "Alcohol Rubbing 70% Isopropyl for COVID19",
+          "procurement_mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)"
+        },
+        "raw_row": {
+          "Organization Name": "PROVINCE OF COMPOSTELA VALLEY",
+          "Reference ID": "7218978",
+          "Solicitation No.": "20-6055",
+          "Notice Title": "alcohol rubbing 70% Isopropyl for COVID19-20-6055",
+          "Publish Date": "2020-10-05T09:07:01+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Business Category": "Medical Supplies and Laboratory Instrument",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "1254998.34",
+          "Area of Delivery": "Compostela Valley",
+          "Line Item No": "1",
+          "Item Name": "Alcohol Rubbing 70% Isopropyl for COVID19",
+          "Item Desc": "Alcohol Rubbing 70% Isopropyl for COVID19",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "1254998.34",
+          "Notice Status": "Awarded",
+          "Award No.": "2833127",
+          "Award Title": "alcohol rubbing 70% Isopropyl for COVID19-20-6055",
+          "Award Type": "Award Notice (Negotiated Procurement - Emergency C",
+          "UNSPSC Code": "42000000",
+          "UNSPSC Description": "Medical Equipment and Accessories and Supplies",
+          "Awardee Corporate Title": "GLORSO MEDICA",
+          "Contract No": "20-09-035",
+          "Publish Date(Award)": "2020-10-05T09:07:01+08:00",
+          "Award Date": "2020-09-08T00:00:00+08:00"
+        },
+        "issues": [
+          {
+            "rule": "award_missing_expected",
+            "severity": "warning",
+            "field": "contract_amount",
+            "value": "NULL",
+            "message": "row 17334: row is `posted` but `contract_amount` is missing"
+          }
+        ]
+      },
+      {
+        "group_key": "bid:6658953",
+        "award_reference_no": "bid:6658953",
+        "row_indices": [
+          211615,
+          211616
+        ],
+        "row_entry": {
+          "bid_reference_no": "6658953",
+          "solicitation_no": "664",
+          "award_reference_no": "2646319",
+          "procuring_entity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - CAMARINES SUR 4TH ",
+          "notice_title": "PURCHASE OF WATER SERVICE CONNECTION MATERIALS/FITTINGS FOR CONSTRUCTION OF LA LIBERTAD WATER SYSTEM - LEVEL 2 (MAMBULOTAN)",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "LDN BUILDERS AND CONSTRUCTION SUPPLY",
+          "approved_budget": "2970000",
+          "item_budget": "2970000",
+          "contract_amount": "2860495.3",
+          "award_date": "2020-02-06T00:00:00+08:00",
+          "published_date": "2019-11-16T00:00:00+08:00",
+          "closing_date": "2019-11-25T01:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "20FN0044",
+          "item_description": "Local Program – Building and Other Structures – Multipurpose/Facilities – Local Infrastructure Program Construction (Completion) of Multi-Purpose Building, Tandaay Elementary School, Brgy. Tandaay, Nabua, Camarines Sur Contract Location Nabua, Camari",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - CAMARINES SUR 4TH",
+          "Reference ID": "6658953",
+          "Solicitation No.": "664",
+          "Notice Title": "PURCHASE OF WATER SERVICE CONNECTION MATERIALS/FITTINGS FOR CONSTRUCTION OF LA LIBERTAD WATER SYSTEM - LEVEL 2 (MAMBULOTAN)",
+          "Publish Date": "2019-11-16T00:00:00+08:00",
+          "Classification": "Civil Works",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Projects",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "2970000",
+          "Area of Delivery": "Camarines Sur",
+          "Contract Duration": "83",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "20FN0044",
+          "Item Desc": "Local Program – Building and Other Structures – Multipurpose/Facilities – Local Infrastructure Program Construction (Completion) of Multi-Purpose Building, Tandaay Elementary School, Brgy. Tandaay, Nabua, Camarines Sur Contract Location Nabua, Camari",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "2970000",
+          "PreBid Date": "2019-11-22T14:00:00+08:00",
+          "Closing Date": "2019-11-25T01:00:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2646319",
+          "Award Title": "20FN0044",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "72000000",
+          "UNSPSC Description": "Building and Facility Construction and Maintenance Services"
+        },
+        "issues": [
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procuring_entity",
+            "value": "['department of agriculture - region iii', 'department of public works and highways - camarines sur 4th']",
+            "message": "process bid:6658953: `procuring_entity` differs across rows [211615, 211616] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "approved_budget",
+            "value": "['1.11e+07', '2.97e+06']",
+            "message": "process bid:6658953: `approved_budget` differs across rows [211615, 211616] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "closing_date",
+            "value": "['2019-11-25t01:00:00+08:00', '2019-12-09t14:00:00+08:00']",
+            "message": "process bid:6658953: `closing_date` differs across rows [211615, 211616] (2 rows) — compiler uses first row only"
+          }
+        ]
+      },
+      {
+        "group_key": "bid:6658945",
+        "award_reference_no": "bid:6658945",
+        "row_indices": [
+          211608,
+          211609
+        ],
+        "row_entry": {
+          "bid_reference_no": "6658945",
+          "solicitation_no": "2019-269",
+          "award_reference_no": "2593549",
+          "procuring_entity": "MUNICIPALITY OF SAN JUAN, ILOCOS SUR",
+          "notice_title": "Laptops and Printer for Pahinungod",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "FIT CONSTRUCTION",
+          "approved_budget": "2490113.1",
+          "item_budget": "2490113.1",
+          "contract_amount": "2487001.8",
+          "award_date": "2019-12-12T00:00:00+08:00",
+          "published_date": "2019-11-16T00:00:00+08:00",
+          "closing_date": "2019-12-09T14:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "REPAIR/IMPROVEMENT OF BRIDGE - CACANDONGAN",
+          "item_description": "REPAIR/IMPROVEMENT OF BRIDGE - CACANDONGAN, SAN JUAN, ILOCOS SUR",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "MUNICIPALITY OF SAN JUAN, ILOCOS SUR",
+          "Reference ID": "6658945",
+          "Solicitation No.": "2019-269",
+          "Notice Title": "Laptops and Printer for Pahinungod",
+          "Publish Date": "2019-11-16T00:00:00+08:00",
+          "Classification": "Civil Works",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Projects",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "2490113.1",
+          "Area of Delivery": "Ilocos Sur",
+          "Contract Duration": "90",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "REPAIR/IMPROVEMENT OF BRIDGE - CACANDONGAN",
+          "Item Desc": "REPAIR/IMPROVEMENT OF BRIDGE - CACANDONGAN, SAN JUAN, ILOCOS SUR",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "2490113.1",
+          "PreBid Date": "2019-11-25T14:00:00+08:00",
+          "Closing Date": "2019-12-09T14:00:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2593549",
+          "Award Title": "REPAIR/IMPROVEMENT OF BRIDGE - CACANDONGAN",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "72000000",
+          "UNSPSC Description": "Building and Facility Construction and Maintenance Services"
+        },
+        "issues": [
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procuring_entity",
+            "value": "['municipality of san juan, ilocos sur', 'tarlac college of agriculture']",
+            "message": "process bid:6658945: `procuring_entity` differs across rows [211608, 211609] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "approved_budget",
+            "value": "['2.49011e+06', '4.9305e+06']",
+            "message": "process bid:6658945: `approved_budget` differs across rows [211608, 211609] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "closing_date",
+            "value": "['2019-12-06t09:00:00+08:00', '2019-12-09t14:00:00+08:00']",
+            "message": "process bid:6658945: `closing_date` differs across rows [211608, 211609] (2 rows) — compiler uses first row only"
+          }
+        ]
+      },
+      {
+        "group_key": "bid:6658840",
+        "award_reference_no": "bid:6658840",
+        "row_indices": [
+          211531,
+          211532
+        ],
+        "row_entry": {
+          "bid_reference_no": "6658840",
+          "solicitation_no": "Goods2019-182",
+          "award_reference_no": "2773950",
+          "procuring_entity": "PROVINCE OF LA UNION",
+          "notice_title": "Procurement of Toner",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "JM ENTERPRISE",
+          "approved_budget": "180000",
+          "item_budget": "180000",
+          "contract_amount": "180000",
+          "award_date": "2019-11-26T00:00:00+08:00",
+          "published_date": "2019-11-16T00:00:00+08:00",
+          "closing_date": "2019-11-19T10:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Supply and Delivery of Corporate Jacket",
+          "item_description": ".",
+          "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+        },
+        "raw_row": {
+          "Organization Name": "PROVINCE OF LA UNION",
+          "Reference ID": "6658840",
+          "Solicitation No.": "Goods2019-182",
+          "Notice Title": "Procurement of Toner",
+          "Publish Date": "2019-11-16T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Request for Quotation (RFQ)",
+          "Business Category": "Garments",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "180000",
+          "Area of Delivery": "La Union",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Supply and Delivery of Corporate Jacket",
+          "Item Desc": ".",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "180000",
+          "Closing Date": "2019-11-19T10:00:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2773950",
+          "Award Title": "Supply and Delivery of Corporate Jacket",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "53101800",
+          "UNSPSC Description": "Coats and jackets",
+          "Awardee Corporate Title": "JM ENTERPRISE"
+        },
+        "issues": [
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procuring_entity",
+            "value": "['department of public works and highways - camarines sur 4th', 'province of la union']",
+            "message": "process bid:6658840: `procuring_entity` differs across rows [211531, 211532] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "approved_budget",
+            "value": "['180000', '2.97e+06']",
+            "message": "process bid:6658840: `approved_budget` differs across rows [211531, 211532] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procurement_mode",
+            "value": "['negotiated procurement - small value procurement (sec. 53.9)', 'public bidding']",
+            "message": "process bid:6658840: `procurement_mode` differs across rows [211531, 211532] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "closing_date",
+            "value": "['2019-11-19t10:00:00+08:00', '2019-11-25t01:00:00+08:00']",
+            "message": "process bid:6658840: `closing_date` differs across rows [211531, 211532] (2 rows) — compiler uses first row only"
+          }
+        ]
+      },
+      {
+        "group_key": "bid:6658824",
+        "award_reference_no": "bid:6658824",
+        "row_indices": [
+          211514,
+          211517,
+          211519
+        ],
+        "row_entry": {
+          "bid_reference_no": "6658824",
+          "solicitation_no": "RFQ-2019-11-250",
+          "award_reference_no": "2675310",
+          "procuring_entity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - CEBU CITY DEO",
+          "notice_title": "Supply and Delivery of Office Supplies for the Conduct of Validation of Last Mile Schools in Public Elementary and Junior High Schools",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "GOWIL BUILDERS",
+          "approved_budget": "1000000",
+          "item_budget": "1000000",
+          "contract_amount": "980875.56",
+          "award_date": "2020-01-22T00:00:00+08:00",
+          "published_date": "2019-11-16T00:00:00+08:00",
+          "closing_date": "2019-12-04T17:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "20HH0032",
+          "item_description": "LOCAL PROGRAM: LOCAL INFRASTRUCTURE PROGRAM – BUILDINGS AND OTHER STRUCTURE – MULTI PURPOSE / FACILITIES – REHABILITATION OF MULTI-PURPOSE BUILDING, BRGY. PARI-AN, CEBU CITY",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - CEBU CITY DEO",
+          "Reference ID": "6658824",
+          "Solicitation No.": "RFQ-2019-11-250",
+          "Notice Title": "Supply and Delivery of Office Supplies for the Conduct of Validation of Last Mile Schools in Public Elementary and Junior High Schools",
+          "Publish Date": "2019-11-16T00:00:00+08:00",
+          "Classification": "Civil Works",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Projects",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "1000000",
+          "Area of Delivery": "Cebu",
+          "Contract Duration": "75",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "20HH0032",
+          "Item Desc": "LOCAL PROGRAM: LOCAL INFRASTRUCTURE PROGRAM – BUILDINGS AND OTHER STRUCTURE – MULTI PURPOSE / FACILITIES – REHABILITATION OF MULTI-PURPOSE BUILDING, BRGY. PARI-AN, CEBU CITY",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "1000000",
+          "PreBid Date": "2019-11-22T10:00:00+08:00",
+          "Closing Date": "2019-12-04T17:00:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2675310",
+          "Award Title": "20HH0032",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "95000000",
+          "UNSPSC Description": "Land and Buildings and Structures and Thoroughfares"
+        },
+        "issues": [
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procuring_entity",
+            "value": "['department of public works and highways - cebu city deo', 'province of la union']",
+            "message": "process bid:6658824: `procuring_entity` differs across rows [211514, 211517, 211519] (3 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "approved_budget",
+            "value": "['1e+06', '412800']",
+            "message": "process bid:6658824: `approved_budget` differs across rows [211514, 211517, 211519] (3 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procurement_mode",
+            "value": "['negotiated procurement - small value procurement (sec. 53.9)', 'public bidding']",
+            "message": "process bid:6658824: `procurement_mode` differs across rows [211514, 211517, 211519] (3 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "closing_date",
+            "value": "['2019-11-19t10:00:00+08:00', '2019-12-04t17:00:00+08:00']",
+            "message": "process bid:6658824: `closing_date` differs across rows [211514, 211517, 211519] (3 rows) — compiler uses first row only"
+          }
+        ]
+      },
+      {
+        "group_key": "bid:6658820",
+        "award_reference_no": "bid:6658820",
+        "row_indices": [
+          211495,
+          211512
+        ],
+        "row_entry": {
+          "bid_reference_no": "6658820",
+          "solicitation_no": "GOODS-159-2019",
+          "award_reference_no": "2711560",
+          "procuring_entity": "MUNICIPALITY OF ORION, BATAAN",
+          "notice_title": "KALAHI CIDSS (Municipal Accountability Reporting)",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "A.T.P. CONSTRUCTION",
+          "approved_budget": "269000",
+          "item_budget": "269000",
+          "contract_amount": "262869.32",
+          "award_date": "2019-12-09T00:00:00+08:00",
+          "published_date": "2019-11-16T00:00:00+08:00",
+          "closing_date": "2019-11-28T10:30:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Rehabilitation of Offices at OES",
+          "item_description": "Labor and Materials for the Rehabilitation of School Superintendent  and Principal’s Office at Orion Elementary School",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "MUNICIPALITY OF ORION, BATAAN",
+          "Reference ID": "6658820",
+          "Solicitation No.": "GOODS-159-2019",
+          "Notice Title": "KALAHI CIDSS (Municipal Accountability Reporting)",
+          "Publish Date": "2019-11-16T00:00:00+08:00",
+          "Classification": "Civil Works",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Projects",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "269000",
+          "Area of Delivery": "Bataan",
+          "Contract Duration": "30",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Rehabilitation of Offices at OES",
+          "Item Desc": "Labor and Materials for the Rehabilitation of School Superintendent  and Principal’s Office at Orion Elementary School",
+          "Quantity": "1",
+          "Unit of Measurement": "Lump Sum",
+          "Item Budget": "269000",
+          "Closing Date": "2019-11-28T10:30:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2711560",
+          "Award Title": "Rehabilitation of Offices at OES",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "72121406",
+          "UNSPSC Description": "School building construction service",
+          "Awardee Corporate Title": "A.T.P. CONSTRUCTION"
+        },
+        "issues": [
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "procuring_entity",
+            "value": "['department of public works and highways - cebu city deo', 'municipality of orion, bataan']",
+            "message": "process bid:6658820: `procuring_entity` differs across rows [211495, 211512] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "approved_budget",
+            "value": "['1.58475e+06', '269000']",
+            "message": "process bid:6658820: `approved_budget` differs across rows [211495, 211512] (2 rows) — compiler uses first row only"
+          },
+          {
+            "rule": "group_field_conflict",
+            "severity": "warning",
+            "field": "closing_date",
+            "value": "['2019-11-28t10:30:00+08:00', '2019-12-04t17:00:00+08:00']",
+            "message": "process bid:6658820: `closing_date` differs across rows [211495, 211512] (2 rows) — compiler uses first row only"
+          }
+        ]
+      },
+      {
+        "row_index": 370631,
+        "row_entry": {
+          "procuring_entity": "CITY OF SAGAY, NEGROS OCCIDENTAL",
+          "bid_notice_status": "Closed",
+          "approved_budget": "1707000",
+          "published_date": "2019-12-31T00:00:00+08:00",
+          "closing_date": "2020-01-21T09:00:00+08:00",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF SAGAY, NEGROS OCCIDENTAL",
+          "Publish Date": "2019-12-31T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Vehicles",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "1707000",
+          "Area of Delivery": "Negros Occidental",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "PreBid Date": "2020-01-09T10:30:00+08:00",
+          "Closing Date": "2020-01-21T09:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "",
+            "message": "row 370631: identity field `bid_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 370632,
+        "row_entry": {
+          "procuring_entity": "CITY OF SAGAY, NEGROS OCCIDENTAL",
+          "bid_notice_status": "Closed",
+          "approved_budget": "1223750",
+          "published_date": "2019-12-31T00:00:00+08:00",
+          "closing_date": "2020-01-21T09:00:00+08:00",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF SAGAY, NEGROS OCCIDENTAL",
+          "Publish Date": "2019-12-31T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Vehicles",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "1223750",
+          "Area of Delivery": "Negros Occidental",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "PreBid Date": "2020-01-09T10:45:00+08:00",
+          "Closing Date": "2020-01-21T09:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "",
+            "message": "row 370632: identity field `bid_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 370633,
+        "row_entry": {
+          "award_reference_no": "2628116",
+          "procuring_entity": "CITY OF VIGAN, ILOCOS SUR",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Posted",
+          "awardee_organization_name": "AB BERRIBER TRADING",
+          "approved_budget": "68000",
+          "item_budget": "68000",
+          "contract_amount": "60000",
+          "award_date": "2020-01-13T00:00:00+08:00",
+          "published_date": "2019-12-31T00:00:00+08:00",
+          "closing_date": "2020-01-03T01:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Singlets",
+          "item_description": "Purchase of Singlets for Runners for the conduct of First Vigan Marathon on January 2020",
+          "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF VIGAN, ILOCOS SUR",
+          "Publish Date": "2019-12-31T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Notice for Negotiated Procurement",
+          "Business Category": "Textiles",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "68000",
+          "Area of Delivery": "Ilocos Sur",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Singlets",
+          "Item Desc": "Purchase of Singlets for Runners for the conduct of First Vigan Marathon on January 2020",
+          "Quantity": "1",
+          "Unit of Measurement": "Lot",
+          "Item Budget": "68000",
+          "Closing Date": "2020-01-03T01:00:00+08:00",
+          "Notice Status": "Awarded",
+          "Award No.": "2628116",
+          "Award Title": "Singlets",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "53103000",
+          "UNSPSC Description": "Tshirts",
+          "Awardee Corporate Title": "AB BERRIBER TRADING",
+          "Contract Amount": "60000",
+          "Publish Date(Award)": "2020-01-30T13:52:42+08:00",
+          "Award Date": "2020-01-13T00:00:00+08:00"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "",
+            "message": "row 370633: identity field `bid_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 370634,
+        "row_entry": {
+          "procuring_entity": "CITY OF TANGUB",
+          "bid_notice_status": "Closed",
+          "approved_budget": "61000",
+          "published_date": "2019-12-31T00:00:00+08:00",
+          "closing_date": "2020-01-03T14:00:00+08:00",
+          "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+        },
+        "raw_row": {
+          "Organization Name": "CITY OF TANGUB",
+          "Publish Date": "2019-12-31T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Request for Quotation (RFQ)",
+          "Business Category": "General Merchandise",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "61000",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "Closing Date": "2020-01-03T14:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "",
+            "message": "row 370634: identity field `bid_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 370635,
+        "row_entry": {
+          "procuring_entity": "MUNICIPALITY OF MATANOG, MAGUINDANAO",
+          "bid_notice_status": "Closed",
+          "approved_budget": "217661",
+          "published_date": "2019-12-31T00:00:00+08:00",
+          "closing_date": "2020-01-20T10:00:00+08:00",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "MUNICIPALITY OF MATANOG, MAGUINDANAO",
+          "Publish Date": "2019-12-31T00:00:00+08:00",
+          "Classification": "Civil Works",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Projects",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "217661",
+          "Area of Delivery": "Maguindanao",
+          "Contract Duration": "20",
+          "Calendar Type": "Day/s",
+          "PreBid Date": "2020-01-08T10:00:00+08:00",
+          "Closing Date": "2020-01-20T10:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "missing_identity",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "",
+            "message": "row 370635: identity field `bid_reference_no` is missing"
+          }
+        ]
+      },
+      {
+        "row_index": 1,
+        "row_entry": {
+          "bid_reference_no": "0",
+          "solicitation_no": "099, S. 2024",
+          "award_reference_no": "5562832",
+          "procuring_entity": "SOCIAL HOUSING FINANCE CORPORATION",
+          "notice_title": "Lease of Venue for the Project Risk Management Training on May 9 - 10, 2024",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "URBANZO CORPORATION",
+          "approved_budget": "300000.00",
+          "item_budget": "300000.00",
+          "contract_amount": "204800.00",
+          "award_date": "2024-04-29 00:00:00.000",
+          "published_date": "2025-05-30 15:51:33.970",
+          "line_item_no": "1",
+          "item_name": "Lease of Venue for the Project Risk Management Tra",
+          "item_description": "Lease of Venue for the Project Risk Management Training on May 9 - 10, 2024",
+          "procurement_mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)"
+        },
+        "raw_row": {
+          "Procuring Entity": "SOCIAL HOUSING FINANCE CORPORATION",
+          "Bid Reference No.": "0",
+          "Solicitation No.": "099, S. 2024",
+          "Notice Title": "Lease of Venue for the Project Risk Management Training on May 9 - 10, 2024",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Classification": "Goods",
+          "Procurement Mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+          "Business Category": "Hotel and Lodging and Meeting Facilities",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "300000.00",
+          "Published Date": "2025-05-30 15:51:33.970",
+          "Area of Delivery": "Metro Manila",
+          "Contract Duration": "2",
+          "Line Item No": "1",
+          "Item Name": "Lease of Venue for the Project Risk Management Tra",
+          "Item Description": "Lease of Venue for the Project Risk Management Training on May 9 - 10, 2024",
+          "Quantity": "1",
+          "UOM": "Lot",
+          "Item Budget": "300000.00",
+          "Notice Status": "Awarded",
+          "Award No.": "5562832",
+          "Award Title": "Lease of Venue for the Project Risk Management Training on May 9 - 10, 2024",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "90110000",
+          "UNSPSC Description": "Hotels and lodging and meeting facilities",
+          "Published Date(Award)": "2025-05-30 15:51:33.970",
+          "Award Date": "2024-04-29 00:00:00.000",
+          "Notice to Proceed Date": "2024-05-09 00:00:00.000"
+        },
+        "issues": [
+          {
+            "rule": "placeholder_bid_ref",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "0",
+            "message": "row 1: `bid_reference_no` is `0` (S4 decommissions this column; award_reference_no is the primary identifier)"
+          }
+        ]
+      },
+      {
+        "row_index": 2,
+        "row_entry": {
+          "bid_reference_no": "0",
+          "solicitation_no": "2025-03-06-267",
+          "award_reference_no": "5573693",
+          "procuring_entity": "DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT - REGION IX",
+          "notice_title": "CIPST CUM CASE MANAGEMENT COACHING",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "KOK TZI DEVELOPMENT INC.",
+          "approved_budget": "374000.00",
+          "item_budget": "374000.00",
+          "contract_amount": "365500.00",
+          "award_date": "2025-03-11 00:00:00.000",
+          "published_date": "2025-06-06 09:25:29.370",
+          "line_item_no": "1",
+          "item_name": "MEALS WITH ACCOMODATION",
+          "item_description": "LEASE OF VENUE",
+          "procurement_mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)"
+        },
+        "raw_row": {
+          "Procuring Entity": "DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT - REGION IX",
+          "Bid Reference No.": "0",
+          "Solicitation No.": "2025-03-06-267",
+          "Notice Title": "CIPST CUM CASE MANAGEMENT COACHING",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Classification": "Goods",
+          "Procurement Mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+          "Business Category": "Lease and Rental of Property or Building",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "374000.00",
+          "Published Date": "2025-06-06 09:25:29.370",
+          "Area of Delivery": "Zamboanga Del Sur",
+          "Contract Duration": "2",
+          "Line Item No": "1",
+          "Item Name": "MEALS WITH ACCOMODATION",
+          "Item Description": "LEASE OF VENUE",
+          "Quantity": "1",
+          "UOM": "Lot",
+          "Item Budget": "374000.00",
+          "Notice Status": "Awarded",
+          "Award No.": "5573693",
+          "Award Title": "CIPST CUM CASE MANAGEMENT COACHING",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "80131500",
+          "UNSPSC Description": "Lease and rental of property or building",
+          "Published Date(Award)": "2025-06-06 09:25:29.433",
+          "Award Date": "2025-03-11 00:00:00.000",
+          "Notice to Proceed Date": "2025-04-03 00:00:00.000"
+        },
+        "issues": [
+          {
+            "rule": "placeholder_bid_ref",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "0",
+            "message": "row 2: `bid_reference_no` is `0` (S4 decommissions this column; award_reference_no is the primary identifier)"
+          }
+        ]
+      },
+      {
+        "row_index": 3,
+        "row_entry": {
+          "bid_reference_no": "0",
+          "solicitation_no": "2024-048A",
+          "award_reference_no": "5326020",
+          "procuring_entity": "PHILIPPINE GUARANTEE CORPORATION",
+          "notice_title": "SUPPLY OF DRINKING WATER",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "MSDR WATER REFILLING STATION",
+          "approved_budget": "342720.00",
+          "item_budget": "342720.00",
+          "contract_amount": "342720.00",
+          "award_date": "2024-12-16 00:00:00.000",
+          "published_date": "2025-01-24 14:28:49.727",
+          "line_item_no": "1",
+          "item_name": "SUPPLY OF DRINKING WATER",
+          "item_description": "SUPPLY OF DRINKING WATER",
+          "procurement_mode": "Renewal of Regular and Recurring Sevices per Appendix 37"
+        },
+        "raw_row": {
+          "Procuring Entity": "PHILIPPINE GUARANTEE CORPORATION",
+          "Bid Reference No.": "0",
+          "Solicitation No.": "2024-048A",
+          "Notice Title": "SUPPLY OF DRINKING WATER",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Classification": "Goods - General Support Services",
+          "Procurement Mode": "Renewal of Regular and Recurring Sevices per Appendix 37",
+          "Business Category": "General Merchandise",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "342720.00",
+          "Published Date": "2025-01-24 14:28:49.727",
+          "Area of Delivery": "Metro Manila",
+          "Contract Duration": "1",
+          "Line Item No": "1",
+          "Item Name": "SUPPLY OF DRINKING WATER",
+          "Item Description": "SUPPLY OF DRINKING WATER",
+          "Quantity": "1",
+          "UOM": "Cycle",
+          "Item Budget": "342720.00",
+          "Notice Status": "Awarded",
+          "Award No.": "5326020",
+          "Award Title": "SUPPLY OF DRINKING WATER",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "83101501",
+          "UNSPSC Description": "Supply of water",
+          "Published Date(Award)": "2025-01-24 14:28:49.757",
+          "Award Date": "2024-12-16 00:00:00.000",
+          "Notice to Proceed Date": "2024-12-16 00:00:00.000"
+        },
+        "issues": [
+          {
+            "rule": "placeholder_bid_ref",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "0",
+            "message": "row 3: `bid_reference_no` is `0` (S4 decommissions this column; award_reference_no is the primary identifier)"
+          }
+        ]
+      },
+      {
+        "row_index": 4,
+        "row_entry": {
+          "bid_reference_no": "0",
+          "solicitation_no": "25010010",
+          "award_reference_no": "5321287",
+          "procuring_entity": "BATANES GENERAL HOSPITAL",
+          "notice_title": "Supply & Delivery of ALT Kit (IFCC Method)R1(4 x 35) R2(2 x 18) & etc. (Direct Contracting Exclusive Dealer / Manufacturer)",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "ALLIED HOSPITAL SUPPLY INTERNATIONAL CORPORATION",
+          "approved_budget": "584322.05",
+          "item_budget": "584322.05",
+          "contract_amount": "584322.05",
+          "award_date": "2025-01-17 00:00:00.000",
+          "published_date": "2025-01-30 14:43:43.450",
+          "line_item_no": "1",
+          "item_name": "Supply & Delivery of ALT Kit (IFCC Method)R1(4 x 3",
+          "item_description": "ALT Kit (IFCC Method)R1(4 x 35) R2(2 x 18)",
+          "procurement_mode": "Direct Contracting (Sec. 50)"
+        },
+        "raw_row": {
+          "Procuring Entity": "BATANES GENERAL HOSPITAL",
+          "Bid Reference No.": "0",
+          "Solicitation No.": "25010010",
+          "Notice Title": "Supply & Delivery of ALT Kit (IFCC Method)R1(4 x 35) R2(2 x 18) & etc. (Direct Contracting Exclusive Dealer / Manufacturer)",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Classification": "Goods",
+          "Procurement Mode": "Direct Contracting (Sec. 50)",
+          "Business Category": "Laboratory Supplies and Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "584322.05",
+          "Published Date": "2025-01-30 14:43:43.450",
+          "Area of Delivery": "Batanes",
+          "Contract Duration": "45",
+          "Line Item No": "1",
+          "Item Name": "Supply & Delivery of ALT Kit (IFCC Method)R1(4 x 3",
+          "Item Description": "ALT Kit (IFCC Method)R1(4 x 35) R2(2 x 18)",
+          "Quantity": "1",
+          "UOM": "Lot",
+          "Item Budget": "584322.05",
+          "Notice Status": "Awarded",
+          "Award No.": "5321287",
+          "Award Title": "Supply & Delivery of ALT Kit (IFCC Method)R1(4 x 35) R2(2 x 18) & etc. (Direct Contracting Exclusive Dealer / Manufacturer)",
+          "Award Type": "Award Notice  (Direct Contracting)",
+          "UNSPSC Code": "12161503",
+          "UNSPSC Description": "Reagent kits",
+          "Published Date(Award)": "2025-01-30 14:43:43.463",
+          "Award Date": "2025-01-17 00:00:00.000",
+          "Notice to Proceed Date": "2025-01-20 00:00:00.000"
+        },
+        "issues": [
+          {
+            "rule": "placeholder_bid_ref",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "0",
+            "message": "row 4: `bid_reference_no` is `0` (S4 decommissions this column; award_reference_no is the primary identifier)"
+          }
+        ]
+      },
+      {
+        "row_index": 5,
+        "row_entry": {
+          "bid_reference_no": "0",
+          "solicitation_no": "CY2025 -2027 Contract of Lease",
+          "award_reference_no": "5345510",
+          "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION X",
+          "notice_title": "Contract of Lease of PBC Camiguin",
+          "bid_notice_status": "Awarded",
+          "award_notice_status": "Updated",
+          "awardee_organization_name": "OSTRICH REAL ESTATE PROPERTY LEASING",
+          "approved_budget": "1718658.00",
+          "item_budget": "1718658.00",
+          "contract_amount": "1718658.00",
+          "award_date": "2025-02-03 00:00:00.000",
+          "published_date": "2025-02-03 16:42:28.827",
+          "line_item_no": "1",
+          "item_name": "Contract of Lease",
+          "item_description": "PBC Camiguin Office Space Rental",
+          "procurement_mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)"
+        },
+        "raw_row": {
+          "Procuring Entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION X",
+          "Bid Reference No.": "0",
+          "Solicitation No.": "CY2025 -2027 Contract of Lease",
+          "Notice Title": "Contract of Lease of PBC Camiguin",
+          "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+          "Classification": "Goods",
+          "Procurement Mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+          "Business Category": "Lease and Rental of Property or Building",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "1718658.00",
+          "Published Date": "2025-02-03 16:42:28.827",
+          "Area of Delivery": "Misamis Oriental",
+          "Contract Duration": "3",
+          "Line Item No": "1",
+          "Item Name": "Contract of Lease",
+          "Item Description": "PBC Camiguin Office Space Rental",
+          "Quantity": "96",
+          "UOM": "Square Meter",
+          "Item Budget": "1718658.00",
+          "Notice Status": "Awarded",
+          "Award No.": "5345510",
+          "Award Title": "Contract of Lease of PBC Camiguin",
+          "Award Type": "Award Notice",
+          "UNSPSC Code": "95000000",
+          "UNSPSC Description": "Land and Buildings and Structures and Thoroughfares",
+          "Published Date(Award)": "2025-02-03 16:42:28.937",
+          "Award Date": "2025-02-03 00:00:00.000",
+          "Notice to Proceed Date": "2025-01-01 00:00:00.000"
+        },
+        "issues": [
+          {
+            "rule": "placeholder_bid_ref",
+            "severity": "warning",
+            "field": "bid_reference_no",
+            "value": "0",
+            "message": "row 5: `bid_reference_no` is `0` (S4 decommissions this column; award_reference_no is the primary identifier)"
+          }
+        ]
+      }
+    ],
+    "warning_samples_omitted": 1093,
+    "info_samples": [
+      {
+        "row_index": 1,
+        "row_entry": {
+          "bid_reference_no": "7195002",
+          "solicitation_no": "PQ#050-2020 Various Common Supplies",
+          "procuring_entity": "DEPARTMENT OF FINANCE - MAIN",
+          "notice_title": "PQ050-2020 Various Common Supplies",
+          "bid_notice_status": "Closed",
+          "approved_budget": "79500",
+          "item_budget": "42000",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-06T15:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Office Supplies",
+          "item_description": "Data Folder with DOF Logo",
+          "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+        },
+        "raw_row": {
+          "Organization Name": "DEPARTMENT OF FINANCE - MAIN",
+          "Reference ID": "7195002",
+          "Solicitation No.": "PQ#050-2020 Various Common Supplies",
+          "Notice Title": "PQ050-2020 Various Common Supplies",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Request for Quotation (RFQ)",
+          "Business Category": "Office Equipment Supplies and Consumables",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "79500",
+          "Area of Delivery": "Metro Manila",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Office Supplies",
+          "Item Desc": "Data Folder with DOF Logo",
+          "Quantity": "600",
+          "Unit of Measurement": "Piece",
+          "Item Budget": "42000",
+          "Closing Date": "2020-10-06T15:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "unawarded_tender",
+            "severity": "info",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 1: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+          }
+        ]
+      },
+      {
+        "row_index": 2,
+        "row_entry": {
+          "bid_reference_no": "7195002",
+          "solicitation_no": "PQ#050-2020 Various Common Supplies",
+          "procuring_entity": "DEPARTMENT OF FINANCE - MAIN",
+          "notice_title": "PQ050-2020 Various Common Supplies",
+          "bid_notice_status": "Closed",
+          "approved_budget": "79500",
+          "item_budget": "37500",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-06T15:00:00+08:00",
+          "line_item_no": "2",
+          "item_name": "Office Supplies",
+          "item_description": "A4 Letterhead with DOF and RIPS Logo",
+          "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+        },
+        "raw_row": {
+          "Organization Name": "DEPARTMENT OF FINANCE - MAIN",
+          "Reference ID": "7195002",
+          "Solicitation No.": "PQ#050-2020 Various Common Supplies",
+          "Notice Title": "PQ050-2020 Various Common Supplies",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Request for Quotation (RFQ)",
+          "Business Category": "Office Equipment Supplies and Consumables",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "General Appropriations Act",
+          "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "79500",
+          "Area of Delivery": "Metro Manila",
+          "Contract Duration": "0",
+          "Calendar Type": "Day/s",
+          "Line Item No": "2",
+          "Item Name": "Office Supplies",
+          "Item Desc": "A4 Letterhead with DOF and RIPS Logo",
+          "Quantity": "50",
+          "Unit of Measurement": "Ream",
+          "Item Budget": "37500",
+          "Closing Date": "2020-10-06T15:00:00+08:00",
+          "Notice Status": "Closed"
+        },
+        "issues": [
+          {
+            "rule": "unawarded_tender",
+            "severity": "info",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 2: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+          }
+        ]
+      },
+      {
+        "row_index": 5,
+        "row_entry": {
+          "bid_reference_no": "7202453",
+          "solicitation_no": "1",
+          "procuring_entity": "BARANGAY MACOGON, LABO, CAMARINES NORTE",
+          "notice_title": "CONSTRUCTION MATERIALS FOR FARM TO MARKET ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "218250",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T13:00:00+08:00",
+          "procurement_mode": "Negotiated Procurement - Two Failed Biddings (Sec. 53.1)"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY MACOGON, LABO, CAMARINES NORTE",
+          "Reference ID": "7202453",
+          "Solicitation No.": "1",
+          "Notice Title": "CONSTRUCTION MATERIALS FOR FARM TO MARKET ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Hardware and Construction Supplies",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Negotiated Procurement - Two Failed Biddings (Sec. 53.1)",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "218250",
+          "Area of Delivery": "Camarines Norte",
+          "Contract Duration": "15",
+          "Calendar Type": "Day/s",
+          "Closing Date": "2020-10-08T13:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "unawarded_tender",
+            "severity": "info",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 5: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+          }
+        ]
+      },
+      {
+        "row_index": 7,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "1",
+          "item_name": "Portland Cement",
+          "item_description": "40kgs/bag",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "1",
+          "Item Name": "Portland Cement",
+          "Item Desc": "40kgs/bag",
+          "Quantity": "638",
+          "Unit of Measurement": "Bag",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "unawarded_tender",
+            "severity": "info",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 7: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+          }
+        ]
+      },
+      {
+        "row_index": 8,
+        "row_entry": {
+          "bid_reference_no": "7204762",
+          "solicitation_no": "ITB-2020-001",
+          "procuring_entity": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "notice_title": "CONCRETING OF CALLE ARAGON ROAD",
+          "bid_notice_status": "Cancelled",
+          "approved_budget": "353059.93",
+          "item_budget": "-1",
+          "published_date": "2020-10-01T00:00:00+08:00",
+          "closing_date": "2020-10-08T01:00:00+08:00",
+          "line_item_no": "2",
+          "item_name": "Fine aggregates",
+          "item_description": "S-1",
+          "procurement_mode": "Public Bidding"
+        },
+        "raw_row": {
+          "Organization Name": "BARANGAY TUAO SOUTH, BAGABAG, NUEVA VIZCAYA",
+          "Reference ID": "7204762",
+          "Solicitation No.": "ITB-2020-001",
+          "Notice Title": "CONCRETING OF CALLE ARAGON ROAD",
+          "Publish Date": "2020-10-01T00:00:00+08:00",
+          "Classification": "Goods",
+          "Notice Type": "Invitation to Bid (ITB)",
+          "Business Category": "Construction Equipment",
+          "Funding Source": "Government of the Philippines (GOP)",
+          "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+          "Procurement Mode": "Public Bidding",
+          "Trade Agreement": "Implementing Rules and Regulations",
+          "Approved Budget of the Contract": "353059.93",
+          "Area of Delivery": "Nueva Vizcaya",
+          "Contract Duration": "7",
+          "Calendar Type": "Day/s",
+          "Line Item No": "2",
+          "Item Name": "Fine aggregates",
+          "Item Desc": "S-1",
+          "Quantity": "35",
+          "Unit of Measurement": "Cubic Meter",
+          "Item Budget": "-1",
+          "Closing Date": "2020-10-08T01:00:00+08:00",
+          "Notice Status": "Cancelled"
+        },
+        "issues": [
+          {
+            "rule": "unawarded_tender",
+            "severity": "info",
+            "field": "award_reference_no",
+            "value": "NULL",
+            "message": "row 8: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+          }
+        ]
+      }
+    ],
+    "info_samples_omitted": 265,
+    "compiled_release_count": 3611852,
+    "source_file_count": 54,
+    "calendar_year_count": 25,
+    "duplicate_ocids_overwritten": 203743,
+    "package_mb_total": 12944.1,
+    "years": [
+      {
+        "year": "2000",
+        "compiled_release_count": 3,
+        "package_mb": 0.0,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 14,
+          "info": 15
+        }
+      },
+      {
+        "year": "2002",
+        "compiled_release_count": 2077,
+        "package_mb": 6.2,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 4432,
+          "info": 8572
+        }
+      },
+      {
+        "year": "2003",
+        "compiled_release_count": 2971,
+        "package_mb": 8.0,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 5320,
+          "info": 16810
+        }
+      },
+      {
+        "year": "2004",
+        "compiled_release_count": 4978,
+        "package_mb": 15.1,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 10772,
+          "info": 42539
+        }
+      },
+      {
+        "year": "2005",
+        "compiled_release_count": 13325,
+        "package_mb": 34.2,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 23557,
+          "info": 81152
+        }
+      },
+      {
+        "year": "2006",
+        "compiled_release_count": 13107,
+        "package_mb": 35.3,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 17812,
+          "info": 132957
+        }
+      },
+      {
+        "year": "2007",
+        "compiled_release_count": 19232,
+        "package_mb": 63.4,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 6360,
+          "info": 186004
+        }
+      },
+      {
+        "year": "2008",
+        "compiled_release_count": 26266,
+        "package_mb": 81.8,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 5653,
+          "info": 253654
+        }
+      },
+      {
+        "year": "2009",
+        "compiled_release_count": 40538,
+        "package_mb": 146.6,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 7456,
+          "info": 323000
+        }
+      },
+      {
+        "year": "2010",
+        "compiled_release_count": 35785,
+        "package_mb": 116.3,
+        "source_file_count": 1,
+        "all_passed": false,
+        "severity_counts": {
+          "error": 1,
+          "warning": 6173,
+          "info": 312319
+        }
+      },
+      {
+        "year": "2011",
+        "compiled_release_count": 50344,
+        "package_mb": 163.4,
+        "source_file_count": 2,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 3743,
+          "info": 309086
+        }
+      },
+      {
+        "year": "2012",
+        "compiled_release_count": 59988,
+        "package_mb": 200.3,
+        "source_file_count": 2,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 4615,
+          "info": 383471
+        }
+      },
+      {
+        "year": "2013",
+        "compiled_release_count": 110747,
+        "package_mb": 549.7,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 30480,
+          "info": 421143
+        }
+      },
+      {
+        "year": "2014",
+        "compiled_release_count": 120556,
+        "package_mb": 608.1,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 43979,
+          "info": 513241
+        }
+      },
+      {
+        "year": "2015",
+        "compiled_release_count": 145295,
+        "package_mb": 732.4,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 60244,
+          "info": 689745
+        }
+      },
+      {
+        "year": "2016",
+        "compiled_release_count": 178718,
+        "package_mb": 933.8,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 72718,
+          "info": 680428
+        }
+      },
+      {
+        "year": "2017",
+        "compiled_release_count": 227540,
+        "package_mb": 672.1,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 61896,
+          "info": 749514
+        }
+      },
+      {
+        "year": "2018",
+        "compiled_release_count": 280437,
+        "package_mb": 841.4,
+        "source_file_count": 4,
+        "all_passed": false,
+        "severity_counts": {
+          "error": 272,
+          "warning": 65764,
+          "info": 778788
+        }
+      },
+      {
+        "year": "2019",
+        "compiled_release_count": 289571,
+        "package_mb": 862.9,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 66803,
+          "info": 751333
+        }
+      },
+      {
+        "year": "2020",
+        "compiled_release_count": 190821,
+        "package_mb": 910.3,
+        "source_file_count": 4,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 38528,
+          "info": 574318
+        }
+      },
+      {
+        "year": "2021",
+        "compiled_release_count": 355410,
+        "package_mb": 1111.4,
+        "source_file_count": 3,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 120360,
+          "info": 1253189
+        }
+      },
+      {
+        "year": "2022",
+        "compiled_release_count": 389900,
+        "package_mb": 1231.9,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 97293,
+          "info": 891192
+        }
+      },
+      {
+        "year": "2023",
+        "compiled_release_count": 422299,
+        "package_mb": 1343.9,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 88978,
+          "info": 871464
+        }
+      },
+      {
+        "year": "2024",
+        "compiled_release_count": 489180,
+        "package_mb": 1538.8,
+        "source_file_count": 2,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 125507,
+          "info": 1204346
+        }
+      },
+      {
+        "year": "2025",
+        "compiled_release_count": 142764,
+        "package_mb": 736.8,
+        "source_file_count": 1,
+        "all_passed": true,
+        "severity_counts": {
+          "error": 0,
+          "warning": 40999,
+          "info": 521591
+        }
+      }
+    ],
+    "releases_sample": [],
+    "release_browser_base_url": "/data/releases",
+    "input_samples": [],
+    "package_path": "references\\transformed\\by_year\\2004.json",
+    "combined_report_path": "references\\transformed\\combined.report.json",
+    "row_accounting": {
+      "rows_seen": 17595375,
+      "rows_committed": 17595102,
+      "rows_quarantined": 273,
+      "compile_accounting": {
+        "rows_excluded_no_award": 11949871,
+        "rows_excluded_no_process_key": 0,
+        "rows_grouped": 5645231,
+        "process_group_count": 3815595,
+        "rows_merged_into_groups": 1829636,
+        "releases_compiled": 3815595
+      },
+      "merge_accounting": {
+        "releases_before_dedup": 3815595,
+        "releases_after_dedup": 3611852,
+        "duplicate_ocids_overwritten": 203743,
+        "scope": "overall"
+      },
+      "breakdown": [
+        {
+          "id": "rows_seen",
+          "label": "Raw rows read",
+          "count": 17595375,
+          "detail": "One PhilGEPS export row after header mapping"
+        },
+        {
+          "id": "quarantined",
+          "label": "Quarantined (DQ errors)",
+          "count": 273,
+          "detail": "Fatal validation — excluded from compilation"
+        },
+        {
+          "id": "excluded_no_award",
+          "label": "Excluded — no award reference",
+          "count": 11949871,
+          "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+        },
+        {
+          "id": "excluded_no_process_key",
+          "label": "Excluded — no process identity",
+          "count": 0,
+          "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+        },
+        {
+          "id": "rows_grouped",
+          "label": "Rows grouped into processes",
+          "count": 5645231,
+          "detail": "Awarded rows assigned to a contracting-process group key"
+        },
+        {
+          "id": "rows_merged",
+          "label": "Rows merged (multi-row processes)",
+          "count": 1829636,
+          "detail": "Line items / awards collapsed into the same release"
+        },
+        {
+          "id": "releases_compiled",
+          "label": "OCDS releases compiled",
+          "count": 3815595,
+          "detail": "One release per process group in source transform output"
+        },
+        {
+          "id": "releases_before_dedup",
+          "label": "Releases from all sources (pre-merge)",
+          "count": 3815595,
+          "detail": "Sum of per-source transform outputs before calendar-year merge"
+        },
+        {
+          "id": "ocid_dedup",
+          "label": "OCID dedup (year merges)",
+          "count": 203743,
+          "detail": "Duplicate ocid across quarterly exports merged per calendar year"
+        },
+        {
+          "id": "releases_final",
+          "label": "Releases in merged dataset",
+          "count": 3611852,
+          "detail": "Final count across all by_year/<year>.json packages"
+        }
+      ],
+      "estimated": true
     }
   },
   "codelists": [
@@ -4495,11 +7354,11 @@
           "ocds": "limited"
         },
         {
-          "philgeps": "Notice for Negotiated Procurement",
-          "ocds": "direct"
+          "philgeps": "Small Value Procurement",
+          "ocds": "limited"
         },
         {
-          "philgeps": "Small Value Procurement",
+          "philgeps": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
           "ocds": "limited"
         },
         {
@@ -4515,11 +7374,75 @@
           "ocds": "limited"
         },
         {
+          "philgeps": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Shopping - Unforeseen Contingency (Sec. 52.1.a)",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Renewal of Regular and Recurring Sevices per Appendix 37",
+          "ocds": "limited"
+        },
+        {
+          "philgeps": "Notice for Negotiated Procurement",
+          "ocds": "direct"
+        },
+        {
           "philgeps": "Direct Contracting",
           "ocds": "direct"
         },
         {
+          "philgeps": "Direct Contracting (Sec. 50)",
+          "ocds": "direct"
+        },
+        {
           "philgeps": "Negotiated Procurement",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Direct Retail Purchase of POL and Airline Tickets (Sec. 53.14)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Agency to Agency (Sec. 53.5)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Emergency Cases (Sec. 53.2)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Two Failed Biddings (Sec. 53.1)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Highly Technical Consultants (Sec. 53.7)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Community Participation (Sec. 53.12)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - NGO Participation (Sec. 53.11)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - Defense Cooperation Agreement (Sec. 53.8)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "Negotiated Procurement - United Nations Agencies (Sec. 53.13)",
+          "ocds": "direct"
+        },
+        {
+          "philgeps": "NP - Scientific, Scholarly/Artistic Work, Exclusive Tech. & Media Service (53.6)",
           "ocds": "direct"
         }
       ]
@@ -4813,6 +7736,12 @@
     "crosswalk_extension": 1,
     "staged_block_count": 7,
     "codelist_count": 5,
-    "semantic_group_count": 14
+    "semantic_group_count": 14,
+    "transform_available": true,
+    "transform_scope": "full_dataset",
+    "transform_release_count": 3611852,
+    "transform_release_sample_count": 0,
+    "transform_source_file_count": 54,
+    "transform_calendar_year_count": 25
   }
 }

@@ -4,24 +4,46 @@ How this repo guarantees the sample OCDS release package is schema-conformant �
 
 ## Scope
 
-This repo validates the **shape** of one sample OCDS 1.1 release package, built from `SAMPLE_CANONICAL_ROW` via the staging rules in `config/canonical_to_ocds.yaml`. It does **not** validate:
+This repo validates OCDS 1.1 **shape** in two contexts:
 
-- The *correctness* of the canonical mapping against real PhilGEPS exports
-- Real OCDS data produced by a downstream compiler pipeline
+1. **Synthetic sample** — `SAMPLE_OCDS_RELEASE_PACKAGE.json`, built from `SAMPLE_CANONICAL_ROW` via `config/canonical_to_ocds.yaml` (runs in CI).
+2. **Transform output** — release packages from `scripts/transform_to_ocds.py`, validated on demand with `scripts/validate_transform_sample.py` (not in CI; outputs are gitignored and large).
 
-For real-data validation, run [libcoveocds](https://github.com/open-contracting/lib-cove-ocds) or the [OCDS Data Review Tool](https://ocds-data-review-tool.readthedocs.io/) against the downstream pipeline's actual output. That work is out of scope here.
+Validation does **not** certify that every canonical mapping decision is correct against all PhilGEPS exports — only that emitted JSON conforms to OCDS structure and schema. Process identity (`ocid`, `release.id`) must be unique per release within a package — see [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md).
 
-## The three layers
+## Validation layers
 
-Validation runs in three layers, each catching regressions earlier than the last. All three run in CI on every push and pull request.
+These layers run in CI for the synthetic sample. Transform output uses layers 1–2 via `validate_transform_sample.py`; layers 3–5 are unit-test guards shared with the transform pipeline.
 
 | Layer | Script | When | Catches | Requires |
 |-------|--------|------|---------|----------|
 | 1. Build-time hard-fail | `build_schema_field_map.py` → `_ocds_checks.assert_release_package` | Before the sample file is written | Malformed structure, version/extension rules, date formats | Nothing |
-| 2. Pre-flight + deep schema | `validate_sample_release.py` | After build, in CI and on demand | Same rules as layer 1, then full JSON Schema via libcoveocds | `pip install -r requirements-dev.txt` |
-| 3. Guard integrity | `test_ocds_checks.py` | After layer 2, in CI | Verifies each known regression class still fires a failure | Nothing |
+| 2. Pre-flight + deep schema | `validate_sample_release.py` or `validate_transform_sample.py` | On demand / after transform | Layer 1 rules, then full JSON Schema via libcoveocds | `requirements-dev.txt` |
+| 3. Pre-flight guard integrity | `test_ocds_checks.py` | CI | Known package-shape regressions still fire | Nothing |
+| 4. Compiler guard integrity | `test_ocds_compiler.py` | CI | Grouped item-id disambiguation, JV supplier expansion | PyYAML |
+| 5. Data-quality guard integrity | `test_data_quality.py` | CI | Group validation rules, sample caps / compaction | Nothing |
 
 Layer 1 is the most important: a bad release **cannot land on disk**. The build raises a `ValueError` with the offending paths before opening the output file.
+
+## Transform output validation
+
+Real PhilGEPS exports are transformed by `scripts/transform_to_ocds.py` (CSV) or `scratch/sample_and_transform.py` (XLSX). Batch processing: `scripts/run_full_dataset.py`. Outputs live in `references/transformed/` (gitignored — regenerate locally).
+
+Each file produces `.json`, `.dq.json`, and unified `.report.json`. Dataset-wide stats: `references/transformed/combined.report.json`. See [ETL_PIPELINE.md](ETL_PIPELINE.md).
+
+```bash
+# Quick iteration (1000 rows)
+python scripts/transform_to_ocds.py raw/<export>.csv --sample 1000 --out references/transformed/sample1k
+
+# Pre-flight + libcoveocds on the transformed package
+python scripts/validate_transform_sample.py references/transformed/sample1k.json
+
+# Full export (large; ~4–5 minutes on the 356MB S4 file)
+python scripts/transform_to_ocds.py "raw/2024-10 -- 2024-12.csv"
+python scripts/validate_transform_sample.py "references/transformed/2024-10 -- 2024-12.json"
+```
+
+`validate_transform_sample.py` runs the same two layers as the sample pipeline: `_ocds_checks` pre-flight, then libcoveocds JSON Schema validation.
 
 ## What the rules catch
 
@@ -35,19 +57,22 @@ The shared rules live in `scripts/_ocds_checks.py` (function `check_release_pack
 | Date-times are RFC 3339 with explicit timezone | `"2025-04-28T09:00:00"` (missing offset) | OCDS date-time fields require `Z` or `+HH:MM`; without it, validation fails |
 | Date-time fields have a time component | `"2025-05-12"` on `release.date` | Bare dates are valid RFC 3339 but wrong for `date-time`-typed fields |
 | Required release fields present | missing `ocid`, `id`, `date`, `initiationType`, `tag` | Core OCDS schema requirement |
+| Unique `(ocid, id)` per release | two releases with same `ocid` and `id` | libcoveocds rejects duplicate keys; bid-first display policy avoids most cases ([OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md)) |
 
 The date walker recurses the entire package tree, so nested dates (tender periods, award dates, contract periods, bid dates, milestones) are covered — not just the top-level fields.
 
 ## Running locally
 
 ```bash
-pip install -r requirements-dev.txt          # only needed for layer 2 (libcoveocds); Python ≥3.9, <3.13
-python scripts/build_schema_field_map.py     # layer 1: hard-fails on bad shape, nothing else needed
-python scripts/test_ocds_checks.py           # layer 3: guard integrity (runs anywhere, no deps)
-python scripts/validate_sample_release.py    # layer 2: full schema validation via libcoveocds
+pip install -r requirements-dev.txt          # libcoveocds; Python ≥3.9, <3.13
+python scripts/build_schema_field_map.py     # layer 1
+python scripts/test_ocds_checks.py           # layer 3
+python scripts/test_ocds_compiler.py         # layer 4
+python scripts/test_data_quality.py          # layer 5
+python scripts/validate_sample_release.py    # layer 2 (synthetic sample)
 ```
 
-Layers 1 and 3 have no third-party dependencies — they run on a fresh checkout with only Python's standard library. Layer 2 pulls in libcoveocds, the engine behind the OCDS Data Review Tool.
+Layers 1, 3, 4, and 5 have no libcoveocds dependency. Layer 2 requires libcoveocds (engine behind the [OCDS Data Review Tool](https://ocds-data-review-tool.readthedocs.io/)).
 
 ## Extending the rules
 
@@ -63,4 +88,4 @@ Both the build (layer 1) and the validator (layer 2) automatically pick up the n
 
 [open-contracting/cove-ocds](https://github.com/open-contracting/cove-ocds) is a Django web app that validates complete, compiled OCDS release packages and records against the standard. We use its underlying library, [libcoveocds](https://github.com/open-contracting/lib-cove-ocds), as layer 2 of this pipeline.
 
-The Data Review Tool is designed for publishers to validate their real output. It is **not** a schema-mapping validator, and our use of its engine here only checks the shape of one sample — it does not certify that our canonical mapping is correct against real PhilGEPS data.
+The Data Review Tool is designed for publishers to validate their real output. Our transform pipeline reuses the same libcoveocds engine via `validate_transform_sample.py` for local checks on real CSV exports — see [TRANSFORM.md](TRANSFORM.md).

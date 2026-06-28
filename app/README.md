@@ -12,11 +12,22 @@ Interactive webapp that renders the PhilGEPS open-data schema mappings (2000–2
 | **Schema evolution** | Field-level change classification (stable / added / renamed / removed) across 25 years. |
 | **Source column lookup** | Ingest tool: paste a CSV header, find its canonical field and OCDS path. |
 | **OCDS crosswalk** | All 151 crosswalk rows, filterable by OCDS block and status (mapped / omit / derived / extension). |
-| **OCDS staged output** | Live rendering of `config/canonical_to_ocds.yaml` — one card per OCDS block (planning, buyer, tender, awards, contracts, bids, philgeps_extension) showing path → canonical field, plus generated fields, planning triggers, and defaults. |
-| **OCDS release package** | A representative compiled OCDS release built by walking the staging rules. Overview cards, per-block jump links, syntax-highlighted raw JSON with copy and download. |
+| **OCDS staged output** | Live rendering of `config/canonical_to_ocds.yaml` — one card per OCDS block. |
+| **OCDS release package** | Representative compiled OCDS release from staging rules. |
 | **Codelist mappings** | PhilGEPS status / method / category labels → OCDS closed codelists. |
+| **ETL Pipeline** | See below — overview, year/overall DQ, Release browser, transform samples. |
 | **Global search** | Cross-section search for any column name, OCDS path, or canonical field. |
 | **About & sources** | Bundle metadata, source file inventory, regen instructions, external links. |
+
+### ETL Pipeline (when transform output is embedded)
+
+| Page | Purpose |
+|------|---------|
+| **Pipeline overview** | Stage diagram, overall run summary, by-year table, OCID/id policy |
+| **Year data quality** | Per-calendar-year DQ from `by_year/dq/{year}.json` (samples with source row context) |
+| **Overall data quality** | Dataset-wide roll-up from `combined.report.json` |
+| **Release browser** | `#/etl-releases/{year}` and `#/etl-releases/{year}/{ocid}` — searchable list, Summary + Raw JSON |
+| **Transform samples** | Capped input/output samples from the transform run |
 
 ## Quick start
 
@@ -32,6 +43,14 @@ cd app
 npm install
 npm run dev          # opens http://localhost:5173
 ```
+
+With a full ETL run, the dev server also serves per-year caches:
+
+- `/data/releases/{year}.json` — Release browser list + sample full releases
+- `/data/dq/{year}.json` — Year data quality
+- `/data/release/{year}/{ocid}.json` — on-demand full release JSON
+
+`vite.config.ts` allows `ocdsphilgeps.simple-systems.dev` (CORS + `allowedHosts`) when the deployed static site fetches data from a tunneled dev server.
 
 ## Scripts
 
@@ -50,28 +69,39 @@ config/*.yaml + references/*.json
         │
         │  scripts/build_schema_field_map.py  (build_app_bundle)
         ▼
-app/src/data/schema_bundle.json   ← single bundled JSON
+app/src/data/schema_bundle.json   ← overall stats + metadata (embedded)
         │
-        │  import (Vite bundles it; no runtime fetch)
+        │  import (Vite bundles it)
         ▼
-React SPA (hash-based routing, no router dependency)
+React SPA (hash routing: #/etl-releases/2004/…)
+        │
+        │  fetch at dev time (full ETL)
+        ▼
+references/transformed/by_year/browser/ + by_year/dq/
 ```
 
-- **No backend, no runtime fetch.** The bundle is compiled into the static site.
-- **No UI library.** Styling is plain CSS with CSS variables (light + dark via `prefers-color-scheme`).
-- **No router dependency.** Hash-based routing keeps the app deployable as a single static folder.
+- **Overall stats** are embedded in `schema_bundle.json` (no runtime fetch).
+- **Per-year release and DQ data** are fetched from `/data/*` when running `npm run dev` after a full ETL merge.
+- **No UI library.** Plain CSS with CSS variables (light + dark via `prefers-color-scheme`).
+- **Hash routing** — no router dependency; supports deep links like `#/etl-releases/2004/ocds-philgeps-39785`.
+
+## Refreshing data after mapping or ETL changes
+
+```bash
+# After full ETL (from repo root)
+python scripts/run_full_dataset.py --no-quiet
+python scripts/build_schema_field_map.py
+
+# Or from app/
+npm run regen-data
+```
+
+Restart `npm run dev` to pick up bundle and cache changes.
+
+→ [../docs/ETL_PIPELINE.md](../docs/ETL_PIPELINE.md) for batch pipeline details  
+→ [../docs/ARCHITECTURAL_DECISIONS.md](../docs/ARCHITECTURAL_DECISIONS.md) for ADR log (browser caches, DQ split, deep links)
 
 ## Tech stack
 
 - Vite 6, React 19, TypeScript 5 (strict).
-- Dev dependencies only beyond React — the production bundle is ~84 KB gzipped.
-
-## Refreshing data after mapping edits
-
-Edit any file under `config/` or `references/` in the parent repo, then:
-
-```bash
-npm run regen-data   # from app/
-```
-
-Restart `npm run dev` (or rebuild) to pick up the new bundle.
+- Mapping-only bundle is small; with full-dataset embed, the JS bundle is larger depending on sample counts.

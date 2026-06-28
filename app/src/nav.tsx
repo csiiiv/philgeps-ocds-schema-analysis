@@ -89,6 +89,36 @@ export const NAV_ITEMS: NavItem[] = [
     icon: <Icon d="M21 8l-5-5H7a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V8zM14 3v5h5M9 13h6M9 17h4" />,
   },
   {
+    id: "etl-overview",
+    label: "Pipeline overview",
+    group: "ETL Pipeline",
+    icon: <Icon d="M4 6h16M4 12h10M4 18h6M14 12h6M14 18h6" />,
+  },
+  {
+    id: "etl-quality",
+    label: "Year data quality",
+    group: "ETL Pipeline",
+    icon: <Icon d="M12 9v4M12 17h.01M10.3 3.86l-8 14A2 2 0 004 21h16a2 2 0 001.7-3.14l-8-14a2 2 0 00-3.4 0z" />,
+  },
+  {
+    id: "etl-overall-quality",
+    label: "Overall data quality",
+    group: "ETL Pipeline",
+    icon: <Icon d="M4 19h16M4 15h10M4 11h16M4 7h6" />,
+  },
+  {
+    id: "etl-releases",
+    label: "Release browser",
+    group: "ETL Pipeline",
+    icon: <Icon d="M21 8l-5-5H7a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V8zM14 3v5h5M9 13h6M9 17h4" />,
+  },
+  {
+    id: "etl-samples",
+    label: "Transform samples",
+    group: "ETL Pipeline",
+    icon: <Icon d="M8 7h8M8 12h8M8 17h5M4 4h16v16H4z" />,
+  },
+  {
     id: "codelists",
     label: "Codelist mappings",
     group: "OCDS mapping",
@@ -104,7 +134,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export function groupedNav(): NavGroup[] {
   const groups: NavGroup[] = [];
-  const order = ["Start", "Schemas", "OCDS mapping"];
+  const order = ["Start", "Schemas", "OCDS mapping", "ETL Pipeline"];
   for (const label of order) {
     const items = NAV_ITEMS.filter((i) => i.group === label);
     if (items.length) groups.push({ label, items });

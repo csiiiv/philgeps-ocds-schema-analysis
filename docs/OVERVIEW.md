@@ -2,7 +2,7 @@
 
 PhilGEPS Schema Analysis is a **standalone reference repository** for understanding Philippine government procurement open-data exports (2000–2025) and mapping them to a stable canonical schema and [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/) 1.1.5.
 
-It does **not** ship raw CSV/XLSX files or a full ETL pipeline. It ships **documentation, JSON references, and mapping config** that downstream tools can consume.
+It does **not** ship raw CSV/XLSX files. It ships **documentation, JSON references, mapping config, and a reference ETL pipeline** (`scripts/run_full_dataset.py`) that transforms local exports into OCDS release packages under `references/transformed/`.
 
 ## Problem this repo solves
 
@@ -25,6 +25,7 @@ Without a crosswalk, ingest code breaks silently when column **position** is ass
 | OCDS alignment | `config/canonical_to_ocds.yaml`, `PHILGEPS_OCDS_CSV_CROSSWALK.md` | How do canonical fields map to OCDS paths? |
 | Live-system templates | `philgeps-1.5.json`, `mphilgeps.json` | What did PS-DBM map from internal PhilGEPS tables? |
 | **Interactive view** | **`app/` (Vite + React webapp)** | **Browse all of the above without reading YAML/JSON by hand** |
+| **OCDS transform output** | **`references/transformed/`** (local) | **Full corpus as OCDS packages + DQ reports** |
 
 ## Data layers (conceptual)
 
@@ -64,6 +65,30 @@ Without a crosswalk, ingest code breaks silently when column **position** is ass
                         OCDS 1.1 schema validation (CI)
 ```
 
+Optional branch — **reference ETL** (local only; outputs gitignored):
+
+```
+raw/ (54 PhilGEPS exports)
+  │
+  ├─ run_full_dataset.py ──► references/transformed/full/*.json + *.report.json
+  │
+  ├─ merge_ocds_by_year.py ──► references/transformed/by_year/<year>.json
+  │                              + browser/<year>.json + dq/<year>.json
+  │
+  ├─ aggregate_dataset_report.py ──► references/transformed/combined.report.json
+  │
+  └─ build_schema_field_map.py ──► app/src/data/schema_bundle.json (webapp embed)
+```
+
+Single-file dev path:
+
+```
+Raw CSV export  →  transform_to_ocds.py  →  references/transformed/full/<file>.json + .dq.json + .report.json
+```
+
+→ [ETL_PIPELINE.md](ETL_PIPELINE.md) for commands, output layout, and report formats  
+→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for `ocid` / `release.id` policy
+
 ## Schema periods (S1–S5)
 
 | Key | Period | Format | Cols |
@@ -91,9 +116,10 @@ A Vite + React + TypeScript single-page app renders every layer above as searcha
 | Schema evolution | Field-level change classification across 25 years |
 | Source column lookup | Paste a CSV header → canonical field → OCDS path |
 | Codelist mappings | PhilGEPS labels → OCDS closed codelists |
+| Data transformation | **ETL Pipeline** — overview, year/corpus DQ, Release browser (`#/etl-releases/{year}`) |
 | Global search | Cross-section search for any column, path, or field |
 
-The app imports a single bundled JSON (`app/src/data/schema_bundle.json`) emitted by `scripts/build_schema_field_map.py`. No backend, no runtime fetch.
+The app imports `app/src/data/schema_bundle.json` from `build_schema_field_map.py`. Corpus stats are embedded; per-year **release** and **DQ** caches are fetched at dev time from `/data/releases/` and `/data/dq/` (see [ADR-012](ARCHITECTURAL_DECISIONS.md#adr-012-year-by-year-release-browser), [ADR-013](ARCHITECTURAL_DECISIONS.md#adr-013-year-vs-corpus-data-quality)).
 
 ```bash
 python scripts/build_schema_field_map.py
@@ -110,22 +136,24 @@ See [../app/README.md](../app/README.md) for full details.
 | Interactive schema UI | [philgeps.simple-systems.dev/about/schema](https://philgeps.simple-systems.dev/about/schema) |
 | OCDS mapping templates | [ocds.simple-systems.dev/p/mphilgeps/overview](https://ocds.simple-systems.dev/p/mphilgeps/overview) |
 | Schema.tsx (upstream tables) | [philgeps-awards-dashboard](https://github.com/csiiiv/philgeps-awards-dashboard/blob/main/frontend/src/pages/About/Schema.tsx) |
+| Source repository | [philgeps-ocds-schema-analysis](https://github.com/csiiiv/philgeps-ocds-schema-analysis) |
 
 ## Relationship to other projects
 
-This repo is designed to be **consumed independently**. A separate data pipeline (e.g. [philgeps_data_analysis](https://github.com/BetterGovPH/philgeps_data_analysis) or your own ingest) may:
+This repo is designed to be **consumed independently**. Downstream pipelines (your own ingest or publication stack) may:
 
 - Import `PHILGEPS_CANONICAL_FIELD_MAP.json` for column normalization
 - Copy or submodule `config/schema_mappings.yaml` as its mapping source
 - Use the crosswalk for OCDS publication design
 
-No runtime dependency on those projects is required to use the reference files.
+No runtime dependency on other projects is required to use the reference files.
 
 ## Out of scope (for now)
 
-- Raw data storage or download scripts
-- OCDS JSON compilation / Cardinal red-flag engine
+- Raw data storage or download scripts (exports come from Google Drive / local `raw/`)
+- Production OCDS publisher (live API, record packages, incremental delta sync)
 - Live PhilGEPS API or WSF ingest
-- Automated validation against production exports (planned extension point)
+
+A **reference ETL pipeline** transforms the full PhilGEPS corpus locally — see [ETL_PIPELINE.md](ETL_PIPELINE.md). Single-file transform for quick iteration: [TRANSFORM.md](TRANSFORM.md). Full-package libcoveocds validation is optional (skipped in batch runs for speed).
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to extend mappings and regenerate artifacts. See [VALIDATION.md](VALIDATION.md) for how the sample OCDS release is validated.

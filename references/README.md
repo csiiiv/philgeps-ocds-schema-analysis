@@ -33,3 +33,28 @@ Regenerate canonical map + crosswalk Canonical column + webapp data bundle:
 ```bash
 python scripts/build_schema_field_map.py
 ```
+
+## Transformed OCDS outputs (local, gitignored)
+
+Produced by the reference ETL pipeline — not committed, but documented here for navigation:
+
+| Path | Contents |
+|------|----------|
+| [transformed/combined.report.json](transformed/combined.report.json) | **Dataset-wide roll-up** — aggregate DQ, per-year stats, source index (~100 KB) |
+| [transformed/by_year/browser/](transformed/by_year/browser/) | Per-year Release browser caches (list + sample full releases) |
+| [transformed/by_year/dq/](transformed/by_year/dq/) | Per-year DQ roll-ups for the webapp |
+| [transformed/full/](transformed/full/) | One OCDS package per raw export (mirrors `raw/` layout) |
+
+Generate:
+
+```bash
+python scripts/run_full_dataset.py --no-quiet   # merge + browser + dq caches at end
+python scripts/build_schema_field_map.py
+```
+
+Refresh combined report only: `python scripts/aggregate_dataset_report.py`
+
+The webapp **ETL Pipeline** embeds `combined.report.json` for corpus stats; Release browser and Year data quality fetch `by_year/browser/` and `by_year/dq/` at dev time (`#/etl-releases/{year}`).
+
+→ [../docs/ETL_PIPELINE.md](../docs/ETL_PIPELINE.md) for the full pipeline reference  
+→ [../docs/TRANSFORM.md](../docs/TRANSFORM.md) for DQ rules and Release browser details

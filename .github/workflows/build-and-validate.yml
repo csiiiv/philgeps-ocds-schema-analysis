@@ -49,6 +49,12 @@ jobs:
       - name: Verify pre-flight guard integrity
         run: python scripts/test_ocds_checks.py
 
+      - name: Verify compiler guard integrity
+        run: python scripts/test_ocds_compiler.py
+
+      - name: Verify data-quality guard integrity
+        run: python scripts/test_data_quality.py
+
   build-webapp:
     runs-on: ubuntu-latest
     needs: build-and-validate

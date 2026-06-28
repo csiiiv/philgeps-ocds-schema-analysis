@@ -8,6 +8,15 @@ export function getRouteFromHash(): string {
   return h || "overview";
 }
 
+export function parseRoute(route: string): { page: string; segments: string[] } {
+  const parts = route.split("/").filter(Boolean);
+  return { page: parts[0] || "overview", segments: parts.slice(1) };
+}
+
+export function routePageId(route: string): string {
+  return parseRoute(route).page;
+}
+
 export function navigate(route: string) {
   window.location.hash = `/${route}`;
 }
@@ -48,7 +57,7 @@ export function Layout({ route, children }: { route: string; children: ReactNode
         <span style={{ flex: 1 }} />
         <a
           className="brand-sub"
-          href="https://github.com/BetterGovPH/philgeps_data_analysis"
+          href="https://github.com/csiiiv/philgeps-ocds-schema-analysis"
           target="_blank"
           rel="noreferrer"
           style={{ fontSize: 12.5 }}
@@ -67,7 +76,10 @@ export function Layout({ route, children }: { route: string; children: ReactNode
                   <a
                     key={item.id}
                     href={`#/${item.id}`}
-                    className={classNames("nav-item", route === item.id && "active")}
+                    className={classNames(
+                      "nav-item",
+                      (route === item.id || route.startsWith(`${item.id}/`)) && "active",
+                    )}
                   >
                     {item.icon}
                     <span>{item.label}</span>

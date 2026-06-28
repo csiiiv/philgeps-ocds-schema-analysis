@@ -21,6 +21,8 @@ REFS = ROOT / "references"
 # Allow importing sibling helper modules when running this script directly.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _ocds_checks import assert_release_package  # noqa: E402
+from _ocds_compiler import _collect_suppliers  # noqa: E402
+from _data_quality import _compact_sample_payload  # noqa: E402
 
 SCHEMA_ANALYSIS = REFS / "PHILGEPS_SCHEMA_ANALYSIS.json"
 SCHEMA_MAPPINGS = ROOT / "config" / "schema_mappings.yaml"
@@ -30,6 +32,8 @@ CROSSWALK_MD = REFS / "PHILGEPS_OCDS_CSV_CROSSWALK.md"
 FIELD_MAP_JSON = REFS / "PHILGEPS_CANONICAL_FIELD_MAP.json"
 APP_BUNDLE_JSON = ROOT / "app" / "src" / "data" / "schema_bundle.json"
 SAMPLE_RELEASE_JSON = REFS / "SAMPLE_OCDS_RELEASE_PACKAGE.json"
+TRANSFORMED_DIR = REFS / "transformed"
+COMBINED_REPORT = TRANSFORMED_DIR / "combined.report.json"
 
 OPEN_SCHEMA_KEYS = [
     ("schema_1", "S1", "2000-2015 XLSX"),
@@ -603,7 +607,7 @@ SAMPLE_CANONICAL_ROW: dict[str, object] = {
     "reason_for_award": "Lowest Calculated Responsive Bid",
     "awardee_organization_name": "Primeprint Trading Inc.",
     "awardee_org_id": "primeprint-trading-inc",
-    "awardee_jointventure": ["Primeprint Trading Inc."],
+    "awardee_joint_venture": "JV Supplies Corp.",
     "awardee_country": "Philippines",
     "awardee_region": "Region V",
     "awardee_size": "Small",
@@ -678,7 +682,19 @@ def _apply_codelist_transform(value: object, canonical: str, codelists: dict) ->
     return value
 
 
-def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
+def build_field_types(mappings: dict) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for ftype, fields in (mappings.get("field_types") or {}).items():
+        for field in fields:
+            out[field] = ftype
+    return out
+
+
+def build_sample_release_package(
+    ocds_cfg: dict,
+    codelists: dict,
+    field_types: dict | None = None,
+) -> dict:
     """Compile a sample compiled release by walking canonical_to_ocds.yaml staging rules."""
     defaults = codelists.get("defaults", {})
     currency = defaults.get("currency", "PHP")
@@ -689,6 +705,8 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
     ocid_prefix = ocds_cfg.get("ocid_prefix", "ocds-philgeps")
 
     row = SAMPLE_CANONICAL_ROW.copy()
+    if field_types is None:
+        field_types = {}
     ocid = f"{ocid_prefix}-{row['procuring_entity']}-{row['award_reference_no']}".lower().replace(" ", "-")
 
     release: dict = {
@@ -767,7 +785,8 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
     if tender.get("items"):
         award["items"] = tender["items"]
     award["suppliers"] = [
-        {"id": row["awardee_org_id"], "name": row["awardee_organization_name"]}
+        {"id": supplier_id, "name": supplier_name}
+        for supplier_id, supplier_name in _collect_suppliers(row, field_types)
     ]
     awards.append(award)
     release["awards"] = awards
@@ -801,13 +820,14 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
             "roles": ["buyer", "procuringEntity"],
         }
     )
-    parties.append(
-        {
-            "id": row["awardee_org_id"],
-            "name": row["awardee_organization_name"],
-            "roles": ["supplier", "payee", "tenderer"],
-        }
-    )
+    for supplier_id, supplier_name in _collect_suppliers(row, field_types):
+        parties.append(
+            {
+                "id": supplier_id,
+                "name": supplier_name,
+                "roles": ["supplier", "payee", "tenderer"],
+            }
+        )
     release["parties"] = parties
 
     # PhilGEPS extension block.
@@ -840,9 +860,9 @@ def build_sample_release_package(ocds_cfg: dict, codelists: dict) -> dict:
     return package
 
 
-def build_release_payload(ocds_cfg: dict, codelists: dict) -> dict:
+def build_release_payload(ocds_cfg: dict, codelists: dict, field_types: dict | None = None) -> dict:
     """Wrap the sample release package with a compact summary for the webapp."""
-    package = build_sample_release_package(ocds_cfg, codelists)
+    package = build_sample_release_package(ocds_cfg, codelists, field_types=field_types)
     release = package["releases"][0]
 
     def block_keys(*names: str) -> list[str]:
@@ -884,6 +904,244 @@ def build_release_payload(ocds_cfg: dict, codelists: dict) -> dict:
     }
 
 
+MAX_EMBEDDED_DQ_SAMPLES = 100
+
+
+def _embed_dq_samples(samples: list | None) -> tuple[list[dict], int]:
+    """Cap samples for the webapp bundle; compact row lists in each entry."""
+    raw = list(samples or [])
+    omitted = max(0, len(raw) - MAX_EMBEDDED_DQ_SAMPLES)
+    embedded = [_compact_sample_payload(s) for s in raw[:MAX_EMBEDDED_DQ_SAMPLES]]
+    return embedded, omitted
+
+
+def _load_by_year_summaries() -> list[dict]:
+    """Build year rows for the webapp from by_year index + per-year reports."""
+    index_path = TRANSFORMED_DIR / "by_year" / "by_year_index.json"
+    if not index_path.exists():
+        return []
+    try:
+        index = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+
+    years: list[dict] = []
+    for entry in index.get("years") or []:
+        year = str(entry.get("year") or "")
+        if not year:
+            continue
+        report_path = ROOT / str(entry.get("report_path") or f"references/transformed/by_year/{year}.report.json")
+        severity_counts: dict = {}
+        all_passed = True
+        if report_path.exists():
+            try:
+                report = json.loads(report_path.read_text(encoding="utf-8"))
+                severity_counts = (
+                    report.get("layers", {}).get("source_dq", {}).get("severity_counts") or {}
+                )
+                all_passed = bool(report.get("summary", {}).get("all_passed", True))
+            except (OSError, json.JSONDecodeError):
+                pass
+        years.append(
+            {
+                "year": year,
+                "compiled_release_count": int(entry.get("releases") or 0),
+                "package_mb": float(entry.get("package_mb") or 0),
+                "source_file_count": int(entry.get("source_files") or 0),
+                "all_passed": all_passed,
+                "severity_counts": severity_counts,
+            }
+        )
+    return years
+
+
+def build_transform_bundle() -> dict | None:
+    """Embed transform-run stats into the webapp bundle.
+
+    Prefers ``references/transformed/combined.report.json`` (full dataset).
+    Falls back to the most recent single-file ``*.dq.json``.
+    """
+    if COMBINED_REPORT.exists():
+        bundle = _build_transform_bundle_combined(COMBINED_REPORT)
+        if bundle:
+            return bundle
+    return _build_transform_bundle_single()
+
+
+def _build_transform_bundle_combined(combined_path: Path) -> dict | None:
+    try:
+        combined = json.loads(combined_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    source_dq = combined.get("layers", {}).get("source_dq") or {}
+    webapp = combined.get("webapp") or {}
+
+    header: list[str] = []
+    schema_detected = "mixed"
+    mapped_column_count = 0
+    unmapped_columns: list[str] = []
+    quarantined, q_extra = _embed_dq_samples([])
+    warnings, w_extra = _embed_dq_samples([])
+    infos, i_extra = _embed_dq_samples([])
+
+    merged = webapp.get("merged_dq_samples") or {}
+    if merged:
+        quarantined, q_extra = _embed_dq_samples(merged.get("quarantined_samples"))
+        warnings, w_extra = _embed_dq_samples(merged.get("warning_samples"))
+        infos, i_extra = _embed_dq_samples(merged.get("info_samples"))
+        q_extra += int(merged.get("quarantined_samples_omitted") or 0)
+        w_extra += int(merged.get("warning_samples_omitted") or 0)
+        i_extra += int(merged.get("info_samples_omitted") or 0)
+    else:
+        dq_report_path = ROOT / webapp["dq_samples_from"] if webapp.get("dq_samples_from") else None
+        if dq_report_path and dq_report_path.exists():
+            try:
+                dq_report = json.loads(dq_report_path.read_text(encoding="utf-8"))
+                src = dq_report.get("layers", {}).get("source_dq") or dq_report
+                quarantined, q_extra = _embed_dq_samples(src.get("quarantined_samples"))
+                warnings, w_extra = _embed_dq_samples(src.get("warning_samples"))
+                infos, i_extra = _embed_dq_samples(src.get("info_samples"))
+            except (OSError, json.JSONDecodeError):
+                dq_report = None
+            else:
+                header = dq_report.get("header") or header
+                schema_detected = dq_report.get("schema_detected") or schema_detected
+                mapped_column_count = dq_report.get("mapped_column_count") or mapped_column_count
+                unmapped_columns = dq_report.get("unmapped_columns") or unmapped_columns
+
+    dq_report_path = ROOT / webapp["dq_samples_from"] if webapp.get("dq_samples_from") else None
+    if merged and dq_report_path and dq_report_path.exists():
+        try:
+            dq_report = json.loads(dq_report_path.read_text(encoding="utf-8"))
+            header = dq_report.get("header") or header
+            schema_detected = dq_report.get("schema_detected") or schema_detected
+            mapped_column_count = dq_report.get("mapped_column_count") or mapped_column_count
+            unmapped_columns = dq_report.get("unmapped_columns") or unmapped_columns
+        except (OSError, json.JSONDecodeError):
+            pass
+
+    max_releases = 50
+    releases_sample: list[dict] = []
+    package_path = combined.get("artifacts", {}).get("by_year_root") or str(combined_path)
+
+    rel_sample_path = ROOT / webapp["releases_sample_from"] if webapp.get("releases_sample_from") else None
+    if rel_sample_path and rel_sample_path.exists():
+        package_path = str(rel_sample_path.relative_to(ROOT))
+
+    years = [
+        {
+            "year": y["year"],
+            "compiled_release_count": y.get("compiled_release_count", 0),
+            "package_mb": y.get("package_mb", 0),
+            "source_file_count": y.get("source_file_count", 0),
+            "all_passed": y.get("all_passed", True),
+            "severity_counts": y.get("severity_counts") or {},
+        }
+        for y in combined.get("years") or []
+    ]
+
+    return {
+        "scope": "full_dataset",
+        "input_file": f"PhilGEPS full dataset ({combined.get('source_file_count', 0)} source files)",
+        "input_bytes": combined.get("input_bytes_total", 0),
+        "schema_detected": schema_detected,
+        "mapped_column_count": mapped_column_count,
+        "unmapped_columns": unmapped_columns,
+        "header": header,
+        "rows_seen": source_dq.get("rows_seen", 0),
+        "rows_committed": source_dq.get("rows_committed", 0),
+        "rows_quarantined": source_dq.get("rows_quarantined", 0),
+        "severity_counts": source_dq.get("severity_counts") or {"error": 0, "warning": 0, "info": 0},
+        "rule_counts": source_dq.get("rule_counts") or [],
+        "issue_group_counts": source_dq.get("issue_group_counts") or [],
+        "quarantined_samples": quarantined,
+        "quarantined_samples_omitted": int(source_dq.get("quarantined_samples_omitted") or 0) + q_extra,
+        "warning_samples": warnings,
+        "warning_samples_omitted": int(source_dq.get("warning_samples_omitted") or 0) + w_extra,
+        "info_samples": infos,
+        "info_samples_omitted": int(source_dq.get("info_samples_omitted") or 0) + i_extra,
+        "compiled_release_count": combined.get("compiled_release_count", 0),
+        "source_file_count": combined.get("source_file_count", 0),
+        "calendar_year_count": combined.get("calendar_year_count", 0),
+        "duplicate_ocids_overwritten": combined.get("duplicate_ocids_overwritten", 0),
+        "package_mb_total": combined.get("package_mb_total", 0),
+        "years": years,
+        "releases_sample": releases_sample,
+        "release_browser_base_url": "/data/releases",
+        "input_samples": [],
+        "package_path": package_path,
+        "combined_report_path": str(combined_path.relative_to(ROOT)),
+        "row_accounting": combined.get("row_accounting"),
+    }
+
+
+def _build_transform_bundle_single() -> dict | None:
+    if not TRANSFORMED_DIR.exists():
+        return None
+
+    dq_files = sorted(TRANSFORMED_DIR.glob("**/*.dq.json"), key=lambda p: p.stat().st_mtime)
+    if not dq_files:
+        return None
+    dq_path = dq_files[-1]
+    package_path = dq_path.parent / dq_path.name.replace(".dq.json", ".json")
+
+    try:
+        dq = json.loads(dq_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    max_releases = 50
+    releases_sample: list[dict] = []
+    if package_path.exists():
+        try:
+            pkg = json.loads(package_path.read_text(encoding="utf-8"))
+            releases_sample = list(pkg.get("releases") or [])[:max_releases]
+            total_releases = len(pkg.get("releases") or [])
+        except (OSError, json.JSONDecodeError):
+            total_releases = dq.get("compiled_release_count", 0)
+    else:
+        total_releases = dq.get("compiled_release_count", 0)
+
+    input_samples = (dq.get("input_samples") or [])[:max_releases]
+    quarantined, q_extra = _embed_dq_samples(dq.get("quarantined_samples"))
+    warnings, w_extra = _embed_dq_samples(dq.get("warning_samples"))
+    infos, i_extra = _embed_dq_samples(dq.get("info_samples"))
+    years = _load_by_year_summaries()
+    scope = "full_dataset" if len(years) > 3 else "single_file"
+
+    return {
+        "scope": scope,
+        "input_file": dq.get("input_file"),
+        "input_bytes": dq.get("input_bytes"),
+        "schema_detected": dq.get("schema_detected"),
+        "mapped_column_count": dq.get("mapped_column_count"),
+        "unmapped_columns": dq.get("unmapped_columns") or [],
+        "header": dq.get("header") or [],
+        "rows_seen": dq.get("rows_seen"),
+        "rows_committed": dq.get("rows_committed"),
+        "rows_quarantined": dq.get("rows_quarantined"),
+        "severity_counts": dq.get("severity_counts") or {"error": 0, "warning": 0, "info": 0},
+        "rule_counts": dq.get("rule_counts") or [],
+        "issue_group_counts": dq.get("issue_group_counts") or [],
+        "quarantined_samples": quarantined,
+        "quarantined_samples_omitted": int(dq.get("quarantined_samples_omitted") or 0) + q_extra,
+        "warning_samples": warnings,
+        "warning_samples_omitted": int(dq.get("warning_samples_omitted") or 0) + w_extra,
+        "info_samples": infos,
+        "info_samples_omitted": int(dq.get("info_samples_omitted") or 0) + i_extra,
+        "compiled_release_count": total_releases,
+        "years": years or None,
+        "calendar_year_count": len(years) if years else None,
+        "source_file_count": sum(y.get("source_file_count", 0) for y in years) if years else 1,
+        "releases_sample": releases_sample,
+        "release_browser_base_url": "/data/releases",
+        "input_samples": input_samples,
+        "display_id_collisions": dq.get("display_id_collisions") or [],
+        "package_path": str(package_path.relative_to(ROOT)) if package_path.is_relative_to(ROOT) else str(package_path),
+    }
+
+
 def build_app_bundle(
     *,
     analysis: dict,
@@ -894,8 +1152,11 @@ def build_app_bundle(
     inverted: dict[str, dict[str, str | None]],
     canonical_fields: list[dict],
     rows: list[dict],
+    field_types: dict | None = None,
 ) -> dict:
     """Build a single bundled JSON the webapp imports directly."""
+    if field_types is None:
+        field_types = build_field_types(mappings)
     schema_periods = {}
     for idx, (schema_key, short, _) in enumerate(OPEN_SCHEMA_KEYS):
         qr = analysis["quick_reference"][idx]
@@ -985,6 +1246,33 @@ def build_app_bundle(
 
     field_types = mappings.get("field_types", {})
 
+    transform_bundle = build_transform_bundle()
+
+    summary = {
+            "schema_count": len(schema_periods),
+            "canonical_field_count": len(canonical_fields),
+            "crosswalk_row_count": len(crosswalk),
+            "crosswalk_with_ocds": sum(1 for r in crosswalk if r["ocds_field"] != "—"),
+            "crosswalk_mapped": sum(1 for r in crosswalk if r["status"] == "mapped"),
+            "crosswalk_omit": sum(1 for r in crosswalk if r["status"] == "omit"),
+            "crosswalk_derived": sum(1 for r in crosswalk if r["status"] == "derived"),
+            "crosswalk_extension": sum(1 for r in crosswalk if r["status"] == "extension"),
+            "staged_block_count": len(staged_blocks),
+            "codelist_count": len(codelist_sections),
+            "semantic_group_count": len(semantic_groups),
+    }
+    if transform_bundle:
+        summary.update({
+            "transform_available": True,
+            "transform_scope": transform_bundle.get("scope"),
+            "transform_release_count": transform_bundle.get("compiled_release_count"),
+            "transform_release_sample_count": len(transform_bundle.get("releases_sample") or []),
+            "transform_source_file_count": transform_bundle.get("source_file_count"),
+            "transform_calendar_year_count": transform_bundle.get("calendar_year_count"),
+        })
+    else:
+        summary["transform_available"] = False
+
     return {
         "metadata": {
             "title": "PhilGEPS Schema Explorer",
@@ -1016,22 +1304,11 @@ def build_app_bundle(
             "blocks": staged_blocks,
             "defaults": defaults,
         },
-        "ocds_release": build_release_payload(ocds_cfg, codelists),
+        "ocds_release": build_release_payload(ocds_cfg, codelists, field_types),
+        "transform": transform_bundle,
         "codelists": codelist_sections,
         "ocds_reverse": {k: v for k, v in ocds_reverse.items()},
-        "summary": {
-            "schema_count": len(schema_periods),
-            "canonical_field_count": len(canonical_fields),
-            "crosswalk_row_count": len(crosswalk),
-            "crosswalk_with_ocds": sum(1 for r in crosswalk if r["ocds_field"] != "—"),
-            "crosswalk_mapped": sum(1 for r in crosswalk if r["status"] == "mapped"),
-            "crosswalk_omit": sum(1 for r in crosswalk if r["status"] == "omit"),
-            "crosswalk_derived": sum(1 for r in crosswalk if r["status"] == "derived"),
-            "crosswalk_extension": sum(1 for r in crosswalk if r["status"] == "extension"),
-            "staged_block_count": len(staged_blocks),
-            "codelist_count": len(codelist_sections),
-            "semantic_group_count": len(semantic_groups),
-        },
+        "summary": summary,
     }
 
 
@@ -1042,6 +1319,8 @@ def main() -> None:
     codelists = load_yaml(CODELIST_MAPPINGS)
     ocds_reverse = reverse_ocds_map(ocds_cfg)
     inverted = invert_schema_mappings(mappings)
+
+    field_types = build_field_types(mappings)
 
     canonical_fields = build_canonical_fields(mappings, analysis, ocds_reverse)
 
@@ -1108,6 +1387,7 @@ def main() -> None:
         inverted=inverted,
         canonical_fields=canonical_fields,
         rows=rows,
+        field_types=field_types,
     )
     APP_BUNDLE_JSON.parent.mkdir(parents=True, exist_ok=True)
     APP_BUNDLE_JSON.write_text(
@@ -1118,7 +1398,7 @@ def main() -> None:
 
     # Emit the sample release package as a standalone JSON file so it can be
     # validated with ocdskit (see scripts/validate_sample_release.py).
-    sample_package = build_sample_release_package(ocds_cfg, codelists)
+    sample_package = build_sample_release_package(ocds_cfg, codelists, field_types)
     # Hard-fail before writing if the package violates OCDS shape rules so a
     # malformed release can never land on disk. Mirrors the pre-flight checks
     # in scripts/validate_sample_release.py via scripts/_ocds_checks.py.
