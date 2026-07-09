@@ -84,8 +84,8 @@ The `app/` directory is a Vite + React + TypeScript single-page app that renders
 # 1. (Re)generate the data bundle from YAML + JSON references
 python scripts/build_schema_field_map.py
 
-# 2. Generate webapp caches from demo data
-python scripts/generate_webapp_caches.py
+# 2. Generate demo browser caches (release browser only)
+python scripts/build_year_browser_cache.py --input references/transformed/demo_by_year
 
 # 3. Install and run the dev server
 cd app
@@ -93,7 +93,7 @@ npm install
 npm run dev      # http://localhost:5173
 ```
 
-The webapp uses lightweight demo data (~60MB) from `references/transformed/demo_by_year/` for instant startup and responsive exploration. Full dataset available on Google Drive (see External Sources below).
+The webapp uses **demo data only for the Release browser** (`demo_by_year/`, ~75 MB). Pipeline overview, overall DQ, and year DQ use **full-dataset reports** (`combined.report.json` + `by_year/dq/`, ~20 MB total, committed in git).
 
 Production build: `npm run build` → static files in `app/dist/`.
 

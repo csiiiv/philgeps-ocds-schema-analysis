@@ -15,12 +15,18 @@ raw/
 !raw_demo/
 
 # Transform outputs (regenerate with scripts/transform_to_ocds.py)
-# Keep demo year packages, ignore full datasets
-references/transformed/by_year/
+# Full year packages + browser caches are huge — keep gitignored
+references/transformed/by_year/*
+!references/transformed/by_year/dq/
+!references/transformed/by_year/dq/**
+# Small full-dataset roll-up for pipeline overview + overall DQ (embedded at build time)
+!references/transformed/combined.report.json
+# Demo year packages for release browser only (~75 MB)
 !references/transformed/demo_by_year/
 references/transformed/full/
 references/transformed/full_partial_*/
 references/transformed/*.json
+!references/transformed/combined.report.json
 !references/transformed/demo_by_year/*.json
 references/transformed/*.7z
 references/transformed/philgeps_ocds_by_year.7z

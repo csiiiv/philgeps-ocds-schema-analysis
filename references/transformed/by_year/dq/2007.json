@@ -1,0 +1,1029 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2007",
+  "source_file_count": 1,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2007.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2007.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2007.xlsx",
+      "compiled_release_count": 19232
+    }
+  ],
+  "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2007.xlsx",
+  "input_bytes": 47314416,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 215309,
+  "rows_committed": 215309,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 6360,
+    "info": 186004
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 186004
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 4808
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 1552
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 174748
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 6629
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 4787
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 4467
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `posted` but `awardee_organization_name` is missing",
+      "count": 1550
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 114
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 46
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 16
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 4
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `updated` but `awardee_organization_name` is missing",
+      "count": 2
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 1
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 151,
+      "row_entry": {
+        "bid_reference_no": "341671",
+        "solicitation_no": "PCA 12-0003-06",
+        "award_reference_no": "50537",
+        "procuring_entity": "PHILIPPINE COCONUT AUTHORITY - MAIN",
+        "notice_title": "Purhase of Office Supplies",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "15000",
+        "contract_amount": "7250",
+        "award_date": "2007-02-23T00:00:00+08:00",
+        "published_date": "2007-01-03T00:00:00+08:00",
+        "closing_date": "2007-01-10T14:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE COCONUT AUTHORITY - MAIN",
+        "Reference ID": "341671",
+        "Solicitation No.": "PCA 12-0003-06",
+        "Notice Title": "Purhase of Office Supplies",
+        "Publish Date": "2007-01-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Equipment Supplies and Consumables",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2007-01-10T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "50537",
+        "Award Title": "Purhase of Office Supplies",
+        "Award Type": "Award Notice",
+        "Contract Amount": "7250",
+        "Publish Date(Award)": "2007-03-29T11:10:01+08:00",
+        "Award Date": "2007-02-23T00:00:00+08:00",
+        "Reason for Award": "Lowest price quotation",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 151: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 316,
+      "row_entry": {
+        "bid_reference_no": "342928",
+        "solicitation_no": "e-07-0101",
+        "award_reference_no": "48868",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "788000",
+        "contract_amount": "388000",
+        "award_date": "2007-01-24T00:00:00+08:00",
+        "published_date": "2007-01-03T00:00:00+08:00",
+        "closing_date": "2007-01-16T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "342928",
+        "Solicitation No.": "e-07-0101",
+        "Notice Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Publish Date": "2007-01-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Vehicles",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "788000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2007-01-16T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "48868",
+        "Award Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Award Type": "Award Notice",
+        "Contract Amount": "388000",
+        "Contract No": "J-2007-0020",
+        "Publish Date(Award)": "2007-03-08T16:02:04+08:00",
+        "Award Date": "2007-01-24T00:00:00+08:00",
+        "Notice to Proceed Date": "2007-01-25T00:00:00+08:00",
+        "Contract Efectivity Date": "2007-01-26T00:00:00+08:00",
+        "Contract End Date": "2007-02-01T00:00:00+08:00",
+        "Reason for Award": "sole complying bidder",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 316: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 585,
+      "row_entry": {
+        "bid_reference_no": "343263",
+        "solicitation_no": "003-07-danaocity",
+        "award_reference_no": "60535",
+        "procuring_entity": "CITY  OF DANAO, CEBU",
+        "notice_title": "HYPO-CHLORINATOR for the use of VARIOUS PUMPING STATION at the CITY PLANNING and DEVELOPMENT OFFICE (WATERWORKS DIVISION), DANAO CITY.",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "1203750",
+        "contract_amount": "1199306.25",
+        "award_date": "2007-01-17T00:00:00+08:00",
+        "published_date": "2007-01-04T00:00:00+08:00",
+        "closing_date": "2007-01-11T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY  OF DANAO, CEBU",
+        "Reference ID": "343263",
+        "Solicitation No.": "003-07-danaocity",
+        "Notice Title": "HYPO-CHLORINATOR for the use of VARIOUS PUMPING STATION at the CITY PLANNING and DEVELOPMENT OFFICE (WATERWORKS DIVISION), DANAO CITY.",
+        "Publish Date": "2007-01-04T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Environmental Health/Safety Equipment",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1203750",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2007-01-11T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "60535",
+        "Award Title": "HYPO-CHLORINATOR for the use of VARIOUS PUMPING STATION at the CITY PLANNING and DEVELOPMENT OFFICE (WATERWORKS DIVISION), DANAO CITY.",
+        "Award Type": "Award Notice",
+        "Contract Amount": "1199306.25",
+        "Publish Date(Award)": "2007-08-07T16:33:26+08:00",
+        "Award Date": "2007-01-17T00:00:00+08:00",
+        "Reason for Award": "lowest bidders.",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 585: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 630,
+      "row_entry": {
+        "bid_reference_no": "343329",
+        "solicitation_no": "PSCbac-07-002",
+        "award_reference_no": "45635",
+        "procuring_entity": "PHILIPPINE SPORTS COMMISSION",
+        "notice_title": "Rental of One (1) Private Vehicle for Use of PSC Chairman",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "45000",
+        "contract_amount": "45000",
+        "award_date": "2007-01-08T00:00:00+08:00",
+        "published_date": "2007-01-04T00:00:00+08:00",
+        "closing_date": "2007-01-05T10:00:00+08:00",
+        "procurement_mode": "Direct Contracting (Sec. 50)"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE SPORTS COMMISSION",
+        "Reference ID": "343329",
+        "Solicitation No.": "PSCbac-07-002",
+        "Notice Title": "Rental of One (1) Private Vehicle for Use of PSC Chairman",
+        "Publish Date": "2007-01-04T00:00:00+08:00",
+        "Classification": "Goods - General Support Services",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Direct Contracting (Sec. 50)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "45000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "8",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2007-01-05T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "45635",
+        "Award Title": "Rental of One (1) Private Vehicle for Use of PSC Chairman",
+        "Award Type": "Award Notice",
+        "Contract Amount": "45000",
+        "Contract No": "PSCbac-07-002",
+        "Publish Date(Award)": "2007-01-08T11:07:47+08:00",
+        "Award Date": "2007-01-08T00:00:00+08:00",
+        "Notice to Proceed Date": "2007-01-08T00:00:00+08:00",
+        "Contract Efectivity Date": "2007-01-09T00:00:00+08:00",
+        "Contract End Date": "2007-01-10T00:00:00+08:00",
+        "Reason for Award": "Single Lowest Calculated Responsive Bid",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 630: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 644,
+      "row_entry": {
+        "bid_reference_no": "343348",
+        "solicitation_no": "0701PR002",
+        "award_reference_no": "46065",
+        "procuring_entity": "PHILIPPINE INSTITUTE FOR DEVELOPMENT STUDIES",
+        "notice_title": "Catring services for the JPEPA Round Table Discussion on January 19, 2007",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "12500",
+        "contract_amount": "12000",
+        "award_date": "2007-01-16T00:00:00+08:00",
+        "published_date": "2007-01-04T00:00:00+08:00",
+        "closing_date": "2007-01-08T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE INSTITUTE FOR DEVELOPMENT STUDIES",
+        "Reference ID": "343348",
+        "Solicitation No.": "0701PR002",
+        "Notice Title": "Catring services for the JPEPA Round Table Discussion on January 19, 2007",
+        "Publish Date": "2007-01-04T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Catering Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "12500",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "1",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2007-01-08T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "46065",
+        "Award Title": "Catring services for the JPEPA Round Table Discussion on January 19, 2007",
+        "Award Type": "Emergency Purchase",
+        "Contract Amount": "12000",
+        "Publish Date(Award)": "2007-01-19T09:45:10+08:00",
+        "Award Date": "2007-01-16T00:00:00+08:00",
+        "Reason for Award": "lowest bid",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 644: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 3018,
+      "row_entry": {
+        "bid_reference_no": "345402",
+        "solicitation_no": "nhi-26",
+        "procuring_entity": "NATIONAL HISTORICAL INSTITUTE",
+        "notice_title": "Female uniform",
+        "bid_notice_status": "Closed",
+        "approved_budget": "65600",
+        "item_budget": "0",
+        "published_date": "2007-01-12T00:00:00+08:00",
+        "closing_date": "2007-01-15T15:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "uniform",
+        "item_description": "Female",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL HISTORICAL INSTITUTE",
+        "Reference ID": "345402",
+        "Solicitation No.": "nhi-26",
+        "Notice Title": "Female uniform",
+        "Publish Date": "2007-01-12T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Garments",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "65600",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "3",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "uniform",
+        "Item Desc": "Female",
+        "Quantity": "164",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2007-01-15T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 3018: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 4070,
+      "row_entry": {
+        "bid_reference_no": "346300",
+        "solicitation_no": "NCMHSHOP01-07",
+        "procuring_entity": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "notice_title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "bid_notice_status": "Shortlisted",
+        "approved_budget": "110000",
+        "item_budget": "0",
+        "published_date": "2007-01-15T00:00:00+08:00",
+        "closing_date": "2007-01-22T09:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "INK CARTRIDGE",
+        "item_description": "black, EPSON T038",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "Reference ID": "346300",
+        "Solicitation No.": "NCMHSHOP01-07",
+        "Notice Title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "Publish Date": "2007-01-15T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "110000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "INK CARTRIDGE",
+        "Item Desc": "black, EPSON T038",
+        "Quantity": "10",
+        "UOM": "Cartridge",
+        "Item Budget": "0",
+        "Closing Date": "2007-01-22T09:00:00+08:00",
+        "Notice Status": "Shortlisted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 4070: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 4071,
+      "row_entry": {
+        "bid_reference_no": "346300",
+        "solicitation_no": "NCMHSHOP01-07",
+        "procuring_entity": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "notice_title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "bid_notice_status": "Shortlisted",
+        "approved_budget": "110000",
+        "item_budget": "0",
+        "published_date": "2007-01-15T00:00:00+08:00",
+        "closing_date": "2007-01-22T09:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "INK CARTRIDGE",
+        "item_description": "black, HP 21",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "Reference ID": "346300",
+        "Solicitation No.": "NCMHSHOP01-07",
+        "Notice Title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "Publish Date": "2007-01-15T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "110000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "INK CARTRIDGE",
+        "Item Desc": "black, HP 21",
+        "Quantity": "10",
+        "UOM": "Cartridge",
+        "Item Budget": "0",
+        "Closing Date": "2007-01-22T09:00:00+08:00",
+        "Notice Status": "Shortlisted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 4071: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 4072,
+      "row_entry": {
+        "bid_reference_no": "346300",
+        "solicitation_no": "NCMHSHOP01-07",
+        "procuring_entity": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "notice_title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "bid_notice_status": "Shortlisted",
+        "approved_budget": "110000",
+        "item_budget": "0",
+        "published_date": "2007-01-15T00:00:00+08:00",
+        "closing_date": "2007-01-22T09:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "INK CARTRIDGE",
+        "item_description": "black, HP 27",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "Reference ID": "346300",
+        "Solicitation No.": "NCMHSHOP01-07",
+        "Notice Title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "Publish Date": "2007-01-15T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "110000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "INK CARTRIDGE",
+        "Item Desc": "black, HP 27",
+        "Quantity": "10",
+        "UOM": "Cartridge",
+        "Item Budget": "0",
+        "Closing Date": "2007-01-22T09:00:00+08:00",
+        "Notice Status": "Shortlisted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 4072: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 4073,
+      "row_entry": {
+        "bid_reference_no": "346300",
+        "solicitation_no": "NCMHSHOP01-07",
+        "procuring_entity": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "notice_title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "bid_notice_status": "Shortlisted",
+        "approved_budget": "110000",
+        "item_budget": "0",
+        "published_date": "2007-01-15T00:00:00+08:00",
+        "closing_date": "2007-01-22T09:00:00+08:00",
+        "line_item_no": "4",
+        "item_name": "INK CARTRIDGE",
+        "item_description": "black, HP 29",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL CENTER FOR MENTAL HEALTH",
+        "Reference ID": "346300",
+        "Solicitation No.": "NCMHSHOP01-07",
+        "Notice Title": "SUPPLY & DELIVERY OF COMPUTER INKS",
+        "Publish Date": "2007-01-15T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "110000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "4",
+        "Item Name": "INK CARTRIDGE",
+        "Item Desc": "black, HP 29",
+        "Quantity": "5",
+        "UOM": "Cartridge",
+        "Item Budget": "0",
+        "Closing Date": "2007-01-22T09:00:00+08:00",
+        "Notice Status": "Shortlisted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 4073: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "341473",
+        "solicitation_no": "SPMO-06-214",
+        "procuring_entity": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "notice_title": "Computer System - 17 sets",
+        "bid_notice_status": "Closed",
+        "approved_budget": "538000",
+        "item_budget": "208000",
+        "published_date": "2007-01-01T00:00:00+08:00",
+        "closing_date": "2007-01-15T13:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Computer System",
+        "item_description": "Computer System",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "Reference ID": "341473",
+        "Solicitation No.": "SPMO-06-214",
+        "Notice Title": "Computer System - 17 sets",
+        "Publish Date": "2007-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Information Technology",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "538000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Computer System",
+        "Item Desc": "Computer System",
+        "Quantity": "8",
+        "UOM": "Set",
+        "Item Budget": "208000",
+        "Closing Date": "2007-01-15T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "341473",
+        "solicitation_no": "SPMO-06-214",
+        "procuring_entity": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "notice_title": "Computer System - 17 sets",
+        "bid_notice_status": "Closed",
+        "approved_budget": "538000",
+        "item_budget": "280000",
+        "published_date": "2007-01-01T00:00:00+08:00",
+        "closing_date": "2007-01-15T13:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "Computer System",
+        "item_description": "Computer System",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "Reference ID": "341473",
+        "Solicitation No.": "SPMO-06-214",
+        "Notice Title": "Computer System - 17 sets",
+        "Publish Date": "2007-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Information Technology",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "538000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "Computer System",
+        "Item Desc": "Computer System",
+        "Quantity": "8",
+        "UOM": "Set",
+        "Item Budget": "280000",
+        "Closing Date": "2007-01-15T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "341473",
+        "solicitation_no": "SPMO-06-214",
+        "procuring_entity": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "notice_title": "Computer System - 17 sets",
+        "bid_notice_status": "Closed",
+        "approved_budget": "538000",
+        "item_budget": "50000",
+        "published_date": "2007-01-01T00:00:00+08:00",
+        "closing_date": "2007-01-15T13:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "Computer System",
+        "item_description": "Computer System",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "Reference ID": "341473",
+        "Solicitation No.": "SPMO-06-214",
+        "Notice Title": "Computer System - 17 sets",
+        "Publish Date": "2007-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Information Technology",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "538000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "Computer System",
+        "Item Desc": "Computer System",
+        "Quantity": "1",
+        "UOM": "Set",
+        "Item Budget": "50000",
+        "Closing Date": "2007-01-15T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 3: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "342572",
+        "solicitation_no": "BAC GP 06-096",
+        "procuring_entity": "CITY OF MALABON",
+        "notice_title": "REQUEST FOR QUOTATION (LABORATORY SUPPLIES)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "122175",
+        "item_budget": "122175",
+        "published_date": "2007-01-01T00:00:00+08:00",
+        "closing_date": "2007-01-05T12:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "LABORATORY SUPPLIES",
+        "item_description": "XRAY FILMS, DEVELOPER & ENVELOPE",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MALABON",
+        "Reference ID": "342572",
+        "Solicitation No.": "BAC GP 06-096",
+        "Notice Title": "REQUEST FOR QUOTATION (LABORATORY SUPPLIES)",
+        "Publish Date": "2007-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Medical Supplies and Laboratory Instrument",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "122175",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "LABORATORY SUPPLIES",
+        "Item Desc": "XRAY FILMS, DEVELOPER & ENVELOPE",
+        "Quantity": "50",
+        "UOM": "Box",
+        "Item Budget": "122175",
+        "Closing Date": "2007-01-05T12:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "342633",
+        "solicitation_no": "BAC GP 06-097",
+        "procuring_entity": "CITY OF MALABON",
+        "notice_title": "REQUEST FOR QUOTATION (ELECTRICAL SUPPLIES)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "167985",
+        "item_budget": "167985",
+        "published_date": "2007-01-01T00:00:00+08:00",
+        "closing_date": "2007-01-08T12:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "ELECTRICAL SUPPLIES",
+        "item_description": "ELECTRICAL SUPPLIES",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MALABON",
+        "Reference ID": "342633",
+        "Solicitation No.": "BAC GP 06-097",
+        "Notice Title": "REQUEST FOR QUOTATION (ELECTRICAL SUPPLIES)",
+        "Publish Date": "2007-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Electrical Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "167985",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "ELECTRICAL SUPPLIES",
+        "Item Desc": "ELECTRICAL SUPPLIES",
+        "Quantity": "383",
+        "UOM": "Piece",
+        "Item Budget": "167985",
+        "Closing Date": "2007-01-08T12:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 19232,
+  "row_accounting": {
+    "rows_seen": 215309,
+    "rows_committed": 215309,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 186004,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 29305,
+      "process_group_count": 19232,
+      "rows_merged_into_groups": 10073,
+      "releases_compiled": 19232
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 19232,
+      "releases_after_dedup": 19232,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 215309,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 186004,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 29305,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 10073,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 19232,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 19232,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 19232,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.668923+00:00"
+}

@@ -1,0 +1,1009 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2005",
+  "source_file_count": 1,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2005.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2005.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2005.xlsx",
+      "compiled_release_count": 13325
+    }
+  ],
+  "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2005.xlsx",
+  "input_bytes": 20733271,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 99161,
+  "rows_committed": 99161,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 23557,
+    "info": 81152
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 81152
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 17975
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 5581
+    },
+    {
+      "rule": "missing_identity",
+      "severity": "warning",
+      "count": 1
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 80548
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `posted` but `awardee_organization_name` is missing",
+      "count": 17934
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 3066
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 2105
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 410
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 335
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 261
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `updated` but `awardee_organization_name` is missing",
+      "count": 41
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 7
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `unknown`, no award) — excluded from OCDS compilation as expected",
+      "count": 1
+    },
+    {
+      "rule": "missing_identity",
+      "severity": "warning",
+      "field": "bid_reference_no",
+      "pattern": "identity field `bid_reference_no` is missing",
+      "count": 1
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 81,
+      "row_entry": {
+        "bid_reference_no": "92463",
+        "solicitation_no": "e-05-0101",
+        "award_reference_no": "11997",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "25000000",
+        "contract_amount": "19908000",
+        "award_date": "2005-01-21T00:00:00+08:00",
+        "published_date": "2005-01-04T00:00:00+08:00",
+        "closing_date": "2005-01-17T00:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "92463",
+        "Solicitation No.": "e-05-0101",
+        "Notice Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Publish Date": "2005-01-04T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Chemicals and Chemical Products",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "25000000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-17T00:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "11997",
+        "Award Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Award Type": "Award Notice",
+        "Contract Amount": "19908000",
+        "Contract No": "PO#0010-2005",
+        "Publish Date(Award)": "2005-01-25T00:00:00+08:00",
+        "Award Date": "2005-01-21T00:00:00+08:00",
+        "Contract End Date": "2005-01-17T00:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 81: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 82,
+      "row_entry": {
+        "bid_reference_no": "92464",
+        "solicitation_no": "e-05-0102",
+        "award_reference_no": "11996",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "25000000",
+        "contract_amount": "19845000",
+        "award_date": "2005-01-21T00:00:00+08:00",
+        "published_date": "2005-01-04T00:00:00+08:00",
+        "closing_date": "2005-01-17T00:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "92464",
+        "Solicitation No.": "e-05-0102",
+        "Notice Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Publish Date": "2005-01-04T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Chemicals and Chemical Products",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "25000000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-17T00:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "11996",
+        "Award Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Award Type": "Award Notice",
+        "Contract Amount": "19845000",
+        "Contract No": "PO#0011-2005",
+        "Publish Date(Award)": "2005-01-25T00:00:00+08:00",
+        "Award Date": "2005-01-21T00:00:00+08:00",
+        "Contract End Date": "2005-01-17T00:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 82: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 83,
+      "row_entry": {
+        "bid_reference_no": "92465",
+        "solicitation_no": "e-05-0104",
+        "award_reference_no": "11959",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "Request for Two Hundred Fifty (250) pieces sacks of Rice for the use of Various Organizations in",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "250000",
+        "contract_amount": "237375",
+        "award_date": "2005-01-11T00:00:00+08:00",
+        "published_date": "2005-01-04T00:00:00+08:00",
+        "closing_date": "2005-01-10T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "92465",
+        "Solicitation No.": "e-05-0104",
+        "Notice Title": "Request for Two Hundred Fifty (250) pieces sacks of Rice for the use of Various Organizations in",
+        "Publish Date": "2005-01-04T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Notice of Proposed Procurement (NPP)",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-10T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "11959",
+        "Award Title": "Request for Two Hundred Fifty (250) pieces sacks of Rice for the use of Various Organizations in",
+        "Award Type": "Award Notice",
+        "Contract Amount": "237375",
+        "Contract No": "PO#0009-2005",
+        "Publish Date(Award)": "2005-01-20T00:00:00+08:00",
+        "Award Date": "2005-01-11T00:00:00+08:00",
+        "Contract End Date": "2005-01-10T00:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 83: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 84,
+      "row_entry": {
+        "bid_reference_no": "92466",
+        "solicitation_no": "e-05-0103",
+        "award_reference_no": "11960",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "Request for Three hundred Sixty Five (365) pieces Quezo de Bola for the use of PNP,",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "250000",
+        "contract_amount": "249842.5",
+        "award_date": "2005-01-11T00:00:00+08:00",
+        "published_date": "2005-01-04T00:00:00+08:00",
+        "closing_date": "2005-01-10T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "92466",
+        "Solicitation No.": "e-05-0103",
+        "Notice Title": "Request for Three hundred Sixty Five (365) pieces Quezo de Bola for the use of PNP,",
+        "Publish Date": "2005-01-04T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Notice of Proposed Procurement (NPP)",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-10T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "11960",
+        "Award Title": "Request for Three hundred Sixty Five (365) pieces Quezo de Bola for the use of PNP,",
+        "Award Type": "Award Notice",
+        "Contract Amount": "249842.5",
+        "Contract No": "PO#0008-2005",
+        "Publish Date(Award)": "2005-01-20T00:00:00+08:00",
+        "Award Date": "2005-01-11T00:00:00+08:00",
+        "Contract End Date": "2005-01-10T00:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 84: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 120,
+      "row_entry": {
+        "bid_reference_no": "92504",
+        "solicitation_no": "05-001b",
+        "award_reference_no": "73466",
+        "procuring_entity": "HOUSING & URBAN DEVELOPMENT COORDINATING COUNCIL - Main",
+        "notice_title": "Purified Water",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "50000",
+        "contract_amount": "48000",
+        "award_date": "2005-01-21T00:00:00+08:00",
+        "published_date": "2005-01-04T00:00:00+08:00",
+        "closing_date": "2005-01-14T17:00:00+08:00",
+        "procurement_mode": "Local Purchase"
+      },
+      "raw_row": {
+        "Organization Name": "HOUSING & URBAN DEVELOPMENT COORDINATING COUNCIL - Main",
+        "Reference ID": "92504",
+        "Solicitation No.": "05-001b",
+        "Notice Title": "Purified Water",
+        "Publish Date": "2005-01-04T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Local Purchase",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "50000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-14T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "73466",
+        "Award Title": "Purified Water",
+        "Award Type": "Award Notice",
+        "Contract Amount": "48000",
+        "Contract No": "05-001",
+        "Publish Date(Award)": "2008-01-15T10:28:20+08:00",
+        "Award Date": "2005-01-21T00:00:00+08:00",
+        "Notice to Proceed Date": "2005-01-24T00:00:00+08:00",
+        "Contract Efectivity Date": "2005-01-25T00:00:00+08:00",
+        "Contract End Date": "2005-12-31T00:00:00+08:00",
+        "Reason for Award": "Lowest qoutation/proposal",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 120: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 404,
+      "row_entry": {
+        "bid_reference_no": "92827",
+        "solicitation_no": "ITB # 2005-001",
+        "award_reference_no": "12564",
+        "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION I",
+        "notice_title": "Lease of Vigan City Service Office",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "1000000",
+        "contract_amount": "0",
+        "award_date": "2005-03-02T00:00:00+08:00",
+        "published_date": "2005-01-06T00:00:00+08:00",
+        "closing_date": "2005-02-18T12:00:00+08:00",
+        "procurement_mode": "Undefined"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION I",
+        "Reference ID": "92827",
+        "Solicitation No.": "ITB # 2005-001",
+        "Notice Title": "Lease of Vigan City Service Office",
+        "Publish Date": "2005-01-06T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Undefined",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1000000",
+        "Area of Delivery": "Pangasinan",
+        "Closing Date": "2005-02-18T12:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "12564",
+        "Award Title": "Lease of Vigan City Service Office",
+        "Contract Amount": "0",
+        "Contract No": "CA#2005-001",
+        "Publish Date(Award)": "2005-03-03T00:00:00+08:00",
+        "Award Date": "2005-03-02T00:00:00+08:00",
+        "Contract End Date": "2006-03-01T00:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "0",
+          "message": "row 404: `contract_amount` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 547,
+      "row_entry": {
+        "bid_reference_no": "92973",
+        "solicitation_no": "g05-001",
+        "award_reference_no": "23625",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "Supplies",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "contract_amount": "1727219",
+        "award_date": "2005-01-31T00:00:00+08:00",
+        "published_date": "2005-01-07T00:00:00+08:00",
+        "closing_date": "2005-01-27T14:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "92973",
+        "Solicitation No.": "g05-001",
+        "Notice Title": "Supplies",
+        "Publish Date": "2005-01-07T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-27T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "23625",
+        "Award Title": "Supplies",
+        "Award Type": "Award Notice",
+        "Contract Amount": "1727219",
+        "Contract No": "05-01-111",
+        "Publish Date(Award)": "2006-01-27T00:00:00+08:00",
+        "Award Date": "2005-01-31T00:00:00+08:00",
+        "Reason for Award": "SUPPLY AND DELIVERY OF ATHLETIC UNIFORM",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 547: `approved_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 684,
+      "row_entry": {
+        "bid_reference_no": "93081",
+        "solicitation_no": "BFAD-2005-65",
+        "award_reference_no": "28526",
+        "procuring_entity": "BUREAU of FOOD and DRUGS",
+        "notice_title": "LABORATORY CHEMICALS (USP REFERENCE STANDARD)",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "contract_amount": "0",
+        "award_date": "2005-05-22T10:00:00+08:00",
+        "published_date": "2005-01-10T00:00:00+08:00",
+        "closing_date": "2005-02-21T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "BUREAU of FOOD and DRUGS",
+        "Reference ID": "93081",
+        "Solicitation No.": "BFAD-2005-65",
+        "Notice Title": "LABORATORY CHEMICALS (USP REFERENCE STANDARD)",
+        "Publish Date": "2005-01-10T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Chemicals and Chemical Products",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-02-21T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "28526",
+        "Award Title": "LABORATORY CHEMICALS (USP REFERENCE STANDARD)",
+        "Contract Amount": "0",
+        "Contract No": "NONE",
+        "Publish Date(Award)": "2006-03-10T00:00:00+08:00",
+        "Award Date": "2005-05-22T10:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 684: `approved_budget` is non-positive (0.0)"
+        },
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "0",
+          "message": "row 684: `contract_amount` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 789,
+      "row_entry": {
+        "bid_reference_no": "93012",
+        "solicitation_no": "VM-05-01-001",
+        "award_reference_no": "12009",
+        "procuring_entity": "ADVANCED SCIENCE and TECHNOLOGY INSTITUTE",
+        "notice_title": "RF- TONER",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "50000",
+        "item_budget": "0",
+        "contract_amount": "0",
+        "award_date": "2005-04-13T14:00:00+08:00",
+        "published_date": "2005-01-10T00:00:00+08:00",
+        "closing_date": "2005-01-13T14:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "ITEM1",
+        "item_description": "RF- TONER",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "ADVANCED SCIENCE and TECHNOLOGY INSTITUTE",
+        "Reference ID": "93012",
+        "Solicitation No.": "VM-05-01-001",
+        "Notice Title": "RF- TONER",
+        "Publish Date": "2005-01-10T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "50000",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "1",
+        "Item Name": "ITEM1",
+        "Item Desc": "RF- TONER",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "0",
+        "Closing Date": "2005-01-13T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "12009",
+        "Award Title": "RF- TONER",
+        "Contract Amount": "0",
+        "Contract No": "VM-05-01-0002",
+        "Publish Date(Award)": "2005-01-28T00:00:00+08:00",
+        "Award Date": "2005-04-13T14:00:00+08:00",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "0",
+          "message": "row 789: `contract_amount` is non-positive (0.0)"
+        },
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 789: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 824,
+      "row_entry": {
+        "bid_reference_no": "93251",
+        "solicitation_no": "05-001-01",
+        "award_reference_no": "47465",
+        "procuring_entity": "FOOD TERMINAL INCORPORATED",
+        "notice_title": "Battery 2D 12Volts",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "contract_amount": "3958",
+        "award_date": "2005-02-01T00:00:00+08:00",
+        "published_date": "2005-01-11T00:00:00+08:00",
+        "closing_date": "2005-01-17T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "FOOD TERMINAL INCORPORATED",
+        "Reference ID": "93251",
+        "Solicitation No.": "05-001-01",
+        "Notice Title": "Battery 2D 12Volts",
+        "Publish Date": "2005-01-11T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Agricultural Machinery and Equipment",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Undefined",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-17T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "47465",
+        "Award Title": "Battery 2D 12Volts",
+        "Award Type": "Award Notice",
+        "Contract Amount": "3958",
+        "Contract No": "46374",
+        "Publish Date(Award)": "2007-02-18T15:59:00+08:00",
+        "Award Date": "2005-02-01T00:00:00+08:00",
+        "Notice to Proceed Date": "2005-02-04T00:00:00+08:00",
+        "Contract Efectivity Date": "2005-02-08T00:00:00+08:00",
+        "Contract End Date": "2005-02-10T00:00:00+08:00",
+        "Reason for Award": "lowest offer",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 824: `approved_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 99161,
+      "row_entry": {
+        "procuring_entity": "L"
+      },
+      "raw_row": {
+        "Organization Name": "L"
+      },
+      "issues": [
+        {
+          "rule": "missing_identity",
+          "severity": "warning",
+          "field": "bid_reference_no",
+          "value": "NULL",
+          "message": "row 99161: identity field `bid_reference_no` is missing"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "92251",
+        "solicitation_no": "sorcity2004-12-15",
+        "procuring_entity": "CITY OF SORSOGON - Prov'l Budget Office",
+        "notice_title": "CATERING AND VEHICLE SERVICES(2nd call)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "1000000",
+        "published_date": "2005-01-03T00:00:00+08:00",
+        "closing_date": "2005-01-12T01:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF SORSOGON - Prov'l Budget Office",
+        "Reference ID": "92251",
+        "Solicitation No.": "sorcity2004-12-15",
+        "Notice Title": "CATERING AND VEHICLE SERVICES(2nd call)",
+        "Publish Date": "2005-01-03T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Services",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1000000",
+        "Area of Delivery": "Sorsogon",
+        "Closing Date": "2005-01-12T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "92367",
+        "solicitation_no": "DSWD-NCR 05-001",
+        "procuring_entity": "DEPARTMENT of SOCIAL WELFARE and DEVELOPMENT-NCR",
+        "notice_title": "6,297 SETS OF DAY CARE MATERIALS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "5000000",
+        "published_date": "2005-01-03T00:00:00+08:00",
+        "closing_date": "2005-01-11T09:30:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT of SOCIAL WELFARE and DEVELOPMENT-NCR",
+        "Reference ID": "92367",
+        "Solicitation No.": "DSWD-NCR 05-001",
+        "Notice Title": "6,297 SETS OF DAY CARE MATERIALS",
+        "Publish Date": "2005-01-03T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Books, Maps and Other Publications",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "5000000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-11T09:30:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "92368",
+        "solicitation_no": "2005-00016",
+        "procuring_entity": "PURCHASING DIVISION",
+        "notice_title": "03-Notebook computer, branded, brand new, Intel pentium IV-1.8GHz processor",
+        "bid_notice_status": "Closed",
+        "approved_budget": "0",
+        "published_date": "2005-01-03T00:00:00+08:00",
+        "closing_date": "2005-01-06T09:30:00+08:00",
+        "procurement_mode": "Local Purchase"
+      },
+      "raw_row": {
+        "Organization Name": "PURCHASING DIVISION",
+        "Reference ID": "92368",
+        "Solicitation No.": "2005-00016",
+        "Notice Title": "03-Notebook computer, branded, brand new, Intel pentium IV-1.8GHz processor",
+        "Publish Date": "2005-01-03T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Local Purchase",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-06T09:30:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 3: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "92369",
+        "solicitation_no": "2005-00018",
+        "procuring_entity": "PURCHASING DIVISION",
+        "notice_title": "01-Personal computer, branded, brand new, mini-tower configuration, Pentium 4-2.8GHz",
+        "bid_notice_status": "Closed",
+        "approved_budget": "0",
+        "published_date": "2005-01-03T00:00:00+08:00",
+        "closing_date": "2005-01-06T09:30:00+08:00",
+        "procurement_mode": "Local Purchase"
+      },
+      "raw_row": {
+        "Organization Name": "PURCHASING DIVISION",
+        "Reference ID": "92369",
+        "Solicitation No.": "2005-00018",
+        "Notice Title": "01-Personal computer, branded, brand new, mini-tower configuration, Pentium 4-2.8GHz",
+        "Publish Date": "2005-01-03T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Information Technology",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Local Purchase",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-06T09:30:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "92370",
+        "solicitation_no": "2005-00015",
+        "procuring_entity": "PURCHASING DIVISION",
+        "notice_title": "VARIOUS IT EQUIPMENT FOR BUREAU OF TREASURY",
+        "bid_notice_status": "Closed",
+        "approved_budget": "0",
+        "published_date": "2005-01-03T00:00:00+08:00",
+        "closing_date": "2005-01-06T09:30:00+08:00",
+        "procurement_mode": "Local Purchase"
+      },
+      "raw_row": {
+        "Organization Name": "PURCHASING DIVISION",
+        "Reference ID": "92370",
+        "Solicitation No.": "2005-00015",
+        "Notice Title": "VARIOUS IT EQUIPMENT FOR BUREAU OF TREASURY",
+        "Publish Date": "2005-01-03T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Agricultural Machinery and Equipment",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Local Purchase",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2005-01-06T09:30:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 13325,
+  "row_accounting": {
+    "rows_seen": 99161,
+    "rows_committed": 99161,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 81152,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 18009,
+      "process_group_count": 13325,
+      "rows_merged_into_groups": 4684,
+      "releases_compiled": 13325
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 13325,
+      "releases_after_dedup": 13325,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 99161,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 81152,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 18009,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 4684,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 13325,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 13325,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 13325,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.596501+00:00"
+}

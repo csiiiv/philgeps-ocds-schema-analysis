@@ -1,0 +1,1054 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2015",
+  "source_file_count": 4,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-June 2015.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-June 2015.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-June 2015.xlsx",
+      "compiled_release_count": 35160
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2015.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2015.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2015.xlsx",
+      "compiled_release_count": 29305
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details July-Sept 2015.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details July-Sept 2015.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details July-Sept 2015.xlsx",
+      "compiled_release_count": 39455
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2015.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2015.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2015.xlsx",
+      "compiled_release_count": 41375
+    }
+  ],
+  "input_file": "Calendar year 2015 (4 source exports)",
+  "input_bytes": 221155627,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [
+    "",
+    "",
+    "",
+    ""
+  ],
+  "header": [],
+  "rows_seen": 918614,
+  "rows_committed": 918614,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 60244,
+    "info": 689745
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 689745
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 60042
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 202
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 596791
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 59676
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 53389
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 26259
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 12896
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 295
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 207
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "row is `posted` but `contract_amount` is missing",
+      "count": 166
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed - pending opening`, no award) — excluded from OCDS compilation as expected",
+      "count": 114
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (-1.0)",
+      "count": 104
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "row is `updated` but `contract_amount` is missing",
+      "count": 36
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 28
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 27
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `disapproved`, no award) — excluded from OCDS compilation as expected",
+      "count": 1
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 1373,
+      "row_entry": {
+        "bid_reference_no": "3112260",
+        "solicitation_no": "DOST1RFQ2015-06",
+        "procuring_entity": "DEPARTMENT OF SCIENCE AND TECHNOLOGY - REGION I",
+        "notice_title": "Trace Metal and Mineral Analysis",
+        "bid_notice_status": "Failed",
+        "approved_budget": "30000",
+        "item_budget": "0",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-10T23:59:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Hollow Cathode Lamp",
+        "item_description": "for AAS Copper Lamp",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF SCIENCE AND TECHNOLOGY - REGION I",
+        "Reference ID": "3112260",
+        "Solicitation No.": "DOST1RFQ2015-06",
+        "Notice Title": "Trace Metal and Mineral Analysis",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Electrical Systems and Lighting Components",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "30000",
+        "Area of Delivery": "La Union",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Hollow Cathode Lamp",
+        "Item Desc": "for AAS Copper Lamp",
+        "Quantity": "1",
+        "UOM": "Unit",
+        "Item Budget": "0",
+        "Closing Date": "2015-04-10T23:59:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1373: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1374,
+      "row_entry": {
+        "bid_reference_no": "3112260",
+        "solicitation_no": "DOST1RFQ2015-06",
+        "procuring_entity": "DEPARTMENT OF SCIENCE AND TECHNOLOGY - REGION I",
+        "notice_title": "Trace Metal and Mineral Analysis",
+        "bid_notice_status": "Failed",
+        "approved_budget": "30000",
+        "item_budget": "0",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-10T23:59:00+08:00",
+        "line_item_no": "2",
+        "item_name": "Hollow Cathode Lamp",
+        "item_description": "for AAS Iron Lamp",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF SCIENCE AND TECHNOLOGY - REGION I",
+        "Reference ID": "3112260",
+        "Solicitation No.": "DOST1RFQ2015-06",
+        "Notice Title": "Trace Metal and Mineral Analysis",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Electrical Systems and Lighting Components",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "30000",
+        "Area of Delivery": "La Union",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "Hollow Cathode Lamp",
+        "Item Desc": "for AAS Iron Lamp",
+        "Quantity": "1",
+        "UOM": "Unit",
+        "Item Budget": "0",
+        "Closing Date": "2015-04-10T23:59:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1374: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1712,
+      "row_entry": {
+        "bid_reference_no": "3116295",
+        "solicitation_no": "2015-047",
+        "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "notice_title": "Procurement of IT supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "497700",
+        "item_budget": "0",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-08T01:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Toner",
+        "item_description": "for Laserjet printer 600M602, CE390A",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "Reference ID": "3116295",
+        "Solicitation No.": "2015-047",
+        "Notice Title": "Procurement of IT supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "497700",
+        "Area of Delivery": "Zamboanga Del Sur",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Toner",
+        "Item Desc": "for Laserjet printer 600M602, CE390A",
+        "Quantity": "90",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2015-04-08T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1712: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1713,
+      "row_entry": {
+        "bid_reference_no": "3116295",
+        "solicitation_no": "2015-047",
+        "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "notice_title": "Procurement of IT supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "497700",
+        "item_budget": "0",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-08T01:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "Toner",
+        "item_description": "for HP LJ Pro M351A, HP305A CE410A, Black",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "Reference ID": "3116295",
+        "Solicitation No.": "2015-047",
+        "Notice Title": "Procurement of IT supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "497700",
+        "Area of Delivery": "Zamboanga Del Sur",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "Toner",
+        "Item Desc": "for HP LJ Pro M351A, HP305A CE410A, Black",
+        "Quantity": "3",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2015-04-08T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1713: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1714,
+      "row_entry": {
+        "bid_reference_no": "3116295",
+        "solicitation_no": "2015-047",
+        "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "notice_title": "Procurement of IT supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "497700",
+        "item_budget": "0",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-08T01:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "Toner",
+        "item_description": "for HP LJ Pro M351A, HP305A CE411A, Cyan",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION IX",
+        "Reference ID": "3116295",
+        "Solicitation No.": "2015-047",
+        "Notice Title": "Procurement of IT supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "497700",
+        "Area of Delivery": "Zamboanga Del Sur",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "Toner",
+        "Item Desc": "for HP LJ Pro M351A, HP305A CE411A, Cyan",
+        "Quantity": "2",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2015-04-08T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1714: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 7663,
+      "row_entry": {
+        "bid_reference_no": "3017292",
+        "solicitation_no": "PR 01-03-2015",
+        "award_reference_no": "835912",
+        "procuring_entity": "NATIONAL CONCILIATION AND MEDIATION BOARD - REGION VII",
+        "notice_title": "PURCHASE OF 126 BOXES CUSTOMIZED MAGAZINE BOXES WITH COVER (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "CEBU FILE SYSTEM, INC.",
+        "approved_budget": "47250",
+        "item_budget": "47250",
+        "award_date": "2015-01-26T00:00:00+08:00",
+        "published_date": "2015-04-06T14:16:50+08:00",
+        "line_item_no": "1",
+        "item_name": "MAGAZINE BOXES",
+        "item_description": "WITH COVER, LABEL POCKET & NCMB LOGO, HEAVY DUTY, 15-3/4X11X11",
+        "procurement_mode": "Direct Contracting (Sec. 50)"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL CONCILIATION AND MEDIATION BOARD - REGION VII",
+        "Reference ID": "3017292",
+        "Solicitation No.": "PR 01-03-2015",
+        "Notice Title": "PURCHASE OF 126 BOXES CUSTOMIZED MAGAZINE BOXES WITH COVER (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Publish Date": "2015-04-06T14:16:50+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Office Equipment Supplies and Consumables",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Direct Contracting (Sec. 50)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "47250",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "7",
+        "Line Item No": "1",
+        "Item Name": "MAGAZINE BOXES",
+        "Item Desc": "WITH COVER, LABEL POCKET & NCMB LOGO, HEAVY DUTY, 15-3/4X11X11",
+        "Quantity": "126",
+        "UOM": "Box",
+        "Item Budget": "47250",
+        "Notice Status": "Awarded",
+        "Award No.": "835912",
+        "Award Title": "PURCHASE OF 126 BOXES CUSTOMIZED MAGAZINE BOXES WITH COVER (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Award Type": "Award Notice  (Direct Contracting)",
+        "UNSPSC Code": "44111515",
+        "UNSPSC Description": "File storage boxes or organizers",
+        "Awardee Corporate Title": "CEBU FILE SYSTEM, INC.",
+        "Contract No": "PO 01-03-2015",
+        "Publish Date(Award)": "2015-04-06T14:16:50+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 7663: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 10788,
+      "row_entry": {
+        "bid_reference_no": "3122259",
+        "solicitation_no": "15-0126",
+        "award_reference_no": "876337",
+        "procuring_entity": "CITY OF ANTIPOLO, RIZAL",
+        "notice_title": "Purchase of Consumables (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "GAKKEN PHILIPPINES, INC.",
+        "approved_budget": "53700",
+        "item_budget": "53700",
+        "award_date": "2013-12-02T00:00:00+08:00",
+        "published_date": "2015-04-07T09:48:05+08:00",
+        "line_item_no": "1",
+        "item_name": "Purchase of Consumables",
+        "item_description": "5 cart. Duplo Black Ink DU14 5 rls. Duplo Master Roll DRU55 5 toner Fuji Xerox S1810 (Model D-B130)",
+        "procurement_mode": "Direct Contracting (Sec. 50)"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF ANTIPOLO, RIZAL",
+        "Reference ID": "3122259",
+        "Solicitation No.": "15-0126",
+        "Notice Title": "Purchase of Consumables (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Publish Date": "2015-04-07T09:48:05+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Office Equipment Supplies and Consumables",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Direct Contracting (Sec. 50)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "53700",
+        "Area of Delivery": "Rizal",
+        "Contract Duration": "15",
+        "Line Item No": "1",
+        "Item Name": "Purchase of Consumables",
+        "Item Desc": "5 cart. Duplo Black Ink DU14 5 rls. Duplo Master Roll DRU55 5 toner Fuji Xerox S1810 (Model D-B130)",
+        "Quantity": "15",
+        "UOM": "Piece",
+        "Item Budget": "53700",
+        "Notice Status": "Awarded",
+        "Award No.": "876337",
+        "Award Title": "Purchase of Consumables (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Award Type": "Award Notice  (Direct Contracting)",
+        "UNSPSC Code": "44000000",
+        "UNSPSC Description": "Office Equipment and Accessories and Supplies",
+        "Awardee Corporate Title": "GAKKEN PHILIPPINES, INC.",
+        "Contract No": "1307813",
+        "Publish Date(Award)": "2015-04-07T09:48:05+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 10788: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 10811,
+      "row_entry": {
+        "bid_reference_no": "3125257",
+        "solicitation_no": "15-03-001",
+        "award_reference_no": "877372",
+        "procuring_entity": "JOSE C. PAYUMO MEMORIAL HIGH SCHOOL",
+        "notice_title": "8 Piece EPSON, CANON",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "BABYLIAM'S TRADING",
+        "approved_budget": "10500",
+        "item_budget": "10500",
+        "award_date": "2015-03-12T15:00:00+08:00",
+        "published_date": "2015-04-07T19:14:22+08:00",
+        "line_item_no": "1",
+        "item_name": "EPSON, CANON",
+        "item_description": "PRINTER, INK, SCOTCH TAPE AND PUSH PIN",
+        "procurement_mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)"
+      },
+      "raw_row": {
+        "Organization Name": "JOSE C. PAYUMO MEMORIAL HIGH SCHOOL",
+        "Reference ID": "3125257",
+        "Solicitation No.": "15-03-001",
+        "Notice Title": "8 Piece EPSON, CANON",
+        "Publish Date": "2015-04-07T19:14:22+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "10500",
+        "Area of Delivery": "Bataan",
+        "Contract Duration": "3",
+        "Line Item No": "1",
+        "Item Name": "EPSON, CANON",
+        "Item Desc": "PRINTER, INK, SCOTCH TAPE AND PUSH PIN",
+        "Quantity": "8",
+        "UOM": "Piece",
+        "Item Budget": "10500",
+        "Notice Status": "Awarded",
+        "Award No.": "877372",
+        "Award Title": "8 Piece EPSON, CANON",
+        "Award Type": "Award Notice  (Shopping - Unforeseen Contingency)",
+        "UNSPSC Code": "44000000",
+        "UNSPSC Description": "Office Equipment and Accessories and Supplies",
+        "Awardee Corporate Title": "BABYLIAM'S TRADING",
+        "Contract No": "26",
+        "Publish Date(Award)": "2015-04-07T19:14:22+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 10811: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 31584,
+      "row_entry": {
+        "bid_reference_no": "3135927",
+        "solicitation_no": "CENRO MF 15-136 MP",
+        "award_reference_no": "881227",
+        "procuring_entity": "DEPT. OF ENVIRONMENT & NATURAL RES. - CENRO MANOLO FORTICH",
+        "notice_title": "PO  SC-UNIFARM, INC.",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Updated",
+        "awardee_organization_name": "SMALL COMMUNITY OF UNITED FARMERS ASSOCIATION IN RAINFOREST MANAGEMENT (SC-UNIFARM)",
+        "approved_budget": "666000",
+        "item_budget": "666000",
+        "award_date": "2015-01-19T00:00:00+08:00",
+        "published_date": "2015-04-15T09:50:41+08:00",
+        "line_item_no": "1",
+        "item_name": "PO SC-UNIFARM, INC.",
+        "item_description": "PLANTATION MAINTENANCE AND PROTECTION",
+        "procurement_mode": "Negotiated Procurement - Community Participation (Sec. 53.12)"
+      },
+      "raw_row": {
+        "Organization Name": "DEPT. OF ENVIRONMENT & NATURAL RES. - CENRO MANOLO FORTICH",
+        "Reference ID": "3135927",
+        "Solicitation No.": "CENRO MF 15-136 MP",
+        "Notice Title": "PO  SC-UNIFARM, INC.",
+        "Publish Date": "2015-04-15T09:50:41+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Agricultural Products (Seeds, Seedlings, Plants..)",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Community Participation (Sec. 53.12)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "666000",
+        "Area of Delivery": "Bukidnon",
+        "Contract Duration": "266",
+        "Line Item No": "1",
+        "Item Name": "PO SC-UNIFARM, INC.",
+        "Item Desc": "PLANTATION MAINTENANCE AND PROTECTION",
+        "Quantity": "222",
+        "UOM": "Hectare",
+        "Item Budget": "666000",
+        "Notice Status": "Awarded",
+        "Award No.": "881227",
+        "Award Title": "PO  SC-UNIFARM, INC.",
+        "Award Type": "Award Notice",
+        "UNSPSC Code": "77000000",
+        "UNSPSC Description": "Environmental Services",
+        "Awardee Corporate Title": "SMALL COMMUNITY OF UNITED FARMERS ASSOCIATION IN RAINFOREST MANAGEMENT (SC-UNIFARM)",
+        "Contract No": "CENRO MF 15-136 MP",
+        "Publish Date(Award)": "2015-04-15T09:50:41+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 31584: row is `updated` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 31610,
+      "row_entry": {
+        "bid_reference_no": "3137174",
+        "solicitation_no": "14-09-1765",
+        "award_reference_no": "881692",
+        "procuring_entity": "OFFICE OF THE PRESIDENT",
+        "notice_title": "Book Isang Harding Papel (Direct Contracting Proprietary in Nature)",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "ADARNA HOUSE, INC.",
+        "approved_budget": "121125",
+        "item_budget": "121125",
+        "award_date": "2014-10-17T00:00:00+08:00",
+        "published_date": "2015-04-15T14:25:54+08:00",
+        "line_item_no": "1",
+        "item_name": "Books",
+        "item_description": "Isang Harding Papel",
+        "procurement_mode": "Direct Contracting (Sec. 50)"
+      },
+      "raw_row": {
+        "Organization Name": "OFFICE OF THE PRESIDENT",
+        "Reference ID": "3137174",
+        "Solicitation No.": "14-09-1765",
+        "Notice Title": "Book Isang Harding Papel (Direct Contracting Proprietary in Nature)",
+        "Publish Date": "2015-04-15T14:25:54+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Books, Maps and Other Publications",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Direct Contracting (Sec. 50)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "121125",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "1",
+        "Item Name": "Books",
+        "Item Desc": "Isang Harding Papel",
+        "Quantity": "1500",
+        "UOM": "Piece",
+        "Item Budget": "121125",
+        "Notice Status": "Awarded",
+        "Award No.": "881692",
+        "Award Title": "Book Isang Harding Papel (Direct Contracting Proprietary in Nature)",
+        "Award Type": "Award Notice  (Direct Contracting)",
+        "UNSPSC Code": "60102300",
+        "UNSPSC Description": "Reading books and resources",
+        "Awardee Corporate Title": "ADARNA HOUSE, INC.",
+        "Contract No": "14-0472",
+        "Publish Date(Award)": "2015-04-15T14:25:54+08:00",
+        "Award Date": "2014-10-17T00:00:00+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 31610: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "3084466",
+        "solicitation_no": "2015-13",
+        "procuring_entity": "MUNICIPALITY OF TIAONG, QUEZON",
+        "notice_title": "Vehicle for Immediate Rescue & Safety Transport of Injured Person",
+        "bid_notice_status": "Cancelled",
+        "approved_budget": "1000000",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-10T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF TIAONG, QUEZON",
+        "Reference ID": "3084466",
+        "Solicitation No.": "2015-13",
+        "Notice Title": "Vehicle for Immediate Rescue & Safety Transport of Injured Person",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Fire Fighting & Rescue and Safety Equipment",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1000000",
+        "Area of Delivery": "Quezon",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2015-04-10T10:00:00+08:00",
+        "Notice Status": "Cancelled"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "3091672",
+        "solicitation_no": "14-12-1192",
+        "procuring_entity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION XII",
+        "notice_title": "Invitation to BID for the Provision for Office  Space Rental for PRO XII - Reposting",
+        "bid_notice_status": "Failed",
+        "approved_budget": "3582118.32",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-21T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION XII",
+        "Reference ID": "3091672",
+        "Solicitation No.": "14-12-1192",
+        "Notice Title": "Invitation to BID for the Provision for Office  Space Rental for PRO XII - Reposting",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Lease and Rental of Property or Building",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "3582118.32",
+        "Area of Delivery": "South Cotabato",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2015-04-13T10:00:00+08:00",
+        "Closing Date": "2015-04-21T10:00:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "3094310",
+        "solicitation_no": "1091-02-47-15 et.al",
+        "procuring_entity": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "notice_title": "Purchase of Office supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "65564.9",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-14T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "Reference ID": "3094310",
+        "Solicitation No.": "1091-02-47-15 et.al",
+        "Notice Title": "Purchase of Office supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "65564.9",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2015-04-06T10:00:00+08:00",
+        "Closing Date": "2015-04-14T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 3: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "3094343",
+        "solicitation_no": "TRUST-02-56-15",
+        "procuring_entity": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "notice_title": "Purchase of Office Supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "52289.75",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-14T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "Reference ID": "3094343",
+        "Solicitation No.": "TRUST-02-56-15",
+        "Notice Title": "Purchase of Office Supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "52289.75",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2015-04-06T10:00:00+08:00",
+        "Closing Date": "2015-04-14T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "3094381",
+        "solicitation_no": "4411-03-78-15",
+        "procuring_entity": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "notice_title": "Purchase of medical, dental and laboratory supplies",
+        "bid_notice_status": "Closed",
+        "approved_budget": "32880",
+        "published_date": "2015-04-01T00:00:00+08:00",
+        "closing_date": "2015-04-14T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF BAROTAC NUEVO, ILOILO",
+        "Reference ID": "3094381",
+        "Solicitation No.": "4411-03-78-15",
+        "Notice Title": "Purchase of medical, dental and laboratory supplies",
+        "Publish Date": "2015-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Medical Supplies and Laboratory Instrument",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "32880",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2015-04-06T10:00:00+08:00",
+        "Closing Date": "2015-04-14T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 145295,
+  "row_accounting": {
+    "rows_seen": 918614,
+    "rows_committed": 918614,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 689745,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 228869,
+      "process_group_count": 145295,
+      "rows_merged_into_groups": 83574,
+      "releases_compiled": 145295
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 145295,
+      "releases_after_dedup": 145295,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 918614,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 689745,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 228869,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 83574,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 145295,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 145295,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 145295,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:15.191416+00:00"
+}

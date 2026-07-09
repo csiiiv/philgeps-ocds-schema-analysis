@@ -1,19 +1,44 @@
 # Demo Year Data Guide
 
-This repository now includes comprehensive demo datasets spanning the entire PhilGEPS history (2000-2025), enabling immediate development and testing without downloading large files.
+Demo data is **only for the Release browser**. Pipeline overview, year data quality, and overall data quality use **full-dataset reports** (small JSON files committed or generated locally).
 
-## Demo Data Structure
+## What uses what
 
-### Raw Demo Data (CSV files)
-- `raw_demo/2024-10--2024-12-demo.csv` - 200 rows from recent period (155 KB)
-- Used for transformation pipeline testing
+| Webapp section | Data source | Size | In git? |
+|----------------|-------------|------|---------|
+| **Pipeline overview** | `combined.report.json` → embedded in `schema_bundle.json` | ~9 MB | Yes (`combined.report.json`) |
+| **Overall data quality** | same `combined.report.json` roll-up | (embedded) | Yes |
+| **Year data quality** | `by_year/dq/{year}.json` | ~10 MB total | Yes (`by_year/dq/`) |
+| **Release browser** | `demo_by_year/browser/` + `demo_by_year/release/` | ~100 MB deploy | Yes (`demo_by_year/`) |
+| Full release corpus | `by_year/*.json` + `by_year/browser/` | 10+ GB | No (Google Drive) |
 
-### Transformed Demo Data (OCDS packages)  
-- `references/transformed/demo_by_year/*.json` - Year-by-year OCDS demo packages
-- Each file contains ~200-1000 releases per year
-- Total size: ~60MB vs 10GB+ for full dataset
+## Demo data structure (release browser only)
 
-## Year Coverage
+### Raw demo CSV
+- `raw_demo/2024-10--2024-12-demo.csv` — 200 rows for transform pipeline testing
+
+### Transformed demo OCDS packages
+- `references/transformed/demo_by_year/*.json` — sampled year packages (~200–1000 releases/year)
+- `references/transformed/demo_by_year/browser/` — release list caches for the browser
+- Materialized at build time: `app/public/data/release/{year}/{ocid}.json`
+
+## Full-dataset reports (small, committed)
+
+| File | Purpose | Size |
+|------|---------|------|
+| `references/transformed/combined.report.json` | Corpus-wide DQ + per-year stats for Pipeline / Overall DQ | ~9 MB |
+| `references/transformed/by_year/dq/{year}.json` | Per-year DQ with source row samples | ~300–35 KB/year |
+
+Regenerate after full ETL:
+
+```bash
+python scripts/run_full_dataset.py --no-quiet
+python scripts/build_year_dq_cache.py
+python scripts/aggregate_dataset_report.py
+python scripts/build_schema_field_map.py
+```
+
+## Year coverage (demo release browser)
 
 | Years | Schema Period | Releases | File Size | Original Size |
 |-------|--------------|----------|-----------|---------------|
@@ -33,10 +58,11 @@ python scripts/build_schema_field_map.py
 cd app && npm run dev
 ```
 
-The webapp will automatically use demo year data from `references/transformed/demo_by_year/` for:
-- **Release Browser** - Browse releases by year
-- **Year Data Quality** - View DQ reports per year
-- **ETL Pipeline Stats** - See transformation metrics
+The webapp uses demo data from `references/transformed/demo_by_year/` **only for the Release browser** (`#/etl-releases/{year}`).
+
+Pipeline overview, overall DQ, and year DQ use full-dataset reports:
+- `combined.report.json` (embedded at build time)
+- `by_year/dq/{year}.json` (fetched at `/data/dq/{year}.json`)
 
 ### Script Development
 ```bash

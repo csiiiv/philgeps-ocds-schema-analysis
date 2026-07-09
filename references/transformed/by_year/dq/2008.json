@@ -1,0 +1,1020 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2008",
+  "source_file_count": 1,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2008.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2008.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2008.xlsx",
+      "compiled_release_count": 26266
+    }
+  ],
+  "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2008.xlsx",
+  "input_bytes": 63625587,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 289795,
+  "rows_committed": 289795,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 5653,
+    "info": 253654
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 253654
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 4624
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 1029
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 237469
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 9929
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 5963
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 4586
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `posted` but `awardee_organization_name` is missing",
+      "count": 1028
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 181
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 112
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 32
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 5
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `updated` but `awardee_organization_name` is missing",
+      "count": 1
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 1
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "3/16 x 1-1/2 Flat bar",
+        "item_description": "3/16 x 1-1/2 Flat bar",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "3/16 x 1-1/2 Flat bar",
+        "Item Desc": "3/16 x 1-1/2 Flat bar",
+        "Quantity": "10",
+        "UOM": "Meter",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 5: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "10 mm square bars",
+        "item_description": "10 mm square bars",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "10 mm square bars",
+        "Item Desc": "10 mm square bars",
+        "Quantity": "40",
+        "UOM": "Meter",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 6: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "Welding Rod",
+        "item_description": "Welding Rod",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "Welding Rod",
+        "Item Desc": "Welding Rod",
+        "Quantity": "8",
+        "UOM": "Kilo",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 7: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 8,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "4",
+        "item_name": "Read lead Primer",
+        "item_description": "Read lead Primer",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "4",
+        "Item Name": "Read lead Primer",
+        "Item Desc": "Read lead Primer",
+        "Quantity": "1",
+        "UOM": "Gallon",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 8: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 9,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "5",
+        "item_name": "Quick dry enamel",
+        "item_description": "Quick dry enamel",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "5",
+        "Item Name": "Quick dry enamel",
+        "Item Desc": "Quick dry enamel",
+        "Quantity": "1",
+        "UOM": "Gallon",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 9: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 51,
+      "row_entry": {
+        "bid_reference_no": "531012",
+        "solicitation_no": "CW – 08-0102-003",
+        "award_reference_no": "82596",
+        "procuring_entity": "CITY OF ZAMBOANGA, ZAMBOANGA DEL SUR",
+        "notice_title": "Concreting of Zambowood Road, Zambowood",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "500000",
+        "contract_amount": "480941.51",
+        "award_date": "2008-04-08T00:00:00+08:00",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-02-06T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF ZAMBOANGA, ZAMBOANGA DEL SUR",
+        "Reference ID": "531012",
+        "Solicitation No.": "CW – 08-0102-003",
+        "Notice Title": "Concreting of Zambowood Road, Zambowood",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Civil Works",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Projects",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "500000",
+        "Area of Delivery": "Zamboanga Del Sur",
+        "Contract Duration": "17",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2008-01-25T10:00:00+08:00",
+        "Closing Date": "2008-02-06T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "82596",
+        "Award Title": "Concreting of Zambowood Road, Zambowood",
+        "Award Type": "Award Notice",
+        "Contract Amount": "480941.51",
+        "Publish Date(Award)": "2008-04-24T13:39:48+08:00",
+        "Award Date": "2008-04-08T00:00:00+08:00",
+        "Reason for Award": "Lowest Calculated Responsive Bid",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 51: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 62,
+      "row_entry": {
+        "bid_reference_no": "531024",
+        "solicitation_no": "CW – 08-0102-014",
+        "award_reference_no": "76885",
+        "procuring_entity": "CITY OF ZAMBOANGA, ZAMBOANGA DEL SUR",
+        "notice_title": "Rehabilitation of School Building at Bunguiao National High School, Bunguiao",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "500000",
+        "contract_amount": "499994",
+        "award_date": "2008-02-20T00:00:00+08:00",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-02-06T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF ZAMBOANGA, ZAMBOANGA DEL SUR",
+        "Reference ID": "531024",
+        "Solicitation No.": "CW – 08-0102-014",
+        "Notice Title": "Rehabilitation of School Building at Bunguiao National High School, Bunguiao",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Civil Works",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Projects",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "500000",
+        "Area of Delivery": "Zamboanga Del Sur",
+        "Contract Duration": "55",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2008-01-25T10:00:00+08:00",
+        "Closing Date": "2008-02-06T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "76885",
+        "Award Title": "Rehabilitation of School Building at Bunguiao National High School, Bunguiao",
+        "Award Type": "Award Notice",
+        "Contract Amount": "499994",
+        "Publish Date(Award)": "2008-02-20T11:10:52+08:00",
+        "Award Date": "2008-02-20T00:00:00+08:00",
+        "Reason for Award": "Single Calculated Responsive Bid",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 62: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 234,
+      "row_entry": {
+        "bid_reference_no": "531480",
+        "solicitation_no": "e-08-0101",
+        "award_reference_no": "74485",
+        "procuring_entity": "CITY OF PASIG",
+        "notice_title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "1490500",
+        "contract_amount": "1487750",
+        "award_date": "2008-01-23T00:00:00+08:00",
+        "published_date": "2008-01-03T00:00:00+08:00",
+        "closing_date": "2008-01-17T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF PASIG",
+        "Reference ID": "531480",
+        "Solicitation No.": "e-08-0101",
+        "Notice Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Publish Date": "2008-01-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Furniture",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1490500",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2008-01-17T17:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "74485",
+        "Award Title": "INVITATION TO APPLY FOR ELIGIBILITY AND TO BID",
+        "Award Type": "Award Notice",
+        "Contract Amount": "1487750",
+        "Contract No": "j-2008-0002",
+        "Publish Date(Award)": "2008-01-29T08:53:01+08:00",
+        "Award Date": "2008-01-23T00:00:00+08:00",
+        "Notice to Proceed Date": "2008-01-24T00:00:00+08:00",
+        "Contract Efectivity Date": "2008-01-25T00:00:00+08:00",
+        "Contract End Date": "2008-01-31T00:00:00+08:00",
+        "Reason for Award": "sole complying bidder",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 234: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 885,
+      "row_entry": {
+        "bid_reference_no": "532291",
+        "solicitation_no": "GSD-07-063912 (RAD)",
+        "award_reference_no": "77577",
+        "procuring_entity": "NATIONAL TRANSMISSION CORPORATION(TRANSCO)",
+        "notice_title": "SAFETY HARNESS, FALL ARRESTER & SHOCK ABSORBER",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "57600",
+        "item_budget": "14400",
+        "contract_amount": "13372.8",
+        "award_date": "2008-02-13T00:00:00+08:00",
+        "published_date": "2008-01-05T00:00:00+08:00",
+        "closing_date": "2008-01-11T15:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "FALL ARRESTER",
+        "item_description": "PLEASE SEE ATTACHED SHEET",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL TRANSMISSION CORPORATION(TRANSCO)",
+        "Reference ID": "532291",
+        "Solicitation No.": "GSD-07-063912 (RAD)",
+        "Notice Title": "SAFETY HARNESS, FALL ARRESTER & SHOCK ABSORBER",
+        "Publish Date": "2008-01-05T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Safety and Occupational Products",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "57600",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "FALL ARRESTER",
+        "Item Desc": "PLEASE SEE ATTACHED SHEET",
+        "Quantity": "3",
+        "UOM": "Piece",
+        "Item Budget": "14400",
+        "Closing Date": "2008-01-11T15:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "77577",
+        "Award Title": "FALL ARRESTER",
+        "Award Type": "Award Notice",
+        "Contract Amount": "13372.8",
+        "Contract No": "49217-RAD",
+        "Publish Date(Award)": "2008-02-28T08:53:24+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 885: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 1158,
+      "row_entry": {
+        "bid_reference_no": "532572",
+        "solicitation_no": "MAWAD 01-08",
+        "award_reference_no": "81934",
+        "procuring_entity": "LOCAL WATER UTILITIES ADMINISTRATION",
+        "notice_title": "Drilling of One Unit Production Well for Mauban (Quezon) Water District",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "1650000",
+        "contract_amount": "1648240",
+        "award_date": "2008-02-07T00:00:00+08:00",
+        "published_date": "2008-01-05T00:00:00+08:00",
+        "closing_date": "2008-02-01T10:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "LOCAL WATER UTILITIES ADMINISTRATION",
+        "Reference ID": "532572",
+        "Solicitation No.": "MAWAD 01-08",
+        "Notice Title": "Drilling of One Unit Production Well for Mauban (Quezon) Water District",
+        "Publish Date": "2008-01-05T00:00:00+08:00",
+        "Classification": "Civil Works",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Water and Waste Water Treatment Supply & Disposal",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1650000",
+        "Area of Delivery": "Quezon",
+        "Contract Duration": "75",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2008-02-01T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "81934",
+        "Award Title": "Drilling of One Unit Production Well for Mauban (Quezon) Water District",
+        "Award Type": "Award Notice",
+        "Contract Amount": "1648240",
+        "Contract No": "MAWAD 01-08",
+        "Publish Date(Award)": "2008-04-18T13:16:47+08:00",
+        "Award Date": "2008-02-07T00:00:00+08:00",
+        "Notice to Proceed Date": "2008-02-19T00:00:00+08:00",
+        "Contract Efectivity Date": "2008-02-20T00:00:00+08:00",
+        "Contract End Date": "2008-05-05T00:00:00+08:00",
+        "Reason for Award": "Lowest calculated and responsive bid",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 1158: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "531150",
+        "solicitation_no": "2007-12-28-a",
+        "procuring_entity": "NATIONAL FOOD AUTHORITY - REGION II",
+        "notice_title": "procurement of ldpe plastic bag",
+        "bid_notice_status": "Closed",
+        "approved_budget": "627150",
+        "published_date": "2008-01-01T00:00:00+08:00",
+        "closing_date": "2008-01-08T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL FOOD AUTHORITY - REGION II",
+        "Reference ID": "531150",
+        "Solicitation No.": "2007-12-28-a",
+        "Notice Title": "procurement of ldpe plastic bag",
+        "Publish Date": "2008-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Packaging Supplies and Materials",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "627150",
+        "Area of Delivery": "Isabela",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2008-01-08T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "531158",
+        "solicitation_no": "2007-12-28-b",
+        "procuring_entity": "NATIONAL FOOD AUTHORITY - REGION II",
+        "notice_title": "handling services",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15649307.5",
+        "published_date": "2008-01-01T00:00:00+08:00",
+        "closing_date": "2008-01-08T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "NATIONAL FOOD AUTHORITY - REGION II",
+        "Reference ID": "531158",
+        "Solicitation No.": "2007-12-28-b",
+        "Notice Title": "handling services",
+        "Publish Date": "2008-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15649307.5",
+        "Area of Delivery": "Isabela",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2008-01-02T11:00:00+08:00",
+        "Closing Date": "2008-01-08T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "3/16 x 1-1/2 Flat bar",
+        "item_description": "3/16 x 1-1/2 Flat bar",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "3/16 x 1-1/2 Flat bar",
+        "Item Desc": "3/16 x 1-1/2 Flat bar",
+        "Quantity": "10",
+        "UOM": "Meter",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "10 mm square bars",
+        "item_description": "10 mm square bars",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "10 mm square bars",
+        "Item Desc": "10 mm square bars",
+        "Quantity": "40",
+        "UOM": "Meter",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 6: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "row_entry": {
+        "bid_reference_no": "531053",
+        "solicitation_no": "IAEB(12/28)-001",
+        "procuring_entity": "MUNICIPALITY OF SIBONGA, CEBU",
+        "notice_title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "9410",
+        "item_budget": "0",
+        "published_date": "2008-01-02T00:00:00+08:00",
+        "closing_date": "2008-01-09T01:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "Welding Rod",
+        "item_description": "Welding Rod",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SIBONGA, CEBU",
+        "Reference ID": "531053",
+        "Solicitation No.": "IAEB(12/28)-001",
+        "Notice Title": "Purchase of Materials for School Building Improvement (Re Bid)",
+        "Publish Date": "2008-01-02T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Materials and Supplies",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "9410",
+        "Area of Delivery": "Cebu",
+        "Contract Duration": "10",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "Welding Rod",
+        "Item Desc": "Welding Rod",
+        "Quantity": "8",
+        "UOM": "Kilo",
+        "Item Budget": "0",
+        "Closing Date": "2008-01-09T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 7: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 26266,
+  "row_accounting": {
+    "rows_seen": 289795,
+    "rows_committed": 289795,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 253654,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 36141,
+      "process_group_count": 26266,
+      "rows_merged_into_groups": 9875,
+      "releases_compiled": 26266
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 26266,
+      "releases_after_dedup": 26266,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 289795,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 253654,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 36141,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 9875,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 26266,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 26266,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 26266,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.702923+00:00"
+}

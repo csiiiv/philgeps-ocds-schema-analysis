@@ -1,0 +1,739 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2010",
+  "source_file_count": 1,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2010.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2010.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2010.xlsx",
+      "compiled_release_count": 35785
+    }
+  ],
+  "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2010.xlsx",
+  "input_bytes": 80012272,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 365065,
+  "rows_committed": 365064,
+  "rows_quarantined": 1,
+  "severity_counts": {
+    "error": 1,
+    "warning": 6173,
+    "info": 312319
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 312319
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 6173
+    },
+    {
+      "rule": "missing_identity",
+      "severity": "error",
+      "count": 1
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 296192
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 8103
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 7520
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 5900
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 435
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 142
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 120
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 69
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 11
+    },
+    {
+      "rule": "missing_identity",
+      "severity": "error",
+      "field": "procuring_entity",
+      "pattern": "identity field `procuring_entity` is missing",
+      "count": 1
+    }
+  ],
+  "quarantined_samples": [
+    {
+      "row_index": 254596,
+      "row_entry": {
+        "bid_reference_no": "1302061",
+        "solicitation_no": "4213531",
+        "notice_title": "Invitation to Bid for Upgraded C-130H Aircraft",
+        "bid_notice_status": "Closed",
+        "approved_budget": "1769000000",
+        "published_date": "2010-09-03T00:00:00+08:00",
+        "closing_date": "2010-09-23T13:30:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Reference ID": "1302061",
+        "Solicitation No.": "4213531",
+        "Notice Title": "Invitation to Bid for Upgraded C-130H Aircraft",
+        "Publish Date": "2010-09-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Notice of Proposed Procurement (NPP)",
+        "Business Category": "Aviation Products",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1769000000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "3",
+        "Calendar Type": "Year/s",
+        "PreBid Date": "2010-09-10T14:00:00+08:00",
+        "Closing Date": "2010-09-23T13:30:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "missing_identity",
+          "severity": "error",
+          "field": "procuring_entity",
+          "value": "NULL",
+          "message": "row 254596: identity field `procuring_entity` is missing"
+        },
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 254596: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 401,
+      "row_entry": {
+        "bid_reference_no": "1093373",
+        "solicitation_no": "10-001",
+        "procuring_entity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "notice_title": "Digital Canon Camera-FMS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "7060",
+        "item_budget": "0",
+        "published_date": "2010-01-04T00:00:00+08:00",
+        "closing_date": "2010-01-05T15:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Digital Canon Camera",
+        "item_description": "(A470)",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "Reference ID": "1093373",
+        "Solicitation No.": "10-001",
+        "Notice Title": "Digital Canon Camera-FMS",
+        "Publish Date": "2010-01-04T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "7060",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Digital Canon Camera",
+        "Item Desc": "(A470)",
+        "Quantity": "1",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2010-01-05T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 401: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 402,
+      "row_entry": {
+        "bid_reference_no": "1093375",
+        "solicitation_no": "10-002",
+        "procuring_entity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "notice_title": "USB 4gb-ERDS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "1050",
+        "item_budget": "0",
+        "published_date": "2010-01-04T00:00:00+08:00",
+        "closing_date": "2010-01-05T15:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "USB",
+        "item_description": "4gb",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "Reference ID": "1093375",
+        "Solicitation No.": "10-002",
+        "Notice Title": "USB 4gb-ERDS",
+        "Publish Date": "2010-01-04T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1050",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "USB",
+        "Item Desc": "4gb",
+        "Quantity": "2",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2010-01-05T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 402: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1002,
+      "row_entry": {
+        "bid_reference_no": "1093447",
+        "solicitation_no": "10-003",
+        "procuring_entity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "notice_title": "Office Supplies(Refill Ink)ERDS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "6537",
+        "item_budget": "0",
+        "published_date": "2010-01-05T00:00:00+08:00",
+        "closing_date": "2010-01-07T15:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Refill Ink for HP 60 (balck)",
+        "item_description": "Refill Ink for HP 60 (balck)",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "Reference ID": "1093447",
+        "Solicitation No.": "10-003",
+        "Notice Title": "Office Supplies(Refill Ink)ERDS",
+        "Publish Date": "2010-01-05T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "6537",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Refill Ink for HP 60 (balck)",
+        "Item Desc": "Refill Ink for HP 60 (balck)",
+        "Quantity": "2",
+        "UOM": "Box",
+        "Item Budget": "0",
+        "Closing Date": "2010-01-07T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1002: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1003,
+      "row_entry": {
+        "bid_reference_no": "1093447",
+        "solicitation_no": "10-003",
+        "procuring_entity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "notice_title": "Office Supplies(Refill Ink)ERDS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "6537",
+        "item_budget": "0",
+        "published_date": "2010-01-05T00:00:00+08:00",
+        "closing_date": "2010-01-07T15:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "Muriatic Acid (Comml. grade)",
+        "item_description": "Muriatic Acid (Comml. grade)",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "Reference ID": "1093447",
+        "Solicitation No.": "10-003",
+        "Notice Title": "Office Supplies(Refill Ink)ERDS",
+        "Publish Date": "2010-01-05T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "6537",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "Muriatic Acid (Comml. grade)",
+        "Item Desc": "Muriatic Acid (Comml. grade)",
+        "Quantity": "10",
+        "UOM": "Liter",
+        "Item Budget": "0",
+        "Closing Date": "2010-01-07T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1003: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1004,
+      "row_entry": {
+        "bid_reference_no": "1093447",
+        "solicitation_no": "10-003",
+        "procuring_entity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "notice_title": "Office Supplies(Refill Ink)ERDS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "6537",
+        "item_budget": "0",
+        "published_date": "2010-01-05T00:00:00+08:00",
+        "closing_date": "2010-01-07T15:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "Envelope,  expanding (long)",
+        "item_description": "Envelope,  expanding (long)",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF ENVIRONMENT AND NATURAL RESOURCES  - REGION VI",
+        "Reference ID": "1093447",
+        "Solicitation No.": "10-003",
+        "Notice Title": "Office Supplies(Refill Ink)ERDS",
+        "Publish Date": "2010-01-05T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "6537",
+        "Area of Delivery": "Iloilo",
+        "Contract Duration": "30",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "Envelope,  expanding (long)",
+        "Item Desc": "Envelope,  expanding (long)",
+        "Quantity": "50",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2010-01-07T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1004: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "1091358",
+        "solicitation_no": "2009-38",
+        "procuring_entity": "BARANGAY SAGRADA FAMILIA, MINALABAC, CAMARINES SUR",
+        "notice_title": "sport development",
+        "bid_notice_status": "Closed",
+        "approved_budget": "27000",
+        "published_date": "2010-01-01T00:00:00+08:00",
+        "closing_date": "2010-01-08T09:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY SAGRADA FAMILIA, MINALABAC, CAMARINES SUR",
+        "Reference ID": "1091358",
+        "Solicitation No.": "2009-38",
+        "Notice Title": "sport development",
+        "Publish Date": "2010-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Sporting Goods",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "27000",
+        "Area of Delivery": "Camarines Sur",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2010-01-08T09:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "1092788",
+        "solicitation_no": "rv# 10931 erv/pavilion",
+        "procuring_entity": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "notice_title": "rv 10931 erv/pav. GEneral Merchandise",
+        "bid_notice_status": "Failed",
+        "approved_budget": "0",
+        "published_date": "2010-01-01T00:00:00+08:00",
+        "closing_date": "2010-01-04T13:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "Reference ID": "1092788",
+        "Solicitation No.": "rv# 10931 erv/pavilion",
+        "Notice Title": "rv 10931 erv/pav. GEneral Merchandise",
+        "Publish Date": "2010-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "General Merchandise",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Others",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2010-01-04T13:00:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "1092806",
+        "solicitation_no": "rv# 10963 erv/pavilion",
+        "procuring_entity": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "notice_title": "rv 10963 erv/pav. General Merchandise",
+        "bid_notice_status": "Cancelled",
+        "approved_budget": "46000",
+        "published_date": "2010-01-01T00:00:00+08:00",
+        "closing_date": "2010-03-09T16:38:33+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "Reference ID": "1092806",
+        "Solicitation No.": "rv# 10963 erv/pavilion",
+        "Notice Title": "rv 10963 erv/pav. General Merchandise",
+        "Publish Date": "2010-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "General Merchandise",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Others",
+        "Approved Budget of the Contract": "46000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2010-03-09T16:38:33+08:00",
+        "Notice Status": "Cancelled"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "1092815",
+        "solicitation_no": "rv# 10962 erv/pavilion",
+        "procuring_entity": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "notice_title": "rv 10962 erv/pav. General Merchandise",
+        "bid_notice_status": "Cancelled",
+        "approved_budget": "20000",
+        "published_date": "2010-01-01T00:00:00+08:00",
+        "closing_date": "2010-03-09T16:38:07+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "Reference ID": "1092815",
+        "Solicitation No.": "rv# 10962 erv/pavilion",
+        "Notice Title": "rv 10962 erv/pav. General Merchandise",
+        "Publish Date": "2010-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "General Merchandise",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Others",
+        "Approved Budget of the Contract": "20000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2010-03-09T16:38:07+08:00",
+        "Notice Status": "Cancelled"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "row_entry": {
+        "bid_reference_no": "1092827",
+        "solicitation_no": "rv# 10961 erv/pavilion",
+        "procuring_entity": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "notice_title": "rv 10961 erv/pav. General Merchandise",
+        "bid_notice_status": "Cancelled",
+        "approved_budget": "42750",
+        "published_date": "2010-01-01T00:00:00+08:00",
+        "closing_date": "2010-03-09T16:37:38+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE AMUSEMENT AND GAMING CORPORATION-PAVILION",
+        "Reference ID": "1092827",
+        "Solicitation No.": "rv# 10961 erv/pavilion",
+        "Notice Title": "rv 10961 erv/pav. General Merchandise",
+        "Publish Date": "2010-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "General Merchandise",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Others",
+        "Approved Budget of the Contract": "42750",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2010-03-09T16:37:38+08:00",
+        "Notice Status": "Cancelled"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 6: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 35785,
+  "row_accounting": {
+    "rows_seen": 365065,
+    "rows_committed": 365064,
+    "rows_quarantined": 1,
+    "compile_accounting": {
+      "rows_excluded_no_award": 312318,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 52746,
+      "process_group_count": 35785,
+      "rows_merged_into_groups": 16961,
+      "releases_compiled": 35785
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 35785,
+      "releases_after_dedup": 35785,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 365065,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 1,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 312318,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 52746,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 16961,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 35785,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 35785,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 35785,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.776922+00:00"
+}

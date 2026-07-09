@@ -1,0 +1,939 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2006",
+  "source_file_count": 1,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2006.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details 2006.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2006.xlsx",
+      "compiled_release_count": 13107
+    }
+  ],
+  "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details 2006.xlsx",
+  "input_bytes": 32115674,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 150791,
+  "rows_committed": 150791,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 17812,
+    "info": 132957
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 132957
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 13492
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 4320
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 128725
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `posted` but `awardee_organization_name` is missing",
+      "count": 13453
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 2175
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 2047
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 2017
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 1169
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 1101
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "awardee_organization_name",
+      "pattern": "row is `updated` but `awardee_organization_name` is missing",
+      "count": 39
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 31
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 9
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 3
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "195463",
+        "solicitation_no": "38698",
+        "award_reference_no": "36029",
+        "procuring_entity": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "notice_title": "Furnitures, fixtures and accessories",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "250000",
+        "item_budget": "107600",
+        "contract_amount": "107600",
+        "award_date": "2006-05-02T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-06T10:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "ITEM1",
+        "item_description": "Furnitures, fixtures and accessories",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "Reference ID": "195463",
+        "Solicitation No.": "38698",
+        "Notice Title": "Furnitures, fixtures and accessories",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Furniture",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "1",
+        "Item Name": "ITEM1",
+        "Item Desc": "Furnitures, fixtures and accessories",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "107600",
+        "Closing Date": "2006-01-06T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "36029",
+        "Award Title": "Furnitures, fixtures and accessories",
+        "Award Type": "Award Notice",
+        "Contract Amount": "107600",
+        "Contract No": "2006-05-000064",
+        "Publish Date(Award)": "2006-06-15T00:00:00+08:00",
+        "Award Date": "2006-05-02T00:00:00+08:00",
+        "Contract End Date": "2006-12-30T00:00:00+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 1: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "195463",
+        "solicitation_no": "38698",
+        "award_reference_no": "36030",
+        "procuring_entity": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "notice_title": "Furnitures, fixtures and accessories",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "250000",
+        "item_budget": "7310",
+        "contract_amount": "7310",
+        "award_date": "2006-05-02T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-06T10:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "ITEM2",
+        "item_description": "Furnitures, fixtures and accessories",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "Reference ID": "195463",
+        "Solicitation No.": "38698",
+        "Notice Title": "Furnitures, fixtures and accessories",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Furniture",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "2",
+        "Item Name": "ITEM2",
+        "Item Desc": "Furnitures, fixtures and accessories",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "7310",
+        "Closing Date": "2006-01-06T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "36030",
+        "Award Title": "Furnitures, fixtures and accessories",
+        "Award Type": "Award Notice",
+        "Contract Amount": "7310",
+        "Contract No": "2006-05-000065",
+        "Publish Date(Award)": "2006-06-15T00:00:00+08:00",
+        "Award Date": "2006-05-02T00:00:00+08:00",
+        "Contract End Date": "2006-12-30T00:00:00+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 2: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "195463",
+        "solicitation_no": "38698",
+        "award_reference_no": "36031",
+        "procuring_entity": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "notice_title": "Furnitures, fixtures and accessories",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "250000",
+        "item_budget": "12800",
+        "contract_amount": "12800",
+        "award_date": "2006-05-02T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-06T10:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "ITEM3",
+        "item_description": "Furnitures, fixtures and accessories",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT of ENVIRONMENT and NATURAL RESOURCES - Main",
+        "Reference ID": "195463",
+        "Solicitation No.": "38698",
+        "Notice Title": "Furnitures, fixtures and accessories",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Furniture",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "3",
+        "Item Name": "ITEM3",
+        "Item Desc": "Furnitures, fixtures and accessories",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "12800",
+        "Closing Date": "2006-01-06T10:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "36031",
+        "Award Title": "Furnitures, fixtures and accessories",
+        "Award Type": "Award Notice",
+        "Contract Amount": "12800",
+        "Contract No": "2006-05-000066",
+        "Publish Date(Award)": "2006-06-15T00:00:00+08:00",
+        "Award Date": "2006-05-02T00:00:00+08:00",
+        "Contract End Date": "2006-12-30T00:00:00+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 3: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "195473",
+        "solicitation_no": "g05-0213",
+        "award_reference_no": "40835",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "bid (1-12)*",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "item_budget": "222500",
+        "contract_amount": "222500",
+        "award_date": "2006-01-12T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T14:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "ITEM1",
+        "item_description": "bid (1-12)*",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "195473",
+        "Solicitation No.": "g05-0213",
+        "Notice Title": "bid (1-12)*",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "1",
+        "Item Name": "ITEM1",
+        "Item Desc": "bid (1-12)*",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "222500",
+        "Closing Date": "2006-01-12T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "40835",
+        "Award Title": "bid (1-12)*",
+        "Award Type": "Award Notice",
+        "Contract Amount": "222500",
+        "Contract No": "06-01-045",
+        "Publish Date(Award)": "2006-08-01T00:00:00+08:00",
+        "Award Date": "2006-01-12T00:00:00+08:00",
+        "Reason for Award": "dinner buffer for the use of City Museum"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 4: `approved_budget` is non-positive (0.0)"
+        },
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 4: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "195473",
+        "solicitation_no": "g05-0213",
+        "award_reference_no": "40842",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "bid (1-12)*",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "item_budget": "294935",
+        "contract_amount": "294935",
+        "award_date": "2006-01-13T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T14:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "ITEM2",
+        "item_description": "bid (1-12)*",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "195473",
+        "Solicitation No.": "g05-0213",
+        "Notice Title": "bid (1-12)*",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "2",
+        "Item Name": "ITEM2",
+        "Item Desc": "bid (1-12)*",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "294935",
+        "Closing Date": "2006-01-12T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "40842",
+        "Award Title": "bid (1-12)*",
+        "Award Type": "Award Notice",
+        "Contract Amount": "294935",
+        "Contract No": "06-01-050",
+        "Publish Date(Award)": "2006-08-01T00:00:00+08:00",
+        "Award Date": "2006-01-13T00:00:00+08:00",
+        "Reason for Award": "supply and delivery of construction materials for CARACOL stage for the City Admin"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 5: `approved_budget` is non-positive (0.0)"
+        },
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "awardee_organization_name",
+          "value": "NULL",
+          "message": "row 5: row is `posted` but `awardee_organization_name` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "row_entry": {
+        "bid_reference_no": "195473",
+        "solicitation_no": "g05-0213",
+        "award_reference_no": "40844",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "bid (1-12)*",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "item_budget": "78000",
+        "contract_amount": "78000",
+        "award_date": "2006-01-13T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T14:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "ITEM3",
+        "item_description": "bid (1-12)*",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "195473",
+        "Solicitation No.": "g05-0213",
+        "Notice Title": "bid (1-12)*",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "3",
+        "Item Name": "ITEM3",
+        "Item Desc": "bid (1-12)*",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "78000",
+        "Closing Date": "2006-01-12T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "40844",
+        "Award Title": "bid (1-12)*",
+        "Award Type": "Award Notice",
+        "Contract Amount": "78000",
+        "Contract No": "06-01-051",
+        "Publish Date(Award)": "2006-08-01T00:00:00+08:00",
+        "Award Date": "2006-01-13T00:00:00+08:00",
+        "Reason for Award": "supply and delivery of CARACOL t-shirts for the use of City Museum"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 6: `approved_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "row_entry": {
+        "bid_reference_no": "195473",
+        "solicitation_no": "g05-0213",
+        "award_reference_no": "40846",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "bid (1-12)*",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "item_budget": "241800",
+        "contract_amount": "241800",
+        "award_date": "2006-02-09T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T14:00:00+08:00",
+        "line_item_no": "4",
+        "item_name": "ITEM4",
+        "item_description": "bid (1-12)*",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "195473",
+        "Solicitation No.": "g05-0213",
+        "Notice Title": "bid (1-12)*",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "4",
+        "Item Name": "ITEM4",
+        "Item Desc": "bid (1-12)*",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "241800",
+        "Closing Date": "2006-01-12T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "40846",
+        "Award Title": "bid (1-12)*",
+        "Award Type": "Award Notice",
+        "Contract Amount": "241800",
+        "Contract No": "06-02-179",
+        "Publish Date(Award)": "2006-08-01T00:00:00+08:00",
+        "Award Date": "2006-02-09T00:00:00+08:00",
+        "Reason for Award": "supply and delivery of computer units for the use of Accounting"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 7: `approved_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 8,
+      "row_entry": {
+        "bid_reference_no": "195473",
+        "solicitation_no": "g05-0213",
+        "award_reference_no": "40848",
+        "procuring_entity": "CITY OF MAKATI",
+        "notice_title": "bid (1-12)*",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "approved_budget": "0",
+        "item_budget": "157000",
+        "contract_amount": "157000",
+        "award_date": "2006-02-09T00:00:00+08:00",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T14:00:00+08:00",
+        "line_item_no": "5",
+        "item_name": "ITEM5",
+        "item_description": "bid (1-12)*",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF MAKATI",
+        "Reference ID": "195473",
+        "Solicitation No.": "g05-0213",
+        "Notice Title": "bid (1-12)*",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Miscellaneous",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Local Government Code",
+        "Approved Budget of the Contract": "0",
+        "Area of Delivery": "Metro Manila",
+        "Line Item No": "5",
+        "Item Name": "ITEM5",
+        "Item Desc": "bid (1-12)*",
+        "Quantity": "1",
+        "UOM": "Each",
+        "Item Budget": "157000",
+        "Closing Date": "2006-01-12T14:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "40848",
+        "Award Title": "bid (1-12)*",
+        "Award Type": "Award Notice",
+        "Contract Amount": "157000",
+        "Contract No": "06-02-180",
+        "Publish Date(Award)": "2006-08-01T00:00:00+08:00",
+        "Award Date": "2006-02-09T00:00:00+08:00",
+        "Reason for Award": "supply and delivery of LCD projector for the use of Finance Dept."
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "approved_budget",
+          "value": "0",
+          "message": "row 8: `approved_budget` is non-positive (0.0)"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 17,
+      "row_entry": {
+        "bid_reference_no": "194949",
+        "solicitation_no": "ITB2005-330(2)",
+        "procuring_entity": "LAND BANK of the PHILIPPINES",
+        "notice_title": "1lot Supply,delivery & installation of 1 unit Emergency Vault Door & Vault Ventilator at LBP West Br",
+        "bid_notice_status": "Closed",
+        "approved_budget": "250000",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-11T13:00:00+08:00",
+        "procurement_mode": "Undefined"
+      },
+      "raw_row": {
+        "Organization Name": "LAND BANK of the PHILIPPINES",
+        "Reference ID": "194949",
+        "Solicitation No.": "ITB2005-330(2)",
+        "Notice Title": "1lot Supply,delivery & installation of 1 unit Emergency Vault Door & Vault Ventilator at LBP West Br",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Office Equipment",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Undefined",
+        "Trade Agreement": "Undefined",
+        "Approved Budget of the Contract": "250000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2006-01-11T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 17: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 19,
+      "row_entry": {
+        "bid_reference_no": "195256",
+        "solicitation_no": "06-001-001",
+        "procuring_entity": "PHILIPPINE SCIENCE HIGH SCHOOL - ILOCOS REGION CAMPUS",
+        "notice_title": "SECURITY SERVICES FOR FEBRUARY - DECEMBER 2006",
+        "bid_notice_status": "Closed",
+        "approved_budget": "500000",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-12T16:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE SCIENCE HIGH SCHOOL - ILOCOS REGION CAMPUS",
+        "Reference ID": "195256",
+        "Solicitation No.": "06-001-001",
+        "Notice Title": "SECURITY SERVICES FOR FEBRUARY - DECEMBER 2006",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Services",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "500000",
+        "Area of Delivery": "Ilocos Sur",
+        "Closing Date": "2006-01-12T16:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 19: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 20,
+      "row_entry": {
+        "bid_reference_no": "195411",
+        "solicitation_no": "SPMO-05-077",
+        "procuring_entity": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "notice_title": "Computers, Peripherals, Server, etc...",
+        "bid_notice_status": "Closed",
+        "approved_budget": "5000000",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-30T13:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "UNIVERSITY OF THE PHILIPPINES SYSTEM - DILIMAN",
+        "Reference ID": "195411",
+        "Solicitation No.": "SPMO-05-077",
+        "Notice Title": "Computers, Peripherals, Server, etc...",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "5000000",
+        "Area of Delivery": "Metro Manila",
+        "Closing Date": "2006-01-30T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 20: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 21,
+      "row_entry": {
+        "bid_reference_no": "195413",
+        "solicitation_no": "BAC-2005-103-259",
+        "procuring_entity": "MUNICIPALITY OF SISON, PANGASINAN",
+        "notice_title": "Purchase of Printed Form for the Assessor's Office",
+        "bid_notice_status": "Closed",
+        "approved_budget": "50000",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-02T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SISON, PANGASINAN",
+        "Reference ID": "195413",
+        "Solicitation No.": "BAC-2005-103-259",
+        "Notice Title": "Purchase of Printed Form for the Assessor's Office",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Information (RFI)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "50000",
+        "Area of Delivery": "Pangasinan",
+        "Closing Date": "2006-01-02T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 21: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 22,
+      "row_entry": {
+        "bid_reference_no": "195415",
+        "solicitation_no": "BAC-2005-103-258",
+        "procuring_entity": "MUNICIPALITY OF SISON, PANGASINAN",
+        "notice_title": "Purchase of Office Supplies for the Bureau of Fire",
+        "bid_notice_status": "Closed",
+        "approved_budget": "50000",
+        "published_date": "2006-01-02T00:00:00+08:00",
+        "closing_date": "2006-01-02T17:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SISON, PANGASINAN",
+        "Reference ID": "195415",
+        "Solicitation No.": "BAC-2005-103-258",
+        "Notice Title": "Purchase of Office Supplies for the Bureau of Fire",
+        "Publish Date": "2006-01-02T00:00:00+08:00",
+        "Classification": "Undefined",
+        "Notice Type": "Request for Information (RFI)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "World Bank (WB)",
+        "Funding Instrument": "Loans / Grants",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "50000",
+        "Area of Delivery": "Pangasinan",
+        "Closing Date": "2006-01-02T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 22: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 13107,
+  "row_accounting": {
+    "rows_seen": 150791,
+    "rows_committed": 150791,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 132957,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 17834,
+      "process_group_count": 13107,
+      "rows_merged_into_groups": 4727,
+      "releases_compiled": 13107
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 13107,
+      "releases_after_dedup": 13107,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 150791,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 132957,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 17834,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 4727,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 13107,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 13107,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 13107,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.632904+00:00"
+}

@@ -1,0 +1,689 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2011",
+  "source_file_count": 2,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details Jan-Jun 2011.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details Jan-Jun 2011.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details Jan-Jun 2011.xlsx",
+      "compiled_release_count": 22500
+    },
+    {
+      "path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details Jul-Dec 2011.json",
+      "dq_path": "references\\transformed\\full\\2000-2012\\Bid Notice and Award Details Jul-Dec 2011.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\2000-2012\\Bid Notice and Award Details Jul-Dec 2011.xlsx",
+      "compiled_release_count": 27844
+    }
+  ],
+  "input_file": "Calendar year 2011 (2 source exports)",
+  "input_bytes": 85802311,
+  "schema_detected": "schema_1",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 381187,
+  "rows_committed": 381187,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 3743,
+    "info": 309086
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 309086
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 3743
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 289596
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 9522
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 8309
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 3318
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 1568
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 309
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 104
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 91
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 12
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 1194,
+      "row_entry": {
+        "bid_reference_no": "1394219",
+        "solicitation_no": "SL-10-11-57",
+        "procuring_entity": "DEPARTMENT OF TRADE AND INDUSTRY - SOUTHERN LEYTE",
+        "notice_title": "Tires for DTI Vehicle",
+        "bid_notice_status": "Closed",
+        "approved_budget": "16000",
+        "item_budget": "0",
+        "published_date": "2011-01-06T00:00:00+08:00",
+        "closing_date": "2011-01-14T01:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Tire",
+        "item_description": "Exterior 30/9.5 R15",
+        "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF TRADE AND INDUSTRY - SOUTHERN LEYTE",
+        "Reference ID": "1394219",
+        "Solicitation No.": "SL-10-11-57",
+        "Notice Title": "Tires for DTI Vehicle",
+        "Publish Date": "2011-01-06T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Vehicle Parts and Accessories",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "16000",
+        "Area of Delivery": "Southern Leyte",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Tire",
+        "Item Desc": "Exterior 30/9.5 R15",
+        "Quantity": "2",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2011-01-14T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1194: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1354,
+      "row_entry": {
+        "bid_reference_no": "1394045",
+        "solicitation_no": "11-01-001",
+        "award_reference_no": "220328",
+        "procuring_entity": "LIPA CITY NATIONAL HIGH SCHOOL",
+        "notice_title": "Purchase of Computer Ink Hp 21 and Hp 22 , UTP Cable with RJ 45 Connector.",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "EASY TOUCH COMPUTER CENTER",
+        "approved_budget": "20000",
+        "contract_amount": "0",
+        "award_date": "2011-01-17T00:00:00+08:00",
+        "published_date": "2011-01-06T00:00:00+08:00",
+        "closing_date": "2011-01-10T01:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "LIPA CITY NATIONAL HIGH SCHOOL",
+        "Reference ID": "1394045",
+        "Solicitation No.": "11-01-001",
+        "Notice Title": "Purchase of Computer Ink Hp 21 and Hp 22 , UTP Cable with RJ 45 Connector.",
+        "Publish Date": "2011-01-06T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Equipment Supplies and Consumables",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "20000",
+        "Area of Delivery": "Batangas",
+        "Contract Duration": "15",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2011-01-10T01:00:00+08:00",
+        "Notice Status": "Awarded",
+        "Award No.": "220328",
+        "Award Title": "Purchase of Computer Ink Hp 21 and Hp 22 , UTP Cable with RJ 45 Connector.",
+        "Award Type": "Award Notice",
+        "Awardee Corporate Title": "EASY TOUCH COMPUTER CENTER",
+        "Contract Amount": "0",
+        "Publish Date(Award)": "2011-01-17T08:21:42+08:00",
+        "Award Date": "2011-01-17T00:00:00+08:00",
+        "Reason for Award": "Award was based on R.A. 9184 Section 36.  Single Calculated Rated and Responsive Bid Submission.",
+        "Award Status": "Posted"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "0",
+          "message": "row 1354: `contract_amount` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1878,
+      "row_entry": {
+        "bid_reference_no": "1394957",
+        "solicitation_no": "SJWD 11-01-0001",
+        "procuring_entity": "SAN JUAN WATER DISTRICT",
+        "notice_title": "Supply and delivery of various materials",
+        "bid_notice_status": "Closed",
+        "approved_budget": "188725",
+        "item_budget": "0",
+        "published_date": "2011-01-07T00:00:00+08:00",
+        "closing_date": "2011-01-13T15:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Teflon Tape",
+        "item_description": "size 1/2",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "SAN JUAN WATER DISTRICT",
+        "Reference ID": "1394957",
+        "Solicitation No.": "SJWD 11-01-0001",
+        "Notice Title": "Supply and delivery of various materials",
+        "Publish Date": "2011-01-07T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Water Service Connection Materials/Fittings",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "188725",
+        "Area of Delivery": "Batangas",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Teflon Tape",
+        "Item Desc": "size 1/2",
+        "Quantity": "1000",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2011-01-13T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1878: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1879,
+      "row_entry": {
+        "bid_reference_no": "1394957",
+        "solicitation_no": "SJWD 11-01-0001",
+        "procuring_entity": "SAN JUAN WATER DISTRICT",
+        "notice_title": "Supply and delivery of various materials",
+        "bid_notice_status": "Closed",
+        "approved_budget": "188725",
+        "item_budget": "0",
+        "published_date": "2011-01-07T00:00:00+08:00",
+        "closing_date": "2011-01-13T15:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "St. elbow",
+        "item_description": "size 1/2 - korea",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "SAN JUAN WATER DISTRICT",
+        "Reference ID": "1394957",
+        "Solicitation No.": "SJWD 11-01-0001",
+        "Notice Title": "Supply and delivery of various materials",
+        "Publish Date": "2011-01-07T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Water Service Connection Materials/Fittings",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "188725",
+        "Area of Delivery": "Batangas",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "St. elbow",
+        "Item Desc": "size 1/2 - korea",
+        "Quantity": "200",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2011-01-13T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1879: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 1880,
+      "row_entry": {
+        "bid_reference_no": "1394957",
+        "solicitation_no": "SJWD 11-01-0001",
+        "procuring_entity": "SAN JUAN WATER DISTRICT",
+        "notice_title": "Supply and delivery of various materials",
+        "bid_notice_status": "Closed",
+        "approved_budget": "188725",
+        "item_budget": "0",
+        "published_date": "2011-01-07T00:00:00+08:00",
+        "closing_date": "2011-01-13T15:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "brass ballvalve",
+        "item_description": "size 1/2",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "SAN JUAN WATER DISTRICT",
+        "Reference ID": "1394957",
+        "Solicitation No.": "SJWD 11-01-0001",
+        "Notice Title": "Supply and delivery of various materials",
+        "Publish Date": "2011-01-07T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Water Service Connection Materials/Fittings",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "188725",
+        "Area of Delivery": "Batangas",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "brass ballvalve",
+        "Item Desc": "size 1/2",
+        "Quantity": "200",
+        "UOM": "Piece",
+        "Item Budget": "0",
+        "Closing Date": "2011-01-13T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "0",
+          "message": "row 1880: `item_budget` is non-positive (0.0)"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "1392331",
+        "solicitation_no": "2010-12-207",
+        "procuring_entity": "DEPARTMENT OF EDUCATION - DIVISION OF CAMARINES SUR",
+        "notice_title": "PROCUREMENT OF GENERATOR SET FOR  DepEd Division of Camarines Sur Office",
+        "bid_notice_status": "Failed",
+        "approved_budget": "1650000",
+        "published_date": "2011-01-01T00:00:00+08:00",
+        "closing_date": "2011-02-09T13:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF EDUCATION - DIVISION OF CAMARINES SUR",
+        "Reference ID": "1392331",
+        "Solicitation No.": "2010-12-207",
+        "Notice Title": "PROCUREMENT OF GENERATOR SET FOR  DepEd Division of Camarines Sur Office",
+        "Publish Date": "2011-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Power Generation and Distribution Machinery",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1650000",
+        "Area of Delivery": "Camarines Sur",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2011-01-07T14:00:00+08:00",
+        "Closing Date": "2011-02-09T13:00:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 2,
+      "row_entry": {
+        "bid_reference_no": "1408228",
+        "solicitation_no": "BIDSTAC-067-2011",
+        "procuring_entity": "CITY OF TACLOBAN, LEYTE",
+        "notice_title": "GROCERY ITEMS",
+        "bid_notice_status": "Closed",
+        "approved_budget": "776400",
+        "published_date": "2011-01-01T00:00:00+08:00",
+        "closing_date": "2011-02-02T00:00:00+08:00",
+        "procurement_mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)"
+      },
+      "raw_row": {
+        "Organization Name": "CITY OF TACLOBAN, LEYTE",
+        "Reference ID": "1408228",
+        "Solicitation No.": "BIDSTAC-067-2011",
+        "Notice Title": "GROCERY ITEMS",
+        "Publish Date": "2011-01-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Notice for Negotiated Procurement",
+        "Business Category": "Grocery Items",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Negotiated Procurement - Emergency Cases (Sec. 53.2)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "776400",
+        "Area of Delivery": "Leyte",
+        "Contract Duration": "1",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2011-02-02T00:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 2: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "1388507",
+        "solicitation_no": "SFP CY2010-03",
+        "procuring_entity": "DEPARTMENT OF EDUCATION DIVISION OF SAMAR",
+        "notice_title": "School Furniture Project CY2010-03",
+        "bid_notice_status": "Closed",
+        "approved_budget": "404000",
+        "published_date": "2011-01-03T00:00:00+08:00",
+        "closing_date": "2011-01-05T15:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF EDUCATION DIVISION OF SAMAR",
+        "Reference ID": "1388507",
+        "Solicitation No.": "SFP CY2010-03",
+        "Notice Title": "School Furniture Project CY2010-03",
+        "Publish Date": "2011-01-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Furniture",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "404000",
+        "Area of Delivery": "Samar",
+        "Contract Duration": "120",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2011-01-05T15:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 3: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "1389044",
+        "solicitation_no": "2010-016",
+        "procuring_entity": "PHILIPPINE DEPOSIT INSURANCE CORPORATION",
+        "notice_title": "INVITATION TO BID - OUTSOURCING OF THE AUDIT OF INSURED DEPOSIT PAYMENTS MADE IN LEGACY BANKS (RE-BIDDING)",
+        "bid_notice_status": "Closed",
+        "approved_budget": "3349850",
+        "published_date": "2011-01-03T00:00:00+08:00",
+        "closing_date": "2011-01-21T17:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "PHILIPPINE DEPOSIT INSURANCE CORPORATION",
+        "Reference ID": "1389044",
+        "Solicitation No.": "2010-016",
+        "Notice Title": "INVITATION TO BID - OUTSOURCING OF THE AUDIT OF INSURED DEPOSIT PAYMENTS MADE IN LEGACY BANKS (RE-BIDDING)",
+        "Publish Date": "2011-01-03T00:00:00+08:00",
+        "Classification": "Goods - General Support Services",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "3349850",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "60",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2011-01-11T09:00:00+08:00",
+        "Closing Date": "2011-01-21T17:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 5,
+      "row_entry": {
+        "bid_reference_no": "1392038",
+        "solicitation_no": "44",
+        "procuring_entity": "MUNICIPALITY OF BATARAZA",
+        "notice_title": "Grocery Items",
+        "bid_notice_status": "Closed",
+        "approved_budget": "175000",
+        "published_date": "2011-01-03T00:00:00+08:00",
+        "closing_date": "2011-01-10T01:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF BATARAZA",
+        "Reference ID": "1392038",
+        "Solicitation No.": "44",
+        "Notice Title": "Grocery Items",
+        "Publish Date": "2011-01-03T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Grocery Items",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "175000",
+        "Area of Delivery": "Palawan",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2011-01-10T01:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 5: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 50344,
+  "row_accounting": {
+    "rows_seen": 381187,
+    "rows_committed": 381187,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 309086,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 72101,
+      "process_group_count": 50344,
+      "rows_merged_into_groups": 21757,
+      "releases_compiled": 50344
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 50344,
+      "releases_after_dedup": 50344,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 381187,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 309086,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 72101,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 21757,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 50344,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 50344,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 50344,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:14.827919+00:00"
+}

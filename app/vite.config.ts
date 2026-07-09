@@ -6,11 +6,11 @@ import react from "@vitejs/plugin-react";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
-// Use demo data for webapp (fast, lightweight, exploratory use)
+// Release browser: demo samples (large full browser caches stay out of git)
 const browserCacheDir = path.join(repoRoot, "references", "transformed", "demo_by_year", "browser");
-const yearDqCacheDir = path.join(repoRoot, "references", "transformed", "demo_by_year", "dq");
-const byYearDir = path.join(repoRoot, "references", "transformed", "demo_by_year");
-// Full dataset available on Google Drive for complete analysis
+const releaseDetailDir = path.join(repoRoot, "references", "transformed", "demo_by_year");
+// DQ + pipeline stats: full-dataset reports (small JSON, ~10 MB total)
+const yearDqCacheDir = path.join(repoRoot, "references", "transformed", "by_year", "dq");
 const MAX_ON_DEMAND_PACKAGE_MB = 250;
 
 const ALLOWED_CORS_ORIGINS = new Set([
@@ -50,7 +50,7 @@ function findReleaseInYearPackage(year: string, ocid: string): Record<string, un
     if (cached) return cached;
   }
 
-  const pkgPath = path.join(byYearDir, `${year}.json`);
+  const pkgPath = path.join(releaseDetailDir, `${year}.json`);
   if (!fs.existsSync(pkgPath)) return null;
 
   const sizeMb = fs.statSync(pkgPath).size / 1e6;

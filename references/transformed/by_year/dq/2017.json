@@ -1,0 +1,1042 @@
+{
+  "scope": "calendar_year",
+  "calendar_year": "2017",
+  "source_file_count": 4,
+  "source_files": [
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-Jun 2017.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-Jun 2017.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Apr-Jun 2017.xlsx",
+      "compiled_release_count": 48912
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2017.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2017.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jan-Mar 2017.xlsx",
+      "compiled_release_count": 43833
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jul-Sep 2017.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jul-Sep 2017.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Jul-Sep 2017.xlsx",
+      "compiled_release_count": 58017
+    },
+    {
+      "path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2017.json",
+      "dq_path": "references\\transformed\\full\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2017.dq.json",
+      "input_file": "E:\\Work\\BetterGovPH\\philgeps_data_analysis\\raw\\PHILGEPS 2013-2021\\Bid Notice and Award Details Oct-Dec 2017.xlsx",
+      "compiled_release_count": 76778
+    }
+  ],
+  "input_file": "Calendar year 2017 (4 source exports)",
+  "input_bytes": 273245370,
+  "schema_detected": "schema_2",
+  "mapped_column_count": 40,
+  "unmapped_columns": [],
+  "header": [],
+  "rows_seen": 1078706,
+  "rows_committed": 1078706,
+  "rows_quarantined": 0,
+  "severity_counts": {
+    "error": 0,
+    "warning": 61896,
+    "info": 749514
+  },
+  "rule_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "count": 749514
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "count": 61654
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "count": 242
+    }
+  ],
+  "issue_group_counts": [
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected",
+      "count": 649385
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (-1.0)",
+      "count": 60685
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected",
+      "count": 59238
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected",
+      "count": 40378
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "item_budget",
+      "pattern": "`item_budget` is non-positive (0.0)",
+      "count": 663
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `shortlisted`, no award) — excluded from OCDS compilation as expected",
+      "count": 427
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "quantity",
+      "pattern": "`quantity` is non-positive (0.0)",
+      "count": 215
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "row is `posted` but `contract_amount` is missing",
+      "count": 146
+    },
+    {
+      "rule": "award_missing_expected",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "row is `updated` but `contract_amount` is missing",
+      "count": 96
+    },
+    {
+      "rule": "unawarded_tender",
+      "severity": "info",
+      "field": "award_reference_no",
+      "pattern": "no `award_reference_no` (tender `awarded`, no award) — excluded from OCDS compilation as expected",
+      "count": 86
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "contract_amount",
+      "pattern": "`contract_amount` is non-positive (0.0)",
+      "count": 53
+    },
+    {
+      "rule": "non_positive_amount",
+      "severity": "warning",
+      "field": "approved_budget",
+      "pattern": "`approved_budget` is non-positive (0.0)",
+      "count": 38
+    }
+  ],
+  "quarantined_samples": [],
+  "quarantined_samples_omitted": 0,
+  "warning_samples": [
+    {
+      "row_index": 245,
+      "row_entry": {
+        "bid_reference_no": "4439662",
+        "solicitation_no": "NP-2017-01",
+        "procuring_entity": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "notice_title": "Invitation for Quotation",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15000",
+        "item_budget": "-1",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T10:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Coupon Bond Long",
+        "item_description": "reams",
+        "procurement_mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "Reference ID": "4439662",
+        "Solicitation No.": "NP-2017-01",
+        "Notice Title": "Invitation for Quotation",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Nueva Vizcaya",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Coupon Bond Long",
+        "Item Desc": "reams",
+        "Quantity": "8",
+        "Unit of Measurement": "Ream",
+        "Item Budget": "-1",
+        "Closing Date": "2017-04-07T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "-1",
+          "message": "row 245: `item_budget` is non-positive (-1.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 246,
+      "row_entry": {
+        "bid_reference_no": "4439662",
+        "solicitation_no": "NP-2017-01",
+        "procuring_entity": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "notice_title": "Invitation for Quotation",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15000",
+        "item_budget": "-1",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T10:00:00+08:00",
+        "line_item_no": "2",
+        "item_name": "Coupon Bond Short",
+        "item_description": "reams",
+        "procurement_mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "Reference ID": "4439662",
+        "Solicitation No.": "NP-2017-01",
+        "Notice Title": "Invitation for Quotation",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Nueva Vizcaya",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "2",
+        "Item Name": "Coupon Bond Short",
+        "Item Desc": "reams",
+        "Quantity": "8",
+        "Unit of Measurement": "Ream",
+        "Item Budget": "-1",
+        "Closing Date": "2017-04-07T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "-1",
+          "message": "row 246: `item_budget` is non-positive (-1.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 247,
+      "row_entry": {
+        "bid_reference_no": "4439662",
+        "solicitation_no": "NP-2017-01",
+        "procuring_entity": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "notice_title": "Invitation for Quotation",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15000",
+        "item_budget": "-1",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T10:00:00+08:00",
+        "line_item_no": "3",
+        "item_name": "black ballpen",
+        "item_description": "box",
+        "procurement_mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "Reference ID": "4439662",
+        "Solicitation No.": "NP-2017-01",
+        "Notice Title": "Invitation for Quotation",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Nueva Vizcaya",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "3",
+        "Item Name": "black ballpen",
+        "Item Desc": "box",
+        "Quantity": "1",
+        "Unit of Measurement": "Box",
+        "Item Budget": "-1",
+        "Closing Date": "2017-04-07T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "-1",
+          "message": "row 247: `item_budget` is non-positive (-1.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 248,
+      "row_entry": {
+        "bid_reference_no": "4439662",
+        "solicitation_no": "NP-2017-01",
+        "procuring_entity": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "notice_title": "Invitation for Quotation",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15000",
+        "item_budget": "-1",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T10:00:00+08:00",
+        "line_item_no": "4",
+        "item_name": "black sign pen-fine tech",
+        "item_description": "pieces",
+        "procurement_mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "Reference ID": "4439662",
+        "Solicitation No.": "NP-2017-01",
+        "Notice Title": "Invitation for Quotation",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Nueva Vizcaya",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "4",
+        "Item Name": "black sign pen-fine tech",
+        "Item Desc": "pieces",
+        "Quantity": "5",
+        "Unit of Measurement": "Piece",
+        "Item Budget": "-1",
+        "Closing Date": "2017-04-07T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "-1",
+          "message": "row 248: `item_budget` is non-positive (-1.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 249,
+      "row_entry": {
+        "bid_reference_no": "4439662",
+        "solicitation_no": "NP-2017-01",
+        "procuring_entity": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "notice_title": "Invitation for Quotation",
+        "bid_notice_status": "Closed",
+        "approved_budget": "15000",
+        "item_budget": "-1",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T10:00:00+08:00",
+        "line_item_no": "5",
+        "item_name": "marker-green",
+        "item_description": "pieces",
+        "procurement_mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY QUIRINO, BAGABAG, NUEVA VIZCAYA",
+        "Reference ID": "4439662",
+        "Solicitation No.": "NP-2017-01",
+        "Notice Title": "Invitation for Quotation",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Office Supplies and Devices",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Ordinary/Regular Office Supplies & Equipment (Sec. 52.1.b)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "15000",
+        "Area of Delivery": "Nueva Vizcaya",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Line Item No": "5",
+        "Item Name": "marker-green",
+        "Item Desc": "pieces",
+        "Quantity": "2",
+        "Unit of Measurement": "Piece",
+        "Item Budget": "-1",
+        "Closing Date": "2017-04-07T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "non_positive_amount",
+          "severity": "warning",
+          "field": "item_budget",
+          "value": "-1",
+          "message": "row 249: `item_budget` is non-positive (-1.0)"
+        }
+      ]
+    },
+    {
+      "row_index": 2705,
+      "row_entry": {
+        "bid_reference_no": "4442689",
+        "solicitation_no": "2017-04-0070",
+        "award_reference_no": "1459073",
+        "procuring_entity": "DEPARTMENT OF AGRARIAN REFORM - NEGROS OCCIDENTAL 2 (SOUTH)",
+        "notice_title": "PROCUREMENT OF MEALS & VENUE FOR THE TRAINING/WORKSHOP ON LATEST DAR ISSUANCES AND RELATED LAWS AND STRATEGIC SCHEME IN DEALING WITH PROBLEMATIC LANDHOLDINGS",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Updated",
+        "awardee_organization_name": "DEPARTMENT OF AGRARIAN REFORM - NEGROS OCCIDENTAL 2 (SOUTH)",
+        "approved_budget": "120250",
+        "item_budget": "120250",
+        "award_date": "2017-03-31T00:00:00+08:00",
+        "published_date": "2017-04-03T11:32:57+08:00",
+        "line_item_no": "1",
+        "item_name": "GOODS/SERVICES",
+        "item_description": "Day 1 - April 6, 2017 - 2 meals & 2 snacks w/ lodging Day 2 - April 7, 2017 - 2 meals & 2 snacks",
+        "procurement_mode": "Negotiated Procurement - Agency to Agency (Sec. 53.5)"
+      },
+      "raw_row": {
+        "Organization Name": "DEPARTMENT OF AGRARIAN REFORM - NEGROS OCCIDENTAL 2 (SOUTH)",
+        "Reference ID": "4442689",
+        "Solicitation No.": "2017-04-0070",
+        "Notice Title": "PROCUREMENT OF MEALS & VENUE FOR THE TRAINING/WORKSHOP ON LATEST DAR ISSUANCES AND RELATED LAWS AND STRATEGIC SCHEME IN DEALING WITH PROBLEMATIC LANDHOLDINGS",
+        "Publish Date": "2017-04-03T11:32:57+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Education and Training Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Agency to Agency (Sec. 53.5)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "120250",
+        "Area of Delivery": "Negros Occidental",
+        "Contract Duration": "2",
+        "Line Item No": "1",
+        "Item Name": "GOODS/SERVICES",
+        "Item Desc": "Day 1 - April 6, 2017 - 2 meals & 2 snacks w/ lodging Day 2 - April 7, 2017 - 2 meals & 2 snacks",
+        "Quantity": "1",
+        "Unit of Measurement": "Lot",
+        "Item Budget": "120250",
+        "Notice Status": "Awarded",
+        "Award No.": "1459073",
+        "Award Title": "PROCUREMENT OF MEALS & VENUE FOR THE TRAINING/WORKSHOP ON LATEST DAR ISSUANCES AND RELATED LAWS AND STRATEGIC SCHEME IN DEALING WITH PROBLEMATIC LANDHOLDINGS",
+        "Award Type": "Award Notice (Negotiated Procurement - Agency-to-A",
+        "UNSPSC Code": "86000000",
+        "UNSPSC Description": "Education and Training Services",
+        "Awardee Corporate Title": "DEPARTMENT OF AGRARIAN REFORM - NEGROS OCCIDENTAL 2 (SOUTH)",
+        "Contract No": "2017-04-0070",
+        "Publish Date(Award)": "2017-04-03T11:32:57+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 2705: row is `updated` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 13715,
+      "row_entry": {
+        "bid_reference_no": "4449391",
+        "solicitation_no": "005 - AMP",
+        "award_reference_no": "1461566",
+        "procuring_entity": "MUNICIPALITY OF SABLAYAN, OCCIDENTAL MINDORO",
+        "notice_title": "1 Lump Sum Purchase of Meals and Snacks",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "THE LANDMANZ HOTEL & RESTAURANT",
+        "approved_budget": "61450",
+        "item_budget": "61450",
+        "award_date": "2017-02-10T00:00:00+08:00",
+        "published_date": "2017-04-05T11:45:18+08:00",
+        "line_item_no": "1",
+        "item_name": "Purchase of Meals and Snacks",
+        "item_description": "Supply and Delivery  of Meals and Snacks",
+        "procurement_mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF SABLAYAN, OCCIDENTAL MINDORO",
+        "Reference ID": "4449391",
+        "Solicitation No.": "005 - AMP",
+        "Notice Title": "1 Lump Sum Purchase of Meals and Snacks",
+        "Publish Date": "2017-04-05T11:45:18+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Travel, Food, Lodging and Entertainment Services",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Shopping - Unforeseen Contingency (Sec. 52.1.a)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "61450",
+        "Area of Delivery": "Oriental Mindoro",
+        "Contract Duration": "15",
+        "Line Item No": "1",
+        "Item Name": "Purchase of Meals and Snacks",
+        "Item Desc": "Supply and Delivery  of Meals and Snacks",
+        "Quantity": "1",
+        "Unit of Measurement": "Lump Sum",
+        "Item Budget": "61450",
+        "Notice Status": "Awarded",
+        "Award No.": "1461566",
+        "Award Title": "1 Lump Sum Purchase of Meals and Snacks",
+        "Award Type": "Award Notice  (Shopping - Unforeseen Contingency)",
+        "UNSPSC Code": "90000000",
+        "UNSPSC Description": "Travel and Food and Lodging and Entertainment Services",
+        "Awardee Corporate Title": "THE LANDMANZ HOTEL & RESTAURANT",
+        "Contract No": "6120",
+        "Publish Date(Award)": "2017-04-05T11:45:24+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 13715: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 21456,
+      "row_entry": {
+        "bid_reference_no": "4425872",
+        "solicitation_no": "DFP PURCH 17 075",
+        "award_reference_no": "1452312",
+        "procuring_entity": "DUTY FREE PHILIPPINES",
+        "notice_title": "TONER AND MAINTENANCE KIT (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "PHILCOPY CORPORATION",
+        "approved_budget": "359850",
+        "item_budget": "359850",
+        "award_date": "2017-03-09T00:00:00+08:00",
+        "published_date": "2017-04-07T09:44:08+08:00",
+        "line_item_no": "1",
+        "item_name": "TONER AND MAINTENANCE KIT",
+        "item_description": "TONER KIT TK3104 MAINTENANCE KIT MK3104 TONER TK584 CYAN, MAGENTA,YELLOW AND BLACK",
+        "procurement_mode": "Direct Contracting (Sec. 50)"
+      },
+      "raw_row": {
+        "Organization Name": "DUTY FREE PHILIPPINES",
+        "Reference ID": "4425872",
+        "Solicitation No.": "DFP PURCH 17 075",
+        "Notice Title": "TONER AND MAINTENANCE KIT (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Publish Date": "2017-04-07T09:44:08+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Information Technology Parts & Accessories & Perip",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Direct Contracting (Sec. 50)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "359850",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "15",
+        "Line Item No": "1",
+        "Item Name": "TONER AND MAINTENANCE KIT",
+        "Item Desc": "TONER KIT TK3104 MAINTENANCE KIT MK3104 TONER TK584 CYAN, MAGENTA,YELLOW AND BLACK",
+        "Quantity": "30",
+        "Unit of Measurement": "Piece",
+        "Item Budget": "359850",
+        "Notice Status": "Awarded",
+        "Award No.": "1452312",
+        "Award Title": "TONER AND MAINTENANCE KIT (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "Award Type": "Award Notice  (Direct Contracting)",
+        "UNSPSC Code": "44000000",
+        "UNSPSC Description": "Office Equipment and Accessories and Supplies",
+        "Awardee Corporate Title": "PHILCOPY CORPORATION",
+        "Contract No": "P.O. 8193",
+        "Publish Date(Award)": "2017-04-07T09:44:10+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 21456: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 27057,
+      "row_entry": {
+        "bid_reference_no": "4457058",
+        "solicitation_no": "IO2201703-03983G-D",
+        "award_reference_no": "1465529",
+        "procuring_entity": "MINES AND GEO-SCIENCES BUREAU",
+        "notice_title": "Hotel , Lodging and meeting Facilities",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "WESTFIELDS RESIDENCES INC.",
+        "approved_budget": "432000",
+        "item_budget": "432000",
+        "award_date": "2017-03-17T00:00:00+08:00",
+        "published_date": "2017-04-10T09:08:01+08:00",
+        "line_item_no": "1",
+        "item_name": "Hotel, Lodging and Meeting Facilities",
+        "item_description": "Triple Sharing Room Buffet Breakfast, Set AM Snacks, MANAGED BUFFET Lunch, Set PM Snacks, MANAGED BUFFET Dinner, Overnight Room Accommodation",
+        "procurement_mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)"
+      },
+      "raw_row": {
+        "Organization Name": "MINES AND GEO-SCIENCES BUREAU",
+        "Reference ID": "4457058",
+        "Solicitation No.": "IO2201703-03983G-D",
+        "Notice Title": "Hotel , Lodging and meeting Facilities",
+        "Publish Date": "2017-04-10T09:08:01+08:00",
+        "Classification": "Goods - General Support Services",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Hotel and Lodging and Meeting Facilities",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Lease of Real Property (Sec. 53.10)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "432000",
+        "Area of Delivery": "Metro Manila",
+        "Contract Duration": "4",
+        "Line Item No": "1",
+        "Item Name": "Hotel, Lodging and Meeting Facilities",
+        "Item Desc": "Triple Sharing Room Buffet Breakfast, Set AM Snacks, MANAGED BUFFET Lunch, Set PM Snacks, MANAGED BUFFET Dinner, Overnight Room Accommodation",
+        "Quantity": "60",
+        "Unit of Measurement": "Pack",
+        "Item Budget": "432000",
+        "Notice Status": "Awarded",
+        "Award No.": "1465529",
+        "Award Title": "Hotel , Lodging and meeting Facilities",
+        "Award Type": "Award Notice",
+        "UNSPSC Code": "90111603",
+        "UNSPSC Description": "Meeting or banquet rooms",
+        "Awardee Corporate Title": "WESTFIELDS RESIDENCES INC.",
+        "Contract No": "2017-03-183",
+        "Publish Date(Award)": "2017-04-10T09:08:03+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 27057: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    },
+    {
+      "row_index": 30816,
+      "row_entry": {
+        "bid_reference_no": "2994653",
+        "solicitation_no": "70-16",
+        "award_reference_no": "822675",
+        "procuring_entity": "CAMARINES SUR NATIONAL HIGH SCHOOL",
+        "notice_title": "Notice of Award",
+        "bid_notice_status": "Awarded",
+        "award_notice_status": "Posted",
+        "awardee_organization_name": "REB-GREENTECH SYSTEMS ENTERPRISES",
+        "approved_budget": "1235000",
+        "item_budget": "1235000",
+        "award_date": "2016-12-29T00:00:00+08:00",
+        "published_date": "2017-04-11T15:28:12+08:00",
+        "line_item_no": "1",
+        "item_name": "Civil Works",
+        "item_description": "Construction/Installation of Animal Production and Horticulture Specialization Courses Facilities/Structure",
+        "procurement_mode": "Negotiated Procurement - Community Participation (Sec. 53.12)"
+      },
+      "raw_row": {
+        "Organization Name": "CAMARINES SUR NATIONAL HIGH SCHOOL",
+        "Reference ID": "2994653",
+        "Solicitation No.": "70-16",
+        "Notice Title": "Notice of Award",
+        "Publish Date": "2017-04-11T15:28:12+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Apply for Eligibility and to Bid",
+        "Business Category": "Construction Projects",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Community Participation (Sec. 53.12)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1235000",
+        "Area of Delivery": "Camarines Sur",
+        "Contract Duration": "2",
+        "Line Item No": "1",
+        "Item Name": "Civil Works",
+        "Item Desc": "Construction/Installation of Animal Production and Horticulture Specialization Courses Facilities/Structure",
+        "Quantity": "10",
+        "Unit of Measurement": "Lot",
+        "Item Budget": "1235000",
+        "Notice Status": "Awarded",
+        "Award No.": "822675",
+        "Award Title": "Notice of Award",
+        "Award Type": "Award Notice",
+        "UNSPSC Code": "72000000",
+        "UNSPSC Description": "Building and Facility Construction and Maintenance Services",
+        "Awardee Corporate Title": "REB-GREENTECH SYSTEMS ENTERPRISES",
+        "Contract No": "122916",
+        "Publish Date(Award)": "2017-04-11T15:28:12+08:00"
+      },
+      "issues": [
+        {
+          "rule": "award_missing_expected",
+          "severity": "warning",
+          "field": "contract_amount",
+          "value": "NULL",
+          "message": "row 30816: row is `posted` but `contract_amount` is missing"
+        }
+      ]
+    }
+  ],
+  "warning_samples_omitted": 0,
+  "info_samples": [
+    {
+      "row_index": 1,
+      "row_entry": {
+        "bid_reference_no": "4328501",
+        "solicitation_no": "SPMO-17-ALT-071",
+        "procuring_entity": "UNIVERSITY OF THE PHILIPPINES - DILIMAN",
+        "notice_title": "One (1) Unit - Display Glass Chiller",
+        "bid_notice_status": "Failed",
+        "approved_budget": "57999",
+        "item_budget": "57999",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-19T17:00:00+08:00",
+        "line_item_no": "1",
+        "item_name": "Display Glass Chiller",
+        "item_description": "Display Glass Chiller",
+        "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+      },
+      "raw_row": {
+        "Organization Name": "UNIVERSITY OF THE PHILIPPINES - DILIMAN",
+        "Reference ID": "4328501",
+        "Solicitation No.": "SPMO-17-ALT-071",
+        "Notice Title": "One (1) Unit - Display Glass Chiller",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Appliances",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "General Appropriations Act",
+        "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "57999",
+        "Contract Duration": "0",
+        "Calendar Type": "Day/s",
+        "Line Item No": "1",
+        "Item Name": "Display Glass Chiller",
+        "Item Desc": "Display Glass Chiller",
+        "Quantity": "1",
+        "Unit of Measurement": "Unit",
+        "Item Budget": "57999",
+        "Closing Date": "2017-04-19T17:00:00+08:00",
+        "Notice Status": "Failed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 1: no `award_reference_no` (tender `failed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 3,
+      "row_entry": {
+        "bid_reference_no": "4418408",
+        "solicitation_no": "2017-03-0004",
+        "procuring_entity": "QUEDAN AND RURAL CREDIT GUARANTEE CORPORATION - REGION XI",
+        "notice_title": "Repair and Maintenance of Service Vehicle",
+        "bid_notice_status": "Closed",
+        "approved_budget": "16500",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-07T13:00:00+08:00",
+        "procurement_mode": "Shopping"
+      },
+      "raw_row": {
+        "Organization Name": "QUEDAN AND RURAL CREDIT GUARANTEE CORPORATION - REGION XI",
+        "Reference ID": "4418408",
+        "Solicitation No.": "2017-03-0004",
+        "Notice Title": "Repair and Maintenance of Service Vehicle",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods - General Support Services",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Vehicle Repair and Maintenance",
+        "Funding Source": "Others",
+        "Funding Instrument": "Corporate Budget for the Contract Approved by the Board",
+        "Procurement Mode": "Shopping",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "16500",
+        "Area of Delivery": "Davao Del Sur",
+        "Contract Duration": "5",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2017-04-06T13:00:00+08:00",
+        "Closing Date": "2017-04-07T13:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 3: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 4,
+      "row_entry": {
+        "bid_reference_no": "4421664",
+        "solicitation_no": "GDS-QIS 2017-015",
+        "procuring_entity": "MUNICIPALITY OF QUIRINO, ILOCOS SUR",
+        "notice_title": "PURCHASE OF 1 SET RADIO BASE WITH ACCESSORIES",
+        "bid_notice_status": "Closed",
+        "approved_budget": "56400",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-10T10:00:00+08:00",
+        "procurement_mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF QUIRINO, ILOCOS SUR",
+        "Reference ID": "4421664",
+        "Solicitation No.": "GDS-QIS 2017-015",
+        "Notice Title": "PURCHASE OF 1 SET RADIO BASE WITH ACCESSORIES",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Request for Quotation (RFQ)",
+        "Business Category": "Communication Equipment & Parts and Accessories",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Negotiated Procurement - Small Value Procurement (Sec. 53.9)",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "56400",
+        "Area of Delivery": "Ilocos Sur",
+        "Contract Duration": "1",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2017-04-10T10:00:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 4: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 6,
+      "row_entry": {
+        "bid_reference_no": "4428789",
+        "solicitation_no": "2017-300",
+        "procuring_entity": "MUNICIPALITY OF TAGKAWAYAN, QUEZON",
+        "notice_title": "Concreting of San Luis Street, Brgy. Poblacion",
+        "bid_notice_status": "Cancelled",
+        "approved_budget": "1254500",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-24T09:00:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "MUNICIPALITY OF TAGKAWAYAN, QUEZON",
+        "Reference ID": "4428789",
+        "Solicitation No.": "2017-300",
+        "Notice Title": "Concreting of San Luis Street, Brgy. Poblacion",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Civil Works",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Construction Projects",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "1254500",
+        "Area of Delivery": "Quezon",
+        "Contract Duration": "90",
+        "Calendar Type": "Day/s",
+        "PreBid Date": "2017-04-07T01:00:00+08:00",
+        "Closing Date": "2017-04-24T09:00:00+08:00",
+        "Notice Status": "Cancelled"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 6: no `award_reference_no` (tender `cancelled`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    },
+    {
+      "row_index": 7,
+      "row_entry": {
+        "bid_reference_no": "4429675",
+        "solicitation_no": "2017-017",
+        "procuring_entity": "BARANGAY SAN JOSE, ANTIPOLO CITY, RIZAL",
+        "notice_title": "Procurement of T-Shirt (Brgy. Assembly",
+        "bid_notice_status": "Closed",
+        "approved_budget": "450000",
+        "published_date": "2017-04-01T00:00:00+08:00",
+        "closing_date": "2017-04-11T09:45:00+08:00",
+        "procurement_mode": "Public Bidding"
+      },
+      "raw_row": {
+        "Organization Name": "BARANGAY SAN JOSE, ANTIPOLO CITY, RIZAL",
+        "Reference ID": "4429675",
+        "Solicitation No.": "2017-017",
+        "Notice Title": "Procurement of T-Shirt (Brgy. Assembly",
+        "Publish Date": "2017-04-01T00:00:00+08:00",
+        "Classification": "Goods",
+        "Notice Type": "Invitation to Bid (ITB)",
+        "Business Category": "Garments",
+        "Funding Source": "Government of the Philippines (GOP)",
+        "Funding Instrument": "Budget for the Contract Approved by the Sanggunian",
+        "Procurement Mode": "Public Bidding",
+        "Trade Agreement": "Implementing Rules and Regulations",
+        "Approved Budget of the Contract": "450000",
+        "Area of Delivery": "Rizal",
+        "Contract Duration": "7",
+        "Calendar Type": "Day/s",
+        "Closing Date": "2017-04-11T09:45:00+08:00",
+        "Notice Status": "Closed"
+      },
+      "issues": [
+        {
+          "rule": "unawarded_tender",
+          "severity": "info",
+          "field": "award_reference_no",
+          "value": "NULL",
+          "message": "row 7: no `award_reference_no` (tender `closed`, no award) — excluded from OCDS compilation as expected"
+        }
+      ]
+    }
+  ],
+  "info_samples_omitted": 0,
+  "display_id_collisions": [],
+  "compiled_release_count": 227540,
+  "row_accounting": {
+    "rows_seen": 1078706,
+    "rows_committed": 1078706,
+    "rows_quarantined": 0,
+    "compile_accounting": {
+      "rows_excluded_no_award": 749514,
+      "rows_excluded_no_process_key": 0,
+      "rows_grouped": 329192,
+      "process_group_count": 227540,
+      "rows_merged_into_groups": 101652,
+      "releases_compiled": 227540
+    },
+    "merge_accounting": {
+      "releases_before_dedup": 227540,
+      "releases_after_dedup": 227540,
+      "duplicate_ocids_overwritten": 0,
+      "scope": "year"
+    },
+    "breakdown": [
+      {
+        "id": "rows_seen",
+        "label": "Raw rows read",
+        "count": 1078706,
+        "detail": "One PhilGEPS export row after header mapping"
+      },
+      {
+        "id": "quarantined",
+        "label": "Quarantined (DQ errors)",
+        "count": 0,
+        "detail": "Fatal validation — excluded from compilation"
+      },
+      {
+        "id": "excluded_no_award",
+        "label": "Excluded — no award reference",
+        "count": 749514,
+        "detail": "Closed / un-awarded tenders (no OCDS release emitted)"
+      },
+      {
+        "id": "excluded_no_process_key",
+        "label": "Excluded — no process identity",
+        "count": 0,
+        "detail": "Passed DQ but missing bid / solicitation / award grouping key"
+      },
+      {
+        "id": "rows_grouped",
+        "label": "Rows grouped into processes",
+        "count": 329192,
+        "detail": "Awarded rows assigned to a contracting-process group key"
+      },
+      {
+        "id": "rows_merged",
+        "label": "Rows merged (multi-row processes)",
+        "count": 101652,
+        "detail": "Line items / awards collapsed into the same release"
+      },
+      {
+        "id": "releases_compiled",
+        "label": "OCDS releases compiled",
+        "count": 227540,
+        "detail": "One release per process group in source transform output"
+      },
+      {
+        "id": "releases_before_dedup",
+        "label": "Releases before year OCID dedup",
+        "count": 227540,
+        "detail": "Sum of per-source packages contributing to this calendar year"
+      },
+      {
+        "id": "ocid_dedup",
+        "label": "OCID dedup (year merge)",
+        "count": 0,
+        "detail": "Duplicate ocid across quarterly exports in the same calendar year"
+      },
+      {
+        "id": "releases_final",
+        "label": "Releases in merged year package",
+        "count": 227540,
+        "detail": "Final count in by_year/<year>.json"
+      }
+    ],
+    "estimated": false
+  },
+  "generated_at": "2026-06-28T21:04:15.357238+00:00"
+}
