@@ -87,7 +87,8 @@ Raw CSV export  →  transform_to_ocds.py  →  references/transformed/full/<fil
 ```
 
 → [ETL_PIPELINE.md](ETL_PIPELINE.md) for commands, output layout, and report formats  
-→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for `ocid` / `release.id` policy
+→ [OCDS_PROCESS_AND_RELEASE_IDENTITY.md](OCDS_PROCESS_AND_RELEASE_IDENTITY.md) for OCDS process vs release concepts  
+→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for PhilGEPS `ocid` / `release.id` policy
 
 ## Schema periods (S1–S5)
 
@@ -133,6 +134,7 @@ See [../app/README.md](../app/README.md) for full details.
 | Source | URL |
 |--------|-----|
 | Raw exports archive | [Google Drive RAW_CSV](https://drive.google.com/drive/folders/1kkqBC60VPHmdlZfntu3A-8pSKAdIh2Nx?usp=sharing) |
+| OCDS by year (merged packages) | [Google Drive OCDS](https://drive.google.com/drive/folders/1Bg4r6x6v64OjAFs0AJ1SQGC4exgddrl4?usp=sharing) — `philgeps_ocds_by_year.7z` |
 | Interactive schema UI | [philgeps.simple-systems.dev/about/schema](https://philgeps.simple-systems.dev/about/schema) |
 | OCDS mapping templates | [ocds.simple-systems.dev/p/mphilgeps/overview](https://ocds.simple-systems.dev/p/mphilgeps/overview) |
 | Schema.tsx (upstream tables) | [philgeps-awards-dashboard](https://github.com/csiiiv/philgeps-awards-dashboard/blob/main/frontend/src/pages/About/Schema.tsx) |

@@ -116,6 +116,14 @@ raw/
   Misc/PHILGEPS -- 2021 - 2025 (CSV) V2/   # quarterly CSV (S4/S5)
 ```
 
+## OCDS outputs by year
+
+Pre-built merged OCDS release packages (one JSON per calendar year, same layout as `references/transformed/by_year/`) are available without running the full ETL:
+
+[OCDS by year — Google Drive](https://drive.google.com/drive/folders/1Bg4r6x6v64OjAFs0AJ1SQGC4exgddrl4?usp=sharing) (`philgeps_ocds_by_year.7z`)
+
+Extract under `references/transformed/by_year/` to browse with the Release browser or validate with `validate_transform_sample.py`.
+
 ## Transform exports
 
 ### Single file (development)
@@ -131,7 +139,8 @@ python scripts/build_schema_field_map.py
 ```
 
 → [TRANSFORM.md](TRANSFORM.md) for DQ rules and grouping semantics  
-→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for `ocid` / `release.id` policy
+→ [OCDS_PROCESS_AND_RELEASE_IDENTITY.md](OCDS_PROCESS_AND_RELEASE_IDENTITY.md) for OCDS process vs release concepts  
+→ [OCDS_ID_GENERATION.md](OCDS_ID_GENERATION.md) for PhilGEPS `ocid` / `release.id` policy
 
 ### Full dataset (batch ETL)
 

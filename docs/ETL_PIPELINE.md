@@ -232,6 +232,8 @@ On completion: per-file outputs in `full/`, year packages in `by_year/`, `combin
 
 **Reference run (2026-06-28):** 54 sources → 25 calendar years → **3,611,852** deduplicated releases in `by_year/` (~20 GB on disk). Shape pre-flight passed; libcoveocds skipped in batch (spot-check with `validate_transform_sample.py`).
 
+**Download:** merged year packages without running ETL — [Google Drive OCDS by year](https://drive.google.com/drive/folders/1Bg4r6x6v64OjAFs0AJ1SQGC4exgddrl4?usp=sharing) (`philgeps_ocds_by_year.7z`, ~762 MB compressed).
+
 **Disk:** allow ~40 GB free (source JSON + year merges). **RAM:** peak ~8–16 GB on largest CSV years.
 
 ### Single file (development)

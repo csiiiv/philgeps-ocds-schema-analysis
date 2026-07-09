@@ -36,7 +36,9 @@ python scripts/build_schema_field_map.py
 
 ## Transformed OCDS outputs (local, gitignored)
 
-Produced by the reference ETL pipeline — not committed, but documented here for navigation:
+Produced by the reference ETL pipeline — not committed, but documented here for navigation.
+
+**Download:** pre-built merged packages per calendar year are on [Google Drive (OCDS by year)](https://drive.google.com/drive/folders/1Bg4r6x6v64OjAFs0AJ1SQGC4exgddrl4?usp=sharing) as `philgeps_ocds_by_year.7z`. Extract to `references/transformed/by_year/`.
 
 | Path | Contents |
 |------|----------|
