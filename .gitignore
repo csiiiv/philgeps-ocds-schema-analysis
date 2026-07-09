@@ -29,3 +29,4 @@ references/transformed/philgeps_ocds_by_year.7z
 app/node_modules/
 app/dist/
 app/.vite/
+app/public/data/

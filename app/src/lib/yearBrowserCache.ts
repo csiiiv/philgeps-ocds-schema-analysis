@@ -42,9 +42,11 @@ export async function fetchYearBrowserCache(
   return response.json() as Promise<YearBrowserCache>;
 }
 
-export function releaseDetailUrl(baseUrl: string, year: string, ocid: string): string {
-  const trimmed = baseUrl.replace(/\/$/, "");
-  return `${trimmed}/release/${year}/${encodeURIComponent(ocid)}.json`;
+export function releaseDetailUrl(_baseUrl: string, year: string, ocid: string): string {
+  // Use fixed base path for release details (not the browser cache base)
+  const base = "/data/release";
+  const trimmed = base.replace(/\/$/, "");
+  return `${trimmed}/${year}/${encodeURIComponent(ocid)}.json`;
 }
 
 export async function fetchReleaseDetail(

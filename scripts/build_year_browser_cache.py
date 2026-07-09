@@ -63,7 +63,11 @@ def main() -> int:
             skipped += 1
             continue
         mb = out.stat().st_size / 1e6
-        print(f"[ok] {year} -> {out.relative_to(ROOT)} ({mb:.1f} MB)")
+        try:
+            rel_path = out.relative_to(ROOT)
+        except ValueError:
+            rel_path = out  # Fallback to absolute path if not relative to ROOT
+        print(f"[ok] {year} -> {rel_path} ({mb:.1f} MB)")
         built += 1
 
     print(f"\nBuilt {built} browser cache(s), skipped {skipped}.")

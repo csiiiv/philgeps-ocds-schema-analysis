@@ -93,14 +93,7 @@ npm install
 npm run dev      # http://localhost:5173
 ```
 
-The webapp now uses lightweight demo data (~60MB) from `references/transformed/demo_by_year/` for instant startup and responsive exploration. Full dataset available on Google Drive (see External Sources below).
-
-**Full Dataset Mode (Complete Analysis)**
-```bash
-# Download full year packages from Google Drive
-# Place in references/transformed/by_year/
-# Webapp will automatically use full data when available
-```
+The webapp uses lightweight demo data (~60MB) from `references/transformed/demo_by_year/` for instant startup and responsive exploration. Full dataset available on Google Drive (see External Sources below).
 
 Production build: `npm run build` → static files in `app/dist/`.
 

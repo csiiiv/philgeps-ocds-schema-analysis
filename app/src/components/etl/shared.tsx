@@ -721,7 +721,7 @@ export function DataQualityPanel({ t }: { t: TransformBundle }) {
 }
 
 export function BeforeAfterPanel({ t }: { t: TransformBundle }) {
-  const pairs = t.input_samples;
+  const pairs = t.input_samples || [];
   const [idx, setIdx] = useState(0);
 
   if (pairs.length === 0) {
