@@ -25,17 +25,25 @@ python scripts/build_year_browser_cache.py --input references/transformed/demo_b
 echo "📈 Generating DQ caches..."
 python scripts/build_demo_dq_caches.py
 
-# 4. Materialize individual release files for static hosting
+# 4. Stage browser + DQ caches for static hosting
+#    (dev serves these via vite middleware; static hosting needs real files)
+echo "📁 Staging browser + DQ caches into app/public/data/..."
+rm -rf app/public/data
+mkdir -p app/public/data/releases app/public/data/dq
+cp references/transformed/demo_by_year/browser/*.json app/public/data/releases/
+cp references/transformed/demo_by_year/dq/*.json app/public/data/dq/
+
+# 5. Materialize individual release files for static hosting
 echo "📄 Materializing individual release files..."
 python scripts/materialize_release_detail_files.py
 
-# 5. Build webapp
+# 6. Build webapp
 echo "🏗️  Building production bundle..."
 cd app
 npm install
 npm run build
 
-# 6. Verify build
+# 7. Verify build
 echo "✅ Build complete!"
 echo ""
 echo "📦 Build output: app/dist/"
