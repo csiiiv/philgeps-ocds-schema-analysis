@@ -48,6 +48,7 @@ When you change pipeline semantics, add a new ADR and mark the old one **Superse
 | [ADR-012](#adr-012-year-by-year-release-browser) | 2026-06-28 | Year-by-year Release browser caches | Accepted |
 | [ADR-013](#adr-013-year-vs-corpus-data-quality) | 2026-06-28 | Year vs corpus data quality | Accepted |
 | [ADR-014](#adr-014-release-browser-deep-links) | 2026-06-28 | Release browser deep links | Accepted |
+| [ADR-015](#adr-015-demo-data-infrastructure) | 2026-07-09 | Demo data infrastructure for lightweight development | Accepted |
 
 ---
 
@@ -72,6 +73,11 @@ When you change pipeline semantics, add a new ADR and mark the old one **Superse
             PROCESS_IDENTITY_ANALYSIS.md. Release browser loads per-year caches.
             Year vs corpus DQ split (ADR-013). Release browser hash routes (ADR-014).
             Full corpus re-run completed (54 sources → 3.61M releases in by_year/).
+
+2026-07-09  Demo data infrastructure for lightweight development (ADR-015).
+            24-year demo dataset (2000-2025) with ~18,000 releases, ~74MB storage.
+            Enables instant clone, fast webapp startup, and git-friendly workflow.
+            Full dataset (10GB+) remains available on Google Drive for complete analysis.
 ```
 
 ---
@@ -548,6 +554,69 @@ Operators and reviewers need shareable URLs that open a specific calendar year (
 - Nav highlights **Release browser** for all `etl-releases/*` paths
 - Document title includes the year when present
 - Production static deploy still needs `release_browser_base_url` pointing at a host that serves `/data/releases/` and `/data/dq/` if cross-origin fetch is required
+
+#### Updates
+
+- None.
+
+---
+
+### ADR-015: Demo data infrastructure for lightweight development
+
+**Status:** Accepted  
+**Date:** 2026-07-09
+
+#### Context
+
+The full PhilGEPS corpus (10GB+) requires large file downloads and slow processing, creating barriers to:
+- **Development**: New contributors can't clone and run immediately
+- **CI/CD**: Pipelines need large storage and network bandwidth
+- **VPS deployment**: Manual file transfers required
+- **Testing**: Slow iteration cycles with full datasets
+- **Git distribution**: Repository can't be self-contained
+
+#### Decision
+
+**Create lightweight demo datasets that maintain data realism while being git-friendly:**
+
+1. **Raw CSV demo data** (`raw_demo/`): 200-row representative samples (~155 KB)
+2. **Year-by-year OCDS demo packages** (`references/transformed/demo_by_year/`): 200-1000 releases per year (~74 MB total vs 10GB+ full dataset)
+3. **Generation scripts**: Memory-efficient sampling from both raw CSV and transformed OCDS
+4. **Webapp configuration**: Use demo data by default, fallback to full datasets
+5. **Git strategy**: Include demo data, exclude full datasets (Google Drive only)
+
+**Implementation:**
+- `scripts/generate_demo_data.py` - Sample raw CSV exports
+- `scripts/generate_year_demo_samples_efficient.py` - Stream year packages for large files
+- `scripts/generate_webapp_caches.py` - Generate browser/DQ caches
+- `app/vite.config.ts` - Configured for `demo_by_year/` directory
+- `.gitignore` - Include demo data, exclude full datasets
+
+**Diversity preservation:**
+- Stratified sampling across procurement methods (19 modes)
+- Organization type coverage (13+ types)
+- Geographic representation (17+ regions)
+- Schema period coverage (S1-S5, 2000-2025)
+
+#### Consequences
+
+- **Benefits**:
+  - Clone time: 60x faster (seconds vs minutes)
+  - Storage: 166x smaller (74MB vs 10GB+)
+  - Webapp startup: instant vs 30+ seconds
+  - Git-friendly: self-contained repository
+  - CI/CD: Fast pipelines, no external dependencies
+  - VPS: Simple git pull deployment
+
+- **Trade-offs**:
+  - Not suitable for production analysis (use Google Drive full datasets)
+  - Requires regeneration when schema mappings change
+  - Demo data needs periodic updates to stay representative
+
+- **Maintenance**:
+  - Full dataset remains available on Google Drive for complete analysis
+  - Demo data can be regenerated with `python scripts/generate_year_demo_samples_efficient.py --years all`
+  - Webapp automatically uses full datasets when placed in `by_year/`
 
 #### Updates
 
