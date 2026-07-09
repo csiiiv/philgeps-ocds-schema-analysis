@@ -1,0 +1,19 @@
+{
+  "year": "2007",
+  "metrics": {
+    "total_releases": 900,
+    "releases_with_tender": 900,
+    "releases_with_awards": 900,
+    "releases_with_buyers": 0,
+    "releases_with_suppliers": 839,
+    "missing_fields": {},
+    "warnings": [],
+    "errors": []
+  },
+  "summary": {
+    "total": 900,
+    "warnings": 0,
+    "errors": 0,
+    "completeness": "100.0%"
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "uri": "https://philgeps-ocds.example/demo-by-year/2000.json",
+  "version": "1.1",
+  "extensions": [
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_bid_extension/v1.1.5/extension.json",
+    "https://raw.githubusercontent.com/open-contracting-extensions/ocds_lots_extension/v1.1.5/extension.json"
+  ],
+  "publishedDate": "2025-01-01T00:00:00+08:00",
+  "publisher": {
+    "name": "Philippine Government Electronic Procurement System (PhilGEPS)",
+    "scheme": "PH-PhilGEPS",
+    "uid": "ph-philgeps",
+    "uri": "https://www.philgeps.gov.ph"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "publicationPolicy": "https://philgeps-ocds.example/policy",
+  "releases": [
+    {
+      "ocid": "ocds-philgeps-1006",
+      "id": "1006",
+      "date": "2000-12-23T00:00:00+08:00",
+      "initiationType": "tender",
+      "tag": [
+        "compiled"
+      ],
+      "language": "en",
+      "buyer": {
+        "name": "PROCUREMENT SERVICE - Purchasing Division"
+      },
+      "tender": {
+        "id": "1006",
+        "title": "Epson printers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procurementMethodDetails": "Undefined",
+        "mainProcurementCategory": "Undefined",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        },
+        "tenderPeriod": {
+          "startDate": "2000-12-18T00:00:00+08:00",
+          "endDate": "2000-12-19T09:30:00+08:00"
+        },
+        "procuringEntity": {
+          "name": "PROCUREMENT SERVICE - Purchasing Division"
+        }
+      },
+      "philgeps": {
+        "tradeAgreement": "Undefined",
+        "fundingInstrument": "Loans / Grants",
+        "solicitationNo": "0006-2000",
+        "reasonForAward": "-35- EPSON LQ-580 Printer  -03- EPSON DLQ-3000+ Printer  -10- EPSON LX-300+  -02- EPSON Stylus Color 860"
+      },
+      "parties": [
+        {
+          "id": "procurement-service-purchasing-division",
+          "name": "PROCUREMENT SERVICE - Purchasing Division",
+          "roles": [
+            "buyer",
+            "procuringEntity"
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "id": "1004",
+          "title": "Epson printers",
+          "date": "2000-12-22T00:00:00+08:00",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        }
+      ],
+      "contracts": [
+        {
+          "id": "1004",
+          "awardID": "1004",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        }
+      ]
+    },
+    {
+      "ocid": "ocds-philgeps-1007",
+      "id": "1007",
+      "date": "2000-12-23T00:00:00+08:00",
+      "initiationType": "tender",
+      "tag": [
+        "compiled"
+      ],
+      "language": "en",
+      "buyer": {
+        "name": "PROCUREMENT SERVICE - Purchasing Division"
+      },
+      "tender": {
+        "id": "1007",
+        "title": "Hewlett Packard Scanners/Deskjet Printers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procurementMethodDetails": "Undefined",
+        "mainProcurementCategory": "Undefined",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        },
+        "tenderPeriod": {
+          "startDate": "2000-12-18T00:00:00+08:00",
+          "endDate": "2000-12-19T09:30:00+08:00"
+        },
+        "procuringEntity": {
+          "name": "PROCUREMENT SERVICE - Purchasing Division"
+        }
+      },
+      "philgeps": {
+        "tradeAgreement": "Undefined",
+        "fundingInstrument": "Loans / Grants",
+        "solicitationNo": "007-2000",
+        "reasonForAward": "-10- HP Scanjet 5300C  -05- HP Scanjet 3300C  -05- HP Deskjet 640C  -10- HP Deskjet 840C"
+      },
+      "parties": [
+        {
+          "id": "procurement-service-purchasing-division",
+          "name": "PROCUREMENT SERVICE - Purchasing Division",
+          "roles": [
+            "buyer",
+            "procuringEntity"
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "id": "1001",
+          "title": "Hewlett Packard Scanners/Deskjet Printers",
+          "date": "2000-12-22T00:00:00+08:00",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        }
+      ],
+      "contracts": [
+        {
+          "id": "1001",
+          "awardID": "1001",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        }
+      ]
+    },
+    {
+      "ocid": "ocds-philgeps-1008",
+      "id": "1008",
+      "date": "2000-12-23T00:00:00+08:00",
+      "initiationType": "tender",
+      "tag": [
+        "compiled"
+      ],
+      "language": "en",
+      "buyer": {
+        "name": "PROCUREMENT SERVICE - Purchasing Division"
+      },
+      "tender": {
+        "id": "1008",
+        "title": "Compaq Deskpro EX Computers",
+        "description": "Compaq Deskpro EX Computers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procurementMethodDetails": "Undefined",
+        "mainProcurementCategory": "Undefined",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        },
+        "tenderPeriod": {
+          "startDate": "2000-12-18T00:00:00+08:00",
+          "endDate": "2000-12-19T09:30:00+08:00"
+        },
+        "procuringEntity": {
+          "name": "PROCUREMENT SERVICE - Purchasing Division"
+        },
+        "items": [
+          {
+            "id": "1",
+            "description": "Compaq Deskpro EX Computers",
+            "name": "ITEM1",
+            "quantity": 1.0,
+            "unit": {
+              "name": "Each",
+              "value": {
+                "amount": 0.0,
+                "currency": "PHP"
+              }
+            }
+          },
+          {
+            "id": "2",
+            "description": "Compaq Deskpro EX Computers",
+            "name": "ITEM2",
+            "quantity": 1.0,
+            "unit": {
+              "name": "Each",
+              "value": {
+                "amount": 0.0,
+                "currency": "PHP"
+              }
+            }
+          }
+        ]
+      },
+      "philgeps": {
+        "tradeAgreement": "Undefined",
+        "fundingInstrument": "Loans / Grants",
+        "solicitationNo": "008-2000",
+        "reasonForAward": "-04- Compaq Deskpro EX P-III 733MHz w/ MS Office SBE  -04- Compaq Deskpro EX P-III 733MHz w/ MS Office Standard Ed"
+      },
+      "parties": [
+        {
+          "id": "procurement-service-purchasing-division",
+          "name": "PROCUREMENT SERVICE - Purchasing Division",
+          "roles": [
+            "buyer",
+            "procuringEntity"
+          ]
+        }
+      ],
+      "awards": [
+        {
+          "id": "1002",
+          "title": "Compaq Deskpro EX Computers",
+          "date": "2000-12-22T00:00:00+08:00",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          },
+          "items": [
+            {
+              "id": "1",
+              "description": "Compaq Deskpro EX Computers",
+              "name": "ITEM1",
+              "quantity": 1.0,
+              "unit": {
+                "name": "Each",
+                "value": {
+                  "amount": 0.0,
+                  "currency": "PHP"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "1003",
+          "title": "Compaq Deskpro EX Computers",
+          "date": "2000-12-22T00:00:00+08:00",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          },
+          "items": [
+            {
+              "id": "2",
+              "description": "Compaq Deskpro EX Computers",
+              "name": "ITEM2",
+              "quantity": 1.0,
+              "unit": {
+                "name": "Each",
+                "value": {
+                  "amount": 0.0,
+                  "currency": "PHP"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "contracts": [
+        {
+          "id": "1002",
+          "awardID": "1002",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        },
+        {
+          "id": "1003",
+          "awardID": "1003",
+          "status": "active",
+          "value": {
+            "amount": 0.0,
+            "currency": "PHP"
+          }
+        }
+      ]
+    }
+  ]
+}

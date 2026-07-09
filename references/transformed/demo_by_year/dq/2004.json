@@ -1,0 +1,19 @@
+{
+  "year": "2004",
+  "metrics": {
+    "total_releases": 1000,
+    "releases_with_tender": 1000,
+    "releases_with_awards": 1000,
+    "releases_with_buyers": 0,
+    "releases_with_suppliers": 10,
+    "missing_fields": {},
+    "warnings": [],
+    "errors": []
+  },
+  "summary": {
+    "total": 1000,
+    "warnings": 0,
+    "errors": 0,
+    "completeness": "100.0%"
+  }
+}

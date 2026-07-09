@@ -11,8 +11,19 @@ venv/
 # Raw exports (large; obtain from Google Drive — see docs/GETTING_STARTED.md)
 raw/
 
+# Demo data (small samples for development/testing - keep in git)
+!raw_demo/
+
 # Transform outputs (regenerate with scripts/transform_to_ocds.py)
-references/transformed/
+# Keep demo year packages, ignore full datasets
+references/transformed/by_year/
+!references/transformed/demo_by_year/
+references/transformed/full/
+references/transformed/full_partial_*/
+references/transformed/*.json
+!references/transformed/demo_by_year/*.json
+references/transformed/*.7z
+references/transformed/philgeps_ocds_by_year.7z
 
 # Webapp (app/)
 app/node_modules/

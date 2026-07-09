@@ -1,0 +1,72 @@
+{
+  "releases": {
+    "ocds-philgeps-1006": {
+      "ocid": "ocds-philgeps-1006",
+      "id": "1006",
+      "date": "2000-12-23T00:00:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Epson printers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procuringEntity": "PROCUREMENT SERVICE - Purchasing Division",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-1007": {
+      "ocid": "ocds-philgeps-1007",
+      "id": "1007",
+      "date": "2000-12-23T00:00:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Hewlett Packard Scanners/Deskjet Printers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procuringEntity": "PROCUREMENT SERVICE - Purchasing Division",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-1008": {
+      "ocid": "ocds-philgeps-1008",
+      "id": "1008",
+      "date": "2000-12-23T00:00:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Compaq Deskpro EX Computers",
+        "status": "complete",
+        "procurementMethod": "Undefined",
+        "procuringEntity": "PROCUREMENT SERVICE - Purchasing Division",
+        "value": {
+          "amount": 0.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    }
+  },
+  "metadata": {
+    "year": "2000",
+    "total_releases": 3,
+    "generated_at": "1783616674.1314664"
+  }
+}

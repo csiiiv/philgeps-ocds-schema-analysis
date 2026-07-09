@@ -1,0 +1,4167 @@
+{
+  "releases": {
+    "ocds-philgeps-11586980": {
+      "ocid": "ocds-philgeps-11586980",
+      "id": "11586980",
+      "date": "2025-01-01T09:52:20+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Improvement of Road Barangay Calanan Wide (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BARANGAY CALANAN - TABUK, KALINGA",
+        "value": {
+          "amount": 12399136.3,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-24gji0248": {
+      "ocid": "ocds-philgeps-24gji0248",
+      "id": "24GJI0248",
+      "date": "2025-01-02T08:25:37+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "1 Unit 24GJI0248",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - ZAMBOANGA SIBUGAY",
+        "value": {
+          "amount": 15995.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-11-029": {
+      "ocid": "ocds-philgeps-2024-11-029",
+      "id": "2024-11-029",
+      "date": "2025-01-02T13:21:53+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LEASE OF VENUE WITH CATERING SERVICES FOR THE CONDUCT OF SGLGB PROGRAM IMPLEMENTATION, REVIEW, AND EVALUATION",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF THE INTERIOR AND LOCAL GOVERNMENT - APAYAO",
+        "value": {
+          "amount": 16800.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-12-0003-bdd": {
+      "ocid": "ocds-philgeps-2024-12-0003-bdd",
+      "id": "2024-12-0003-BDD",
+      "date": "2025-01-02T17:03:18+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LEASE OF VENUE WITH PROVISION OF FOOD FOR THE CONDUCT OF MARKETING CAMPAIGN FOR INSTUTIONAL PARTNERS",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "HOME DEVELOPMENT MUTUAL FUND - REGION X",
+        "value": {
+          "amount": 84600.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-11-053": {
+      "ocid": "ocds-philgeps-2024-11-053",
+      "id": "2024-11-053",
+      "date": "2025-01-03T10:54:21+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "2024-12-041 RESPICARE (Direct Contracting Critical Plant Components)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MARIANO MARCOS MEMORIAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 68900.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-11-0028": {
+      "ocid": "ocds-philgeps-2024-11-0028",
+      "id": "2024-11-0028",
+      "date": "2025-01-03T17:22:01+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PMS of Insulated Derrick Crane Truck (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "AUTHORITY OF THE FREEPORT AREA OF BATAAN",
+        "value": {
+          "amount": 100000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-414870": {
+      "ocid": "ocds-philgeps-414870",
+      "id": "414870",
+      "date": "2025-01-05T21:21:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "AUDIO VISUAL PRESENTATION OF GOVERNMENT QUALITY MANAGEMENT PROGRAM (GQMP) ADVOCACY  CAMPAIGN VIDEOS",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEVELOPMENT ACADEMY OF THE PHILIPPINES",
+        "value": {
+          "amount": 550000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-2024-4411-0052": {
+      "ocid": "ocds-philgeps-pr-2024-4411-0052",
+      "id": "PR-2024-4411-0052",
+      "date": "2025-01-06T10:53:34+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Food and Accommodation",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF MANDAUE, CEBU",
+        "value": {
+          "amount": 660000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-nf-2410-0736": {
+      "ocid": "ocds-philgeps-nf-2410-0736",
+      "id": "NF 2410-0736",
+      "date": "2025-01-06T14:42:27+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "TO FURNISH TONERS FOR KYOCERAMITA TASKALFA 4012i FOR USE IN THE HUMAN RESOURCE MANAGEMENT DIVISION FOR THE LAST QUARTER OF 2024 (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF SOCIAL WELFARE AND DEVELOPMENT - REGION V",
+        "value": {
+          "amount": 132000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-rfq-24-1488": {
+      "ocid": "ocds-philgeps-rfq-24-1488",
+      "id": "RFQ 24-1488",
+      "date": "2025-01-07T09:43:20+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LEASE OF VENUE | PO 24-1690",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF HEALTH - CAR OFFICE",
+        "value": {
+          "amount": 244000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-54": {
+      "ocid": "ocds-philgeps-2024-54",
+      "id": "2024-54",
+      "date": "2025-01-07T13:28:31+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Medical Supplies and Medicine Expenses for Bantay Kalusugan Program",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BARANGAY UGONG NORTE, QUEZON CITY",
+        "value": {
+          "amount": 430000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-12-236": {
+      "ocid": "ocds-philgeps-2024-12-236",
+      "id": "2024-12-236",
+      "date": "2025-01-07T21:00:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Door-to-Door Delivery of Supplementary Learning Resources (SLRs) for Library Hubs in Region I- Lot 2 (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF EDUCATION - REGION I",
+        "value": {
+          "amount": 1618750.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-ro-g-24-117": {
+      "ocid": "ocds-philgeps-ro-g-24-117",
+      "id": "RO-G-24-117",
+      "date": "2025-01-08T12:33:15+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Lease of Venue Onboarding of Newly Hired Employees in the DAR",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRARIAN REFORM - CARAGA",
+        "value": {
+          "amount": 62370.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-bac-ho-gs-no-2025-0157": {
+      "ocid": "ocds-philgeps-bac-ho-gs-no-2025-0157",
+      "id": "BAC-HO GS No. 2025-0157",
+      "date": "2025-01-08T16:58:18+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "2025 Subscriptions to Bloomberg Services (Renewal Subscription)(OSRM)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BANGKO SENTRAL NG PILIPINAS",
+        "value": {
+          "amount": 7911292.8,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-hmo-24-1617-agency-to-agency": {
+      "ocid": "ocds-philgeps-hmo-24-1617-agency-to-agency",
+      "id": "HMO-24-1617- AGENCY TO AGENCY",
+      "date": "2025-01-09T10:48:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "HMO-24-1617- AGENCY TO AGENCY",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PROVINCE OF ILOILO",
+        "value": {
+          "amount": 4999750.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11637935": {
+      "ocid": "ocds-philgeps-11637935",
+      "id": "11637935",
+      "date": "2025-01-09T11:54:58+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Coloring Books and Water Color",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "SANGGUNIANG KABATAAN NG BARANGAY 121, ZONE 9, DISTRICT 1, MA",
+        "value": {
+          "amount": 65847.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-24-0147-lov": {
+      "ocid": "ocds-philgeps-24-0147-lov",
+      "id": "24-0147-LOV",
+      "date": "2025-01-10T09:33:08+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Lease of Venue for the Conduct of Year-End Assessment of the Corporate Communications Department",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PHILIPPINE HEALTH INSURANCE CORPORATION",
+        "value": {
+          "amount": 281000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-rfq-no-2024-06-4339-4289": {
+      "ocid": "ocds-philgeps-rfq-no-2024-06-4339-4289",
+      "id": "RFQ No. 2024-06-4339/4289",
+      "date": "2025-01-11T13:34:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Calcium + Cholecalciferol (Vit D3) equiv. to 600mg elemental calcium + 400 IU Film Coated Tablet",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "ILOCOS TRAINING AND REGIONAL MEDICAL CENTER",
+        "value": {
+          "amount": 372000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-345-2024": {
+      "ocid": "ocds-philgeps-345-2024",
+      "id": "345-2024",
+      "date": "2025-01-13T09:54:52+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Basic Life Support Training",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "JOSE B. LINGAD MEMORIAL GENERAL HOSPITAL",
+        "value": {
+          "amount": 400000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-12-361": {
+      "ocid": "ocds-philgeps-2024-12-361",
+      "id": "2024-12-361",
+      "date": "2025-01-13T15:05:16+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Lease of Venue for the Conduct of SAAD National Year end Physical and Financial Assessment",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BUREAU OF FISHERIES AND AQUATIC RESOURCES - REGION III",
+        "value": {
+          "amount": 1440000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11638833": {
+      "ocid": "ocds-philgeps-11638833",
+      "id": "11638833",
+      "date": "2025-01-14T10:44:22+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Photocopier Machine Rental",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BANGKO SENTRAL NG PILIPINAS - VISAYAS REGIONAL OFFICE",
+        "value": {
+          "amount": 70400.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-no-2024-12-0132": {
+      "ocid": "ocds-philgeps-pr-no-2024-12-0132",
+      "id": "PR No. 2024-12-0132",
+      "date": "2025-01-14T11:27:29+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement and Delivery of Traffic Counting Device of Planning and Deisgn Section at the DPWH Isabela Third District Engineering Office, Brgy. Tagaran, Cauayan City, Isabela (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - ISABELA 3RD DEO",
+        "value": {
+          "amount": 250000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-no-2025-0054": {
+      "ocid": "ocds-philgeps-pr-no-2025-0054",
+      "id": "PR No. 2025-0054",
+      "date": "2025-01-14T16:41:37+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of One Job Order for 30-minutes airtime services to be aired on a commercial radio station",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRICULTURE - REGION VI",
+        "value": {
+          "amount": 780000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-no-2025-0055": {
+      "ocid": "ocds-philgeps-pr-no-2025-0055",
+      "id": "PR No. 2025-0055",
+      "date": "2025-01-15T14:24:23+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of One Job Order for 30-minutes airtime services to be aired on a commercial radio station",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRICULTURE - REGION VI",
+        "value": {
+          "amount": 396000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-11-3060": {
+      "ocid": "ocds-philgeps-2024-11-3060",
+      "id": "2024-11-3060",
+      "date": "2025-01-16T10:08:31+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Various Lens Intraocular, Posterior Chamber",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BAGUIO GENERAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 165600.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11644095": {
+      "ocid": "ocds-philgeps-11644095",
+      "id": "11644095",
+      "date": "2025-01-16T14:58:27+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Transportation Rental (Jeep) for Elementary Athletes and Coaches",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF NABUNTURAN, COMPOSTELA VALLEY",
+        "value": {
+          "amount": 108000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-043b-2024-243": {
+      "ocid": "ocds-philgeps-043b-2024-243",
+      "id": "043B-2024-243",
+      "date": "2025-01-16T15:28:20+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Conduct of Performance Review and Strategic Planning Workshop for ARF-FMR Project 25-29 November 2024",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRARIAN REFORM - MAIN",
+        "value": {
+          "amount": 462000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-04-0549": {
+      "ocid": "ocds-philgeps-2024-04-0549",
+      "id": "2024-04-0549",
+      "date": "2025-01-17T12:04:53+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CREATIVE SOFTWARE ANNUAL SUBSCRIPTION",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF TRECE MARTIRES",
+        "value": {
+          "amount": 350000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-r3g-2024-115": {
+      "ocid": "ocds-philgeps-r3g-2024-115",
+      "id": "R3G-2024-115",
+      "date": "2025-01-18T08:22:50+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "BOARD AND LODGING (FOOD AND ACCOMMODATION) RE RE-ECHO TRAINING ON UNIVERSAL PREVENTION CURRICULUM (UPC) FOR SUBSTANCE USE ON DECEMBER 2-6, 2024",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF EDUCATION - REGION III",
+        "value": {
+          "amount": 616000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11650690": {
+      "ocid": "ocds-philgeps-11650690",
+      "id": "11650690",
+      "date": "2025-01-20T13:48:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PROCUREMENT OF DRUGS AND MEDICINES, MEDICAL SUPPLIES AND EQUIPMENTS FOR CDSA 2025",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF ANILAO - ILOILO",
+        "value": {
+          "amount": 123200.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-ec-2024-0054-pr2024-0053": {
+      "ocid": "ocds-philgeps-ec-2024-0054-pr2024-0053",
+      "id": "EC#2024-0054-PR2024-0053",
+      "date": "2025-01-20T14:17:13+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Veterinary Supplies",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PROVINCE OF BOHOL",
+        "value": {
+          "amount": 529910.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pgbh-nc-2025-000108": {
+      "ocid": "ocds-philgeps-pgbh-nc-2025-000108",
+      "id": "PGBh-NC#2025-000108",
+      "date": "2025-01-21T10:41:56+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Services",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PROVINCE OF BOHOL",
+        "value": {
+          "amount": 1495000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11643842": {
+      "ocid": "ocds-philgeps-11643842",
+      "id": "11643842",
+      "date": "2025-01-21T16:40:43+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Supplies and Materials for Repairs and Maintenance of Office Building and Equipment",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "TECHNICAL EDUCATION & SKILLS DEVELOPMENT AUTHORITY - REGION",
+        "value": {
+          "amount": 68725.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    },
+    "ocds-philgeps-2025-01-079": {
+      "ocid": "ocds-philgeps-2025-01-079",
+      "id": "2025-01-079",
+      "date": "2025-01-22T08:27:47+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "MEDMASTER, INC. PO NO. 2025-01-028  (Direct Contracting Critical Plant Components)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MARIANO MARCOS MEMORIAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 40000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-101-25-01-0036": {
+      "ocid": "ocds-philgeps-pr-101-25-01-0036",
+      "id": "PR#101-25-01-0036",
+      "date": "2025-01-22T14:20:34+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "DIESEL, GASOLINE & LUBRICANTS FOR CMO-BDP OPERATIONS - 1ST QUARTER 2025",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF KORONADAL, SOUTH COTABATO",
+        "value": {
+          "amount": 249970.81,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11658072": {
+      "ocid": "ocds-philgeps-11658072",
+      "id": "11658072",
+      "date": "2025-01-23T08:03:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Playing Uniforms to be used during the  Actual Palarong Bicol on April 2025 (PR NO. 200-25-01-0018)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PROVINCE OF ALBAY",
+        "value": {
+          "amount": 400000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-2024-4421-00009": {
+      "ocid": "ocds-philgeps-pr-2024-4421-00009",
+      "id": "PR-2024-4421-00009",
+      "date": "2025-01-23T10:12:21+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Food and Accommodation",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF MANDAUE, CEBU",
+        "value": {
+          "amount": 360000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-1216-214": {
+      "ocid": "ocds-philgeps-2024-1216-214",
+      "id": "2024-1216-214",
+      "date": "2025-01-23T15:36:15+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Meals, snacks and accomodation January 14-15, 2025",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "NATIONAL IRRIGATION ADMINISTRATION - REGION I",
+        "value": {
+          "amount": 433140.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11664589": {
+      "ocid": "ocds-philgeps-11664589",
+      "id": "11664589",
+      "date": "2025-01-23T23:52:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Grocery Items for Provision of Food for Provincial Meet",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF VICTORIA, ORIENTAL MINDORO",
+        "value": {
+          "amount": 196655.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-12-431": {
+      "ocid": "ocds-philgeps-2024-12-431",
+      "id": "2024-12-431",
+      "date": "2025-01-24T10:03:38+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "2024-12-431",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - SURIGAO DEL SUR 1S",
+        "value": {
+          "amount": 28000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-68": {
+      "ocid": "ocds-philgeps-2024-68",
+      "id": "2024-68",
+      "date": "2025-01-24T14:35:15+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Playground Equipment Set",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BARANGAY UGONG NORTE, QUEZON CITY",
+        "value": {
+          "amount": 1400000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    },
+    "ocds-philgeps-11670582": {
+      "ocid": "ocds-philgeps-11670582",
+      "id": "11670582",
+      "date": "2025-01-24T21:18:06+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Other Supplies & Equipment ES",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SAN CARLOS ELEMENTARY SCHOOL - VALENCIA CITY BUKIDNON",
+        "value": {
+          "amount": 83800.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 10,
+      "has_awards": true
+    },
+    "ocds-philgeps-09-031-24": {
+      "ocid": "ocds-philgeps-09-031-24",
+      "id": "09-031-24",
+      "date": "2025-01-27T11:09:28+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Engagement of Technical Consultant",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "APO PRODUCTION UNIT, INC.",
+        "value": {
+          "amount": 330000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2025-07-ngp": {
+      "ocid": "ocds-philgeps-2025-07-ngp",
+      "id": "2025-07 NGP",
+      "date": "2025-01-27T13:26:31+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Establishment of New Plantation",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF ENVIRONMENT AND NATURAL RES. - PENRO, ILOILO",
+        "value": {
+          "amount": 289000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11654236": {
+      "ocid": "ocds-philgeps-11654236",
+      "id": "11654236",
+      "date": "2025-01-27T14:28:18+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CONSTRUCTION OF SEPARATE COMFORT ROOMS FOR 4 IDENTIFIED PUBLIC SCHOOLS AT SAN PABLO ELEMENTARY SCHOOL",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF DEL GALLEGO, CAMARINES SUR",
+        "value": {
+          "amount": 324996.11,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2412-740": {
+      "ocid": "ocds-philgeps-2412-740",
+      "id": "2412-740",
+      "date": "2025-01-27T16:57:26+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Additional Item of work",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PHILIPPINE COCONUT AUTHORITY - REGION X",
+        "value": {
+          "amount": 306360.65,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11682664": {
+      "ocid": "ocds-philgeps-11682664",
+      "id": "11682664",
+      "date": "2025-01-28T10:54:13+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "RFQ 2025-01-002 PROCUREMENT OF DRUGS AND MEDICINES AND OTHER SUPPLIES FOR PERSONNEL AND LEARNERS USE",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SANTA MARIA NATIONAL HIGH SCHOOL",
+        "value": {
+          "amount": 65021.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-2023-11-0679-epa": {
+      "ocid": "ocds-philgeps-pr-2023-11-0679-epa",
+      "id": "PR 2023-11-0679 EPA",
+      "date": "2025-01-28T14:35:14+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Airline Ticket Services",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PHIL. ATMOSPHERIC, GEOPHYSICAL AND ASTRONOMICAL SERVICE ADM.",
+        "value": {
+          "amount": 5000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11674749": {
+      "ocid": "ocds-philgeps-11674749",
+      "id": "11674749",
+      "date": "2025-01-29T00:00:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "procurement of office and materials supplies of Longboy Elementary School.",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "LOMON ELEMENTARY SCHOOL - KAPANGAN, BENGUET",
+        "value": {
+          "amount": 138425.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-25-01-038": {
+      "ocid": "ocds-philgeps-25-01-038",
+      "id": "25-01-038",
+      "date": "2025-01-30T10:44:27+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "RENEWAL OF LEASE OF PRIVATELY-OWNED REAL PROPERTY OF THE DA-MIMAROPA REGIONAL OFFICE-OPERATION DIVISION IN CALAPAN CITY, ORIENTAL MINDORO",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRICULTURE - REGION IV-B (MIMAROPA)",
+        "value": {
+          "amount": 1440000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11656315": {
+      "ocid": "ocds-philgeps-11656315",
+      "id": "11656315",
+      "date": "2025-01-30T11:44:29+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Construction of Solar Streetlights",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY TAYAMAAN - MAMBURAO, OCCIDENTAL MINDORO",
+        "value": {
+          "amount": 300000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11641083": {
+      "ocid": "ocds-philgeps-11641083",
+      "id": "11641083",
+      "date": "2025-01-30T14:10:43+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and delivery of power bank to be given during the activity entitled KEEPING ON TRACK ATI'S FY 2024 ANNUAL REVIEW AND FY 2025 COMMITMENT SIGNING on January 27-30, 2025 at Quezon City",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "AGRICULTURAL TRAINING INSTITUTE",
+        "value": {
+          "amount": 274000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-25-014": {
+      "ocid": "ocds-philgeps-25-014",
+      "id": "25-014",
+      "date": "2025-01-30T17:06:59+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PROCUREMENT FOR THE PREVENTIVE MAINTENANCE SERVICES (MINDRAY ULTRASOUND) FOR ULTRASOUND USE (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "LUNG CENTER OF THE PHILIPPINES",
+        "value": {
+          "amount": 36000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    },
+    "ocds-philgeps-11677998": {
+      "ocid": "ocds-philgeps-11677998",
+      "id": "11677998",
+      "date": "2025-01-31T10:37:50+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply of 5 Weeks Old Chicken for PVET",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PROVINCE OF MOUNTAIN PROVINCE",
+        "value": {
+          "amount": 796500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-01-25-0032": {
+      "ocid": "ocds-philgeps-01-25-0032",
+      "id": "01-25-0032",
+      "date": "2025-01-31T11:51:02+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Personlized Form 51-C",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "AUTHORITY OF THE FREEPORT AREA OF BATAAN",
+        "value": {
+          "amount": 203100.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11657627": {
+      "ocid": "ocds-philgeps-11657627",
+      "id": "11657627",
+      "date": "2025-01-31T12:02:08+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "4ACGM2024B-003 Office Supplies Expenses",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PNP ANTI-CYBERCRIME GROUP",
+        "value": {
+          "amount": 750000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-101-25-01-0206": {
+      "ocid": "ocds-philgeps-pr-101-25-01-0206",
+      "id": "PR#101-25-01-0206",
+      "date": "2025-01-31T16:06:17+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "DIESEL FOR USE ON THE OFFICE OPERATIONS OF THE DILG / BARANGAY SECRETARIAT OFFICE - 1ST SEMESTER 2025",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF KORONADAL, SOUTH COTABATO",
+        "value": {
+          "amount": 75000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11670948": {
+      "ocid": "ocds-philgeps-11670948",
+      "id": "11670948",
+      "date": "2025-01-31T16:53:43+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Printing of FAB Newsletter (Flyers)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "AUTHORITY OF THE FREEPORT AREA OF BATAAN",
+        "value": {
+          "amount": 60000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-gds-2024-200": {
+      "ocid": "ocds-philgeps-gds-2024-200",
+      "id": "GDS-2024-200",
+      "date": "2025-01-31T23:43:35+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Provision of meals and venue (meals and rental for LED and sounds and lights and decorations) for the 2024 Regional Recognition Ceremony of Outstanding Local Anti-Drug Abuse Councils and other Local Governance Performance Areas on October 18, 2024",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF THE INTERIOR AND LOCAL GOVERNMENT - REGION V",
+        "value": {
+          "amount": 195000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11643228": {
+      "ocid": "ocds-philgeps-11643228",
+      "id": "11643228",
+      "date": "2025-02-03T09:05:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Brand New Patrol Vehicle",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF DIPACULAO",
+        "value": {
+          "amount": 1000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11699452": {
+      "ocid": "ocds-philgeps-11699452",
+      "id": "11699452",
+      "date": "2025-02-03T12:15:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of training tools as part of modernization of PTC OrMin's training delivery and part realization of PTC's Institutional Development plan",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "ORIENTAL MINDORO PROVINCIAL TRAINING CENTER",
+        "value": {
+          "amount": 170000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11665537": {
+      "ocid": "ocds-philgeps-11665537",
+      "id": "11665537",
+      "date": "2025-02-03T14:49:55+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Materials for the Framing of Tarpaulins used for various events/occasion of Tarlac City Government.",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF TARLAC, TARLAC",
+        "value": {
+          "amount": 78680.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11688542": {
+      "ocid": "ocds-philgeps-11688542",
+      "id": "11688542",
+      "date": "2025-02-04T09:01:44+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY AND DELIVERY OF MATERIALS FOR REPAIR OF GRADE V CLASSROOM",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CULIPAPA ELEMENTARY SCHOOL",
+        "value": {
+          "amount": 65000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-25-02-086": {
+      "ocid": "ocds-philgeps-25-02-086",
+      "id": "25-02-086",
+      "date": "2025-02-04T11:47:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LABOR AND MATERIALS FOR THE CONSTRUCTION / ESTABLISHMENT OF COMMAND CENTER (PHASE II) (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MUNICIPALITY OF CAUAYAN, NEGROS OCCIDENTAL",
+        "value": {
+          "amount": 2399297.04,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11685879": {
+      "ocid": "ocds-philgeps-11685879",
+      "id": "11685879",
+      "date": "2025-02-04T12:21:41+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Concreting of Multi-Purpose Pavement at Purok 1/ Concreting of Multi Purpose Pavement at Purok 1 (Phase 2)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY POOD",
+        "value": {
+          "amount": 332800.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11651350": {
+      "ocid": "ocds-philgeps-11651350",
+      "id": "11651350",
+      "date": "2025-02-04T13:41:27+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Reagents for the Hematology Analyzer",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF SAN ROQUE - NORTHERN SAMAR",
+        "value": {
+          "amount": 89500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11672068": {
+      "ocid": "ocds-philgeps-11672068",
+      "id": "11672068",
+      "date": "2025-02-05T08:56:35+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PR-2025-0047 Procurement of Catering Services of PPDO",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PROVINCE OF AGUSAN DEL NORTE",
+        "value": {
+          "amount": 70000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11668223": {
+      "ocid": "ocds-philgeps-11668223",
+      "id": "11668223",
+      "date": "2025-02-05T11:51:40+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Concreting of Alegria - Punta Road",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF CORCUERA, ROMBLON",
+        "value": {
+          "amount": 737074.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-12-090": {
+      "ocid": "ocds-philgeps-2024-12-090",
+      "id": "2024-12-090",
+      "date": "2025-02-05T12:55:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LEASE OF VENUE WITH PROVISION OF MEALS & FUNCTION ROOM",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "COMMISSION ON HUMAN RIGHTS - CEBU CITY",
+        "value": {
+          "amount": 63000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    },
+    "ocds-philgeps-11654696": {
+      "ocid": "ocds-philgeps-11654696",
+      "id": "11654696",
+      "date": "2025-02-05T13:43:49+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "(SAAD) Supply and Delivery of Tilapia Fingerlings",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BUREAU OF FISHERIES AND AQUATIC RESOURCES REGION 1",
+        "value": {
+          "amount": 438200.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11691023": {
+      "ocid": "ocds-philgeps-11691023",
+      "id": "11691023",
+      "date": "2025-02-06T08:41:23+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "To support the logistical requirements of 103Bde,1ID,PA",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "101ST CONTRACTING OFFICE, AFP PROCUREMENT SERVICE",
+        "value": {
+          "amount": 389750.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-mabpang-1227-2024-pol1": {
+      "ocid": "ocds-philgeps-mabpang-1227-2024-pol1",
+      "id": "mabpang-1227-2024-POL1",
+      "date": "2025-02-06T09:59:34+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Diesel Fuel for the Office of the Municipal Mayor",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MUNICIPALITY OF MABINI, PANGASINAN",
+        "value": {
+          "amount": 520000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11699674": {
+      "ocid": "ocds-philgeps-11699674",
+      "id": "11699674",
+      "date": "2025-02-06T12:33:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PROCUREMENT OF CATERING SERVICES FOR 2025 DIVISION SCHOOL'S PRESS CONFERENCE (DSPC) HOSTING",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF MARABUT, SAMAR",
+        "value": {
+          "amount": 55100.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11643405": {
+      "ocid": "ocds-philgeps-11643405",
+      "id": "11643405",
+      "date": "2025-02-06T13:06:41+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CONCRETING OF ROAD AT BARANGAY AMBUETEL(SITIO LAGUINLIN, GARCIA, SAPLAN & SAGUR)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF CALASIAO, PANGASINAN",
+        "value": {
+          "amount": 3000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11688672": {
+      "ocid": "ocds-philgeps-11688672",
+      "id": "11688672",
+      "date": "2025-02-06T16:32:59+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and delivery of tire, batteries & other spare parts for repair & maintenance",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BUREAU OF CORRECTIONS - PUERTO PRINCESA",
+        "value": {
+          "amount": 461600.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11652370": {
+      "ocid": "ocds-philgeps-11652370",
+      "id": "11652370",
+      "date": "2025-02-06T17:42:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Invitation to Bid - Supply and Delivery of Construction Materials for Concreting of Barangay Roads at Various Barangay, Barangay Guinacot, Danao City",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "CITY  OF DANAO, CEBU",
+        "value": {
+          "amount": 207983.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-02-040-2025": {
+      "ocid": "ocds-philgeps-02-040-2025",
+      "id": "02-040-2025",
+      "date": "2025-02-07T08:57:16+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Meals with venue for the conduct of Employers' Forum",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PHILIPPINE HEALTH INSURANCE CORPORATION - REGION VII",
+        "value": {
+          "amount": 241060.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11656002": {
+      "ocid": "ocds-philgeps-11656002",
+      "id": "11656002",
+      "date": "2025-02-07T10:14:08+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "IMPROVEMENT OF COPCOPIT FMR, DALIPEY, BAKUN, BENGUET",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF BAKUN, BENGUET",
+        "value": {
+          "amount": 399840.91,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11687031": {
+      "ocid": "ocds-philgeps-11687031",
+      "id": "11687031",
+      "date": "2025-02-07T10:50:39+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Medical Oxygen (Content Only)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BASILAN GENERAL HOSPITAL",
+        "value": {
+          "amount": 899760.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11673130": {
+      "ocid": "ocds-philgeps-11673130",
+      "id": "11673130",
+      "date": "2025-02-07T12:34:44+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PURCHASE OF TOOLS AND EQUIPMENTS – Barangay Lag-On, Daet Camarines Norte",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY 2 DAET CAMARINES NORTE",
+        "value": {
+          "amount": 356626.88,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-10-2690": {
+      "ocid": "ocds-philgeps-2024-10-2690",
+      "id": "2024-10-2690",
+      "date": "2025-02-07T15:03:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "HEMODIALYSIS TREATMENT",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BAGUIO GENERAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 18330156.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11643300": {
+      "ocid": "ocds-philgeps-11643300",
+      "id": "11643300",
+      "date": "2025-02-07T15:09:24+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Rehabilitation of Fiangtin-Tiko Footpath",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF BARLIG MOUNTAIN PROVINCE",
+        "value": {
+          "amount": 1000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11655487": {
+      "ocid": "ocds-philgeps-11655487",
+      "id": "11655487",
+      "date": "2025-02-07T15:18:37+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25GEI0002 - Furnishing and Delivery of I.T. Equipment (1 Laptop Administrative Use) for use in the Office of the Assistant District Engineer, DPWH-Southern Mindoro District Engineering Office, Dangay,",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - SOUTHERN MINDORO D",
+        "value": {
+          "amount": 130000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11650757": {
+      "ocid": "ocds-philgeps-11650757",
+      "id": "11650757",
+      "date": "2025-02-08T13:24:42+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CONCRETING OF BARANGAY ROADS",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY 26 OAIG UPAY ABULAO PAOAY, ILOCOS NORTE",
+        "value": {
+          "amount": 274684.22,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 3,
+      "has_awards": true
+    },
+    "ocds-philgeps-11685765": {
+      "ocid": "ocds-philgeps-11685765",
+      "id": "11685765",
+      "date": "2025-02-10T00:48:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and deliver meals and snacks for the participants of 2025 Run After Contribution Evaders (RACE) Operation for the first Quarter of 2025 of SSS Davao-San Pedro Branch",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SOCIAL SECURITY SYSTEM - SOUTHERN MINDANAO",
+        "value": {
+          "amount": 61200.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 3,
+      "has_awards": true
+    },
+    "ocds-philgeps-amp-iep-2024-08-13-02e": {
+      "ocid": "ocds-philgeps-amp-iep-2024-08-13-02e",
+      "id": "AMP (IEP)-2024-08-13.02E",
+      "date": "2025-02-10T09:52:28+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "REHABILITATION OF RETAINING WALL AT GILLIAN SUBDIVISION CREEK, BRGY. 167, CALOOCAN CITY",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF CALOOCAN",
+        "value": {
+          "amount": 10606000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11702481": {
+      "ocid": "ocds-philgeps-11702481",
+      "id": "11702481",
+      "date": "2025-02-10T13:01:36+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Basketball Uniforms for 2025 Inter-Barangay Basketball Tournament",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF MABINI, PANGASINAN",
+        "value": {
+          "amount": 192000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11664168": {
+      "ocid": "ocds-philgeps-11664168",
+      "id": "11664168",
+      "date": "2025-02-10T14:41:32+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Concreting of Farmers Street (Barangay Dumpay)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF BASISTA, PANGASINAN",
+        "value": {
+          "amount": 500000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11700133": {
+      "ocid": "ocds-philgeps-11700133",
+      "id": "11700133",
+      "date": "2025-02-10T16:53:27+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Meals and Snacks for STEAM WEEK 2025 Activities",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE SCIENCE HIGH SCHOOL - CAR CAMPUS",
+        "value": {
+          "amount": 90900.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2025-01-0018b": {
+      "ocid": "ocds-philgeps-2025-01-0018b",
+      "id": "2025-01-0018B",
+      "date": "2025-02-11T09:23:57+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "DAR XII CY2024 Year End Assessment cum Strategic Planning CY 2025 Regular and SPLIT Project",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF AGRARIAN REFORM - REGION XII",
+        "value": {
+          "amount": 277200.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11638697": {
+      "ocid": "ocds-philgeps-11638697",
+      "id": "11638697",
+      "date": "2025-02-11T09:38:11+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Drug and Medicines, Medical and Laboratory Supplies and Equipment, Lgu-Zumarraga, Samar",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF ZUMARRAGA, SAMAR",
+        "value": {
+          "amount": 3415000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11675497": {
+      "ocid": "ocds-philgeps-11675497",
+      "id": "11675497",
+      "date": "2025-02-11T10:40:23+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Centrifugal Pump, Submersible Pump and Submersible Motor",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "METRO MIDSAYAP WATER DISTRICT",
+        "value": {
+          "amount": 210000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11663933": {
+      "ocid": "ocds-philgeps-11663933",
+      "id": "11663933",
+      "date": "2025-02-11T14:31:51+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Health Policy and Financing Consultant for DOH-PHIC-PIDS Technical Assistance ...",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE INSTITUTE FOR DEVELOPMENT STUDIES",
+        "value": {
+          "amount": 931700.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11687502": {
+      "ocid": "ocds-philgeps-11687502",
+      "id": "11687502",
+      "date": "2025-02-11T14:46:26+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "FURNISHING LABOR, MATERIALS & EQUIPMENT RENTAL FOR INSTALLATION STREETLIGHTS AT BARANGAY JP LAUREL BULAN SORSOGON",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY J.P. LAUREL - BULAN, SORSOGON",
+        "value": {
+          "amount": 191341.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2023-06-00949": {
+      "ocid": "ocds-philgeps-2023-06-00949",
+      "id": "2023-06-00949",
+      "date": "2025-02-11T18:36:36+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Consumables for Hematology Analyzer (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "VISAYAS STATE UNIVERSITY - MAIN CAMPUS",
+        "value": {
+          "amount": 383500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11641883": {
+      "ocid": "ocds-philgeps-11641883",
+      "id": "11641883",
+      "date": "2025-02-12T06:33:07+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Farm Equipment's at LGU-Labrador, Pangasinan- ABC-1,000,000.00",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF LABRADOR, PANGASINAN",
+        "value": {
+          "amount": 1000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11686190": {
+      "ocid": "ocds-philgeps-11686190",
+      "id": "11686190",
+      "date": "2025-02-12T08:08:10+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SVP-S 25-01-0030 Printing and Binding of Book Entitled Kinaiya Antolohiya ng mga  Makabagong Tinig mula sa LGBTQIA++",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "UNIVERSITY OF THE PHILIPPINES - SYSTEM",
+        "value": {
+          "amount": 139695.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11663854": {
+      "ocid": "ocds-philgeps-11663854",
+      "id": "11663854",
+      "date": "2025-02-12T10:44:08+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SPARE PARTS & SERVICES FOR THE MAINTENANCE OF VARIOUS SERVICE VEHICLE & EQUIPMENT",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF CARASI, ILOCOS NORTE",
+        "value": {
+          "amount": 143511.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11711474": {
+      "ocid": "ocds-philgeps-11711474",
+      "id": "11711474",
+      "date": "2025-02-12T11:20:41+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PROCUREMENT OF OFFICE SUPPLIES",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE NATIONAL POLICE - CALABARZON",
+        "value": {
+          "amount": 882000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-ep-2024-11-011": {
+      "ocid": "ocds-philgeps-ep-2024-11-011",
+      "id": "EP-2024-11-011",
+      "date": "2025-02-12T13:38:35+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "EMERGENCY PURCHASE OF GOODS TO BE USED AT OPERATION CENTER DURING THE ONSLAUGHT OF TYPHOON PEPITO",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MUNICIPALITY OF BALATAN, CAMARINES SUR",
+        "value": {
+          "amount": 10153.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11712498": {
+      "ocid": "ocds-philgeps-11712498",
+      "id": "11712498",
+      "date": "2025-02-12T14:14:58+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "1 LOT SUPPLY AND DELIVERY OF VARIOUS MATERIALS",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "LA TRINIDAD WATER DISTRICT - LA TRINIDAD BENGUET",
+        "value": {
+          "amount": 143945.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11643768": {
+      "ocid": "ocds-philgeps-11643768",
+      "id": "11643768",
+      "date": "2025-02-12T14:33:11+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "24GGL0016 - PROCUREMENT OF OFFICE FURNITURES AND FIXTURES FOR USE IN DISTRICT ENGINEER'S OFFICE, ASSISTANT DISTRICT ENGINEER'S OFFICE AND ALL OFFICE SECTIONS TO OCCUPY THE NEW OFFICE BUILDING OF THIS",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - NEG. OCC. 2ND DEO",
+        "value": {
+          "amount": 2498500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11698913": {
+      "ocid": "ocds-philgeps-11698913",
+      "id": "11698913",
+      "date": "2025-02-12T17:27:55+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Meals (Contract for February-April 2025) - Poblacion",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF TRADE AND INDUSTRY - REGION XI",
+        "value": {
+          "amount": 120000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11647304": {
+      "ocid": "ocds-philgeps-11647304",
+      "id": "11647304",
+      "date": "2025-02-12T20:52:16+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25DF0082 (By Contract) - CONVERGENCE AND SPECIAL SUPPORT PROGRAM Basic Infrastructure Program (BIP) BIP - Multi-Purpose Buildings/ Facilities to Support Social  Services Construction of Multi-Purpose",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - CAVITE I DEO",
+        "value": {
+          "amount": 5940000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-018": {
+      "ocid": "ocds-philgeps-018",
+      "id": "018",
+      "date": "2025-02-13T09:05:39+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "JANITORIAL AND OFFICE SUPPLIES",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BAESA HIGH SCHOOL",
+        "value": {
+          "amount": 149850.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11678495": {
+      "ocid": "ocds-philgeps-11678495",
+      "id": "11678495",
+      "date": "2025-02-13T10:10:00+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Request for Quotation (RDTD-2025-01-0034 Meals and Snacks)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHIL. ATMOSPHERIC GEOPHYSICAL & ASTRONOMICAL SERVICES ADM.",
+        "value": {
+          "amount": 93000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11656880": {
+      "ocid": "ocds-philgeps-11656880",
+      "id": "11656880",
+      "date": "2025-02-13T10:55:53+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Improvement of Multi-Purpose Hall of Barangay Sibucauan, Tubungan, Iloilo",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF TUBUNGAN, ILOILO",
+        "value": {
+          "amount": 709550.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11705074": {
+      "ocid": "ocds-philgeps-11705074",
+      "id": "11705074",
+      "date": "2025-02-13T13:49:14+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Office Supplies for the use of City Budget Office",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY GOVERNMENT OF CABUYAO, LAGUNA",
+        "value": {
+          "amount": 86646.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11649158": {
+      "ocid": "ocds-philgeps-11649158",
+      "id": "11649158",
+      "date": "2025-02-13T14:14:28+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "5020305000-14-2025",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PHILIPPINE NATIONAL POLICE - HEADQUARTERS SUPPORT SERVICE",
+        "value": {
+          "amount": 800000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-25-c02-010": {
+      "ocid": "ocds-philgeps-25-c02-010",
+      "id": "25-C02-010",
+      "date": "2025-02-13T14:28:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Venue and Accomodation for 2025 DOST-SEI Pens and Lens Workshop",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "SCIENCE EDUCATION INSTITUTE",
+        "value": {
+          "amount": 354000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 2,
+      "has_awards": true
+    },
+    "ocds-philgeps-11698020": {
+      "ocid": "ocds-philgeps-11698020",
+      "id": "11698020",
+      "date": "2025-02-13T16:10:28+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "DRUGS AND MEDICINE - MAYORS OFFICE",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF TUBAO, LA UNION",
+        "value": {
+          "amount": 499995.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11656356": {
+      "ocid": "ocds-philgeps-11656356",
+      "id": "11656356",
+      "date": "2025-02-13T16:43:09+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "TVL-ICT CSS Tools",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MANGATAREM NATIONAL HIGH SCHOOL",
+        "value": {
+          "amount": 90000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-37-2024": {
+      "ocid": "ocds-philgeps-37-2024",
+      "id": "37-2024",
+      "date": "2025-02-13T19:22:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Consultant for the Integration of the Human Resource Information System",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF TRADE AND INDUSTRY - MAIN",
+        "value": {
+          "amount": 275000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11638261": {
+      "ocid": "ocds-philgeps-11638261",
+      "id": "11638261",
+      "date": "2025-02-14T08:45:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Improvement/Rehabilitation of Solid Waste Management Area (Roof Extension), MRF Ground",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF STO. TOMAS, PAMPANGA",
+        "value": {
+          "amount": 600000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11721173": {
+      "ocid": "ocds-philgeps-11721173",
+      "id": "11721173",
+      "date": "2025-02-14T10:35:29+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Medical, Dental and Laboratory Supplies to be used at JBDAPH (PR NO. 100(01)25-01-0083)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PROVINCE OF ALBAY",
+        "value": {
+          "amount": 641952.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-2024-11-0168": {
+      "ocid": "ocds-philgeps-pr-2024-11-0168",
+      "id": "PR 2024-11-0168",
+      "date": "2025-02-14T10:45:34+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PR 2024-11-0168 (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - BILIRAN ED",
+        "value": {
+          "amount": 290000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11670168": {
+      "ocid": "ocds-philgeps-11670168",
+      "id": "11670168",
+      "date": "2025-02-14T11:55:01+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25GBE01-PROCUREMENT OF DPWH SECURITY SERVICES FOR 3 SECURITY GUARDS FOR DEPLOYMENT AT DPWH-IFDEO COMPOUND, CITY OF ILAGAN, ISABELA",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - ISABELA 1ST DEO",
+        "value": {
+          "amount": 965000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11656572": {
+      "ocid": "ocds-philgeps-11656572",
+      "id": "11656572",
+      "date": "2025-02-14T14:55:51+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "RFQ for PR 2024-12-0205 (Nylon)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - BILIRAN ED",
+        "value": {
+          "amount": 520000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11580630": {
+      "ocid": "ocds-philgeps-11580630",
+      "id": "11580630",
+      "date": "2025-02-14T15:50:07+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "One (1) lot Furniture-Mobile Pedestal",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MINES AND GEO-SCIENCES BUREAU",
+        "value": {
+          "amount": 125000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11661979": {
+      "ocid": "ocds-philgeps-11661979",
+      "id": "11661979",
+      "date": "2025-02-15T13:12:56+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CONCRETING OF ROAD IN BARANGAY CARLOSA",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF CALATAGAN, BATANGAS",
+        "value": {
+          "amount": 998770.53,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11699585": {
+      "ocid": "ocds-philgeps-11699585",
+      "id": "11699585",
+      "date": "2025-02-15T20:38:07+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "INSTALLATION OF STREETLIGHTS",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY BIHIS - STA. TERESITA, BATANGAS",
+        "value": {
+          "amount": 450000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 20,
+      "has_awards": true
+    },
+    "ocds-philgeps-11692392": {
+      "ocid": "ocds-philgeps-11692392",
+      "id": "11692392",
+      "date": "2025-02-16T16:03:45+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Fittings and Water Meter",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "ODIONGAN WATER DISTRICT",
+        "value": {
+          "amount": 159660.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 15,
+      "has_awards": true
+    },
+    "ocds-philgeps-11683216": {
+      "ocid": "ocds-philgeps-11683216",
+      "id": "11683216",
+      "date": "2025-02-17T08:43:54+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PURCHASE AND DELIVERY OF SUPPLIES AND MEDICINES",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SAN NARCISO, ZAMBALES",
+        "value": {
+          "amount": 499998.25,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-dc-24-0003": {
+      "ocid": "ocds-philgeps-dc-24-0003",
+      "id": "DC 24-0003",
+      "date": "2025-02-17T09:40:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Notice of Award (Direct Contracting Exclusive Dealer / Manufacturer)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PROVINCE OF SOUTH COTABATO",
+        "value": {
+          "amount": 23200.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11729065": {
+      "ocid": "ocds-philgeps-11729065",
+      "id": "11729065",
+      "date": "2025-02-17T11:26:21+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY AND DELIVERY OF JANITORIAL SUPPLIES FOR THE OPERATIONAL READINESS AND CAPABILITY OF FACILITIES OF FIRE STATIONS FOR 1ST SEMESTER CY 2025",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BUREAU OF FIRE PROTECTION - REGION IV-A (CALABARZON)",
+        "value": {
+          "amount": 969032.14,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11697702": {
+      "ocid": "ocds-philgeps-11697702",
+      "id": "11697702",
+      "date": "2025-02-17T11:45:55+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Various Other Supplies and Materials/IB NO. DE-2025-048",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PROVINCE OF ANTIQUE",
+        "value": {
+          "amount": 960394.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-24-06-0246": {
+      "ocid": "ocds-philgeps-pr-24-06-0246",
+      "id": "PR-24-06-0246",
+      "date": "2025-02-17T13:40:47+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "LEASE OF VENUE WITH CATERING SERVICES FOR THE CONDUCT OF RSTL PERFORMANCE REVIEW AND RE-ECHO",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF SCIENCE AND TECHNOLOGY - REGION IX",
+        "value": {
+          "amount": 53000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11650756": {
+      "ocid": "ocds-philgeps-11650756",
+      "id": "11650756",
+      "date": "2025-02-17T14:30:09+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25DO0059 ORGANIZATIONAL OUTCOME 2 Protect Lives and Properties Against Major Floods - Flood Management Program - Construction / Maintenance of Flood Mitigation Structures and Drainage Systems - Cons",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - RIZAL II DEO",
+        "value": {
+          "amount": 51972005.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11675727": {
+      "ocid": "ocds-philgeps-11675727",
+      "id": "11675727",
+      "date": "2025-02-17T14:56:47+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY AND DELIVERY OF FOOD SUPPLIES FOR REAL QUALITY PUBLIC SERVICE UNDER GENERAL FUND (2025-1ST HALF)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF MANOLO FORTICH, BUKIDNON",
+        "value": {
+          "amount": 71050.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11648617": {
+      "ocid": "ocds-philgeps-11648617",
+      "id": "11648617",
+      "date": "2025-02-17T17:23:09+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "HO-FMG25-002 (PB2) - Fuel Hauling Services to SPUG Power Plants and Barges for CY 2025",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "NATIONAL POWER CORPORATION",
+        "value": {
+          "amount": 88578840.6,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 4,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-08-408": {
+      "ocid": "ocds-philgeps-2024-08-408",
+      "id": "2024-08-408",
+      "date": "2025-02-17T19:01:39+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Lease of Real Property for the Storage of COA related files",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "PHILIPPINE COMMISSION ON WOMEN",
+        "value": {
+          "amount": 198000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11723017": {
+      "ocid": "ocds-philgeps-11723017",
+      "id": "11723017",
+      "date": "2025-02-17T19:14:42+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Janitorial Supplies",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BAGONG DIWA ELEMENTARY SCHOOL - MANILA METRO MANILA",
+        "value": {
+          "amount": 63000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11641836": {
+      "ocid": "ocds-philgeps-11641836",
+      "id": "11641836",
+      "date": "2025-02-18T08:06:50+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of  Agricultural Supplies for the Use of the Office of the City Agriculturist",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "CITY OF LIPA, BATANGAS",
+        "value": {
+          "amount": 817041.25,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11654020": {
+      "ocid": "ocds-philgeps-11654020",
+      "id": "11654020",
+      "date": "2025-02-18T10:04:06+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CSSU SUPPLY (PR2024-12-1548)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CORAZON LOCSIN MONTELIBANO MEMORIAL REGIONAL HOSPITAL-DOH R6",
+        "value": {
+          "amount": 202500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11682472": {
+      "ocid": "ocds-philgeps-11682472",
+      "id": "11682472",
+      "date": "2025-02-18T10:14:49+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Rehab. Of Multi -Purpose Center",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY CASALSAGAN, POTOTAN, ILOILO",
+        "value": {
+          "amount": 70400.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11740427": {
+      "ocid": "ocds-philgeps-11740427",
+      "id": "11740427",
+      "date": "2025-02-18T12:28:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "S/D of 1 set Tie rod end (Toyota Hilux) and 28 Others",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE ARMY PROCUREMENT CENTER, AFP PROCUREMENT SERVICE",
+        "value": {
+          "amount": 311014.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2025-01-130": {
+      "ocid": "ocds-philgeps-2025-01-130",
+      "id": "2025-01-130",
+      "date": "2025-02-18T12:58:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PO NO. 2025-02-029  GREAT RECONSTRUCTION",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MARIANO MARCOS MEMORIAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 280000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11679280": {
+      "ocid": "ocds-philgeps-11679280",
+      "id": "11679280",
+      "date": "2025-02-18T13:22:18+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Construction of Sitio Pahalang to Nazareth Road Phase I (Sanitary Landfill to Irenea Estates Subdivision)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF GENERAL TINIO, NUEVA ECIJA",
+        "value": {
+          "amount": 18000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11710246": {
+      "ocid": "ocds-philgeps-11710246",
+      "id": "11710246",
+      "date": "2025-02-18T14:48:26+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SVP-D 25-01-0046 Pathological Waste Disposal Services",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "UNIVERSITY OF THE PHILIPPINES - DILIMAN",
+        "value": {
+          "amount": 100000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11664169": {
+      "ocid": "ocds-philgeps-11664169",
+      "id": "11664169",
+      "date": "2025-02-18T15:08:19+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "REHABILITATION OF LOCAL ACCESS ROADS (including Drainage System) AT SISON, PUBLIC MARKET PERIMETER ROAD, BRGY. PALDIT, SISON, PANG.",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SISON, PANGASINAN",
+        "value": {
+          "amount": 1499999.87,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2024-09-01988": {
+      "ocid": "ocds-philgeps-2024-09-01988",
+      "id": "2024-09-01988",
+      "date": "2025-02-18T15:49:51+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Airtime of Radio Advertisement",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "CITY OF SAN FERNANDO, PAMPANGA",
+        "value": {
+          "amount": 500000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11645146": {
+      "ocid": "ocds-philgeps-11645146",
+      "id": "11645146",
+      "date": "2025-02-18T17:25:01+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25CC0275 - Sustainable Infrastructure Projects Alleviating Gaps (SIPAG)- Access Roads and/or Bridges from the National Road/s leading to Major/ Strategic Public Buildings/ Facilities -Construction of",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - BULACAN 1ST DEO",
+        "value": {
+          "amount": 52729197.15,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11727531": {
+      "ocid": "ocds-philgeps-11727531",
+      "id": "11727531",
+      "date": "2025-02-18T17:48:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PRODUCTION AND DELIVERY OF GRADE 1 MATHEMATICS QUARTER 4 LESSON EXEMPLARS AND WORKSHEETS FOR SCHOOL YEAR 2024-2025",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF  EDUCATION - DIVISION OF SAN CARLOS CITY",
+        "value": {
+          "amount": 111383.5,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11747315": {
+      "ocid": "ocds-philgeps-11747315",
+      "id": "11747315",
+      "date": "2025-02-19T07:44:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Office Supplies, Drugs & Medicines, Peace & Order Supplies and Monoblock Chairs",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY 369, ZONE 37, DISTRICT 3, MANILA",
+        "value": {
+          "amount": 320000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11652810": {
+      "ocid": "ocds-philgeps-11652810",
+      "id": "11652810",
+      "date": "2025-02-19T09:36:16+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Provision of Supplies and Materials for the Teacher Made Learning resources and assessment Tools and office supplies for the whole fiscal Year 2025",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DACONGCOGON ELEMENTARY SCHOOL",
+        "value": {
+          "amount": 182570.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-060-s-2023": {
+      "ocid": "ocds-philgeps-060-s-2023",
+      "id": "060, S. 2023",
+      "date": "2025-02-19T10:43:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Legislative Consultant for SHFC Charter for the Office of the President",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "SOCIAL HOUSING FINANCE CORPORATION",
+        "value": {
+          "amount": 442866.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11667743": {
+      "ocid": "ocds-philgeps-11667743",
+      "id": "11667743",
+      "date": "2025-02-19T10:54:43+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25CF0093 Sustainable Infrastructure Projects Alleviating Gaps (SIPAG) – Flood Mitigation Structures Protecting Major / Strategic Public Buildings / Facilities - Construction of Slope Protection Struct",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - NUEVA ECIJA 2ND DE",
+        "value": {
+          "amount": 60794965.24,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11689950": {
+      "ocid": "ocds-philgeps-11689950",
+      "id": "11689950",
+      "date": "2025-02-19T11:47:11+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Catering Services for the conduct of CY 2024 Inventory of Irrigation Systems Workshop under PR No. MISC-2025-01-027",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "NATIONAL IRRIGATION ADMINISTRATION - REGION XI",
+        "value": {
+          "amount": 125400.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11724596": {
+      "ocid": "ocds-philgeps-11724596",
+      "id": "11724596",
+      "date": "2025-02-19T12:09:42+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "One Lot Construction and Installation of Solar Street Light System Along Brgy. San Pedro Road Zone 6",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF TUNGA, LEYTE",
+        "value": {
+          "amount": 400000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11758329": {
+      "ocid": "ocds-philgeps-11758329",
+      "id": "11758329",
+      "date": "2025-02-19T14:58:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Delivery of Supplies & Materials to support the Repair & Maintenance of Sports equipment",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "301ST CONTRACTING OFFICE, AFP PROCUREMENT SERVICE",
+        "value": {
+          "amount": 78000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11669798": {
+      "ocid": "ocds-philgeps-11669798",
+      "id": "11669798",
+      "date": "2025-02-19T15:39:31+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of one(1) unit Rescue Vehicle of Barangay Sta. Maria, San Jacinto, Pangasinan",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SAN JACINTO, PANGASINAN",
+        "value": {
+          "amount": 1250000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11756500": {
+      "ocid": "ocds-philgeps-11756500",
+      "id": "11756500",
+      "date": "2025-02-19T17:10:20+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Common Office Supplies for January-February 2025",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "IPIL NATIONAL HIGH SCHOOL",
+        "value": {
+          "amount": 51207.55,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11667936": {
+      "ocid": "ocds-philgeps-11667936",
+      "id": "11667936",
+      "date": "2025-02-19T18:04:13+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Livestocks for Animal Dispersal Program",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SAN MIGUEL, ZAMBOANGA DEL SUR",
+        "value": {
+          "amount": 700000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11664807": {
+      "ocid": "ocds-philgeps-11664807",
+      "id": "11664807",
+      "date": "2025-02-20T09:19:09+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Construction of Canal besides Dadagupan Multi-purpose Hall",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SAN EMILIO, ILOCOS SUR",
+        "value": {
+          "amount": 89989.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11660722": {
+      "ocid": "ocds-philgeps-11660722",
+      "id": "11660722",
+      "date": "2025-02-20T09:34:15+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Contract of Service for the Rental of Bus to be used for the Agency Employees' Day 2025 of the City Government of San Fernando, Pampanga",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY OF SAN FERNANDO, PAMPANGA",
+        "value": {
+          "amount": 760000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11657492": {
+      "ocid": "ocds-philgeps-11657492",
+      "id": "11657492",
+      "date": "2025-02-20T10:25:30+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "5020305000-48-2025",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PHILIPPINE NATIONAL POLICE - HEADQUARTERS SUPPORT SERVICE",
+        "value": {
+          "amount": 1200085.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-pr-2025-00093": {
+      "ocid": "ocds-philgeps-pr-2025-00093",
+      "id": "PR 2025-00093",
+      "date": "2025-02-20T10:48:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Venue, Accommodation and Meals for College of Engineering Library Assessment and Planning Workshop",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "UNIVERSITY OF THE PHILIPPINES - DILIMAN",
+        "value": {
+          "amount": 88000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11640848": {
+      "ocid": "ocds-philgeps-11640848",
+      "id": "11640848",
+      "date": "2025-02-20T11:43:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Improvement of Ynares Multi-Purpose Bldg. (Brgy. Hall) at Brgy. Niogan, Pililla, Rizal",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PROVINCE OF RIZAL",
+        "value": {
+          "amount": 1068943.66,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11705439": {
+      "ocid": "ocds-philgeps-11705439",
+      "id": "11705439",
+      "date": "2025-02-20T11:58:18+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Catering Services",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY OF TACLOBAN, LEYTE",
+        "value": {
+          "amount": 687500.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11660800": {
+      "ocid": "ocds-philgeps-11660800",
+      "id": "11660800",
+      "date": "2025-02-20T12:57:49+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "5020399000-73-2025",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PHILIPPINE NATIONAL POLICE - HEADQUARTERS SUPPORT SERVICE",
+        "value": {
+          "amount": 900000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11650217": {
+      "ocid": "ocds-philgeps-11650217",
+      "id": "11650217",
+      "date": "2025-02-20T14:35:37+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of 100 Truck Load Filling Materials (20cum./ truckload) at Brgy. Poblacion 1, Pura, Tarlac",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF PURA, TARLAC",
+        "value": {
+          "amount": 500000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11759669": {
+      "ocid": "ocds-philgeps-11759669",
+      "id": "11759669",
+      "date": "2025-02-20T15:02:59+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Food Packages for Orientation for their Four HR Systems",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "DEPARTMENT OF HEALTH - TREATMENT AND REHABILITATION CENTER -",
+        "value": {
+          "amount": 135000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 6,
+      "has_awards": true
+    },
+    "ocds-philgeps-11688240": {
+      "ocid": "ocds-philgeps-11688240",
+      "id": "11688240",
+      "date": "2025-02-20T16:36:50+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SOLAR ELECTRIFICATION, PHASE 2",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF BALANGKAYAN, EASTERN SAMAR",
+        "value": {
+          "amount": 4000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11735446": {
+      "ocid": "ocds-philgeps-11735446",
+      "id": "11735446",
+      "date": "2025-02-20T17:55:22+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "1 Lot ICT",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SAN LORENZO RUIZ SENIOR HIGH SCHOOL",
+        "value": {
+          "amount": 86000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-25-01-9": {
+      "ocid": "ocds-philgeps-25-01-9",
+      "id": "25-01-9",
+      "date": "2025-02-20T18:27:58+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Consultation Workshop for NEO & BNEO Program Design",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "DEPARTMENT OF THE INTERIOR AND LOCAL GOVERNMENT - REGION X",
+        "value": {
+          "amount": 497600.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11644162": {
+      "ocid": "ocds-philgeps-11644162",
+      "id": "11644162",
+      "date": "2025-02-21T07:08:01+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and delivery of one (1) lot Various Medical, Dental & Laboratory Supplies for the 1st Qtr 2025 requirement of Pasay City General Hospital",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "CITY OF PASAY",
+        "value": {
+          "amount": 9496684.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11708707": {
+      "ocid": "ocds-philgeps-11708707",
+      "id": "11708707",
+      "date": "2025-02-21T10:12:04+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "REPAIR OF BASKETBALL HOOPS (6 NOS.) AT MUNICIPAL PARK",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF STA. ANA, CAGAYAN",
+        "value": {
+          "amount": 149919.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11664804": {
+      "ocid": "ocds-philgeps-11664804",
+      "id": "11664804",
+      "date": "2025-02-21T10:22:32+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY OF LIQUID MEDICAL OXYGEN FOR LUNG CENTER OF THE PHILIPPINES",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "LUNG CENTER OF THE PHILIPPINES",
+        "value": {
+          "amount": 4499480.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11659976": {
+      "ocid": "ocds-philgeps-11659976",
+      "id": "11659976",
+      "date": "2025-02-21T11:36:39+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Request for Quotation (Supply, Installation and Commissioning of Inverter Board, IPM Transistor, etc.)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SUPREME COURT OF THE PHILIPPINES",
+        "value": {
+          "amount": 145000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11641642": {
+      "ocid": "ocds-philgeps-11641642",
+      "id": "11641642",
+      "date": "2025-02-21T11:48:46+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY & DELIVERY OF ONE (1) UNIT BRAND NEW VAN",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF LOPEZ, QUEZON",
+        "value": {
+          "amount": 1220000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11764568": {
+      "ocid": "ocds-philgeps-11764568",
+      "id": "11764568",
+      "date": "2025-02-21T14:22:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Various Supplies not Available at PS-DBM",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "SUAL NATIONAL HIGH SCHOOL",
+        "value": {
+          "amount": 160020.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11672296": {
+      "ocid": "ocds-philgeps-11672296",
+      "id": "11672296",
+      "date": "2025-02-21T14:28:05+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "24DJ0217- CONVERGENCE AND SPECIAL SUPPORT PROGRAM, Special Road Fund-Motor Vehicle User’s Charge (MVUC) as per R.A. 11239, Installation of Road Safety Devices-Sn Juan-Candelaria Jct-Candelaria-Bolboc",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - QUEZON 2ND ED",
+        "value": {
+          "amount": 96500000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11649811": {
+      "ocid": "ocds-philgeps-11649811",
+      "id": "11649811",
+      "date": "2025-02-21T15:48:36+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PR 24-5841- To supply labor, materials and necessary equipment for the Construction of Two (2) Storey- Six (6) Classroom School Building with Comfort Rooms at Prado Siongco Elementary School, Prado S",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PROVINCE OF PAMPANGA",
+        "value": {
+          "amount": 11680987.73,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-mabpang-0211-2025-tesda": {
+      "ocid": "ocds-philgeps-mabpang-0211-2025-tesda",
+      "id": "mabpang-0211-2025-TESDA",
+      "date": "2025-02-21T15:54:44+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Livelihood Training Project (Dressmaking NCII)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "MUNICIPALITY OF MABINI, PANGASINAN",
+        "value": {
+          "amount": 150000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11715133": {
+      "ocid": "ocds-philgeps-11715133",
+      "id": "11715133",
+      "date": "2025-02-21T16:24:53+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Garments",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY OF TACLOBAN, LEYTE",
+        "value": {
+          "amount": 978479.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 4,
+      "has_awards": true
+    },
+    "ocds-philgeps-11640841": {
+      "ocid": "ocds-philgeps-11640841",
+      "id": "11640841",
+      "date": "2025-02-21T17:09:06+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "FUELS/FUEL ADDITIVES & LUBRICANT & ANTI-CORROSIVE",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF TAYTAY, PALAWAN",
+        "value": {
+          "amount": 2073600.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11714878": {
+      "ocid": "ocds-philgeps-11714878",
+      "id": "11714878",
+      "date": "2025-02-22T14:20:23+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Rescue Boat with Trailer and Accessories",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF AGNO, PANGASINAN",
+        "value": {
+          "amount": 999000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-bar-cbts-004-epa": {
+      "ocid": "ocds-philgeps-bar-cbts-004-epa",
+      "id": "BAR-CBTS-004 (EPA)",
+      "date": "2025-02-23T16:37:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Lot 3 Provision of Meals, Venue and Accommodation for the conduct of LDRRMP Training (Maguindanao del Norte)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "OFFICE OF CIVIL DEFENSE-ARMM",
+        "value": {
+          "amount": 252000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11700473": {
+      "ocid": "ocds-philgeps-11700473",
+      "id": "11700473",
+      "date": "2025-02-23T17:27:07+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Crude Oil of RHU",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "MUNICIPALITY OF STA. MARIA, ROMBLON",
+        "value": {
+          "amount": 99940.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11682236": {
+      "ocid": "ocds-philgeps-11682236",
+      "id": "11682236",
+      "date": "2025-02-24T00:02:10+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "INSTALLATION OF ROAD AND STREET LIGHTNGS OF NATIONAL AND ACCESS ROADS",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF MONDRAGON, NORTHERN SAMAR",
+        "value": {
+          "amount": 13982540.34,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11713284": {
+      "ocid": "ocds-philgeps-11713284",
+      "id": "11713284",
+      "date": "2025-02-24T10:17:41+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Power Tools and Equipment.",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE INTERNATIONAL CONVENTION CENTER",
+        "value": {
+          "amount": 238900.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11701551": {
+      "ocid": "ocds-philgeps-11701551",
+      "id": "11701551",
+      "date": "2025-02-24T10:40:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of Goods & Kitchenware",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SAN MIGUEL, CATANDUANES",
+        "value": {
+          "amount": 194776.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11758279": {
+      "ocid": "ocds-philgeps-11758279",
+      "id": "11758279",
+      "date": "2025-02-24T13:22:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "SUPPLY AND DELIVERY OF OTHER SUPPLIES & MATERIALS  TO TOMAS CLAUDIO MEMORIAL ELEMENTARY SCHOOL",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "TOMAS CLAUDIO MEMORIAL ELEMENTARY SCHOOL - MORONG RIZAL",
+        "value": {
+          "amount": 65100.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11684729": {
+      "ocid": "ocds-philgeps-11684729",
+      "id": "11684729",
+      "date": "2025-02-24T14:23:02+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Semi-Expendable Furniture and Fixtures for the New Division Office Building of the Department of Education, Division of Cagayan de Oro City",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF EDUCATION - DIVISION OF CAGAYAN DE ORO",
+        "value": {
+          "amount": 2819000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11672601": {
+      "ocid": "ocds-philgeps-11672601",
+      "id": "11672601",
+      "date": "2025-02-24T15:48:24+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25BK0053 - Basic Infrastructure Program (BIP) - Access Roads and/or Bridges from the National Road/s leading to Major/ Strategic Public Buildings/ Facilities - Construction of San Dionisio II Road, Ba",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - QUIRINO DEO",
+        "value": {
+          "amount": 4950000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-2025-01-0112": {
+      "ocid": "ocds-philgeps-2025-01-0112",
+      "id": "2025-01-0112",
+      "date": "2025-02-24T15:53:44+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Renewal of Subscription of Optically Stimulated Luminescence (OSL)",
+        "status": "complete",
+        "procurementMethod": "direct",
+        "procuringEntity": "BAGUIO GENERAL HOSPITAL AND MEDICAL CENTER",
+        "value": {
+          "amount": 126900.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11722872": {
+      "ocid": "ocds-philgeps-11722872",
+      "id": "11722872",
+      "date": "2025-02-24T16:54:16+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply & Delivery of Various Hardware Materials & Supplies use for the repair of Old DSWD Office to occupied by PESO at NGC, Brgy. Talaban, Himamaylan City",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY  OF HIMAMAYLAN, NEGROS OCCIDENTAL",
+        "value": {
+          "amount": 111995.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11646837": {
+      "ocid": "ocds-philgeps-11646837",
+      "id": "11646837",
+      "date": "2025-02-24T17:28:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Construction/Completion of Multi-Purpose Building (Covered Court Gymnasium) (Phase I), Sto. Tomas, Saguday, Quirino",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "PROVINCE OF QUIRINO",
+        "value": {
+          "amount": 2994189.45,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11723286": {
+      "ocid": "ocds-philgeps-11723286",
+      "id": "11723286",
+      "date": "2025-02-25T08:07:25+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "CONSTRUCTION OF POTABLE WATER RESERVOIR FOR DISASTER PREPAREDNESS AND RESPONSE (CONSTRUCTION OF 1.20M X 1.20M RESERVOIR)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "BARANGAY CULASIAN, CAPOOCAN, LEYTE",
+        "value": {
+          "amount": 199994.58,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11687868": {
+      "ocid": "ocds-philgeps-11687868",
+      "id": "11687868",
+      "date": "2025-02-25T08:48:54+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of One (1) Unit Steel Filing Cabinet",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PHILIPPINE TRADE TRAINING CENTER",
+        "value": {
+          "amount": 12000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11660079": {
+      "ocid": "ocds-philgeps-11660079",
+      "id": "11660079",
+      "date": "2025-02-25T10:10:10+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Rehabilitation & Improvement of Day Care Center & Health Center(Bacar)",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "LIGA NG MGA BARANGAY, MAGSINGAL, ILOCOS SUR CHAPTER",
+        "value": {
+          "amount": 1283752.96,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11762424": {
+      "ocid": "ocds-philgeps-11762424",
+      "id": "11762424",
+      "date": "2025-02-25T10:40:13+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Purchase of office supplies and devices to be used at the LEDIPO office (PR NO. 100(01)25-02-0383)",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "PROVINCE OF ALBAY",
+        "value": {
+          "amount": 81498.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11687576": {
+      "ocid": "ocds-philgeps-11687576",
+      "id": "11687576",
+      "date": "2025-02-25T12:55:08+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "25JG0042 - Sustainable Infrastructure Projects Alleviating Gaps (SIPAG) – Access Roads and/or Bridges from the National Road/s leading to Major Strategic Public Buildings/ Facilities – Construction of",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - ZAMBOANGA DEL SUR",
+        "value": {
+          "amount": 49000000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11708000": {
+      "ocid": "ocds-philgeps-11708000",
+      "id": "11708000",
+      "date": "2025-02-25T13:39:31+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Supply and Delivery of Nets and Farm Equipment at SBDFF Cabid-an, Sorsogon",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "BUREAU OF FISHERIES AND AQUATIC RESOURCES - RV",
+        "value": {
+          "amount": 207250.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11661229": {
+      "ocid": "ocds-philgeps-11661229",
+      "id": "11661229",
+      "date": "2025-02-25T14:19:26+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "24GB019 Purchase and Delivery of Various Supplies for the Preventive Maintenance of Five (5) Units Water-Based Dredging Equipment",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "DEPARTMENT OF PUBLIC WORKS AND HIGHWAYS - REGION II",
+        "value": {
+          "amount": 3322595.6,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11647012": {
+      "ocid": "ocds-philgeps-11647012",
+      "id": "11647012",
+      "date": "2025-02-25T15:36:42+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "PURCHASE OF 100 UNITS SPRAYER AS DIRECT ASSISTANCE TO FARMERS",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF SUDIPEN, LA UNION",
+        "value": {
+          "amount": 500000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11655971": {
+      "ocid": "ocds-philgeps-11655971",
+      "id": "11655971",
+      "date": "2025-02-25T15:42:01+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "Procurement of Laptops and Computers for the City General Services Office, Ormoc City",
+        "status": "complete",
+        "procurementMethod": "limited",
+        "procuringEntity": "CITY OF ORMOC, LEYTE",
+        "value": {
+          "amount": 435000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    },
+    "ocds-philgeps-11719131": {
+      "ocid": "ocds-philgeps-11719131",
+      "id": "11719131",
+      "date": "2025-02-25T16:15:12+08:00",
+      "tag": [
+        "compiled"
+      ],
+      "initiationType": "tender",
+      "tender": {
+        "title": "INSTALLATION AND PURCHASE OF HEAVY DUTY GENERATOR SET FOR NEWLY CONSTRUCTED SLAUGHTERHOUSE",
+        "status": "complete",
+        "procurementMethod": "open",
+        "procuringEntity": "MUNICIPALITY OF CALASIAO, PANGASINAN",
+        "value": {
+          "amount": 800000.0,
+          "currency": "PHP"
+        }
+      },
+      "awards_count": 1,
+      "has_awards": true
+    }
+  },
+  "metadata": {
+    "year": "2025",
+    "total_releases": 198,
+    "generated_at": "1783616674.1314664"
+  }
+}

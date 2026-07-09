@@ -1,0 +1,38 @@
+{
+  "year": "2013",
+  "metrics": {
+    "total_releases": 729,
+    "releases_with_tender": 729,
+    "releases_with_awards": 729,
+    "releases_with_buyers": 0,
+    "releases_with_suppliers": 726,
+    "missing_fields": {
+      "tender.title": 16
+    },
+    "warnings": [
+      "Release ocds-philgeps-2505851: missing tender title",
+      "Release ocds-philgeps-2475475: missing tender title",
+      "Release ocds-philgeps-2443121: missing tender title",
+      "Release ocds-philgeps-2360165: missing tender title",
+      "Release ocds-philgeps-2487244: missing tender title",
+      "Release ocds-philgeps-2479848: missing tender title",
+      "Release ocds-philgeps-2445882: missing tender title",
+      "Release ocds-philgeps-2500937: missing tender title",
+      "Release ocds-philgeps-2490619: missing tender title",
+      "Release ocds-philgeps-2471710: missing tender title",
+      "Release ocds-philgeps-2311973: missing tender title",
+      "Release ocds-philgeps-2427923: missing tender title",
+      "Release ocds-philgeps-2490554: missing tender title",
+      "Release ocds-philgeps-2462151: missing tender title",
+      "Release ocds-philgeps-2372140: missing tender title",
+      "Release ocds-philgeps-2422180: missing tender title"
+    ],
+    "errors": []
+  },
+  "summary": {
+    "total": 729,
+    "warnings": 16,
+    "errors": 0,
+    "completeness": "100.0%"
+  }
+}

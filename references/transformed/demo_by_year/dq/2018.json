@@ -1,0 +1,19 @@
+{
+  "year": "2018",
+  "metrics": {
+    "total_releases": 656,
+    "releases_with_tender": 656,
+    "releases_with_awards": 656,
+    "releases_with_buyers": 0,
+    "releases_with_suppliers": 656,
+    "missing_fields": {},
+    "warnings": [],
+    "errors": []
+  },
+  "summary": {
+    "total": 656,
+    "warnings": 0,
+    "errors": 0,
+    "completeness": "100.0%"
+  }
+}

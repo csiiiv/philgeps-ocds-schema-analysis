@@ -6,9 +6,11 @@ import react from "@vitejs/plugin-react";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const repoRoot = path.resolve(__dirname, "..");
-const browserCacheDir = path.join(repoRoot, "references", "transformed", "by_year", "browser");
-const yearDqCacheDir = path.join(repoRoot, "references", "transformed", "by_year", "dq");
-const byYearDir = path.join(repoRoot, "references", "transformed", "by_year");
+// Use demo data for webapp (fast, lightweight, exploratory use)
+const browserCacheDir = path.join(repoRoot, "references", "transformed", "demo_by_year", "browser");
+const yearDqCacheDir = path.join(repoRoot, "references", "transformed", "demo_by_year", "dq");
+const byYearDir = path.join(repoRoot, "references", "transformed", "demo_by_year");
+// Full dataset available on Google Drive for complete analysis
 const MAX_ON_DEMAND_PACKAGE_MB = 250;
 
 const ALLOWED_CORS_ORIGINS = new Set([

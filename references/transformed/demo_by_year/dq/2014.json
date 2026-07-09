@@ -1,0 +1,23 @@
+{
+  "year": "2014",
+  "metrics": {
+    "total_releases": 729,
+    "releases_with_tender": 729,
+    "releases_with_awards": 729,
+    "releases_with_buyers": 0,
+    "releases_with_suppliers": 729,
+    "missing_fields": {
+      "tender.title": 1
+    },
+    "warnings": [
+      "Release ocds-philgeps-2511231: missing tender title"
+    ],
+    "errors": []
+  },
+  "summary": {
+    "total": 729,
+    "warnings": 1,
+    "errors": 0,
+    "completeness": "100.0%"
+  }
+}
